@@ -16,6 +16,7 @@ def main():
     p.add_argument("--request", required=True)
     p.add_argument("--output")
     p.add_argument("--batch-size", type=int, default=32)
+    p.add_argument("--device", default="cuda:0")
     p.add_argument("--prefix-cache", action=argparse.BooleanOptionalAction, default=False,
                    help="Enable token-prefix reuse; default off pending full-checkpoint BF16 validation")
     args = p.parse_args()
@@ -23,7 +24,7 @@ def main():
     records = compile_request(request["state"], request["questions"])
     checkpoint = Path(args.checkpoint)
     temperature = json.loads((checkpoint / "temperature.json").read_text())["temperature"]
-    model = DecisionModel.load(checkpoint)
+    model = DecisionModel.load(checkpoint, device=args.device)
     with torch.inference_mode():
         if args.prefix_cache:
             logits, cache_stats = model.score_cached(records, batch_size=args.batch_size)

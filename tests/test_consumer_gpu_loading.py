@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 from types import SimpleNamespace
 import unittest
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 from tests.test_prefix_cache import HAS_RUNTIME
 
@@ -143,6 +143,50 @@ class ConsumerGpuLoadingTest(unittest.TestCase):
         with patch("peft.PeftModel.from_pretrained", return_value=broken):
             with self.assertRaisesRegex(RuntimeError, "unloaded meta parameters"):
                 StubModel.load(self.root, device="cpu")
+
+    def load(self, *, device="cpu", env=None, loader=None):
+        """Construct unsharded; the from_pretrained mock is returned for inspection."""
+        loader = loader or MagicMock(return_value=self.full())
+        tokenizer = SimpleNamespace(pad_token_id=0,
+                                    encode=lambda text, **kwargs: [1 if text == "Yes" else 2])
+        with patch("jev.model.AutoTokenizer.from_pretrained", return_value=tokenizer), \
+             patch("jev.model.AutoModelForImageTextToText.from_pretrained", loader), \
+             patch.dict(os.environ, env or {}):
+            DecisionModel("Qwen/Qwen3.5-9B", "a" * 40, device=device, lora_rank=0)
+        return loader
+
+    def test_backbone_dtype_defaults_to_released_bfloat16_and_is_selectable(self):
+        self.assertIs(self.load().call_args.kwargs["torch_dtype"], torch.bfloat16)
+        for name, dtype in (("bfloat16", torch.bfloat16), ("float16", torch.float16),
+                            ("float32", torch.float32)):
+            with self.subTest(dtype=name):
+                loader = self.load(env={"JEV_TORCH_DTYPE": name})
+                self.assertIs(loader.call_args.kwargs["torch_dtype"], dtype)
+
+    def test_unknown_backbone_dtype_is_rejected_before_loading(self):
+        loader = MagicMock(return_value=self.full())
+        with self.assertRaisesRegex(ValueError, "JEV_TORCH_DTYPE must be one of"):
+            self.load(env={"JEV_TORCH_DTYPE": "float64"}, loader=loader)
+        loader.assert_not_called()
+
+    def test_quantized_loading_is_refused_on_apple_mps_before_loading(self):
+        # torch.device("mps") needs no Apple hardware, so this runs everywhere.
+        for flag in ("JEV_LOAD_8BIT", "JEV_LOAD_4BIT"):
+            with self.subTest(flag=flag):
+                loader = MagicMock(return_value=self.full())
+                with self.assertRaisesRegex(ValueError, "no Apple MPS backend"):
+                    self.load(device="mps", env={flag: "1"}, loader=loader)
+                loader.assert_not_called()
+
+    def test_provenance_records_loaded_rather_than_requested_backbone_dtypes(self):
+        from jev.serving import load_predictor
+        tokenizer = SimpleNamespace(pad_token_id=0,
+                                    encode=lambda text, **kwargs: [1 if text == "Yes" else 2])
+        with patch("jev.model.AutoTokenizer.from_pretrained", return_value=tokenizer), \
+             patch("jev.model.AutoModelForImageTextToText.from_pretrained", return_value=self.full()):
+            predictor = load_predictor(model_id="Qwen/Qwen3.5-9B", revision="a" * 40, device="cpu")
+        # bfloat16 was requested, but this stand-in backbone is float32: record what loaded.
+        self.assertEqual(predictor.provenance["backbone_parameter_dtypes"], ["torch.float32"])
 
 
 if __name__ == "__main__":

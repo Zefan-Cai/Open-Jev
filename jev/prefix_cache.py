@@ -191,9 +191,18 @@ def score_cached(model, records, *, batch_size=32):
     _prof = os.environ.get("JEV_PROFILE") == "1"
     _timing = collections.defaultdict(float)
 
+    def _sync():
+        # Accelerator work is queued asynchronously, so a phase timing is only
+        # meaningful after the queue drains. CPU and meta have nothing to drain.
+        kind = torch.device(str(model.device_name)).type
+        if kind == "cuda":
+            torch.cuda.synchronize()
+        elif kind == "mps":
+            torch.mps.synchronize()
+
     def _mark(bucket, start):
         if _prof:
-            torch.cuda.synchronize()
+            _sync()
             _timing[bucket] += time.perf_counter() - start
 
     shared_length = common_prefix_length(sequences)

@@ -142,7 +142,10 @@ def load_predictor(*, checkpoint=None, model_id=None, revision=None, device="cud
         if max_length < 1:
             raise ValueError("max length must be positive")
         model.max_length = max_length
-    provenance.update(base_revision=model.revision, max_length=model.max_length)
+    # The dtypes actually loaded, not the requested one: a quantized or
+    # JEV_TORCH_DTYPE run is then visible in every response's metadata.
+    provenance.update(base_revision=model.revision, max_length=model.max_length,
+                      backbone_parameter_dtypes=sorted({str(p.dtype) for p in model.backbone.parameters()}))
     try:
         provenance["code_commit"] = subprocess.check_output(
             ["git", "-C", str(Path(__file__).resolve().parent), "rev-parse", "HEAD"],

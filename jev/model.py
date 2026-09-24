@@ -31,6 +31,10 @@ def _module_under(name, parent):
     return name == parent or name.startswith(parent + ".")
 
 
+# JEV_TORCH_DTYPE selects the backbone dtype; unset keeps the released bfloat16.
+BACKBONE_DTYPES = {"bfloat16": torch.bfloat16, "float16": torch.float16, "float32": torch.float32}
+
+
 class DecisionModel(nn.Module):
     def __init__(self, model_id, revision, device="cuda:0", lora_rank=8, max_length=384):
         super().__init__()
@@ -47,6 +51,16 @@ class DecisionModel(nn.Module):
         # numbers. On 16 GB cards prefer the exact bf16 single-GPU layout below
         # (JEV_DEVICE_MAP + --prefix-cache); measured, it is also faster than
         # LLM.int8 (4.4 s vs 18.2 s per 21-question record on one card).
+        # Optional backbone dtype: JEV_TORCH_DTYPE=bfloat16|float16|float32.
+        # Unset keeps bfloat16, the dtype the released head and temperature were
+        # fitted against; any other dtype changes numerics, so, as with
+        # quantization, its quality is NOT comparable to the released numbers.
+        _dtype = os.environ.get("JEV_TORCH_DTYPE") or "bfloat16"
+        if _dtype not in BACKBONE_DTYPES:
+            raise ValueError("JEV_TORCH_DTYPE must be one of: " + ", ".join(BACKBONE_DTYPES))
+        if torch.device(device).type == "mps" and "1" in (os.environ.get("JEV_LOAD_8BIT"),
+                                                          os.environ.get("JEV_LOAD_4BIT")):
+            raise ValueError("bitsandbytes has no Apple MPS backend; unset JEV_LOAD_8BIT and JEV_LOAD_4BIT")
         _q = None
         if os.environ.get("JEV_LOAD_8BIT") == "1":
             from transformers import BitsAndBytesConfig
@@ -87,7 +101,7 @@ class DecisionModel(nn.Module):
         full = AutoModelForImageTextToText.from_pretrained(
             model_id, revision=revision,
             **({"quantization_config": _q} if _q else
-               {"torch_dtype": torch.bfloat16}),
+               {"torch_dtype": BACKBONE_DTYPES[_dtype]}),
             attn_implementation="sdpa", **_kw,
         )
         # Initialize a discriminative scalar from the pretrained Yes/No readout.

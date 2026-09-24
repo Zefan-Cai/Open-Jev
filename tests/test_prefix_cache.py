@@ -61,7 +61,7 @@ class ByteTokenizer:
         return {key: torch.tensor(value) for key, value in result.items()} if return_tensors else result
 
 
-def tiny_model(profile="qwen3.5-9b", *, lora=True):
+def tiny_model(profile="qwen3.5-9b", *, lora=True, device="cpu"):
     query_ratio, linear_ratio = PROFILES[profile]
     with torch.random.fork_rng(devices=[]):
         torch.manual_seed(4129)
@@ -96,7 +96,13 @@ def tiny_model(profile="qwen3.5-9b", *, lora=True):
         model.tokenizer, model.device_name, model.max_length = ByteTokenizer(), "cpu", 2048
         model.model_id, model.revision, model.lora_rank = profile, "random-cpu-fixture", 2 if lora else 0
         model.head.weight.data.normal_(std=0.25)
-    return model.eval()
+    model = model.eval()
+    if device != "cpu":
+        # Same seeded init as the CPU fixture, then relocated, so a CPU/device
+        # comparison isolates the backend rather than the initialization.
+        model.to(device)
+        model.device_name = device
+    return model
 
 
 def mixed_request():
