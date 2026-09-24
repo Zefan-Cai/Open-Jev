@@ -398,6 +398,8 @@ def final_evaluation(model, args, out, rows, baseline, meta):
 
 
 def run(args):
+    # Validate the source checkout before reading any argument, as jev/train.py does.
+    source_commit = source_checkout_commit(__file__)
     initialize_from = getattr(args, "initialize_training_weights", None)
     initialize_package = getattr(args, "initialize_inference_weights", None)
     package_manifest = getattr(args, "initialization_manifest_sha256", None)
@@ -405,7 +407,6 @@ def run(args):
         raise ValueError("Weights-only initialization and exact resume are mutually exclusive")
     if bool(initialize_package) != bool(package_manifest):
         raise ValueError("Inference-package initialization requires its pinned manifest SHA256")
-    source_commit = source_checkout_commit(__file__)
     import torch
     import torch.distributed as dist
     from torch.nn.parallel import DistributedDataParallel
