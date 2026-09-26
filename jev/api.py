@@ -63,11 +63,12 @@ def compile_request(state, questions: Mapping) -> list[dict]:
             record["legend"] = dict(zip(record["answer_keys"], json.loads(json.dumps(criteria))))
         else:
             if criteria is not None:
-                if not isinstance(criteria, Mapping) or set(criteria) != {"true", "false"}:
-                    raise ValueError("Noul criteria must contain true and false descriptions")
-                true = _description(criteria["true"])
-                false = _description(criteria["false"])
-                record["question"] += f"\nYes means: {true}\nNo means: {false}"
+                if not isinstance(criteria, Mapping) or not set(criteria).issubset({"true", "false"}):
+                    raise ValueError("Noul criteria must contain only true and false descriptions")
+                for key, label in (("true", "Yes"), ("false", "No")):
+                    if key in criteria:
+                        description = _description(criteria[key])
+                        record["question"] += f"\n{label} means: {description}"
             record["options"] = ["no", "yes"]
             record["answer_keys"] = ["false", "true"]
         records.append(record)

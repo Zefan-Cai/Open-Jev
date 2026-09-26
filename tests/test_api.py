@@ -51,6 +51,29 @@ class TypedAPITest(unittest.TestCase):
         self.assertNotIn("workaround", prompts[0])
         self.assertNotIn("Proposed answer: 0", prompts[0])
         self.assertIn("Yes means: Explicitly asks", candidate_prompts(records[2])[0])
+        self.assertIn("No means: Does not request", candidate_prompts(records[2])[0])
+
+    def test_noul_accepts_optional_true_and_false_criteria(self):
+        cases = [
+            ({"true": "Refund requested"}, "Yes means: Refund requested", "No means:"),
+            ({"false": "No refund requested"}, "No means: No refund requested", "Yes means:"),
+            ({}, None, None),
+        ]
+        for criteria, expected_description, absent_description in cases:
+            with self.subTest(criteria=criteria):
+                record = compile_request("Refund please", {
+                    "refund": {"type": "noul", "instructions": "Is a refund requested?", "criteria": criteria},
+                })[0]
+                self.assertEqual(record["options"], ["no", "yes"])
+                self.assertEqual(record["answer_keys"], ["false", "true"])
+                prompt = candidate_prompts(record)[0]
+                if expected_description:
+                    self.assertIn(expected_description, prompt)
+                if absent_description:
+                    self.assertNotIn(absent_description, prompt)
+                if not criteria:
+                    self.assertNotIn("Yes means:", prompt)
+                    self.assertNotIn("No means:", prompt)
 
     def test_structured_descriptions_and_null_choice_descriptions(self):
         records = compile_request(["first", "second"], {
@@ -70,7 +93,7 @@ class TypedAPITest(unittest.TestCase):
     def test_cardinality_and_primitive_validation(self):
         for kind, criteria in [("choice", {}), ("choice", {str(i): None for i in range(256)}),
                                ("score", ["only"]), ("score", ["level"] * 11),
-                               ("noul", {"true": "yes"}), ("unknown", None)]:
+                               ("noul", {"other": "yes"}), ("unknown", None)]:
             with self.subTest(kind=kind, count=len(criteria) if criteria is not None else 0):
                 with self.assertRaises(ValueError):
                     compile_request("state", {"q": {"type": kind, "instructions": "Question", "criteria": criteria}})
