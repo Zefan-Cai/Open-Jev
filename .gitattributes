@@ -1,2 +1,5 @@
 # Preserve the pinned upstream license bytes, including its CRLF endings.
 third_party/qwen/LICENSE -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Keep the POSIX container entrypoint LF-only on every checkout.
+docker/entrypoint.sh text eol=lf
