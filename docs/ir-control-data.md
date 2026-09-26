@@ -209,7 +209,7 @@ probe results cannot reconstruct complete heap rankings and have no full-query
 nDCG claim here. All pilot results remain separate from the existing frozen
 189-request provider comparison.
 
-## External TREC evaluation remains pending
+## Open-Jev TREC inference remains pending
 
 The real held-out inputs are now prepared: DL19 has **43 judged queries with
 4,300 candidate occurrences and 9,260 qrels**; DL20 has **54 queries with 5,400
@@ -217,8 +217,9 @@ candidate occurrences and 11,386 qrels**. The
 [preparation evidence](../reports/ir-control-v1/trec-holdout/README.md) records
 immutable source revisions, checksums, official-query agreement and complete
 judged-query coverage. Raw texts stay in the isolated local holdout directory;
-they were not uploaded as Open-Jev training data. **No model has evaluated this
-TREC holdout yet.**
+they were not uploaded as Open-Jev training data. **Open-Jev TREC inference has
+not yet been run on this holdout.** The separate hosted evaluation is summarized
+in the [IR-control report](../reports/ir-control-v1/README.md).
 
 The downloaded BM25 rankings give linear nDCG@10 of 0.505831 on DL19 and
 0.479637 on DL20. These are arithmetic checks of supplied rankings, not a new
