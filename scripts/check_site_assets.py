@@ -8,6 +8,11 @@ from pathlib import Path
 import re
 import subprocess
 
+if __package__:
+    from .site_display_media import approved_media_paths
+else:
+    from site_display_media import approved_media_paths
+
 
 def check(site):
     catalog = json.loads((site / "catalog.json").read_text())
@@ -51,7 +56,7 @@ def check(site):
             evidence = {key: item.get(key) for key in ("id", "request", "answer", "frames", "records", "pixel_predictions", "source_sha256", "selector")}
             digest = hashlib.sha256(json.dumps(evidence, sort_keys=True, separators=(",", ":"), ensure_ascii=False, allow_nan=False).encode()).hexdigest()
             assert digest == review["evidence_sha256"], item["id"]
-        approved = {item[key] for item in items + [catalog["overview"]] for key in ("video", "poster", "captions", "transcript")}
+        approved = approved_media_paths(site, items, catalog["overview"])
         published = {path.relative_to(site).as_posix() for path in (site / "media").iterdir()
                      if path.suffix in (".mp4", ".jpg", ".vtt", ".txt")}
         assert published == approved, "Unreviewed or missing media in published directory"

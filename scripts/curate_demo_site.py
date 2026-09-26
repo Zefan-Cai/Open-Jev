@@ -6,10 +6,14 @@ import hashlib
 import json
 from pathlib import Path
 
+if __package__:
+    from .site_display_media import approved_media_paths
+else:
+    from site_display_media import approved_media_paths
+
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE_FIELDS = ("id", "request", "answer", "frames", "records",
                    "pixel_predictions", "source_sha256", "selector")
-MEDIA_FIELDS = ("video", "poster", "captions", "transcript")
 
 
 def evidence_sha(item):
@@ -74,6 +78,7 @@ def main():
     manifest["count"] = len(manifest["items"])
     manifest["total_video_bytes"] = sum(item["bytes"] for item in manifest["items"])
     manifest["selection"] = "Successful complete seed-10001 episodes selected from the original saved 9B pilot; outcomes were used for showcase selection."
+    keep = approved_media_paths(site, selected, catalog["overview"])
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
     manifest_sha = hashlib.sha256(manifest_path.read_bytes()).hexdigest()
     catalog["overview"]["source_sha256"] = manifest_sha
@@ -88,7 +93,6 @@ def main():
             raise ValueError("Unsafe technical manifest path")
         old_manifest.unlink()
 
-    keep = {item[field] for item in selected + [catalog["overview"]] for field in MEDIA_FIELDS}
     removed = []
     for path in sorted((site / "media").iterdir()):
         if path.suffix not in (".mp4", ".jpg", ".vtt", ".txt"):
