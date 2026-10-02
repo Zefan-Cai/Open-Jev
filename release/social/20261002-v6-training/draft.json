@@ -1,0 +1,10 @@
+{
+  "status": "verified_draft_not_yet_posted",
+  "account": "Zefan_Cai",
+  "text": "🧪 Open-Jev 2B: fixed v6 training completed.\n\n📊 Synthetic Test/OOD: 32/36 each (released: 20/36, 21/36).\n\n⚠️ All 12 out-of-window Choice requests were wrongly accepted. Weights stay experimental.\n\n🔎 Evidence: https://github.com/Zefan-Cai/Open-Jev/blob/e133cb88ad614357434f2e3e24e51d3d844083bd/reports/policy-v6-training-20261002/README.md",
+  "evidence_commit": "e133cb88ad614357434f2e3e24e51d3d844083bd",
+  "evidence_url": "https://github.com/Zefan-Cai/Open-Jev/blob/e133cb88ad614357434f2e3e24e51d3d844083bd/reports/policy-v6-training-20261002/README.md",
+  "text_sha256": "15a38c721ce535edaebe211006c6785d1002482a925d8fc346cb46efd5d7eb6d",
+  "created_at_utc": "2026-10-02T22:45:46.735476+00:00",
+  "scope": "Completed fixed synthetic experiment; no official/natural claim or weight promotion."
+}
