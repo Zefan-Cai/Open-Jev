@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "configuration": {
+    "type": "synthetic",
+    "status": "prepared_not_trained",
+    "generator_version": "boundary-training-v7-mixture",
+    "seed": 20261003,
+    "source_commit": "87eb8b419685d272f059b3696e0f547e47ebdcc6",
+    "sources": {
+      "v4": {
+        "manifest_sha256": "393cc5b5d37f1998571f1dfa3c3a2bb4ca855005989a133c5a1f4e6b53bec005",
+        "split_sha256": {
+          "train.jsonl": "0a0e9f2c4e3b8444d0e86766103072050163a438ce595fad4d28bb30037b8077",
+          "calibration.jsonl": "55cbbc3b0858e91f8d2dcbb4ead9357235bb9a78bb87562c8851ab55f5ef9901",
+          "validation.jsonl": "c3798acbba34ccf4e08dd90fee641e83eb5cb4eb892094a365dabe7a5b769cde",
+          "test.jsonl": "8242f47a926fc952e77add7014a9b2bb5882d8d525eeb6b92818013cc058dd90",
+          "ood.jsonl": "bc77b8c71bca4e75e5ca799687e7bb8f5ce73dd5a3c5faede089f0a1fdf67845"
+        },
+        "rows_sha256": {
+          "train": "a1dabdc6777110bfc18bcd800d00f7360f410b4e6e5b82ccf7502158c620259d",
+          "calibration": "b11df8c050d03ce2c09af1852b1097f9c01781eb5ce0928ccdb1a9b907ab4ae6",
+          "validation": "31cfbf07746e835ab8989cff6f843274c671e8e5837c28a28a7561fc1ee51242",
+          "test": "7f617cf20449129c77ab392161fd62e096c5b8b49119232ca583e3099b47c708",
+          "ood": "4c6b384908b5e1928bc31ce25b6497ce5473d2956eeaaf9385d3b5af3359bf5f"
+        },
+        "rows": {
+          "train": 2400,
+          "calibration": 240,
+          "validation": 240,
+          "test": 240,
+          "ood": 240
+        }
+      },
+      "v5": {
+        "manifest_sha256": "615a79fff7bb8ba9b3774efacab81f051d8ff16b92abeb6003ab6472d03d278c",
+        "split_sha256": {
+          "train.jsonl": "0af482a95fad393883576fb6557a6bf49730f70c715b1cb857cf54c115c39ddb",
+          "calibration.jsonl": "a3df2af27afba099084ac501c2a4d62c31bd06ebf61127b8a5ce2cbedf4814f2",
+          "validation.jsonl": "b041f485aa88c2a545cfe935bc2e0140f10f108d7addd58244f5be6c6e70efc0",
+          "test.jsonl": "871b940bc47d61672395225bbb893756b5abd0ecb690593d4c55c5ed2a909513",
+          "ood.jsonl": "cfc121f3067d59d2fcb80c589ebd5c82b6f754ef5f1922c3c0268f733b02d231"
+        },
+        "rows_sha256": {
+          "train": "87411ca3237313d03a4356efc821664f67f3997e505d5cb43969bffe1e348ac2",
+          "calibration": "1e767959771635a03617b78a7a68b027f7d3ea32cf11513046440ff6f575876d",
+          "validation": "63b84ca70d37c29f7306410e8c318982c4eefe65ab127f010dc49f09815081af",
+          "test": "8f2f8174a94e84f3c5e81de42f7c0098ea12c509d7bdeb7cea74d370873148c7",
+          "ood": "5e49b522828eed05274da314b9418616a376c761fba892488e7e86cb1def530b"
+        },
+        "rows": {
+          "train": 128,
+          "calibration": 32,
+          "validation": 32,
+          "test": 32,
+          "ood": 32
+        }
+      },
+      "v6": {
+        "manifest_sha256": "294d0841db0521962b2ac95b637d8a2c5367d934364bca41adae0c9dc80cd4d5",
+        "split_sha256": {
+          "train.jsonl": "451b2295452dea0c9463a109d85834214ab1c9f434821c8c253b32d783e2608e",
+          "calibration.jsonl": "834c5d57456d0f9cffd7a067b55ea4b5e5d8e38c449296faafdaf66ed07d896d",
+          "validation.jsonl": "68ba0f512fda0471c3a8ab3e32d70601b5c37009d141488cf0e433b0aeeb103b",
+          "test.jsonl": "807bd0d5e40f5883bf1f276fb732b2552fb992885cf45884364140e90231ef5b",
+          "ood.jsonl": "09d72bc41eaff341efa9e768874c433696e03199365b337733334540fc8f7537"
+        },
+        "rows_sha256": {
+          "train": "6ad171617780d78ab0c2c94fb08668cbd962efbc9e669bca7b62a90f4e037bfd",
+          "calibration": "c49f1768c7f744a47b6d93f3db1a5496325f7758b701b6175d6fe55ef83c2d03",
+          "validation": "7cb25144cd4797d7329df5012d3d76595949a3686510328d7af67d7b1465a094",
+          "test": "5eef6d51a8fbb59d611dc6efa0bb0f0ed8950861a9b792a8e160fbe95b493aa1",
+          "ood": "167a596ac5ab0902c367b6aabc6558ea77f5832f3fd4fedbbca080e2253764b9"
+        },
+        "rows": {
+          "train": 240,
+          "calibration": 36,
+          "validation": 36,
+          "test": 36,
+          "ood": 36
+        },
+        "frozen_candidate_sha256": "35bb2d6b408e7832d36cf8bbdb77839fda39b9cd99a90e7c9d388776705dcc9f"
+      },
+      "v7": {
+        "manifest_sha256": "13d182739eaf9ac9ebe623af7299750639b22f82393059c3b16fc222da31b267",
+        "split_sha256": {
+          "train.jsonl": "8a5b505a82b5f5d9d527f8dd89ee6c20a79503726772fd9569123d27a1128b6f",
+          "calibration.jsonl": "0d66caa9d7eca46f45a5bef8e64aa0c26e0c0e86c9b9cb95787f994162bf9905",
+          "validation.jsonl": "55e86d3bb45a5af698e4edbae05009893ae4c89cabf8eae251f11423a1b58455",
+          "test.jsonl": "6aa95f95c51cb0c7c40bf66a7fc101a2ba8506b17d04c25958c9fa0b36356d45",
+          "ood.jsonl": "ed0af3eea8c8851481bd0283378f440708193e8c540e7cb67ba650aa59818929"
+        },
+        "rows_sha256": {
+          "train": "c80ce25e7b89f53da3dbae83c2525f0c0d11da66d076da2f5a8d22aaf00e2a6f",
+          "calibration": "14c673226d4b44864757895a84aa8e431ee252df585076f19725e80825a75cba",
+          "validation": "7ca315a91c245e16e6690fad7373b7a594467b63f7541ab3064c956e068836b6",
+          "test": "5c5af9b467f109534d8924aa324ef046530500a6e2b62832c1e06baf26b0e850",
+          "ood": "6ea617b84504390e1c71c4aa554917670ec3259bf014790badc775f2b45e9ff3"
+        },
+        "rows": {
+          "train": 1024,
+          "calibration": 128,
+          "validation": 128,
+          "test": 256,
+          "ood": 256
+        },
+        "candidate_lock_sha256": "503bdbf4792f6462779d6c2c0ff592eb4461a550105e20ed94b3e5bfebf3ab45"
+      }
+    },
+    "train_policy": "Existing original Train only plus new v7 Train. Observed Test/OOD remain outside Train."
+  },
+  "summary": {
+    "records": 5176,
+    "groups": 1070,
+    "unique_inputs": 5176,
+    "splits": {
+      "calibration": 436,
+      "ood": 256,
+      "test": 256,
+      "train": 3792,
+      "validation": 436
+    },
+    "kinds": {
+      "choice": 3434,
+      "noul": 1742
+    },
+    "families": {
+      "policy": 4696,
+      "routing": 480
+    },
+    "sources": {
+      "boundary-controls-v7": 1792,
+      "frontier-controls-v4": 2880,
+      "original-policy-controls-v6-candidate": 312,
+      "temporal-windows-v5": 192
+    }
+  },
+  "files_sha256": {
+    "train.jsonl": "83fa0a04e04c43fa21a86aa799b642dad5fcb1c3e69ffb7a8b92df42c759b6c0",
+    "calibration.jsonl": "25f03bf4e194099e8d405c6c3b8bfa9ac1f304112b5000bad8abfa7636e21f28",
+    "validation.jsonl": "f8da1e79d5f7dd0665a61ccc4467d8e17d8da62a8d1a37b7d6e612d20b87ec00",
+    "test.jsonl": "6aa95f95c51cb0c7c40bf66a7fc101a2ba8506b17d04c25958c9fa0b36356d45",
+    "ood.jsonl": "ed0af3eea8c8851481bd0283378f440708193e8c540e7cb67ba650aa59818929"
+  },
+  "model_input_fields": [
+    "state",
+    "question",
+    "kind",
+    "options"
+  ]
+}

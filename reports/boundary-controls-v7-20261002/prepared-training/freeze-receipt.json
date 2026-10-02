@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "status": "cpu_frozen_not_trained_comparison_runner_pending",
+  "source_commit": "87eb8b419685d272f059b3696e0f547e47ebdcc6",
+  "pushed_remote_branch_head_at_freeze": "87eb8b419685d272f059b3696e0f547e47ebdcc6",
+  "manifest_sha256": "adcf3c66af2c6398c9039220172d10ce3398c455f40d7fc9bfc0af639a33aae0",
+  "comparison_plan_sha256": "bab40284419d8ff0bfcdca818047cc96581d0d4e69a7fb891f1c08fe0ec49f35",
+  "split_sha256": {
+    "train.jsonl": "83fa0a04e04c43fa21a86aa799b642dad5fcb1c3e69ffb7a8b92df42c759b6c0",
+    "calibration.jsonl": "25f03bf4e194099e8d405c6c3b8bfa9ac1f304112b5000bad8abfa7636e21f28",
+    "validation.jsonl": "f8da1e79d5f7dd0665a61ccc4467d8e17d8da62a8d1a37b7d6e612d20b87ec00",
+    "test.jsonl": "6aa95f95c51cb0c7c40bf66a7fc101a2ba8506b17d04c25958c9fa0b36356d45",
+    "ood.jsonl": "ed0af3eea8c8851481bd0283378f440708193e8c540e7cb67ba650aa59818929"
+  },
+  "retained_files_sha256": {
+    "heldout/v4/calibration.jsonl": "55cbbc3b0858e91f8d2dcbb4ead9357235bb9a78bb87562c8851ab55f5ef9901",
+    "heldout/v4/validation.jsonl": "c3798acbba34ccf4e08dd90fee641e83eb5cb4eb892094a365dabe7a5b769cde",
+    "heldout/v5/calibration.jsonl": "a3df2af27afba099084ac501c2a4d62c31bd06ebf61127b8a5ce2cbedf4814f2",
+    "heldout/v5/validation.jsonl": "b041f485aa88c2a545cfe935bc2e0140f10f108d7addd58244f5be6c6e70efc0",
+    "heldout/v6/calibration.jsonl": "834c5d57456d0f9cffd7a067b55ea4b5e5d8e38c449296faafdaf66ed07d896d",
+    "heldout/v6/validation.jsonl": "68ba0f512fda0471c3a8ab3e32d70601b5c37009d141488cf0e433b0aeeb103b",
+    "heldout/v7/calibration.jsonl": "0d66caa9d7eca46f45a5bef8e64aa0c26e0c0e86c9b9cb95787f994162bf9905",
+    "heldout/v7/validation.jsonl": "55e86d3bb45a5af698e4edbae05009893ae4c89cabf8eae251f11423a1b58455",
+    "observed-regression/v4/test.jsonl": "36bdd440f48eb364cb32f4779492aa5c65ca737b9600b1b934b403beb656eda0",
+    "observed-regression/v4/ood.jsonl": "013d4d5af35c7c8f183eccad13aee0054dc53a5432cf011bc712bcdff7b6d9fa",
+    "observed-regression/v5/test.jsonl": "7a5b23564faa0edd9f1fc196f36c0f85ff6aee59781151fc964fc09c2374af07",
+    "observed-regression/v5/ood.jsonl": "05dbfcbeb4eaeaee0e2836fb84dd3ddf8a46e05add84f74abd2fbe80ba17126e",
+    "observed-regression/v6/test.jsonl": "807bd0d5e40f5883bf1f276fb732b2552fb992885cf45884364140e90231ef5b",
+    "observed-regression/v6/ood.jsonl": "09d72bc41eaff341efa9e768874c433696e03199365b337733334540fc8f7537"
+  },
+  "source_only_train_verified": true,
+  "train_rows": 3792,
+  "new_train_rows": 1024,
+  "observed_regression_rows": 392,
+  "train_heldout_id_group_overlap": 0,
+  "steps": 948,
+  "accumulation": 4,
+  "all_retained_bytes_verified": true,
+  "model_calls": 0,
+  "gpu_runs": 0,
+  "checkpoint_paths": "Future staging placeholders only; no model/checkpoint was loaded by preparation.",
+  "launch_gate": "Do not launch until a separately committed same-runtime comparison runner and protocol verify this exact plan, new primary and all observed slices, and current GPU ownership/restoration. This preparation never acquires a GPU or runs training."
+}

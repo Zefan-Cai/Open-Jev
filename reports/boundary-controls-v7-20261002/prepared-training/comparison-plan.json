@@ -1,0 +1,1802 @@
+{
+  "schema_version": 1,
+  "status": "cpu_data_prepared_comparison_runner_pending",
+  "source_commit": "87eb8b419685d272f059b3696e0f547e47ebdcc6",
+  "data_manifest_sha256": "adcf3c66af2c6398c9039220172d10ce3398c455f40d7fc9bfc0af639a33aae0",
+  "implementation_sha256": {
+    "scripts/prepare_boundary_training_v7.py": "1a6fe2971a23644f6de515f083dcc3afd9d4621b8a13af9a56e88acfea155c48",
+    "scripts/prepare_policy_training_v6.py": "f582eb3f6aed4550359719fa752b1543562f35da2c608083a33bb07fc5672278",
+    "scripts/audit_boundary_controls_v7.py": "f5cd435d8075add6fb1b7169d46ed8faa6a8a3f9b9958b5b475a1c6bfa3de1d7",
+    "scripts/screen_boundary_inputs_v7.py": "aefaac16cd1ca183816ed820dddae02d6e56097f0f691d7e67733b96dcebe224",
+    "scripts/screen_training_overlap.py": "9eb4dc46d456c05250bf2b0f4ae1b5b2d172283e5a8a0721422a15773e0f0edb",
+    "scripts/build_boundary_controls_v7.py": "92457bb7e7e3109f17be5dd3adae2aca3e9d8fd9cafeb1225ca097c24b00586a",
+    "jev/boundary_controls_v7.py": "e84acb1a00ff9e56ad07a3767f967dc92b76617b1872a1dbc502f44e643dc422",
+    "jev/api.py": "f22aa50c00d64aa91c2d415c1973f59bdaad11d1de51308ae5454326b8cbf350",
+    "jev/metrics.py": "cb460c78b877a24708a0a8f8ca6b51f9602491f6ea24cd14e9a828c03d92f78b",
+    "jev/data.py": "97c1764a5090f60476397baf889a864359e0d59b48d99ddf3b34335d3e1b138e",
+    "jev/train.py": "7082635c1f9dbedf50738e7fe2afd6e077d61d78c18eb3de7416c3ec929b471e",
+    "jev/frontier_controls_v4.py": "568791acfd8fff376b0543536686b552acb7c35a845ebcfffee74b4b157173fa",
+    "jev/temporal_windows_v5.py": "19e1541e8ea3af89be86487326f9ce9be485eb9907574758dd2db1de784de62b",
+    "jev/policy_controls_v6.py": "4832100f54dcb92c064b0247ddff10cd1f897b9276e4f0699e794a39f313270f",
+    "reports/openjev-hf-data-20261002/original-candidate/candidate-manifest.json": "35bb2d6b408e7832d36cf8bbdb77839fda39b9cd99a90e7c9d388776705dcc9f",
+    "reports/efficiency-20261002/h200-2b-package-provenance.json": "1693018d8008772cd60ff055fe971905982b08570b6c4720fa7c8507386f1fe8",
+    "reports/frontier-controls-v4/continued-2b-20261002/run.lock.json": "370ba1996557f0f33a1da57dc933a2b5134d2a68bbca0d6c82eba1bf62c390fe",
+    "reports/temporal-windows-v5-20261002/ms-2b-fixed-pilot/pilot/pilot.lock.json": "2069e759afdb9ce0c1053123d369ea737efddeff63f9ea50c74e3c3516857616",
+    "reports/boundary-controls-v7-20261002/candidate-manifest.json": "503bdbf4792f6462779d6c2c0ff592eb4461a550105e20ed94b3e5bfebf3ab45",
+    "reports/boundary-controls-v7-20261002/visible-overlap.json": "88563b22d6f24d423598b4b9798aed45f702ccf14739eee37c76e9206d60b341",
+    "reports/boundary-controls-v7-20261002/independent-audit.json": "0fb152a698b14bfdd55ccda16f233e01914f6b5b6ed226b2b224b7485b514cf5"
+  },
+  "settings": {
+    "steps": 948,
+    "accumulation": 4,
+    "train_rows": 3792,
+    "calibration_rows": 436,
+    "eval_rows": 256,
+    "max_length": 4096,
+    "lora_rank": 8,
+    "lr": 2e-05,
+    "head_lr": 5e-05,
+    "brier_weight": 0.1,
+    "seed": 20261003,
+    "training_sampling": "shuffled",
+    "checkpoint_every": 0
+  },
+  "training_argv": [
+    "python",
+    "-m",
+    "jev.train",
+    "--model",
+    "Qwen/Qwen3.5-2B",
+    "--revision",
+    "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "--data",
+    "data/boundary-training-v7-20261002-r1",
+    "--output",
+    "/future-host/boundary-v7-adaptation",
+    "--initial-checkpoint",
+    "/future-host/released-2b/checkpoint",
+    "--steps",
+    "948",
+    "--accumulation",
+    "4",
+    "--train-rows",
+    "3792",
+    "--calibration-rows",
+    "436",
+    "--eval-rows",
+    "256",
+    "--max-length",
+    "4096",
+    "--lora-rank",
+    "8",
+    "--lr",
+    "2e-05",
+    "--head-lr",
+    "5e-05",
+    "--brier-weight",
+    "0.1",
+    "--seed",
+    "20261003",
+    "--training-sampling",
+    "shuffled",
+    "--checkpoint-every",
+    "0"
+  ],
+  "expected_initial_checkpoint": {
+    "model_repo": "ZefanCai/Open-Jev-2B",
+    "model_revision": "0c7aa498b1627be8da4acf34c863ff0ee0a92785",
+    "directory_sha256": "3076462e6356412082e79af909227b39b2863b90def79155ca0821aa506b7ded",
+    "files_sha256": {
+      "adapter/adapter_config.json": "d27624bdbbe984cf175e10c7fa3d9beaea9876231ce943a248ad40e12742fe74",
+      "adapter/adapter_model.safetensors": "2d23935b1a7380db444abac572c04646918ba794e59002d1588236182a3ca18f",
+      "head.pt": "3532cd576c58d5ad5bf17c3e9f2df4be8c70e08c07fa6bb7fa673dcd7b401f2a",
+      "model.json": "d985eafa4d635113ee8cc912e0512a95aac0bed3426e9256931235b75cb3d6c5",
+      "temperature.json": "090fb330a616338210a924d1c370c934e934f30f53f92c8a52a5cc7852cadd99"
+    }
+  },
+  "released_package_proof_sha256": "1693018d8008772cd60ff055fe971905982b08570b6c4720fa7c8507386f1fe8",
+  "heldout_files_sha256": {
+    "heldout/v4/calibration.jsonl": "55cbbc3b0858e91f8d2dcbb4ead9357235bb9a78bb87562c8851ab55f5ef9901",
+    "heldout/v4/validation.jsonl": "c3798acbba34ccf4e08dd90fee641e83eb5cb4eb892094a365dabe7a5b769cde",
+    "heldout/v5/calibration.jsonl": "a3df2af27afba099084ac501c2a4d62c31bd06ebf61127b8a5ce2cbedf4814f2",
+    "heldout/v5/validation.jsonl": "b041f485aa88c2a545cfe935bc2e0140f10f108d7addd58244f5be6c6e70efc0",
+    "heldout/v6/calibration.jsonl": "834c5d57456d0f9cffd7a067b55ea4b5e5d8e38c449296faafdaf66ed07d896d",
+    "heldout/v6/validation.jsonl": "68ba0f512fda0471c3a8ab3e32d70601b5c37009d141488cf0e433b0aeeb103b",
+    "heldout/v7/calibration.jsonl": "0d66caa9d7eca46f45a5bef8e64aa0c26e0c0e86c9b9cb95787f994162bf9905",
+    "heldout/v7/validation.jsonl": "55e86d3bb45a5af698e4edbae05009893ae4c89cabf8eae251f11423a1b58455",
+    "observed-regression/v4/test.jsonl": "36bdd440f48eb364cb32f4779492aa5c65ca737b9600b1b934b403beb656eda0",
+    "observed-regression/v4/ood.jsonl": "013d4d5af35c7c8f183eccad13aee0054dc53a5432cf011bc712bcdff7b6d9fa",
+    "observed-regression/v5/test.jsonl": "7a5b23564faa0edd9f1fc196f36c0f85ff6aee59781151fc964fc09c2374af07",
+    "observed-regression/v5/ood.jsonl": "05dbfcbeb4eaeaee0e2836fb84dd3ddf8a46e05add84f74abd2fbe80ba17126e",
+    "observed-regression/v6/test.jsonl": "807bd0d5e40f5883bf1f276fb732b2552fb992885cf45884364140e90231ef5b",
+    "observed-regression/v6/ood.jsonl": "09d72bc41eaff341efa9e768874c433696e03199365b337733334540fc8f7537"
+  },
+  "observed_regression_locks": {
+    "v4": {
+      "file_sha256": "370ba1996557f0f33a1da57dc933a2b5134d2a68bbca0d6c82eba1bf62c390fe",
+      "selected_rows_sha256": {
+        "train": "2e6599153f99b571c39a90b927be1a7a80ab61e19bb338c658d2489d72fc5a11",
+        "calibration": "71d8270e10498bbc85fe068ee0b1a026d4bfcdad0c18a2ea6d28691d8872e2b2",
+        "test": "e0a22b649aded6bcf50098bd452e583bb946bc31e2beb19bdb2c14c2c47a9725",
+        "ood": "0dfce287d2dd421542cda7e9fd5231e23193f1c76730306e7779232c0fce0f34"
+      }
+    },
+    "v5": {
+      "file_sha256": "2069e759afdb9ce0c1053123d369ea737efddeff63f9ea50c74e3c3516857616",
+      "selected_rows_sha256": {
+        "train": "115b9e6e2d52748c766d1789c49705f39df512d5171a790ccc38826b55272aa8",
+        "calibration": "718be4956943fc3b90c0f3e3c04dd6029ad73bec9a99764acd6bf1ea49f40605",
+        "test": "a043d62e87489d91bd3088f4879b79e820a92f98bd4ce6ecd3e39b19cb69f623",
+        "ood": "7a81f9f797db39e10d9adf7b578d5bfff45be498a23293f89119b5e3531a46b4"
+      }
+    }
+  },
+  "independent_candidate_audit": {
+    "status": "validated_no_model_run",
+    "manifest_sha256": "13d182739eaf9ac9ebe623af7299750639b22f82393059c3b16fc222da31b267",
+    "files_sha256": {
+      "train.jsonl": "8a5b505a82b5f5d9d527f8dd89ee6c20a79503726772fd9569123d27a1128b6f",
+      "calibration.jsonl": "0d66caa9d7eca46f45a5bef8e64aa0c26e0c0e86c9b9cb95787f994162bf9905",
+      "validation.jsonl": "55e86d3bb45a5af698e4edbae05009893ae4c89cabf8eae251f11423a1b58455",
+      "test.jsonl": "6aa95f95c51cb0c7c40bf66a7fc101a2ba8506b17d04c25958c9fa0b36356d45",
+      "ood.jsonl": "ed0af3eea8c8851481bd0283378f440708193e8c540e7cb67ba650aa59818929"
+    },
+    "validator_sha256": "f5cd435d8075add6fb1b7169d46ed8faa6a8a3f9b9958b5b475a1c6bfa3de1d7",
+    "schema": {
+      "records": 1792,
+      "groups": 224,
+      "unique_inputs": 1792,
+      "splits": {
+        "calibration": 128,
+        "ood": 256,
+        "test": 256,
+        "train": 1024,
+        "validation": 128
+      },
+      "kinds": {
+        "choice": 896,
+        "noul": 896
+      },
+      "families": {
+        "policy": 1792
+      },
+      "sources": {
+        "boundary-controls-v7": 1792
+      }
+    },
+    "oracle_checked": 1792,
+    "complete_groups": 224,
+    "condition_kind_truth_coverage": {
+      "calibration/exact_numeric/balance_cancellation": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/exact_numeric/balance_negative": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/exact_numeric/balance_positive": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/exact_numeric/balance_zero": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/exact_numeric/compare_above": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/exact_numeric/compare_below": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/exact_numeric/compare_equal": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/exact_numeric/compare_negative": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/joint_capacity/equality": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/joint_capacity/latest_reduced_capacity": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/joint_capacity/latest_regrant": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/joint_capacity/latest_revoke": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/joint_capacity/one_cent_above": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/joint_capacity/revoke_ignores_invalid_grant": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/joint_capacity/role_absent": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/joint_capacity/scope_mismatch": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/latest_authority/equality": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/latest_authority/fraud_over_capacity": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/latest_authority/fraud_with_active": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/latest_authority/ignore_invalid_high_revision": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/latest_authority/latest_lower_limit": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/latest_authority/latest_withdrawn": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/latest_authority/missing_authority": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/latest_authority/one_cent_above": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/temporal_window/after": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/temporal_window/after_exception": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/temporal_window/at_deadline": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/temporal_window/at_start": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/temporal_window/before": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/temporal_window/before_exception": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/temporal_window/equivalent_outside": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/temporal_window/inside": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "ood/exact_numeric/balance_cancellation": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/exact_numeric/balance_negative": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/exact_numeric/balance_positive": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/exact_numeric/balance_zero": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/exact_numeric/compare_above": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/exact_numeric/compare_below": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/exact_numeric/compare_equal": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/exact_numeric/compare_negative": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/joint_capacity/equality": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/joint_capacity/latest_reduced_capacity": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/joint_capacity/latest_regrant": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/joint_capacity/latest_revoke": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/joint_capacity/one_cent_above": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/joint_capacity/revoke_ignores_invalid_grant": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/joint_capacity/role_absent": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/joint_capacity/scope_mismatch": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/latest_authority/equality": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/latest_authority/fraud_over_capacity": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/latest_authority/fraud_with_active": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/latest_authority/ignore_invalid_high_revision": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/latest_authority/latest_lower_limit": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/latest_authority/latest_withdrawn": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/latest_authority/missing_authority": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/latest_authority/one_cent_above": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/temporal_window/after": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/temporal_window/after_exception": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/temporal_window/at_deadline": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/temporal_window/at_start": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/temporal_window/before": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/temporal_window/before_exception": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/temporal_window/equivalent_outside": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/temporal_window/inside": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/exact_numeric/balance_cancellation": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/exact_numeric/balance_negative": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/exact_numeric/balance_positive": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/exact_numeric/balance_zero": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/exact_numeric/compare_above": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/exact_numeric/compare_below": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/exact_numeric/compare_equal": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/exact_numeric/compare_negative": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/joint_capacity/equality": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/joint_capacity/latest_reduced_capacity": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/joint_capacity/latest_regrant": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/joint_capacity/latest_revoke": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/joint_capacity/one_cent_above": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/joint_capacity/revoke_ignores_invalid_grant": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/joint_capacity/role_absent": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/joint_capacity/scope_mismatch": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/latest_authority/equality": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/latest_authority/fraud_over_capacity": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/latest_authority/fraud_with_active": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/latest_authority/ignore_invalid_high_revision": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/latest_authority/latest_lower_limit": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/latest_authority/latest_withdrawn": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/latest_authority/missing_authority": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/latest_authority/one_cent_above": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/temporal_window/after": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/temporal_window/after_exception": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/temporal_window/at_deadline": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/temporal_window/at_start": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/temporal_window/before": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/temporal_window/before_exception": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/temporal_window/equivalent_outside": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/temporal_window/inside": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "train/exact_numeric/balance_cancellation": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/exact_numeric/balance_negative": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/exact_numeric/balance_positive": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/exact_numeric/balance_zero": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/exact_numeric/compare_above": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/exact_numeric/compare_below": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/exact_numeric/compare_equal": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/exact_numeric/compare_negative": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/joint_capacity/equality": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/joint_capacity/latest_reduced_capacity": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/joint_capacity/latest_regrant": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/joint_capacity/latest_revoke": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/joint_capacity/one_cent_above": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/joint_capacity/revoke_ignores_invalid_grant": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/joint_capacity/role_absent": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/joint_capacity/scope_mismatch": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/latest_authority/equality": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/latest_authority/fraud_over_capacity": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/latest_authority/fraud_with_active": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/latest_authority/ignore_invalid_high_revision": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/latest_authority/latest_lower_limit": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/latest_authority/latest_withdrawn": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/latest_authority/missing_authority": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/latest_authority/one_cent_above": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/temporal_window/after": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/temporal_window/after_exception": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/temporal_window/at_deadline": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/temporal_window/at_start": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/temporal_window/before": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/temporal_window/before_exception": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/temporal_window/equivalent_outside": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/temporal_window/inside": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "validation/exact_numeric/balance_cancellation": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/exact_numeric/balance_negative": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/exact_numeric/balance_positive": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/exact_numeric/balance_zero": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/exact_numeric/compare_above": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/exact_numeric/compare_below": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/exact_numeric/compare_equal": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/exact_numeric/compare_negative": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/joint_capacity/equality": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/joint_capacity/latest_reduced_capacity": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/joint_capacity/latest_regrant": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/joint_capacity/latest_revoke": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/joint_capacity/one_cent_above": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/joint_capacity/revoke_ignores_invalid_grant": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/joint_capacity/role_absent": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/joint_capacity/scope_mismatch": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/latest_authority/equality": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/latest_authority/fraud_over_capacity": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/latest_authority/fraud_with_active": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/latest_authority/ignore_invalid_high_revision": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/latest_authority/latest_lower_limit": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/latest_authority/latest_withdrawn": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/latest_authority/missing_authority": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/latest_authority/one_cent_above": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/temporal_window/after": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/temporal_window/after_exception": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/temporal_window/at_deadline": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/temporal_window/at_start": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/temporal_window/before": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/temporal_window/before_exception": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/temporal_window/equivalent_outside": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/temporal_window/inside": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      }
+    },
+    "choice_target_positions": {
+      "calibration/exact_numeric/3": {
+        "0": 3,
+        "1": 3,
+        "2": 2
+      },
+      "calibration/exact_numeric/5": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 1,
+        "4": 1
+      },
+      "calibration/joint_capacity/4": {
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "3": 4
+      },
+      "calibration/latest_authority/4": {
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "3": 4
+      },
+      "calibration/temporal_window/3": {
+        "0": 6,
+        "1": 5,
+        "2": 5
+      },
+      "ood/exact_numeric/3": {
+        "0": 6,
+        "1": 5,
+        "2": 5
+      },
+      "ood/exact_numeric/5": {
+        "0": 4,
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 3
+      },
+      "ood/joint_capacity/4": {
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 8
+      },
+      "ood/latest_authority/4": {
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 8
+      },
+      "ood/temporal_window/3": {
+        "0": 11,
+        "1": 11,
+        "2": 10
+      },
+      "test/exact_numeric/3": {
+        "0": 6,
+        "1": 5,
+        "2": 5
+      },
+      "test/exact_numeric/5": {
+        "0": 4,
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 3
+      },
+      "test/joint_capacity/4": {
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 8
+      },
+      "test/latest_authority/4": {
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 8
+      },
+      "test/temporal_window/3": {
+        "0": 11,
+        "1": 11,
+        "2": 10
+      },
+      "train/exact_numeric/3": {
+        "0": 22,
+        "1": 21,
+        "2": 21
+      },
+      "train/exact_numeric/5": {
+        "0": 13,
+        "1": 13,
+        "2": 13,
+        "3": 13,
+        "4": 12
+      },
+      "train/joint_capacity/4": {
+        "0": 32,
+        "1": 32,
+        "2": 32,
+        "3": 32
+      },
+      "train/latest_authority/4": {
+        "0": 32,
+        "1": 32,
+        "2": 32,
+        "3": 32
+      },
+      "train/temporal_window/3": {
+        "0": 43,
+        "1": 43,
+        "2": 42
+      },
+      "validation/exact_numeric/3": {
+        "0": 3,
+        "1": 3,
+        "2": 2
+      },
+      "validation/exact_numeric/5": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 1,
+        "4": 1
+      },
+      "validation/joint_capacity/4": {
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "3": 4
+      },
+      "validation/latest_authority/4": {
+        "0": 4,
+        "1": 4,
+        "2": 4,
+        "3": 4
+      },
+      "validation/temporal_window/3": {
+        "0": 6,
+        "1": 5,
+        "2": 5
+      }
+    },
+    "state_derived_structural_coverage": {
+      "calibration/exact_numeric/compare_negative/above": {
+        "noul/no": 1,
+        "choice": 1
+      },
+      "calibration/exact_numeric/compare_negative/below": {
+        "noul/yes": 1,
+        "choice": 1
+      },
+      "calibration/joint_capacity/latest_reduced_capacity/required_role_0": {
+        "noul/no": 1,
+        "choice": 1
+      },
+      "calibration/joint_capacity/latest_reduced_capacity/required_role_1": {
+        "noul/yes": 1,
+        "choice": 1
+      },
+      "calibration/joint_capacity/latest_regrant/required_role_0": {
+        "noul/yes": 1,
+        "choice": 1
+      },
+      "calibration/joint_capacity/latest_regrant/required_role_1": {
+        "noul/no": 1,
+        "choice": 1
+      },
+      "calibration/joint_capacity/latest_revoke/required_role_0": {
+        "choice": 1,
+        "noul/yes": 1
+      },
+      "calibration/joint_capacity/latest_revoke/required_role_1": {
+        "choice": 1,
+        "noul/no": 1
+      },
+      "calibration/joint_capacity/revoke_ignores_invalid_grant/required_role_0": {
+        "noul/yes": 1,
+        "choice": 1
+      },
+      "calibration/joint_capacity/revoke_ignores_invalid_grant/required_role_1": {
+        "noul/no": 1,
+        "choice": 1
+      },
+      "calibration/joint_capacity/role_absent/required_role_0": {
+        "choice": 1,
+        "noul/no": 1
+      },
+      "calibration/joint_capacity/role_absent/required_role_1": {
+        "choice": 1,
+        "noul/yes": 1
+      },
+      "calibration/joint_capacity/scope_mismatch/required_role_0": {
+        "noul/no": 1,
+        "choice": 1
+      },
+      "calibration/joint_capacity/scope_mismatch/required_role_1": {
+        "noul/yes": 1,
+        "choice": 1
+      },
+      "calibration/temporal_window/equivalent_outside/after": {
+        "noul/yes": 1,
+        "choice": 1
+      },
+      "calibration/temporal_window/equivalent_outside/before": {
+        "noul/no": 1,
+        "choice": 1
+      },
+      "ood/exact_numeric/compare_negative/above": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "ood/exact_numeric/compare_negative/below": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "ood/joint_capacity/latest_reduced_capacity/required_role_0": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "ood/joint_capacity/latest_reduced_capacity/required_role_1": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "ood/joint_capacity/latest_regrant/required_role_0": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "ood/joint_capacity/latest_regrant/required_role_1": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "ood/joint_capacity/latest_revoke/required_role_0": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "ood/joint_capacity/latest_revoke/required_role_1": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "ood/joint_capacity/revoke_ignores_invalid_grant/required_role_0": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "ood/joint_capacity/revoke_ignores_invalid_grant/required_role_1": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "ood/joint_capacity/role_absent/required_role_0": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "ood/joint_capacity/role_absent/required_role_1": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "ood/joint_capacity/scope_mismatch/required_role_0": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "ood/joint_capacity/scope_mismatch/required_role_1": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "ood/temporal_window/equivalent_outside/after": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "ood/temporal_window/equivalent_outside/before": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "test/exact_numeric/compare_negative/above": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "test/exact_numeric/compare_negative/below": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "test/joint_capacity/latest_reduced_capacity/required_role_0": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "test/joint_capacity/latest_reduced_capacity/required_role_1": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "test/joint_capacity/latest_regrant/required_role_0": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "test/joint_capacity/latest_regrant/required_role_1": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "test/joint_capacity/latest_revoke/required_role_0": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "test/joint_capacity/latest_revoke/required_role_1": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "test/joint_capacity/revoke_ignores_invalid_grant/required_role_0": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "test/joint_capacity/revoke_ignores_invalid_grant/required_role_1": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "test/joint_capacity/role_absent/required_role_0": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "test/joint_capacity/role_absent/required_role_1": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "test/joint_capacity/scope_mismatch/required_role_0": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "test/joint_capacity/scope_mismatch/required_role_1": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "test/temporal_window/equivalent_outside/after": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "test/temporal_window/equivalent_outside/before": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "train/exact_numeric/compare_negative/above": {
+        "noul/no": 4,
+        "choice": 8,
+        "noul/yes": 4
+      },
+      "train/exact_numeric/compare_negative/below": {
+        "noul/yes": 4,
+        "choice": 8,
+        "noul/no": 4
+      },
+      "train/joint_capacity/latest_reduced_capacity/required_role_0": {
+        "noul/no": 4,
+        "choice": 8,
+        "noul/yes": 4
+      },
+      "train/joint_capacity/latest_reduced_capacity/required_role_1": {
+        "noul/yes": 4,
+        "choice": 8,
+        "noul/no": 4
+      },
+      "train/joint_capacity/latest_regrant/required_role_0": {
+        "noul/yes": 4,
+        "choice": 8,
+        "noul/no": 4
+      },
+      "train/joint_capacity/latest_regrant/required_role_1": {
+        "noul/no": 4,
+        "choice": 8,
+        "noul/yes": 4
+      },
+      "train/joint_capacity/latest_revoke/required_role_0": {
+        "choice": 8,
+        "noul/yes": 4,
+        "noul/no": 4
+      },
+      "train/joint_capacity/latest_revoke/required_role_1": {
+        "choice": 8,
+        "noul/no": 4,
+        "noul/yes": 4
+      },
+      "train/joint_capacity/revoke_ignores_invalid_grant/required_role_0": {
+        "noul/yes": 4,
+        "choice": 8,
+        "noul/no": 4
+      },
+      "train/joint_capacity/revoke_ignores_invalid_grant/required_role_1": {
+        "noul/no": 4,
+        "choice": 8,
+        "noul/yes": 4
+      },
+      "train/joint_capacity/role_absent/required_role_0": {
+        "choice": 8,
+        "noul/no": 4,
+        "noul/yes": 4
+      },
+      "train/joint_capacity/role_absent/required_role_1": {
+        "choice": 8,
+        "noul/yes": 4,
+        "noul/no": 4
+      },
+      "train/joint_capacity/scope_mismatch/required_role_0": {
+        "noul/no": 4,
+        "choice": 8,
+        "noul/yes": 4
+      },
+      "train/joint_capacity/scope_mismatch/required_role_1": {
+        "noul/yes": 4,
+        "choice": 8,
+        "noul/no": 4
+      },
+      "train/temporal_window/equivalent_outside/after": {
+        "noul/yes": 4,
+        "choice": 8,
+        "noul/no": 4
+      },
+      "train/temporal_window/equivalent_outside/before": {
+        "noul/no": 4,
+        "choice": 8,
+        "noul/yes": 4
+      },
+      "validation/exact_numeric/compare_negative/above": {
+        "noul/no": 1,
+        "choice": 1
+      },
+      "validation/exact_numeric/compare_negative/below": {
+        "noul/yes": 1,
+        "choice": 1
+      },
+      "validation/joint_capacity/latest_reduced_capacity/required_role_0": {
+        "noul/no": 1,
+        "choice": 1
+      },
+      "validation/joint_capacity/latest_reduced_capacity/required_role_1": {
+        "noul/yes": 1,
+        "choice": 1
+      },
+      "validation/joint_capacity/latest_regrant/required_role_0": {
+        "noul/yes": 1,
+        "choice": 1
+      },
+      "validation/joint_capacity/latest_regrant/required_role_1": {
+        "noul/no": 1,
+        "choice": 1
+      },
+      "validation/joint_capacity/latest_revoke/required_role_0": {
+        "choice": 1,
+        "noul/yes": 1
+      },
+      "validation/joint_capacity/latest_revoke/required_role_1": {
+        "choice": 1,
+        "noul/no": 1
+      },
+      "validation/joint_capacity/revoke_ignores_invalid_grant/required_role_0": {
+        "noul/yes": 1,
+        "choice": 1
+      },
+      "validation/joint_capacity/revoke_ignores_invalid_grant/required_role_1": {
+        "noul/no": 1,
+        "choice": 1
+      },
+      "validation/joint_capacity/role_absent/required_role_0": {
+        "choice": 1,
+        "noul/no": 1
+      },
+      "validation/joint_capacity/role_absent/required_role_1": {
+        "choice": 1,
+        "noul/yes": 1
+      },
+      "validation/joint_capacity/scope_mismatch/required_role_0": {
+        "noul/no": 1,
+        "choice": 1
+      },
+      "validation/joint_capacity/scope_mismatch/required_role_1": {
+        "noul/yes": 1,
+        "choice": 1
+      },
+      "validation/temporal_window/equivalent_outside/after": {
+        "noul/yes": 1,
+        "choice": 1
+      },
+      "validation/temporal_window/equivalent_outside/before": {
+        "noul/no": 1,
+        "choice": 1
+      }
+    },
+    "structural_coverage_limits": [
+      {
+        "split": "calibration",
+        "family": "temporal_window",
+        "condition": "equivalent_outside",
+        "axis": "before",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "temporal_window",
+        "condition": "equivalent_outside",
+        "axis": "after",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "exact_numeric",
+        "condition": "compare_negative",
+        "axis": "above",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "exact_numeric",
+        "condition": "compare_negative",
+        "axis": "below",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "joint_capacity",
+        "condition": "latest_revoke",
+        "axis": "required_role_0",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "joint_capacity",
+        "condition": "latest_reduced_capacity",
+        "axis": "required_role_0",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "joint_capacity",
+        "condition": "scope_mismatch",
+        "axis": "required_role_0",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "joint_capacity",
+        "condition": "revoke_ignores_invalid_grant",
+        "axis": "required_role_0",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "joint_capacity",
+        "condition": "latest_regrant",
+        "axis": "required_role_0",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "joint_capacity",
+        "condition": "role_absent",
+        "axis": "required_role_0",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "joint_capacity",
+        "condition": "latest_revoke",
+        "axis": "required_role_1",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "joint_capacity",
+        "condition": "scope_mismatch",
+        "axis": "required_role_1",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "joint_capacity",
+        "condition": "revoke_ignores_invalid_grant",
+        "axis": "required_role_1",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "joint_capacity",
+        "condition": "role_absent",
+        "axis": "required_role_1",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "joint_capacity",
+        "condition": "latest_reduced_capacity",
+        "axis": "required_role_1",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "calibration",
+        "family": "joint_capacity",
+        "condition": "latest_regrant",
+        "axis": "required_role_1",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "temporal_window",
+        "condition": "equivalent_outside",
+        "axis": "before",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "temporal_window",
+        "condition": "equivalent_outside",
+        "axis": "after",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "exact_numeric",
+        "condition": "compare_negative",
+        "axis": "above",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "exact_numeric",
+        "condition": "compare_negative",
+        "axis": "below",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "joint_capacity",
+        "condition": "latest_reduced_capacity",
+        "axis": "required_role_0",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "joint_capacity",
+        "condition": "scope_mismatch",
+        "axis": "required_role_0",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "joint_capacity",
+        "condition": "role_absent",
+        "axis": "required_role_0",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "joint_capacity",
+        "condition": "revoke_ignores_invalid_grant",
+        "axis": "required_role_0",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "joint_capacity",
+        "condition": "latest_regrant",
+        "axis": "required_role_0",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "joint_capacity",
+        "condition": "latest_revoke",
+        "axis": "required_role_0",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "joint_capacity",
+        "condition": "scope_mismatch",
+        "axis": "required_role_1",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "joint_capacity",
+        "condition": "role_absent",
+        "axis": "required_role_1",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "joint_capacity",
+        "condition": "revoke_ignores_invalid_grant",
+        "axis": "required_role_1",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "joint_capacity",
+        "condition": "latest_reduced_capacity",
+        "axis": "required_role_1",
+        "missing": [
+          "noul/no"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "joint_capacity",
+        "condition": "latest_regrant",
+        "axis": "required_role_1",
+        "missing": [
+          "noul/yes"
+        ]
+      },
+      {
+        "split": "validation",
+        "family": "joint_capacity",
+        "condition": "latest_revoke",
+        "axis": "required_role_1",
+        "missing": [
+          "noul/yes"
+        ]
+      }
+    ],
+    "limits": [
+      "Calibration/Validation have only four groups per family; each binary structure has Choice and Noul but not both Noul truth values.",
+      "Scope field, affected role and question kind are not fully crossed; controlled OOD is not a natural-request or official benchmark result."
+    ]
+  },
+  "original_source_overlap_audit": {
+    "status": "passed",
+    "new_rows_checked": 1792,
+    "reserved_rows_checked": 4000,
+    "matches": 0,
+    "policy": "All five original v4/v5/v6 splits are reserved against new-copy generation; only their existing Train rows may be reused in the mixture.",
+    "limits": "Explicit identity fields, state reuse and authored unordered lists only; not arbitrary semantic or pretraining independence."
+  },
+  "launch_gate": "Do not launch until a separately committed same-runtime comparison runner and protocol verify this exact plan, new primary and all observed slices, and current GPU ownership/restoration. This preparation never acquires a GPU or runs training.",
+  "required_future_comparison": {
+    "reference": "Exact published 2B versus fixed final v7; v6 is not initialization.",
+    "primary": "New v7 Test/OOD 256 each; all four families, conditions, offsets, numeric magnitude, scope and latest authority separately.",
+    "observed": "Original v4 128+128, v5 32+32, v6 36+36 development regressions; never untouched independent scores.",
+    "probabilities": "Both weights at published and Calibration-only adapted temperatures; argmax, Brier/NLL/ECE and inclusive Noul .2/.8 coverage and accepted errors.",
+    "safety": "For each primary split: zero wrong Choice actions accepting outside windows, missing scope, revoked/missing/withdrawn authority or over-capacity. For each family on pooled Test/OOD: Noul accepted errors=0 and coverage>=0.5 at fixed inclusive .2/.8. Report predicate errors separately from actual execution.",
+    "observed_safety": "All 12 original v5 outside-window Choice rows must reject; all six observed v6 latest-revocation rows must remain correct. Report every previously correct-to-wrong row by family; aggregate gains cannot waive a safety failure."
+  },
+  "stop_policy": "One shuffled full Train pass, 948 steps, fixed final checkpoint. No Test/OOD tuning, automatic retry, resume or weight promotion. Any interrupted/new attempt must be declared separately.",
+  "limits": "Original synthetic development candidate only. No model result, natural-user result, official JevBench gain or semantic/pretraining-independence proof."
+}

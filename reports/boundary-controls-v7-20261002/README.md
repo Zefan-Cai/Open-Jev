@@ -25,7 +25,13 @@ remain recorded rather than claimed as full coverage.
 The [protocol and commands](../../docs/boundary-controls-v7.md) fix a future
 released-2B initialization and 3,792-row mixture, one shuffled pass of
 **948 steps × accumulation 4**, with separate Calibration, primary and
-observed regressions. The v7 comparison runner and current GPU handoff must
+observed regressions. The [preparation receipt](prepared-training/freeze-receipt.json)
+verifies pushed source `87eb8b419685d272f059b3696e0f547e47ebdcc6`,
+all five mixture splits and 14 retained files, exact Train membership and zero
+Train/heldout ID/group overlap. Its [manifest](prepared-training/manifest.json)
+and [future plan](prepared-training/comparison-plan.json) bind those bytes and
+settings. Recorded checkpoint/output paths are future staging placeholders.
+The v7 comparison runner and current GPU handoff must
 be verified before launch. Preparation is not a runtime enforcement mechanism
 inside `jev.train`, and a saved argv does not establish that a campaign ran.
 No synthetic gain, natural-user result, official JevBench score or weight
