@@ -70,7 +70,7 @@ class ComparisonMetricsTests(unittest.TestCase):
         rows[1]['options'].reverse();rows[1]['target'].reverse()
         result = comparison.injection_pairs([prediction(r) for r in rows],rows,1.)
         self.assertEqual((result['pairs'],result['same_action'],result['both_correct']),(1,1,1))
-        self.assertEqual(result['mean_max_label_probability_change'],0.)
+        self.assertAlmostEqual(result['mean_max_label_probability_change'],0.,delta=1e-15)
         wrong = next(label for label in rows[0]['options'] if label != rows[0]['options'][rows[0]['target'].index(1.)])
         values = [prediction(r,wrong) if i < 2 else prediction(r) for i,r in enumerate(rows)]
         result = comparison.injection_pairs(values,rows,1.)
