@@ -1,6 +1,6 @@
-# Original policy controls: future v6 candidate
+# Original policy controls v6
 
-This prepares **384 original CC0-1.0 synthetic rows from 96 four-variant groups**, with zero upstream examples imported. It is a data candidate for a future experiment. No model was trained, no improvement was measured, and the current v5 plan, source and weights remain unchanged.
+This preparation produced **384 original CC0-1.0 synthetic rows from 96 four-variant groups**, with zero upstream examples imported. The subsequent fixed v6 training and independent comparison have [completed](../reports/policy-v6-training-20261002/README.md). Rejection and authorization failures keep its weights experimental. The original preparation protocol below records the data's origin; its builder does not run training.
 
 Public error aggregates identified `temporal_numeric` and `long_policy` as weak development families; the [v4 analysis](frontier-controls-v4.md) describes those observations and their limits. External [OpenJev demos](https://github.com/abhishekgahlot2/openjev-server/tree/032a2c5791f3d8856cc26fdb6876c106fac8dbf8/demos) motivated the abstract refund, approval and guardrail uses. Original test text, labels and predictions were not imported, rewritten or used to generate cases. The [Hub/source audit](openjev-hf-data.md) explains why those public evaluation journals are reserved.
 
@@ -40,4 +40,4 @@ Author refund/filter journals omit full input state, prompt-injection journals t
 
 The fixed candidate contributes **240 additional original training rows: 80 per family**, with 144 reserved calibration/validation/test/OOD rows. External author data contributes **zero**. The candidate manifest is not a training launch plan and does not modify an existing mixture. A later experiment must bind its baseline checkpoint, retained replay-source hashes, fixed steps and selected groups before inference, then report original versus adapted accuracy, probability calibration and injected/benign pair consistency. Real natural-test and JevBench performance require their own separately declared checks.
 
-The separate [v6 mixture preparation](policy-training-v6.md) supplies that fixed allocation and released-checkpoint initialization contract. Training and its comparisons remain pending.
+The separate [v6 mixture preparation](policy-training-v6.md) supplies that fixed allocation and released-checkpoint initialization contract. Its fixed training and independent comparison have now [completed](../reports/policy-v6-training-20261002/README.md); rejection/capacity failures keep the candidate experimental. [New v7 controls](boundary-controls-v7.md) address those failure families without promoting observed heldouts into Train.

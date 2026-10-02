@@ -1,0 +1,165 @@
+{
+  "status": "no_detected_overlap",
+  "dataset_manifest_sha256": "13d182739eaf9ac9ebe623af7299750639b22f82393059c3b16fc222da31b267",
+  "split_sha256": {
+    "train.jsonl": "8a5b505a82b5f5d9d527f8dd89ee6c20a79503726772fd9569123d27a1128b6f",
+    "calibration.jsonl": "0d66caa9d7eca46f45a5bef8e64aa0c26e0c0e86c9b9cb95787f994162bf9905",
+    "validation.jsonl": "55e86d3bb45a5af698e4edbae05009893ae4c89cabf8eae251f11423a1b58455",
+    "test.jsonl": "6aa95f95c51cb0c7c40bf66a7fc101a2ba8506b17d04c25958c9fa0b36356d45",
+    "ood.jsonl": "ed0af3eea8c8851481bd0283378f440708193e8c540e7cb67ba650aa59818929"
+  },
+  "screen_script_sha256": "aefaac16cd1ca183816ed820dddae02d6e56097f0f691d7e67733b96dcebe224",
+  "lexical_screen_sha256": "9eb4dc46d456c05250bf2b0f4ae1b5b2d172283e5a8a0721422a15773e0f0edb",
+  "compile_api_sha256": "f22aa50c00d64aa91c2d415c1973f59bdaad11d1de51308ae5454326b8cbf350",
+  "candidate_rows_checked": 1792,
+  "source_snapshot_sha256": {
+    "author-demos--README.md": "c6cbe56332dbe5f8ffb5b9f517ad2ec7ef0e7d8fa0f79873f39171a875c03669",
+    "author-demos--classify.py": "e36cb5e32dac5d9618ea7c191333e81f9e6b8d2425edcbd7379f905a0b2f96c5",
+    "author-demos--prompt_injection.py": "2249e03e1eb421d226c0cf5a13ea2fd041d1b723603af61c34b699f41455597a",
+    "author-demos--policy.py": "651fc80c8dca1419a4dc1ce4031c4c4a61d66f99296529951d0a537dc372f2d8",
+    "author-demos--guardrail.py": "6d6271f4a47bcd82eb1be8b216579cced49ca446ced214c1080ae1888f0be719",
+    "author-demos--nl_filter.py": "946b35453db00846679fd9df72b594729b8c44f40ea1b34b0afb9a3286281754",
+    "author-demos--out--classify_banking77--summary.json": "99cf8995309f0825882ae4fc6d64ec195bb9e0ee666df8b5481ec5b05ede75f7",
+    "author-demos--out--prompt_injection--summary.json": "86594b2064d3bfe4549a3a6c004dd55d61ddc40e585b70bf17533529f91a519c",
+    "author-server-repository.json": "e7a0a0d1068ebda4bb1a156e2c85839c2e0ea1ba7a3be05da43ceebec6e4ae33",
+    "author-server-commit.json": "c2f037e0f763fa5f60b92098534742864cecbf3ae6f9b3380b376368c2b0983e",
+    "author-server-tree.json": "654d1f66b9727befc3da93a9f1dade2a29f3f5c2f09eb686a7cc2578fe37d7fa",
+    "author-server-readme.md": "235cea4baae43e378e84eda4fe792cb898a456ee2422c38d4a903d4116157662",
+    "space-info.json": "50328d2f44a7f1dd201bf81feb166b651cbaf4e7887bc79a0a95210affdbb276",
+    "space-tree.json": "5ca718866b294f9ce0f7bab1bc4c2b309cf7cad509214f273d0636ceb6348f09",
+    "space-card.md": "8c7db5f4301fb0b11df37ee6aafb2bf3fa73f830f64df74e418e018a33dc8c63",
+    "author-demos--out--classify_banking77--decisions.jsonl": "dc202082207135cccc2ab836f70eb79ddabaf8553d60df475b97cba5ce908ac1",
+    "author-demos--out--prompt_injection--decisions.jsonl": "681bb7e0d5881e7d075e6fdba3cbc9c1216d92c51b056304c5fa1124072a852e",
+    "author-demos--out--policy--decisions.jsonl": "b297d389b955b97d1034b1344770d67d440903531e820089c5ef4cd72da7703c",
+    "author-demos--out--guardrail--decisions.jsonl": "e809f519d7ed8e1f115ead2687b4ca13fef3db35b2887fb869dc4737a79494aa",
+    "author-demos--out--nl_filter--decisions.jsonl": "a541b0b55cc51d0087b5990268c238ca6466d04774a491cc5cd16020a8f7ba1a",
+    "author-demos--out--policy--summary.json": "d1eea3039cd555b1e691e5e26242af9e1e4c1d6c1d088185706ddc4e003f636b",
+    "author-demos--out--guardrail--summary.json": "957f1140e53b63814ff08aab4f0dd9504fb50d07af904980a850e4a2382113a1",
+    "author-demos--out--nl_filter--summary.json": "ccd11438db2f7104dfe342241212e28099b830f762be5365c62403d1692a1f2f",
+    "source-prompt-injections-info.json": "587f1f82616ce161002220c978f081ac79c642b51c28c32e81c1f86929b2e271",
+    "source-banking77-info.json": "33608d8cbf76c70ad348161809e3da95dad510402e4de1685fff64b310a3aade",
+    "manifest-upstream.json": "50d599ec1632059abf9602af196710d36b196ccd4144ec723a68984268a901a9",
+    "notice-upstream.txt": "c07600d670ed9e19c55bcf4478313c88547c13c185411b93f6cfa40555cb9048",
+    "config-upstream.json": "265d68ba406ad07b27b391a42e3d40c48973a5dfe9574b90ddfb6a9acbd7e401",
+    "serving-guide.md": "f0abad8939611475c3cf63f7bed04f32e3c8da7e6292daa1fd73d54b3647c723",
+    "org-datasets.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "org-spaces.json": "2585d3b3210dc704cc7ba3a6ebc8804d988fed8f4b410aed853b0678846c6f5c",
+    "org-profile.html": "fbc7a25833ed4e67bdf1c10268650db687c312b7c63286bf40fb47fbca1a95c7",
+    "github-repositories-search.json": "9cf67337092cc091b8bc27b536ab45e2b69ce7cd8b011aee92bd4fa69fde787c",
+    "model-card.md": "4ffef312f1961237f3f4153d5e5533d074bef2fbb37a7319a5c67be2aab1d4b3",
+    "model-info.json": "dc12478cefa97e0bbd8da3035ea0d8fa26cbca64e9d0c5e22bd1553b096e56e8",
+    "model-tree.json": "a78c1dffef06867a7ae388e6778f93283067210a4b0513280a77f53f18239c34",
+    "author-overview.json": "7e7c0aff7914c92f0959e0f4c4be05e1c14e9c4708ef9e43fd72bdb3061241f9",
+    "dataset-info-response.txt": "65842e3d84e6b7f62a470c85204e80b953bb8f944e9b69813130a9d7f3eaa1d8",
+    "source-prompt-injections-card.md": "d90b4518dfe06154deeec938243d1ec9119bdfbfd2105aee9cf1567999764b94",
+    "source-banking77-card.md": "acd7824643a65ad5447e2119669639a4613aa252f1b985b49227bd3a744cab4c",
+    "author-demos--out--browser_hf--run.json": "f748dcd62010a2ed31c6032928c56bd861e72a69fd312ddf551190f09a37d482",
+    "author-demos--out--browser_hn2--run.json": "478ef4e64ac0665b2fb31dab25f72a84fd86773fcbbe82a37c4643984412f13f",
+    "author-demos--out--browser_wikipedia--run.json": "44b50bada743d232a4f0e64139fe271e691d9f3add0d475fdc50effe8a4f3553",
+    "author-demos--out--chess_openjev_vs_random--decisions.jsonl": "517b681dc6ecb2ccecfef86edab571b7a7bc1174bd19db0164819132b86fb69d",
+    "author-demos--out--poker_openjev_vs_random--decisions.jsonl": "c6d83d42b67cc865629df1b78496453d22a9d484525aa1fd6121829acac22a15",
+    "author-demos--out--poker_openjev_vs_rulebot--decisions.jsonl": "e97fc5600e24986e2bed134227ac788f5ecf2efa255eaded3d779b1dfb918e86",
+    "author-demos--out--poker_openjev_vs_rulebot_60--decisions.jsonl": "6c82939f9a3069e3587d07d16e2dfc93553b0964cb24ec57966648c7b3cc1065",
+    "author-demos--out--snake--decisions.jsonl": "38ee771140d608cc6d9ea874bdeed412b65874d01c6e28820063634213775157"
+  },
+  "source_manifest_sha256": {
+    "source-manifest.json": "6d8550316364795548502940dcb628cbccc77365b04626d4ba03dc71993c925a"
+  },
+  "input_bindings": [
+    {
+      "name": "jevbench231-visible-inputs.json",
+      "sha256": "835147256ab22be88a4c757656bbc3ef904716027046ef093d80c4f10cb4d79d"
+    },
+    {
+      "name": "test-inputs.csv",
+      "sha256": "bf9105f0629b6604393d254af21aef29982e684628113b6380ccbbe877a3b27a"
+    },
+    {
+      "name": "calibration-inputs.csv",
+      "sha256": "677b09db5da6dc56c9e1c88f5436a4f9568463e02bd413fbe1be300d5a12046f"
+    }
+  ],
+  "visible_corpus_inventory": {
+    "jevbench_public_inputs": 231,
+    "natural_routing_test": 256,
+    "natural_routing_calibration": 96,
+    "upstream_journal_classify_banking77": {
+      "rows": 300,
+      "selected_visible_fields": [
+        "text"
+      ]
+    },
+    "upstream_journal_prompt_injection": {
+      "rows": 662,
+      "selected_visible_fields": [
+        "text"
+      ]
+    },
+    "upstream_journal_policy": {
+      "rows": 400,
+      "selected_visible_fields": []
+    },
+    "upstream_journal_guardrail": {
+      "rows": 200,
+      "selected_visible_fields": [
+        "tool"
+      ]
+    },
+    "upstream_journal_nl_filter": {
+      "rows": 60,
+      "selected_visible_fields": []
+    },
+    "upstream_journal_chess_openjev_vs_random": {
+      "rows": 31,
+      "selected_visible_fields": [
+        "fen",
+        "legal"
+      ]
+    },
+    "upstream_journal_poker_openjev_vs_random": {
+      "rows": 76,
+      "selected_visible_fields": [
+        "hole",
+        "board",
+        "options"
+      ]
+    },
+    "upstream_journal_poker_openjev_vs_rulebot": {
+      "rows": 127,
+      "selected_visible_fields": [
+        "hole",
+        "board",
+        "options"
+      ]
+    },
+    "upstream_journal_poker_openjev_vs_rulebot_60": {
+      "rows": 367,
+      "selected_visible_fields": [
+        "hole",
+        "board",
+        "options"
+      ]
+    },
+    "upstream_journal_snake": {
+      "rows": 600,
+      "selected_visible_fields": [
+        "options"
+      ]
+    },
+    "upstream_demo_source_string_literals": 647,
+    "upstream_browser_task_descriptions": 3
+  },
+  "compiled_visible_requests": 3596,
+  "matched_rows": 0,
+  "quarantined_groups": [],
+  "matches": [],
+  "structured_label_gold_score_probability_fields_selected_for_screening": false,
+  "source_string_literal_classification": "Unclassified authored source string literals; not a claim that every literal excludes labels or gold.",
+  "upstream_rows_imported": 0,
+  "limits": [
+    "Visible lexical screen only; no semantic or foundation-pretraining independence proof.",
+    "Author policy/filter journals omit full inputs; 94 injection texts are truncated.",
+    "Game/browser logs expose partial states. Public JevBench is development feedback.",
+    "Partial lexical matching uses state strings only; question/options are covered by full-input exact matching."
+  ]
+}

@@ -1,0 +1,1119 @@
+{
+  "schema_version": 1,
+  "configuration": {
+    "type": "synthetic",
+    "status": "candidate_not_trained",
+    "generator_version": "boundary-controls-v7",
+    "seed": 20261003,
+    "groups_per_family_split": {
+      "train": 32,
+      "calibration": 4,
+      "validation": 4,
+      "test": 8,
+      "ood": 8
+    },
+    "variants_per_group": 8,
+    "license": "CC0-1.0",
+    "scope": "Original CC0 synthetic boundary controls motivated by previously observed aggregate failures. The generator reads or copies no old Test/OOD input, state or label. All eight case and representation variants stay in one split. OOD changes controlled magnitudes, offsets and irrelevant-list lengths; it does not establish unseen-business or natural-request generalization."
+  },
+  "summary": {
+    "records": 1792,
+    "groups": 224,
+    "unique_inputs": 1792,
+    "splits": {
+      "calibration": 128,
+      "ood": 256,
+      "test": 256,
+      "train": 1024,
+      "validation": 128
+    },
+    "kinds": {
+      "choice": 896,
+      "noul": 896
+    },
+    "families": {
+      "policy": 1792
+    },
+    "sources": {
+      "boundary-controls-v7": 1792
+    }
+  },
+  "files_sha256": {
+    "train.jsonl": "8a5b505a82b5f5d9d527f8dd89ee6c20a79503726772fd9569123d27a1128b6f",
+    "calibration.jsonl": "0d66caa9d7eca46f45a5bef8e64aa0c26e0c0e86c9b9cb95787f994162bf9905",
+    "validation.jsonl": "55e86d3bb45a5af698e4edbae05009893ae4c89cabf8eae251f11423a1b58455",
+    "test.jsonl": "6aa95f95c51cb0c7c40bf66a7fc101a2ba8506b17d04c25958c9fa0b36356d45",
+    "ood.jsonl": "ed0af3eea8c8851481bd0283378f440708193e8c540e7cb67ba650aa59818929"
+  },
+  "model_input_fields": [
+    "state",
+    "question",
+    "kind",
+    "options"
+  ],
+  "generator_sha256": "e84acb1a00ff9e56ad07a3767f967dc92b76617b1872a1dbc502f44e643dc422",
+  "oracle_audit": {
+    "records": 1792,
+    "groups": 224,
+    "unique_inputs": 1792,
+    "splits": {
+      "calibration": 128,
+      "ood": 256,
+      "test": 256,
+      "train": 1024,
+      "validation": 128
+    },
+    "kinds": {
+      "choice": 896,
+      "noul": 896
+    },
+    "families": {
+      "policy": 1792
+    },
+    "sources": {
+      "boundary-controls-v7": 1792
+    },
+    "oracle_checked": 1792,
+    "complete_eight_case_groups": 224,
+    "condition_kind_truth_coverage": {
+      "calibration/exact_numeric/balance_cancellation": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/exact_numeric/balance_negative": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/exact_numeric/balance_positive": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/exact_numeric/balance_zero": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/exact_numeric/compare_above": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/exact_numeric/compare_below": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/exact_numeric/compare_equal": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/exact_numeric/compare_negative": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/joint_capacity/equality": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/joint_capacity/latest_reduced_capacity": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/joint_capacity/latest_regrant": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/joint_capacity/latest_revoke": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/joint_capacity/one_cent_above": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/joint_capacity/revoke_ignores_invalid_grant": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/joint_capacity/role_absent": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/joint_capacity/scope_mismatch": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/latest_authority/equality": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/latest_authority/fraud_over_capacity": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/latest_authority/fraud_with_active": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/latest_authority/ignore_invalid_high_revision": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/latest_authority/latest_lower_limit": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/latest_authority/latest_withdrawn": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/latest_authority/missing_authority": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/latest_authority/one_cent_above": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/temporal_window/after": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/temporal_window/after_exception": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "calibration/temporal_window/at_deadline": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/temporal_window/at_start": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/temporal_window/before": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "calibration/temporal_window/before_exception": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "calibration/temporal_window/equivalent_outside": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "calibration/temporal_window/inside": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "ood/exact_numeric/balance_cancellation": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/exact_numeric/balance_negative": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/exact_numeric/balance_positive": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/exact_numeric/balance_zero": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/exact_numeric/compare_above": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/exact_numeric/compare_below": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/exact_numeric/compare_equal": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/exact_numeric/compare_negative": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/joint_capacity/equality": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/joint_capacity/latest_reduced_capacity": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/joint_capacity/latest_regrant": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/joint_capacity/latest_revoke": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/joint_capacity/one_cent_above": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/joint_capacity/revoke_ignores_invalid_grant": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/joint_capacity/role_absent": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/joint_capacity/scope_mismatch": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/latest_authority/equality": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/latest_authority/fraud_over_capacity": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/latest_authority/fraud_with_active": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/latest_authority/ignore_invalid_high_revision": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/latest_authority/latest_lower_limit": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/latest_authority/latest_withdrawn": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/latest_authority/missing_authority": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/latest_authority/one_cent_above": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/temporal_window/after": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/temporal_window/after_exception": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "ood/temporal_window/at_deadline": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/temporal_window/at_start": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/temporal_window/before": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "ood/temporal_window/before_exception": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "ood/temporal_window/equivalent_outside": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "ood/temporal_window/inside": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/exact_numeric/balance_cancellation": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/exact_numeric/balance_negative": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/exact_numeric/balance_positive": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/exact_numeric/balance_zero": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/exact_numeric/compare_above": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/exact_numeric/compare_below": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/exact_numeric/compare_equal": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/exact_numeric/compare_negative": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/joint_capacity/equality": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/joint_capacity/latest_reduced_capacity": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/joint_capacity/latest_regrant": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/joint_capacity/latest_revoke": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/joint_capacity/one_cent_above": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/joint_capacity/revoke_ignores_invalid_grant": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/joint_capacity/role_absent": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/joint_capacity/scope_mismatch": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/latest_authority/equality": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/latest_authority/fraud_over_capacity": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/latest_authority/fraud_with_active": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/latest_authority/ignore_invalid_high_revision": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/latest_authority/latest_lower_limit": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/latest_authority/latest_withdrawn": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/latest_authority/missing_authority": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/latest_authority/one_cent_above": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/temporal_window/after": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/temporal_window/after_exception": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "test/temporal_window/at_deadline": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/temporal_window/at_start": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/temporal_window/before": {
+        "choice": 4,
+        "noul/yes": 2,
+        "noul/no": 2
+      },
+      "test/temporal_window/before_exception": {
+        "noul/yes": 2,
+        "choice": 4,
+        "noul/no": 2
+      },
+      "test/temporal_window/equivalent_outside": {
+        "noul/no": 2,
+        "choice": 4,
+        "noul/yes": 2
+      },
+      "test/temporal_window/inside": {
+        "choice": 4,
+        "noul/no": 2,
+        "noul/yes": 2
+      },
+      "train/exact_numeric/balance_cancellation": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/exact_numeric/balance_negative": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/exact_numeric/balance_positive": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/exact_numeric/balance_zero": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/exact_numeric/compare_above": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/exact_numeric/compare_below": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/exact_numeric/compare_equal": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/exact_numeric/compare_negative": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/joint_capacity/equality": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/joint_capacity/latest_reduced_capacity": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/joint_capacity/latest_regrant": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/joint_capacity/latest_revoke": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/joint_capacity/one_cent_above": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/joint_capacity/revoke_ignores_invalid_grant": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/joint_capacity/role_absent": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/joint_capacity/scope_mismatch": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/latest_authority/equality": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/latest_authority/fraud_over_capacity": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/latest_authority/fraud_with_active": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/latest_authority/ignore_invalid_high_revision": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/latest_authority/latest_lower_limit": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/latest_authority/latest_withdrawn": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/latest_authority/missing_authority": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/latest_authority/one_cent_above": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/temporal_window/after": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/temporal_window/after_exception": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "train/temporal_window/at_deadline": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/temporal_window/at_start": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/temporal_window/before": {
+        "choice": 16,
+        "noul/yes": 8,
+        "noul/no": 8
+      },
+      "train/temporal_window/before_exception": {
+        "noul/yes": 8,
+        "choice": 16,
+        "noul/no": 8
+      },
+      "train/temporal_window/equivalent_outside": {
+        "noul/no": 8,
+        "choice": 16,
+        "noul/yes": 8
+      },
+      "train/temporal_window/inside": {
+        "choice": 16,
+        "noul/no": 8,
+        "noul/yes": 8
+      },
+      "validation/exact_numeric/balance_cancellation": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/exact_numeric/balance_negative": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/exact_numeric/balance_positive": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/exact_numeric/balance_zero": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/exact_numeric/compare_above": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/exact_numeric/compare_below": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/exact_numeric/compare_equal": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/exact_numeric/compare_negative": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/joint_capacity/equality": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/joint_capacity/latest_reduced_capacity": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/joint_capacity/latest_regrant": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/joint_capacity/latest_revoke": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/joint_capacity/one_cent_above": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/joint_capacity/revoke_ignores_invalid_grant": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/joint_capacity/role_absent": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/joint_capacity/scope_mismatch": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/latest_authority/equality": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/latest_authority/fraud_over_capacity": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/latest_authority/fraud_with_active": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/latest_authority/ignore_invalid_high_revision": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/latest_authority/latest_lower_limit": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/latest_authority/latest_withdrawn": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/latest_authority/missing_authority": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/latest_authority/one_cent_above": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/temporal_window/after": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/temporal_window/after_exception": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      },
+      "validation/temporal_window/at_deadline": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/temporal_window/at_start": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/temporal_window/before": {
+        "choice": 2,
+        "noul/yes": 1,
+        "noul/no": 1
+      },
+      "validation/temporal_window/before_exception": {
+        "noul/yes": 1,
+        "choice": 2,
+        "noul/no": 1
+      },
+      "validation/temporal_window/equivalent_outside": {
+        "noul/no": 1,
+        "choice": 2,
+        "noul/yes": 1
+      },
+      "validation/temporal_window/inside": {
+        "choice": 2,
+        "noul/no": 1,
+        "noul/yes": 1
+      }
+    },
+    "upstream_rows_imported": 0,
+    "scope": "Original CC0 synthetic boundary controls motivated by previously observed aggregate failures. The generator reads or copies no old Test/OOD input, state or label. All eight case and representation variants stay in one split. OOD changes controlled magnitudes, offsets and irrelevant-list lengths; it does not establish unseen-business or natural-request generalization."
+  },
+  "group_ids_by_split": {
+    "train": [
+      "boundary-controls-v7/20261003/train/exact_numeric/0",
+      "boundary-controls-v7/20261003/train/exact_numeric/1",
+      "boundary-controls-v7/20261003/train/exact_numeric/10",
+      "boundary-controls-v7/20261003/train/exact_numeric/11",
+      "boundary-controls-v7/20261003/train/exact_numeric/12",
+      "boundary-controls-v7/20261003/train/exact_numeric/13",
+      "boundary-controls-v7/20261003/train/exact_numeric/14",
+      "boundary-controls-v7/20261003/train/exact_numeric/15",
+      "boundary-controls-v7/20261003/train/exact_numeric/16",
+      "boundary-controls-v7/20261003/train/exact_numeric/17",
+      "boundary-controls-v7/20261003/train/exact_numeric/18",
+      "boundary-controls-v7/20261003/train/exact_numeric/19",
+      "boundary-controls-v7/20261003/train/exact_numeric/2",
+      "boundary-controls-v7/20261003/train/exact_numeric/20",
+      "boundary-controls-v7/20261003/train/exact_numeric/21",
+      "boundary-controls-v7/20261003/train/exact_numeric/22",
+      "boundary-controls-v7/20261003/train/exact_numeric/23",
+      "boundary-controls-v7/20261003/train/exact_numeric/24",
+      "boundary-controls-v7/20261003/train/exact_numeric/25",
+      "boundary-controls-v7/20261003/train/exact_numeric/26",
+      "boundary-controls-v7/20261003/train/exact_numeric/27",
+      "boundary-controls-v7/20261003/train/exact_numeric/28",
+      "boundary-controls-v7/20261003/train/exact_numeric/29",
+      "boundary-controls-v7/20261003/train/exact_numeric/3",
+      "boundary-controls-v7/20261003/train/exact_numeric/30",
+      "boundary-controls-v7/20261003/train/exact_numeric/31",
+      "boundary-controls-v7/20261003/train/exact_numeric/4",
+      "boundary-controls-v7/20261003/train/exact_numeric/5",
+      "boundary-controls-v7/20261003/train/exact_numeric/6",
+      "boundary-controls-v7/20261003/train/exact_numeric/7",
+      "boundary-controls-v7/20261003/train/exact_numeric/8",
+      "boundary-controls-v7/20261003/train/exact_numeric/9",
+      "boundary-controls-v7/20261003/train/joint_capacity/0",
+      "boundary-controls-v7/20261003/train/joint_capacity/1",
+      "boundary-controls-v7/20261003/train/joint_capacity/10",
+      "boundary-controls-v7/20261003/train/joint_capacity/11",
+      "boundary-controls-v7/20261003/train/joint_capacity/12",
+      "boundary-controls-v7/20261003/train/joint_capacity/13",
+      "boundary-controls-v7/20261003/train/joint_capacity/14",
+      "boundary-controls-v7/20261003/train/joint_capacity/15",
+      "boundary-controls-v7/20261003/train/joint_capacity/16",
+      "boundary-controls-v7/20261003/train/joint_capacity/17",
+      "boundary-controls-v7/20261003/train/joint_capacity/18",
+      "boundary-controls-v7/20261003/train/joint_capacity/19",
+      "boundary-controls-v7/20261003/train/joint_capacity/2",
+      "boundary-controls-v7/20261003/train/joint_capacity/20",
+      "boundary-controls-v7/20261003/train/joint_capacity/21",
+      "boundary-controls-v7/20261003/train/joint_capacity/22",
+      "boundary-controls-v7/20261003/train/joint_capacity/23",
+      "boundary-controls-v7/20261003/train/joint_capacity/24",
+      "boundary-controls-v7/20261003/train/joint_capacity/25",
+      "boundary-controls-v7/20261003/train/joint_capacity/26",
+      "boundary-controls-v7/20261003/train/joint_capacity/27",
+      "boundary-controls-v7/20261003/train/joint_capacity/28",
+      "boundary-controls-v7/20261003/train/joint_capacity/29",
+      "boundary-controls-v7/20261003/train/joint_capacity/3",
+      "boundary-controls-v7/20261003/train/joint_capacity/30",
+      "boundary-controls-v7/20261003/train/joint_capacity/31",
+      "boundary-controls-v7/20261003/train/joint_capacity/4",
+      "boundary-controls-v7/20261003/train/joint_capacity/5",
+      "boundary-controls-v7/20261003/train/joint_capacity/6",
+      "boundary-controls-v7/20261003/train/joint_capacity/7",
+      "boundary-controls-v7/20261003/train/joint_capacity/8",
+      "boundary-controls-v7/20261003/train/joint_capacity/9",
+      "boundary-controls-v7/20261003/train/latest_authority/0",
+      "boundary-controls-v7/20261003/train/latest_authority/1",
+      "boundary-controls-v7/20261003/train/latest_authority/10",
+      "boundary-controls-v7/20261003/train/latest_authority/11",
+      "boundary-controls-v7/20261003/train/latest_authority/12",
+      "boundary-controls-v7/20261003/train/latest_authority/13",
+      "boundary-controls-v7/20261003/train/latest_authority/14",
+      "boundary-controls-v7/20261003/train/latest_authority/15",
+      "boundary-controls-v7/20261003/train/latest_authority/16",
+      "boundary-controls-v7/20261003/train/latest_authority/17",
+      "boundary-controls-v7/20261003/train/latest_authority/18",
+      "boundary-controls-v7/20261003/train/latest_authority/19",
+      "boundary-controls-v7/20261003/train/latest_authority/2",
+      "boundary-controls-v7/20261003/train/latest_authority/20",
+      "boundary-controls-v7/20261003/train/latest_authority/21",
+      "boundary-controls-v7/20261003/train/latest_authority/22",
+      "boundary-controls-v7/20261003/train/latest_authority/23",
+      "boundary-controls-v7/20261003/train/latest_authority/24",
+      "boundary-controls-v7/20261003/train/latest_authority/25",
+      "boundary-controls-v7/20261003/train/latest_authority/26",
+      "boundary-controls-v7/20261003/train/latest_authority/27",
+      "boundary-controls-v7/20261003/train/latest_authority/28",
+      "boundary-controls-v7/20261003/train/latest_authority/29",
+      "boundary-controls-v7/20261003/train/latest_authority/3",
+      "boundary-controls-v7/20261003/train/latest_authority/30",
+      "boundary-controls-v7/20261003/train/latest_authority/31",
+      "boundary-controls-v7/20261003/train/latest_authority/4",
+      "boundary-controls-v7/20261003/train/latest_authority/5",
+      "boundary-controls-v7/20261003/train/latest_authority/6",
+      "boundary-controls-v7/20261003/train/latest_authority/7",
+      "boundary-controls-v7/20261003/train/latest_authority/8",
+      "boundary-controls-v7/20261003/train/latest_authority/9",
+      "boundary-controls-v7/20261003/train/temporal_window/0",
+      "boundary-controls-v7/20261003/train/temporal_window/1",
+      "boundary-controls-v7/20261003/train/temporal_window/10",
+      "boundary-controls-v7/20261003/train/temporal_window/11",
+      "boundary-controls-v7/20261003/train/temporal_window/12",
+      "boundary-controls-v7/20261003/train/temporal_window/13",
+      "boundary-controls-v7/20261003/train/temporal_window/14",
+      "boundary-controls-v7/20261003/train/temporal_window/15",
+      "boundary-controls-v7/20261003/train/temporal_window/16",
+      "boundary-controls-v7/20261003/train/temporal_window/17",
+      "boundary-controls-v7/20261003/train/temporal_window/18",
+      "boundary-controls-v7/20261003/train/temporal_window/19",
+      "boundary-controls-v7/20261003/train/temporal_window/2",
+      "boundary-controls-v7/20261003/train/temporal_window/20",
+      "boundary-controls-v7/20261003/train/temporal_window/21",
+      "boundary-controls-v7/20261003/train/temporal_window/22",
+      "boundary-controls-v7/20261003/train/temporal_window/23",
+      "boundary-controls-v7/20261003/train/temporal_window/24",
+      "boundary-controls-v7/20261003/train/temporal_window/25",
+      "boundary-controls-v7/20261003/train/temporal_window/26",
+      "boundary-controls-v7/20261003/train/temporal_window/27",
+      "boundary-controls-v7/20261003/train/temporal_window/28",
+      "boundary-controls-v7/20261003/train/temporal_window/29",
+      "boundary-controls-v7/20261003/train/temporal_window/3",
+      "boundary-controls-v7/20261003/train/temporal_window/30",
+      "boundary-controls-v7/20261003/train/temporal_window/31",
+      "boundary-controls-v7/20261003/train/temporal_window/4",
+      "boundary-controls-v7/20261003/train/temporal_window/5",
+      "boundary-controls-v7/20261003/train/temporal_window/6",
+      "boundary-controls-v7/20261003/train/temporal_window/7",
+      "boundary-controls-v7/20261003/train/temporal_window/8",
+      "boundary-controls-v7/20261003/train/temporal_window/9"
+    ],
+    "calibration": [
+      "boundary-controls-v7/20261003/calibration/exact_numeric/0",
+      "boundary-controls-v7/20261003/calibration/exact_numeric/1",
+      "boundary-controls-v7/20261003/calibration/exact_numeric/2",
+      "boundary-controls-v7/20261003/calibration/exact_numeric/3",
+      "boundary-controls-v7/20261003/calibration/joint_capacity/0",
+      "boundary-controls-v7/20261003/calibration/joint_capacity/1",
+      "boundary-controls-v7/20261003/calibration/joint_capacity/2",
+      "boundary-controls-v7/20261003/calibration/joint_capacity/3",
+      "boundary-controls-v7/20261003/calibration/latest_authority/0",
+      "boundary-controls-v7/20261003/calibration/latest_authority/1",
+      "boundary-controls-v7/20261003/calibration/latest_authority/2",
+      "boundary-controls-v7/20261003/calibration/latest_authority/3",
+      "boundary-controls-v7/20261003/calibration/temporal_window/0",
+      "boundary-controls-v7/20261003/calibration/temporal_window/1",
+      "boundary-controls-v7/20261003/calibration/temporal_window/2",
+      "boundary-controls-v7/20261003/calibration/temporal_window/3"
+    ],
+    "validation": [
+      "boundary-controls-v7/20261003/validation/exact_numeric/0",
+      "boundary-controls-v7/20261003/validation/exact_numeric/1",
+      "boundary-controls-v7/20261003/validation/exact_numeric/2",
+      "boundary-controls-v7/20261003/validation/exact_numeric/3",
+      "boundary-controls-v7/20261003/validation/joint_capacity/0",
+      "boundary-controls-v7/20261003/validation/joint_capacity/1",
+      "boundary-controls-v7/20261003/validation/joint_capacity/2",
+      "boundary-controls-v7/20261003/validation/joint_capacity/3",
+      "boundary-controls-v7/20261003/validation/latest_authority/0",
+      "boundary-controls-v7/20261003/validation/latest_authority/1",
+      "boundary-controls-v7/20261003/validation/latest_authority/2",
+      "boundary-controls-v7/20261003/validation/latest_authority/3",
+      "boundary-controls-v7/20261003/validation/temporal_window/0",
+      "boundary-controls-v7/20261003/validation/temporal_window/1",
+      "boundary-controls-v7/20261003/validation/temporal_window/2",
+      "boundary-controls-v7/20261003/validation/temporal_window/3"
+    ],
+    "test": [
+      "boundary-controls-v7/20261003/test/exact_numeric/0",
+      "boundary-controls-v7/20261003/test/exact_numeric/1",
+      "boundary-controls-v7/20261003/test/exact_numeric/2",
+      "boundary-controls-v7/20261003/test/exact_numeric/3",
+      "boundary-controls-v7/20261003/test/exact_numeric/4",
+      "boundary-controls-v7/20261003/test/exact_numeric/5",
+      "boundary-controls-v7/20261003/test/exact_numeric/6",
+      "boundary-controls-v7/20261003/test/exact_numeric/7",
+      "boundary-controls-v7/20261003/test/joint_capacity/0",
+      "boundary-controls-v7/20261003/test/joint_capacity/1",
+      "boundary-controls-v7/20261003/test/joint_capacity/2",
+      "boundary-controls-v7/20261003/test/joint_capacity/3",
+      "boundary-controls-v7/20261003/test/joint_capacity/4",
+      "boundary-controls-v7/20261003/test/joint_capacity/5",
+      "boundary-controls-v7/20261003/test/joint_capacity/6",
+      "boundary-controls-v7/20261003/test/joint_capacity/7",
+      "boundary-controls-v7/20261003/test/latest_authority/0",
+      "boundary-controls-v7/20261003/test/latest_authority/1",
+      "boundary-controls-v7/20261003/test/latest_authority/2",
+      "boundary-controls-v7/20261003/test/latest_authority/3",
+      "boundary-controls-v7/20261003/test/latest_authority/4",
+      "boundary-controls-v7/20261003/test/latest_authority/5",
+      "boundary-controls-v7/20261003/test/latest_authority/6",
+      "boundary-controls-v7/20261003/test/latest_authority/7",
+      "boundary-controls-v7/20261003/test/temporal_window/0",
+      "boundary-controls-v7/20261003/test/temporal_window/1",
+      "boundary-controls-v7/20261003/test/temporal_window/2",
+      "boundary-controls-v7/20261003/test/temporal_window/3",
+      "boundary-controls-v7/20261003/test/temporal_window/4",
+      "boundary-controls-v7/20261003/test/temporal_window/5",
+      "boundary-controls-v7/20261003/test/temporal_window/6",
+      "boundary-controls-v7/20261003/test/temporal_window/7"
+    ],
+    "ood": [
+      "boundary-controls-v7/20261003/ood/exact_numeric/0",
+      "boundary-controls-v7/20261003/ood/exact_numeric/1",
+      "boundary-controls-v7/20261003/ood/exact_numeric/2",
+      "boundary-controls-v7/20261003/ood/exact_numeric/3",
+      "boundary-controls-v7/20261003/ood/exact_numeric/4",
+      "boundary-controls-v7/20261003/ood/exact_numeric/5",
+      "boundary-controls-v7/20261003/ood/exact_numeric/6",
+      "boundary-controls-v7/20261003/ood/exact_numeric/7",
+      "boundary-controls-v7/20261003/ood/joint_capacity/0",
+      "boundary-controls-v7/20261003/ood/joint_capacity/1",
+      "boundary-controls-v7/20261003/ood/joint_capacity/2",
+      "boundary-controls-v7/20261003/ood/joint_capacity/3",
+      "boundary-controls-v7/20261003/ood/joint_capacity/4",
+      "boundary-controls-v7/20261003/ood/joint_capacity/5",
+      "boundary-controls-v7/20261003/ood/joint_capacity/6",
+      "boundary-controls-v7/20261003/ood/joint_capacity/7",
+      "boundary-controls-v7/20261003/ood/latest_authority/0",
+      "boundary-controls-v7/20261003/ood/latest_authority/1",
+      "boundary-controls-v7/20261003/ood/latest_authority/2",
+      "boundary-controls-v7/20261003/ood/latest_authority/3",
+      "boundary-controls-v7/20261003/ood/latest_authority/4",
+      "boundary-controls-v7/20261003/ood/latest_authority/5",
+      "boundary-controls-v7/20261003/ood/latest_authority/6",
+      "boundary-controls-v7/20261003/ood/latest_authority/7",
+      "boundary-controls-v7/20261003/ood/temporal_window/0",
+      "boundary-controls-v7/20261003/ood/temporal_window/1",
+      "boundary-controls-v7/20261003/ood/temporal_window/2",
+      "boundary-controls-v7/20261003/ood/temporal_window/3",
+      "boundary-controls-v7/20261003/ood/temporal_window/4",
+      "boundary-controls-v7/20261003/ood/temporal_window/5",
+      "boundary-controls-v7/20261003/ood/temporal_window/6",
+      "boundary-controls-v7/20261003/ood/temporal_window/7"
+    ]
+  }
+}

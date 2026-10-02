@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "new_rows_checked": 1792,
+  "reserved_rows_checked": 4000,
+  "matches": 0,
+  "policy": "All five original v4/v5/v6 splits are reserved against new-copy generation; only their existing Train rows may be reused in the mixture.",
+  "limits": "Explicit identity fields, state reuse and authored unordered lists only; not arbitrary semantic or pretraining independence.",
+  "screen_sha256": "ab1695c0d824ebe78322af3980784b4ad5a05b36efecba0fd2842a9037e70b37",
+  "original_sources": {
+    "v4": {
+      "manifest_sha256": "393cc5b5d37f1998571f1dfa3c3a2bb4ca855005989a133c5a1f4e6b53bec005",
+      "split_sha256": {
+        "train.jsonl": "0a0e9f2c4e3b8444d0e86766103072050163a438ce595fad4d28bb30037b8077",
+        "calibration.jsonl": "55cbbc3b0858e91f8d2dcbb4ead9357235bb9a78bb87562c8851ab55f5ef9901",
+        "validation.jsonl": "c3798acbba34ccf4e08dd90fee641e83eb5cb4eb892094a365dabe7a5b769cde",
+        "test.jsonl": "8242f47a926fc952e77add7014a9b2bb5882d8d525eeb6b92818013cc058dd90",
+        "ood.jsonl": "bc77b8c71bca4e75e5ca799687e7bb8f5ce73dd5a3c5faede089f0a1fdf67845"
+      },
+      "rows_sha256": {
+        "train": "a1dabdc6777110bfc18bcd800d00f7360f410b4e6e5b82ccf7502158c620259d",
+        "calibration": "b11df8c050d03ce2c09af1852b1097f9c01781eb5ce0928ccdb1a9b907ab4ae6",
+        "validation": "31cfbf07746e835ab8989cff6f843274c671e8e5837c28a28a7561fc1ee51242",
+        "test": "7f617cf20449129c77ab392161fd62e096c5b8b49119232ca583e3099b47c708",
+        "ood": "4c6b384908b5e1928bc31ce25b6497ce5473d2956eeaaf9385d3b5af3359bf5f"
+      },
+      "rows": {
+        "train": 2400,
+        "calibration": 240,
+        "validation": 240,
+        "test": 240,
+        "ood": 240
+      }
+    },
+    "v5": {
+      "manifest_sha256": "615a79fff7bb8ba9b3774efacab81f051d8ff16b92abeb6003ab6472d03d278c",
+      "split_sha256": {
+        "train.jsonl": "0af482a95fad393883576fb6557a6bf49730f70c715b1cb857cf54c115c39ddb",
+        "calibration.jsonl": "a3df2af27afba099084ac501c2a4d62c31bd06ebf61127b8a5ce2cbedf4814f2",
+        "validation.jsonl": "b041f485aa88c2a545cfe935bc2e0140f10f108d7addd58244f5be6c6e70efc0",
+        "test.jsonl": "871b940bc47d61672395225bbb893756b5abd0ecb690593d4c55c5ed2a909513",
+        "ood.jsonl": "cfc121f3067d59d2fcb80c589ebd5c82b6f754ef5f1922c3c0268f733b02d231"
+      },
+      "rows_sha256": {
+        "train": "87411ca3237313d03a4356efc821664f67f3997e505d5cb43969bffe1e348ac2",
+        "calibration": "1e767959771635a03617b78a7a68b027f7d3ea32cf11513046440ff6f575876d",
+        "validation": "63b84ca70d37c29f7306410e8c318982c4eefe65ab127f010dc49f09815081af",
+        "test": "8f2f8174a94e84f3c5e81de42f7c0098ea12c509d7bdeb7cea74d370873148c7",
+        "ood": "5e49b522828eed05274da314b9418616a376c761fba892488e7e86cb1def530b"
+      },
+      "rows": {
+        "train": 128,
+        "calibration": 32,
+        "validation": 32,
+        "test": 32,
+        "ood": 32
+      }
+    },
+    "v6": {
+      "manifest_sha256": "294d0841db0521962b2ac95b637d8a2c5367d934364bca41adae0c9dc80cd4d5",
+      "split_sha256": {
+        "train.jsonl": "451b2295452dea0c9463a109d85834214ab1c9f434821c8c253b32d783e2608e",
+        "calibration.jsonl": "834c5d57456d0f9cffd7a067b55ea4b5e5d8e38c449296faafdaf66ed07d896d",
+        "validation.jsonl": "68ba0f512fda0471c3a8ab3e32d70601b5c37009d141488cf0e433b0aeeb103b",
+        "test.jsonl": "807bd0d5e40f5883bf1f276fb732b2552fb992885cf45884364140e90231ef5b",
+        "ood.jsonl": "09d72bc41eaff341efa9e768874c433696e03199365b337733334540fc8f7537"
+      },
+      "rows_sha256": {
+        "train": "6ad171617780d78ab0c2c94fb08668cbd962efbc9e669bca7b62a90f4e037bfd",
+        "calibration": "c49f1768c7f744a47b6d93f3db1a5496325f7758b701b6175d6fe55ef83c2d03",
+        "validation": "7cb25144cd4797d7329df5012d3d76595949a3686510328d7af67d7b1465a094",
+        "test": "5eef6d51a8fbb59d611dc6efa0bb0f0ed8950861a9b792a8e160fbe95b493aa1",
+        "ood": "167a596ac5ab0902c367b6aabc6558ea77f5832f3fd4fedbbca080e2253764b9"
+      },
+      "rows": {
+        "train": 240,
+        "calibration": 36,
+        "validation": 36,
+        "test": 36,
+        "ood": 36
+      },
+      "frozen_candidate_sha256": "35bb2d6b408e7832d36cf8bbdb77839fda39b9cd99a90e7c9d388776705dcc9f"
+    }
+  },
+  "candidate_manifest_sha256": "13d182739eaf9ac9ebe623af7299750639b22f82393059c3b16fc222da31b267"
+}

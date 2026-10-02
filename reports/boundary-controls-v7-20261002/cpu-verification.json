@@ -1,0 +1,13 @@
+{
+  "full_portable_summary": [
+    "Ran 933 tests in 64.145s",
+    "OK (skipped=85)"
+  ],
+  "full_log_sha256": "5d66b5b31741a81b33dbf6ba4f3f7d592bc81a3a2d7332800437e6434efd0fdf",
+  "final_binding_changes": "Followed by seven preparation tests; latest GitHub CI must also pass before integration.",
+  "gpu_tests_skipped": 85,
+  "independent_rows_replayed": 1792,
+  "source_screen_reserved_rows": 4000,
+  "upstream_screen_detected_matches": 0,
+  "model_calls": 0
+}
