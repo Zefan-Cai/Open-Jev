@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "source_commit": "1ecbabb77d506d948dc7dd548f1cedb2f3f8f189",
+  "artifacts_sha256": {
+    "run.json": "7e42c6ad4d174ae1ae05300d4bbc8f537d17bc36760c5ff23df8bdebce5d4546",
+    "summary.json": "01f7e69ff89e89216b75752e8dc55ff705a587ad4f4be05a3c86867a58b2d8f7",
+    "training.jsonl": "210aee5cf2396cd8a27f9b14f06138ce38e3bd801d8af8e0ff8f178a4bc30cf5",
+    "calibration.jsonl": "ca8db7d78d853404fadc60d7d19a61d790d306024d56aaa774177be095a46f40"
+  },
+  "checkpoint": {
+    "files_sha256": {
+      "model.json": "d985eafa4d635113ee8cc912e0512a95aac0bed3426e9256931235b75cb3d6c5",
+      "head.pt": "4dfeee72dd04f41d82d8dcedd4d60a1cad2addc00c82bc4bf4bac1b4a7d0ad3e",
+      "temperature.json": "68aebc1d0b2b2c9fdf0fcd81bee1b269de8cbb7901e57d497873a319a5a38dc6",
+      "adapter/adapter_model.safetensors": "d40bb6f7a61c064d3a453f7b20548d4db76f1b34ebeb6dc520cfd99e5853901b",
+      "adapter/README.md": "f9e934433c6ae81516474d416c6b1dcf5193fe08bf41205363cf0b5b33760c1e",
+      "adapter/adapter_config.json": "bf79aec7f876744ae4b607fdcb1a2dcddf4bdcd99566b3255deaef6b90f3a27c"
+    },
+    "directory_sha256": "3096ee7bcad662203d8f309802cdfe26295c0069cce345199cb2b6ad99f766e5"
+  },
+  "driver_sha256": "9e16fc58a1bd0a268ce3593fe79807eb226cd3170009591b3afe0347a3064e42",
+  "cpu_stage_receipt_sha256": "0b63fc52edcd45c2c0b54802ad6fb6beb4e3b883c4d67e6241d51eb37c54d9f5",
+  "initial_load_verification_sha256": "d878d2043bb96c8c60650bdb69ecb2fcfbd4d41beeefe41b1fea053d19f8ec34",
+  "first_step_gradient_verification_sha256": "52afa0fd6e6de4c6fa00445108afc9ea758903d09241a46dd88b6a3b795c8db9",
+  "elapsed_seconds": 631.8046288490295
+}

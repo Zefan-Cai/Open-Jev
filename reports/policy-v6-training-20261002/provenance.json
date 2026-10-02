@@ -1,0 +1,26 @@
+{
+  "training_source_commit": "1ecbabb77d506d948dc7dd548f1cedb2f3f8f189",
+  "evaluation_source_commit": "58d45064c98f133a614addc0a3bab712707a1b4c",
+  "plan_sha256": "c3f44415e7000fa5a7c0653c85519956596d1ff845ee2afed82d9777f5174c82",
+  "raw_comparison_files_sha256": {
+    "adapted_v6_test.jsonl": "c1a1e2b3fb669e654505d24f2fbfe43d037b9196cd130783e3b9745c2ef81a20",
+    "summary.json": "c61a09839025593cb3431900ec3e01d7d9462b7354f675a51d5cc726716fba87",
+    "adapted_v5_ood.jsonl": "1878dc7a432fe4d1a7c6b5c7064328adcdb901d2382f8192c135415d9a2157b3",
+    "released_v5_ood.jsonl": "aa397a31ad0080639b7135dd4cdd155aa8f992971e488eb24c09258520f5c690",
+    "released_v5_test.jsonl": "7337cd79586a7dbcd47eaacf3d6dc7aea52f246a3ed2fbd52069f444d4c2240e",
+    "adapted_v4_test.jsonl": "71d9cb099e35d64c8573b8cda95f7b4176aa58b526924c8b6e3dd06110bda7fb",
+    "adapted_v4_ood.jsonl": "c394b421a967ea0e23ec1dc8acc2c376f0590509f4c6d0588add5c4558358bfc",
+    "released_v4_ood.jsonl": "463a43a1be31629096af7f572ff3cdde90b51732a0b9adce04283fac480c5047",
+    "adapted.runtime.json": "6c9097a34ddf1be1341e89b93556b98f1420b9635a4f65841f663be23934b0be",
+    "released_v6_test.jsonl": "e0e45762ce61f54e0515cf8bc229a047bd3e3d4635d813b375b819fb13536cf4",
+    "released.runtime.json": "6c9097a34ddf1be1341e89b93556b98f1420b9635a4f65841f663be23934b0be",
+    "adapted_v6_ood.jsonl": "8eeb0b7fcce08291f73e0742b13d44c76ed2210f3f0d27a9024551c3ee91cb3e",
+    "adapted_v5_test.jsonl": "8cc36c6c1701aa1d77f7ed9d02cc129978be7b5600cf286298f591da8a11141d",
+    "released_v4_test.jsonl": "e8a25f86be022065e34e4ef1c1d9f9ead360d713646a64ef7f181468f3d0a84f",
+    "released_v6_ood.jsonl": "0a156d4f03234c1fda4220d1723319e4d9b3305bc2e452e525f48746d8241bab",
+    "comparison.lock.json": "8c26c382cbf44f74f872f36f30d1b992416c6533c14a6c16f55abc5fb535affb"
+  },
+  "public_summary_omits_device_identifiers": true,
+  "candidate_promoted": false,
+  "scope": "Fixed synthetic Test/OOD and observed v4/v5 regression controls only. No natural-request or official JevBench result; no test/OOD fitting or release promotion. Latest-policy withdrawal/missing authority is not represented in v6 heldout."
+}

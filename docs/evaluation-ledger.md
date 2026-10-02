@@ -98,3 +98,24 @@ Record hardware, actual denominators, attempted/failed/missing requests,
 per-primitive accuracy/calibration/coverage, warmup/retry policy, raw timings
 and cost assumptions with the returned aggregate. The new sealed status
 remains **pending independent evaluator** until those results exist.
+
+## Controlled synthetic v6 adaptation: completed, candidate not promoted
+
+The [fixed 2B run](../reports/policy-v6-training-20261002/README.md) completed
+692 steps over 2,768 Train rows. A same-runtime comparison used 392 decisions
+per checkpoint and retained both temperature ablations. Independent raw-logit
+replay reproduced every metric cell and subgroup.
+
+| Fixed slice | Released argmax correct | Adapted argmax correct |
+|---|---:|---:|
+| v6 Test | 20/36 | 32/36 |
+| v6 OOD | 21/36 | 32/36 |
+| observed v4 Test / OOD | 86/128 / 83/128 | 114/128 / 113/128 |
+| observed v5 Test / OOD | 15/32 / 17/32 | 24/32 / 25/32 |
+
+These synthetic controls do not fill an official or natural-request result.
+All 12 outside-window Choice requests still select `accept`, joint capacity
+and missing-scope failures remain, and 13 previously correct rows become
+wrong. Noul thresholds, accepted errors, coverage, calibration and per-row
+regressions are retained in the report. The final weights remain experimental;
+released model results above stay unchanged.

@@ -1,0 +1,1653 @@
+{
+  "v6_test": {
+    "final_errors": [
+      {
+        "id": "original-policy-controls-v6-candidate/20261002/test/scoped_joint_approval/0/v0",
+        "family": "scoped_joint_approval",
+        "kind": "choice",
+        "gold": "execute",
+        "released_action": "request higher capacity",
+        "adapted_action": "request missing consent",
+        "semantic": {
+          "family": "scoped_joint_approval",
+          "kind": "choice",
+          "approval_authority": "execute",
+          "rejection": "not_rejected",
+          "amount_boundary": "equal_capacity",
+          "gold_disposition": "execute"
+        },
+        "probabilities": {
+          "execute": 0.2414501473304911,
+          "request higher capacity": 0.16702855406938483,
+          "request missing consent": 0.5521454388378334,
+          "reject revoked consent": 0.03937585976229066
+        },
+        "proposed_outcome": null,
+        "amount_cents": 70980
+      },
+      {
+        "id": "original-policy-controls-v6-candidate/20261002/test/scoped_joint_approval/0/v3",
+        "family": "scoped_joint_approval",
+        "kind": "noul",
+        "gold": "yes",
+        "released_action": "no",
+        "adapted_action": "no",
+        "semantic": {
+          "family": "scoped_joint_approval",
+          "kind": "noul",
+          "approval_authority": "request higher capacity",
+          "rejection": "not_rejected",
+          "amount_boundary": "one_cent_above",
+          "gold_disposition": "request higher capacity"
+        },
+        "probabilities": {
+          "no": 0.7193989366984059,
+          "yes": 0.2806010633015941
+        },
+        "proposed_outcome": "request higher capacity",
+        "threshold_decision": "abstained",
+        "amount_cents": 70981
+      },
+      {
+        "id": "original-policy-controls-v6-candidate/20261002/test/scoped_joint_approval/1/v2",
+        "family": "scoped_joint_approval",
+        "kind": "choice",
+        "gold": "request missing consent",
+        "released_action": "request higher capacity",
+        "adapted_action": "execute",
+        "semantic": {
+          "family": "scoped_joint_approval",
+          "kind": "choice",
+          "approval_authority": "request missing consent",
+          "rejection": "missing_scope_consent",
+          "amount_boundary": "authority_blocked",
+          "gold_disposition": "request missing consent"
+        },
+        "probabilities": {
+          "reject revoked consent": 0.018222087073467362,
+          "request missing consent": 0.08074890963134992,
+          "request higher capacity": 0.04785957812498196,
+          "execute": 0.8531694251702008
+        },
+        "proposed_outcome": null,
+        "amount_cents": 53749
+      },
+      {
+        "id": "original-policy-controls-v6-candidate/20261002/test/scoped_joint_approval/2/v3",
+        "family": "scoped_joint_approval",
+        "kind": "noul",
+        "gold": "yes",
+        "released_action": "no",
+        "adapted_action": "no",
+        "semantic": {
+          "family": "scoped_joint_approval",
+          "kind": "noul",
+          "approval_authority": "request higher capacity",
+          "rejection": "not_rejected",
+          "amount_boundary": "one_cent_above",
+          "gold_disposition": "request higher capacity"
+        },
+        "probabilities": {
+          "no": 0.8167085848249367,
+          "yes": 0.18329141517506337
+        },
+        "proposed_outcome": "request higher capacity",
+        "threshold_decision": "no",
+        "amount_cents": 71775
+      }
+    ],
+    "correct_to_wrong": [],
+    "amount_by_family": {
+      "explicit_refund_priority/equal_limit": {
+        "n": 9,
+        "released_correct": 7,
+        "adapted_correct": 9
+      },
+      "explicit_refund_priority/one_cent_above": {
+        "n": 3,
+        "released_correct": 2,
+        "adapted_correct": 3
+      },
+      "scoped_joint_approval/equal_capacity": {
+        "n": 3,
+        "released_correct": 0,
+        "adapted_correct": 2
+      },
+      "scoped_joint_approval/authority_blocked": {
+        "n": 6,
+        "released_correct": 1,
+        "adapted_correct": 5
+      },
+      "scoped_joint_approval/one_cent_above": {
+        "n": 3,
+        "released_correct": 1,
+        "adapted_correct": 1
+      },
+      "untrusted_policy_conflict/equal_signed_limit": {
+        "n": 9,
+        "released_correct": 9,
+        "adapted_correct": 9
+      },
+      "untrusted_policy_conflict/one_cent_above": {
+        "n": 3,
+        "released_correct": 0,
+        "adapted_correct": 3
+      }
+    },
+    "outside_window_actions": []
+  },
+  "v6_ood": {
+    "final_errors": [
+      {
+        "id": "original-policy-controls-v6-candidate/20261002/ood/scoped_joint_approval/0/v0",
+        "family": "scoped_joint_approval",
+        "kind": "choice",
+        "gold": "execute",
+        "released_action": "request higher capacity",
+        "adapted_action": "request missing consent",
+        "semantic": {
+          "family": "scoped_joint_approval",
+          "kind": "choice",
+          "approval_authority": "execute",
+          "rejection": "not_rejected",
+          "amount_boundary": "equal_capacity",
+          "gold_disposition": "execute"
+        },
+        "probabilities": {
+          "execute": 0.04194866740846693,
+          "request higher capacity": 0.03294500482241373,
+          "reject revoked consent": 0.047518781751680755,
+          "request missing consent": 0.8775875460174387
+        },
+        "proposed_outcome": null,
+        "amount_cents": 345880
+      },
+      {
+        "id": "original-policy-controls-v6-candidate/20261002/ood/scoped_joint_approval/1/v0",
+        "family": "scoped_joint_approval",
+        "kind": "choice",
+        "gold": "execute",
+        "released_action": "request missing consent",
+        "adapted_action": "request missing consent",
+        "semantic": {
+          "family": "scoped_joint_approval",
+          "kind": "choice",
+          "approval_authority": "execute",
+          "rejection": "not_rejected",
+          "amount_boundary": "equal_capacity",
+          "gold_disposition": "execute"
+        },
+        "probabilities": {
+          "request missing consent": 0.7102169846997134,
+          "request higher capacity": 0.038075615411492236,
+          "reject revoked consent": 0.03245300865179871,
+          "execute": 0.21925439123699575
+        },
+        "proposed_outcome": null,
+        "amount_cents": 423749
+      },
+      {
+        "id": "original-policy-controls-v6-candidate/20261002/ood/scoped_joint_approval/1/v3",
+        "family": "scoped_joint_approval",
+        "kind": "noul",
+        "gold": "no",
+        "released_action": "no",
+        "adapted_action": "yes",
+        "semantic": {
+          "family": "scoped_joint_approval",
+          "kind": "noul",
+          "approval_authority": "request higher capacity",
+          "rejection": "not_rejected",
+          "amount_boundary": "one_cent_above",
+          "gold_disposition": "request higher capacity"
+        },
+        "probabilities": {
+          "no": 0.47849762948792346,
+          "yes": 0.5215023705120765
+        },
+        "proposed_outcome": "request missing consent",
+        "threshold_decision": "abstained",
+        "amount_cents": 423750
+      },
+      {
+        "id": "original-policy-controls-v6-candidate/20261002/ood/scoped_joint_approval/2/v3",
+        "family": "scoped_joint_approval",
+        "kind": "noul",
+        "gold": "yes",
+        "released_action": "no",
+        "adapted_action": "no",
+        "semantic": {
+          "family": "scoped_joint_approval",
+          "kind": "noul",
+          "approval_authority": "request higher capacity",
+          "rejection": "not_rejected",
+          "amount_boundary": "one_cent_above",
+          "gold_disposition": "request higher capacity"
+        },
+        "probabilities": {
+          "no": 0.8639882147953777,
+          "yes": 0.13601178520462223
+        },
+        "proposed_outcome": "request higher capacity",
+        "threshold_decision": "no",
+        "amount_cents": 301263
+      }
+    ],
+    "correct_to_wrong": [
+      {
+        "id": "original-policy-controls-v6-candidate/20261002/ood/scoped_joint_approval/1/v3",
+        "family": "scoped_joint_approval",
+        "kind": "noul",
+        "gold": "no",
+        "released_action": "no",
+        "adapted_action": "yes",
+        "semantic": {
+          "family": "scoped_joint_approval",
+          "kind": "noul",
+          "approval_authority": "request higher capacity",
+          "rejection": "not_rejected",
+          "amount_boundary": "one_cent_above",
+          "gold_disposition": "request higher capacity"
+        },
+        "probabilities": {
+          "no": 0.47849762948792346,
+          "yes": 0.5215023705120765
+        },
+        "proposed_outcome": "request missing consent",
+        "threshold_decision": "abstained",
+        "amount_cents": 423750
+      }
+    ],
+    "amount_by_family": {
+      "explicit_refund_priority/equal_limit": {
+        "n": 9,
+        "released_correct": 6,
+        "adapted_correct": 9
+      },
+      "explicit_refund_priority/one_cent_above": {
+        "n": 3,
+        "released_correct": 3,
+        "adapted_correct": 3
+      },
+      "scoped_joint_approval/equal_capacity": {
+        "n": 3,
+        "released_correct": 0,
+        "adapted_correct": 1
+      },
+      "scoped_joint_approval/authority_blocked": {
+        "n": 6,
+        "released_correct": 1,
+        "adapted_correct": 6
+      },
+      "scoped_joint_approval/one_cent_above": {
+        "n": 3,
+        "released_correct": 2,
+        "adapted_correct": 1
+      },
+      "untrusted_policy_conflict/equal_signed_limit": {
+        "n": 9,
+        "released_correct": 6,
+        "adapted_correct": 9
+      },
+      "untrusted_policy_conflict/one_cent_above": {
+        "n": 3,
+        "released_correct": 3,
+        "adapted_correct": 3
+      }
+    },
+    "outside_window_actions": []
+  },
+  "v4_test": {
+    "final_errors": [
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/3/v0",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 244.84",
+        "released_action": "USD 244.84",
+        "adapted_action": "USD 244.86",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 244.84"
+        },
+        "probabilities": {
+          "USD 243.84": 0.11331824441650641,
+          "USD 244.84": 0.23426040903249493,
+          "USD 245.86": 0.1906764356425305,
+          "USD 244.86": 0.23689108757458366,
+          "USD 244.85": 0.22485382333388437
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/3/v1",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 244.85",
+        "released_action": "USD 244.84",
+        "adapted_action": "USD 244.86",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 244.85"
+        },
+        "probabilities": {
+          "USD 245.86": 0.13662529534730544,
+          "USD 244.84": 0.2574236785953855,
+          "USD 244.85": 0.24380548355386908,
+          "USD 243.84": 0.10162173746070294,
+          "USD 244.86": 0.2605238050427371
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/3/v3",
+        "family": "numeric_candidates",
+        "kind": "noul",
+        "gold": "yes",
+        "released_action": "no",
+        "adapted_action": "no",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "noul",
+          "gold_disposition": "USD 245.86"
+        },
+        "probabilities": {
+          "no": 0.9119083541251095,
+          "yes": 0.08809164587489038
+        },
+        "proposed_outcome": "USD 245.86",
+        "threshold_decision": "no"
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/1/v2",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 388.34",
+        "released_action": "USD 388.32",
+        "adapted_action": "USD 388.32",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 388.34"
+        },
+        "probabilities": {
+          "USD 387.32": 0.03364917525000837,
+          "USD 388.33": 0.3027488144128491,
+          "USD 388.34": 0.30353247366663055,
+          "USD 389.34": 0.04786430680463478,
+          "USD 388.32": 0.3122052298658771
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/1/v3",
+        "family": "numeric_candidates",
+        "kind": "noul",
+        "gold": "yes",
+        "released_action": "no",
+        "adapted_action": "no",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "noul",
+          "gold_disposition": "USD 389.34"
+        },
+        "probabilities": {
+          "no": 0.8287044795320402,
+          "yes": 0.1712955204679599
+        },
+        "proposed_outcome": "USD 389.34",
+        "threshold_decision": "no"
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/9/v0",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 822.10",
+        "released_action": "USD 822.12",
+        "adapted_action": "USD 822.12",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 822.10"
+        },
+        "probabilities": {
+          "USD 821.10": 0.07268039359618302,
+          "USD 822.11": 0.28321336872514746,
+          "USD 822.12": 0.29168611554676976,
+          "USD 822.10": 0.28731193690251444,
+          "USD 823.12": 0.06510818522938532
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/9/v1",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 822.11",
+        "released_action": "USD 822.12",
+        "adapted_action": "USD 822.10",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 822.11"
+        },
+        "probabilities": {
+          "USD 822.10": 0.3014901248403486,
+          "USD 821.10": 0.07778271992491595,
+          "USD 822.12": 0.2831908538801444,
+          "USD 822.11": 0.2724851646863599,
+          "USD 823.12": 0.06505113666823108
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/9/v2",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 822.12",
+        "released_action": "USD 822.12",
+        "adapted_action": "USD 822.10",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 822.12"
+        },
+        "probabilities": {
+          "USD 822.12": 0.26973832448912244,
+          "USD 823.12": 0.07670300977955152,
+          "USD 822.10": 0.2858986251079063,
+          "USD 821.10": 0.10141680799071326,
+          "USD 822.11": 0.2662432326327065
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/4/v0",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 8.38",
+        "released_action": "USD 8.39",
+        "adapted_action": "USD 8.40",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 8.38"
+        },
+        "probabilities": {
+          "USD 8.39": 0.2409563222638211,
+          "USD 8.38": 0.23804918264760463,
+          "USD 7.38": 0.12950400970925394,
+          "USD 8.40": 0.24102620548185058,
+          "USD 9.40": 0.15046427989746966
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/4/v1",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 8.39",
+        "released_action": "USD 9.40",
+        "adapted_action": "USD 9.40",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 8.39"
+        },
+        "probabilities": {
+          "USD 8.39": 0.10059439602858324,
+          "USD 9.40": 0.3327759358507754,
+          "USD 7.38": 0.18929213221529032,
+          "USD 8.40": 0.25554007552247643,
+          "USD 8.38": 0.1217974603828747
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/4/v2",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 8.40",
+        "released_action": "USD 9.40",
+        "adapted_action": "USD 9.40",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 8.40"
+        },
+        "probabilities": {
+          "USD 7.38": 0.19784448200973104,
+          "USD 8.40": 0.22071610194095997,
+          "USD 8.38": 0.1422192401939689,
+          "USD 9.40": 0.30408381295683873,
+          "USD 8.39": 0.13513636289850134
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/4/v3",
+        "family": "numeric_candidates",
+        "kind": "noul",
+        "gold": "yes",
+        "released_action": "no",
+        "adapted_action": "no",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "noul",
+          "gold_disposition": "USD 9.40"
+        },
+        "probabilities": {
+          "no": 0.9517619477188958,
+          "yes": 0.04823805228110411
+        },
+        "proposed_outcome": "USD 9.40",
+        "threshold_decision": "no"
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/6/v0",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 355.08",
+        "released_action": "USD 355.08",
+        "adapted_action": "USD 355.10",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 355.08"
+        },
+        "probabilities": {
+          "USD 355.09": 0.23251714460718068,
+          "USD 355.10": 0.28977560067151764,
+          "USD 355.08": 0.2606952826710504,
+          "USD 356.10": 0.08029991000841553,
+          "USD 354.08": 0.13671206204183578
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/6/v1",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 355.09",
+        "released_action": "USD 355.08",
+        "adapted_action": "USD 355.10",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 355.09"
+        },
+        "probabilities": {
+          "USD 355.08": 0.262633605933989,
+          "USD 354.08": 0.11703292720127952,
+          "USD 355.10": 0.2974748491025652,
+          "USD 355.09": 0.24602587713700894,
+          "USD 356.10": 0.0768327406251573
+        },
+        "proposed_outcome": null
+      }
+    ],
+    "correct_to_wrong": [
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/3/v0",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 244.84",
+        "released_action": "USD 244.84",
+        "adapted_action": "USD 244.86",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 244.84"
+        },
+        "probabilities": {
+          "USD 243.84": 0.11331824441650641,
+          "USD 244.84": 0.23426040903249493,
+          "USD 245.86": 0.1906764356425305,
+          "USD 244.86": 0.23689108757458366,
+          "USD 244.85": 0.22485382333388437
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/9/v2",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 822.12",
+        "released_action": "USD 822.12",
+        "adapted_action": "USD 822.10",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 822.12"
+        },
+        "probabilities": {
+          "USD 822.12": 0.26973832448912244,
+          "USD 823.12": 0.07670300977955152,
+          "USD 822.10": 0.2858986251079063,
+          "USD 821.10": 0.10141680799071326,
+          "USD 822.11": 0.2662432326327065
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/test/numeric_candidates/6/v0",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 355.08",
+        "released_action": "USD 355.08",
+        "adapted_action": "USD 355.10",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 355.08"
+        },
+        "probabilities": {
+          "USD 355.09": 0.23251714460718068,
+          "USD 355.10": 0.28977560067151764,
+          "USD 355.08": 0.2606952826710504,
+          "USD 356.10": 0.08029991000841553,
+          "USD 354.08": 0.13671206204183578
+        },
+        "proposed_outcome": null
+      }
+    ],
+    "amount_by_family": {},
+    "outside_window_actions": [
+      {
+        "kind": "choice",
+        "gold": "reject",
+        "adapted": "reject",
+        "n": 6
+      }
+    ]
+  },
+  "v4_ood": {
+    "final_errors": [
+      {
+        "id": "frontier-controls-v4/ood/state_tracking/2/v3",
+        "family": "state_tracking",
+        "kind": "noul",
+        "gold": "no",
+        "released_action": "yes",
+        "adapted_action": "yes",
+        "semantic": {
+          "family": "state_tracking",
+          "kind": "noul",
+          "gold_disposition": "unknown"
+        },
+        "probabilities": {
+          "no": 0.4886688624348473,
+          "yes": 0.5113311375651527
+        },
+        "proposed_outcome": "active",
+        "threshold_decision": "abstained"
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/0/v1",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 102.31",
+        "released_action": "USD 102.30",
+        "adapted_action": "USD 102.30",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 102.31"
+        },
+        "probabilities": {
+          "USD 102.31": 0.223461459402918,
+          "USD 103.32": 0.09436811187534194,
+          "USD 102.30": 0.23445622417917036,
+          "USD 101.30": 0.22108302263057325,
+          "USD 102.32": 0.22663118191199633
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/0/v2",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 102.32",
+        "released_action": "USD 102.30",
+        "adapted_action": "USD 102.30",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 102.32"
+        },
+        "probabilities": {
+          "USD 103.32": 0.0888094390440824,
+          "USD 101.30": 0.21695841530046708,
+          "USD 102.30": 0.2420990514217544,
+          "USD 102.31": 0.22734316168081747,
+          "USD 102.32": 0.2247899325528786
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/0/v3",
+        "family": "numeric_candidates",
+        "kind": "noul",
+        "gold": "yes",
+        "released_action": "no",
+        "adapted_action": "no",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "noul",
+          "gold_disposition": "USD 103.32"
+        },
+        "probabilities": {
+          "no": 0.6502198877943622,
+          "yes": 0.3497801122056378
+        },
+        "proposed_outcome": "USD 103.32",
+        "threshold_decision": "abstained"
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/4/v1",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 872.23",
+        "released_action": "USD 872.24",
+        "adapted_action": "USD 872.24",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 872.23"
+        },
+        "probabilities": {
+          "USD 872.24": 0.27982999655623303,
+          "USD 871.22": 0.10870673620724525,
+          "USD 873.24": 0.081518377214641,
+          "USD 872.22": 0.26669198702024133,
+          "USD 872.23": 0.2632529030016394
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/4/v2",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 872.24",
+        "released_action": "USD 872.24",
+        "adapted_action": "USD 872.22",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 872.24"
+        },
+        "probabilities": {
+          "USD 872.24": 0.27373503979802977,
+          "USD 872.22": 0.275337348414159,
+          "USD 871.22": 0.10621393618794096,
+          "USD 872.23": 0.2684333371967572,
+          "USD 873.24": 0.07628033840311306
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/3/v0",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 88.77",
+        "released_action": "USD 88.78",
+        "adapted_action": "USD 88.79",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 88.77"
+        },
+        "probabilities": {
+          "USD 88.78": 0.21925515626329622,
+          "USD 89.79": 0.09689618510935194,
+          "USD 88.77": 0.22710717240676695,
+          "USD 87.77": 0.21852724036122453,
+          "USD 88.79": 0.23821424585936038
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/3/v1",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 88.78",
+        "released_action": "USD 88.78",
+        "adapted_action": "USD 88.79",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 88.78"
+        },
+        "probabilities": {
+          "USD 89.79": 0.095614498147846,
+          "USD 88.79": 0.23294657967727792,
+          "USD 88.78": 0.21717570015835802,
+          "USD 88.77": 0.22610587303310917,
+          "USD 87.77": 0.22815734898340895
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/3/v3",
+        "family": "numeric_candidates",
+        "kind": "noul",
+        "gold": "yes",
+        "released_action": "no",
+        "adapted_action": "no",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "noul",
+          "gold_disposition": "USD 89.79"
+        },
+        "probabilities": {
+          "no": 0.8468324480734886,
+          "yes": 0.15316755192651135
+        },
+        "proposed_outcome": "USD 89.79",
+        "threshold_decision": "no"
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/7/v0",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 778.60",
+        "released_action": "USD 778.61",
+        "adapted_action": "USD 778.61",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 778.60"
+        },
+        "probabilities": {
+          "USD 778.60": 0.24527518115572408,
+          "USD 778.62": 0.24204952160357798,
+          "USD 779.62": 0.09382516128983137,
+          "USD 778.61": 0.2504855398915905,
+          "USD 777.60": 0.1683645960592761
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/7/v1",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 778.61",
+        "released_action": "USD 778.62",
+        "adapted_action": "USD 778.60",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 778.61"
+        },
+        "probabilities": {
+          "USD 777.60": 0.15360697582383723,
+          "USD 778.61": 0.24840447995606282,
+          "USD 779.62": 0.10258153576585091,
+          "USD 778.60": 0.25044069243895273,
+          "USD 778.62": 0.24496631601529628
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/7/v2",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 778.62",
+        "released_action": "USD 778.62",
+        "adapted_action": "USD 778.60",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 778.62"
+        },
+        "probabilities": {
+          "USD 778.60": 0.2581557561686583,
+          "USD 778.61": 0.25127669496583843,
+          "USD 779.62": 0.09599434985254042,
+          "USD 777.60": 0.14825538738773641,
+          "USD 778.62": 0.24631781162522637
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/6/v0",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 28.86",
+        "released_action": "USD 29.88",
+        "adapted_action": "USD 29.88",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 28.86"
+        },
+        "probabilities": {
+          "USD 28.87": 0.18524840452085778,
+          "USD 29.88": 0.2617080578295331,
+          "USD 28.86": 0.20570839968857235,
+          "USD 28.88": 0.19897524481883558,
+          "USD 27.86": 0.1483598931422012
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/6/v1",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 28.87",
+        "released_action": "USD 29.88",
+        "adapted_action": "USD 29.88",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 28.87"
+        },
+        "probabilities": {
+          "USD 28.87": 0.15152254707141757,
+          "USD 28.88": 0.1798424933162259,
+          "USD 29.88": 0.3144621092816668,
+          "USD 28.86": 0.19752728374051842,
+          "USD 27.86": 0.15664556659017126
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/6/v2",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 28.88",
+        "released_action": "USD 29.88",
+        "adapted_action": "USD 29.88",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 28.88"
+        },
+        "probabilities": {
+          "USD 28.86": 0.19836526826145,
+          "USD 27.86": 0.16287688289211538,
+          "USD 29.88": 0.2736773439067652,
+          "USD 28.88": 0.19003716184711275,
+          "USD 28.87": 0.17504334309255662
+        },
+        "proposed_outcome": null
+      }
+    ],
+    "correct_to_wrong": [
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/4/v2",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 872.24",
+        "released_action": "USD 872.24",
+        "adapted_action": "USD 872.22",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 872.24"
+        },
+        "probabilities": {
+          "USD 872.24": 0.27373503979802977,
+          "USD 872.22": 0.275337348414159,
+          "USD 871.22": 0.10621393618794096,
+          "USD 872.23": 0.2684333371967572,
+          "USD 873.24": 0.07628033840311306
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/3/v1",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 88.78",
+        "released_action": "USD 88.78",
+        "adapted_action": "USD 88.79",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 88.78"
+        },
+        "probabilities": {
+          "USD 89.79": 0.095614498147846,
+          "USD 88.79": 0.23294657967727792,
+          "USD 88.78": 0.21717570015835802,
+          "USD 88.77": 0.22610587303310917,
+          "USD 87.77": 0.22815734898340895
+        },
+        "proposed_outcome": null
+      },
+      {
+        "id": "frontier-controls-v4/ood/numeric_candidates/7/v2",
+        "family": "numeric_candidates",
+        "kind": "choice",
+        "gold": "USD 778.62",
+        "released_action": "USD 778.62",
+        "adapted_action": "USD 778.60",
+        "semantic": {
+          "family": "numeric_candidates",
+          "kind": "choice",
+          "gold_disposition": "USD 778.62"
+        },
+        "probabilities": {
+          "USD 778.60": 0.2581557561686583,
+          "USD 778.61": 0.25127669496583843,
+          "USD 779.62": 0.09599434985254042,
+          "USD 777.60": 0.14825538738773641,
+          "USD 778.62": 0.24631781162522637
+        },
+        "proposed_outcome": null
+      }
+    ],
+    "amount_by_family": {},
+    "outside_window_actions": [
+      {
+        "kind": "choice",
+        "gold": "reject",
+        "adapted": "reject",
+        "n": 6
+      }
+    ]
+  },
+  "v5_test": {
+    "final_errors": [
+      {
+        "id": "temporal-windows-v5/test/4/v0",
+        "family": "timeline",
+        "kind": "noul",
+        "gold": "no",
+        "released_action": "no",
+        "adapted_action": "yes",
+        "semantic": {
+          "family": "timeline",
+          "kind": "noul",
+          "temporal_boundary": "before_delivery",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "no": 0.4805771564117796,
+          "yes": 0.5194228435882203
+        },
+        "proposed_outcome": "accept",
+        "threshold_decision": "abstained",
+        "timestamps": {
+          "delivered_at": "2066-02-28T23:34:29+00:00",
+          "request_received_at": "2066-03-01T05:04:28+05:30",
+          "return_window_hours": 25
+        }
+      },
+      {
+        "id": "temporal-windows-v5/test/3/v2",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "reject",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "after_deadline",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "review": 0.01677050075603143,
+          "reject": 0.12437773015256558,
+          "accept": 0.858851769091403
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2045-01-31T15:58:14-08:00",
+          "request_received_at": "2045-02-01T00:58:15+00:00",
+          "return_window_hours": 1
+        }
+      },
+      {
+        "id": "temporal-windows-v5/test/5/v2",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "accept",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "after_deadline",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "review": 0.0337401276554606,
+          "accept": 0.8308190866813181,
+          "reject": 0.1354407856632213
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2039-01-01T05:08:41+05:30",
+          "request_received_at": "2039-01-02T16:38:42-08:00",
+          "return_window_hours": 49
+        }
+      },
+      {
+        "id": "temporal-windows-v5/test/7/v2",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "accept",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "after_deadline",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "accept": 0.8620844010236528,
+          "review": 0.021011074933213334,
+          "reject": 0.11690452404313378
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2039-02-28T23:48:43+00:00",
+          "request_received_at": "2039-03-02T06:18:44+05:30",
+          "return_window_hours": 25
+        }
+      },
+      {
+        "id": "temporal-windows-v5/test/2/v0",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "accept",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "before_delivery",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "reject": 0.14784779643423623,
+          "review": 0.042471500539842985,
+          "accept": 0.8096807030259207
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2050-01-01T04:47:56+05:30",
+          "request_received_at": "2049-12-31T15:17:55-08:00",
+          "return_window_hours": 49
+        }
+      },
+      {
+        "id": "temporal-windows-v5/test/6/v0",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "accept",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "before_delivery",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "reject": 0.13228476809456075,
+          "review": 0.028622979630466908,
+          "accept": 0.8390922522749723
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2095-01-31T15:42:57-08:00",
+          "request_received_at": "2095-01-31T23:42:56+00:00",
+          "return_window_hours": 1
+        }
+      },
+      {
+        "id": "temporal-windows-v5/test/0/v0",
+        "family": "timeline",
+        "kind": "noul",
+        "gold": "yes",
+        "released_action": "no",
+        "adapted_action": "no",
+        "semantic": {
+          "family": "timeline",
+          "kind": "noul",
+          "temporal_boundary": "before_delivery",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "no": 0.7763833455087913,
+          "yes": 0.2236166544912086
+        },
+        "proposed_outcome": "reject",
+        "threshold_decision": "abstained",
+        "timestamps": {
+          "delivered_at": "2054-01-31T15:43:23-08:00",
+          "request_received_at": "2054-01-31T23:43:22+00:00",
+          "return_window_hours": 1
+        }
+      },
+      {
+        "id": "temporal-windows-v5/test/1/v2",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "accept",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "after_deadline",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "reject": 0.11569551034090196,
+          "accept": 0.8610222952891735,
+          "review": 0.023282194369924583
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2062-02-28T23:31:59+00:00",
+          "request_received_at": "2062-03-02T06:02:00+05:30",
+          "return_window_hours": 25
+        }
+      }
+    ],
+    "correct_to_wrong": [
+      {
+        "id": "temporal-windows-v5/test/4/v0",
+        "family": "timeline",
+        "kind": "noul",
+        "gold": "no",
+        "released_action": "no",
+        "adapted_action": "yes",
+        "semantic": {
+          "family": "timeline",
+          "kind": "noul",
+          "temporal_boundary": "before_delivery",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "no": 0.4805771564117796,
+          "yes": 0.5194228435882203
+        },
+        "proposed_outcome": "accept",
+        "threshold_decision": "abstained",
+        "timestamps": {
+          "delivered_at": "2066-02-28T23:34:29+00:00",
+          "request_received_at": "2066-03-01T05:04:28+05:30",
+          "return_window_hours": 25
+        }
+      },
+      {
+        "id": "temporal-windows-v5/test/3/v2",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "reject",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "after_deadline",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "review": 0.01677050075603143,
+          "reject": 0.12437773015256558,
+          "accept": 0.858851769091403
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2045-01-31T15:58:14-08:00",
+          "request_received_at": "2045-02-01T00:58:15+00:00",
+          "return_window_hours": 1
+        }
+      }
+    ],
+    "amount_by_family": {},
+    "outside_window_actions": [
+      {
+        "kind": "noul",
+        "gold": "no",
+        "adapted": "yes",
+        "n": 1
+      },
+      {
+        "kind": "choice",
+        "gold": "reject",
+        "adapted": "accept",
+        "n": 6
+      },
+      {
+        "kind": "noul",
+        "gold": "yes",
+        "adapted": "no",
+        "n": 1
+      }
+    ]
+  },
+  "v5_ood": {
+    "final_errors": [
+      {
+        "id": "temporal-windows-v5/ood/1/v2",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "reject",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "after_deadline",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "accept": 0.7761403949252743,
+          "reject": 0.19811111681467192,
+          "review": 0.025748488260053798
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2040-03-01T08:19:12+08:45",
+          "request_received_at": "2040-03-02T19:19:13+12:45",
+          "return_window_hours": 31
+        }
+      },
+      {
+        "id": "temporal-windows-v5/ood/2/v0",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "accept",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "before_delivery",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "accept": 0.9049337960689156,
+          "reject": 0.08384374704825599,
+          "review": 0.011222456882828406
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2041-01-01T12:06:14+12:45",
+          "request_received_at": "2040-12-31T17:36:13-05:45",
+          "return_window_hours": 73
+        }
+      },
+      {
+        "id": "temporal-windows-v5/ood/3/v2",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "reject",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "after_deadline",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "review": 0.022528745404240377,
+          "accept": 0.7806897496810679,
+          "reject": 0.19678150491469173
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2032-02-28T17:37:10-05:45",
+          "request_received_at": "2032-02-29T15:07:11+08:45",
+          "return_window_hours": 7
+        }
+      },
+      {
+        "id": "temporal-windows-v5/ood/6/v0",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "reject",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "before_delivery",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "accept": 0.7760752243723679,
+          "review": 0.020249464384331655,
+          "reject": 0.20367531124330046
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2032-02-28T17:46:17-05:45",
+          "request_received_at": "2032-02-29T08:16:16+08:45",
+          "return_window_hours": 7
+        }
+      },
+      {
+        "id": "temporal-windows-v5/ood/5/v2",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "accept",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "after_deadline",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "accept": 0.8895396026060808,
+          "reject": 0.09536278442405335,
+          "review": 0.015097612969865934
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2037-01-01T11:47:55+12:45",
+          "request_received_at": "2037-01-03T18:17:56-05:45",
+          "return_window_hours": 73
+        }
+      },
+      {
+        "id": "temporal-windows-v5/ood/0/v0",
+        "family": "timeline",
+        "kind": "noul",
+        "gold": "yes",
+        "released_action": "no",
+        "adapted_action": "no",
+        "semantic": {
+          "family": "timeline",
+          "kind": "noul",
+          "temporal_boundary": "before_delivery",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "no": 0.7231428313500023,
+          "yes": 0.27685716864999765
+        },
+        "proposed_outcome": "reject",
+        "threshold_decision": "abstained",
+        "timestamps": {
+          "delivered_at": "2028-02-28T17:30:32-05:45",
+          "request_received_at": "2028-02-29T08:00:31+08:45",
+          "return_window_hours": 7
+        }
+      },
+      {
+        "id": "temporal-windows-v5/ood/7/v2",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "reject",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "after_deadline",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "review": 0.014825725077434532,
+          "accept": 0.8779799220264481,
+          "reject": 0.10719435289611728
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2032-03-01T08:42:26+08:45",
+          "request_received_at": "2032-03-02T19:42:27+12:45",
+          "return_window_hours": 31
+        }
+      }
+    ],
+    "correct_to_wrong": [
+      {
+        "id": "temporal-windows-v5/ood/1/v2",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "reject",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "after_deadline",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "accept": 0.7761403949252743,
+          "reject": 0.19811111681467192,
+          "review": 0.025748488260053798
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2040-03-01T08:19:12+08:45",
+          "request_received_at": "2040-03-02T19:19:13+12:45",
+          "return_window_hours": 31
+        }
+      },
+      {
+        "id": "temporal-windows-v5/ood/3/v2",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "reject",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "after_deadline",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "review": 0.022528745404240377,
+          "accept": 0.7806897496810679,
+          "reject": 0.19678150491469173
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2032-02-28T17:37:10-05:45",
+          "request_received_at": "2032-02-29T15:07:11+08:45",
+          "return_window_hours": 7
+        }
+      },
+      {
+        "id": "temporal-windows-v5/ood/6/v0",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "reject",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "before_delivery",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "accept": 0.7760752243723679,
+          "review": 0.020249464384331655,
+          "reject": 0.20367531124330046
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2032-02-28T17:46:17-05:45",
+          "request_received_at": "2032-02-29T08:16:16+08:45",
+          "return_window_hours": 7
+        }
+      },
+      {
+        "id": "temporal-windows-v5/ood/7/v2",
+        "family": "timeline",
+        "kind": "choice",
+        "gold": "reject",
+        "released_action": "reject",
+        "adapted_action": "accept",
+        "semantic": {
+          "family": "timeline",
+          "kind": "choice",
+          "temporal_boundary": "after_deadline",
+          "rejection": "outside_window",
+          "gold_disposition": "reject"
+        },
+        "probabilities": {
+          "review": 0.014825725077434532,
+          "accept": 0.8779799220264481,
+          "reject": 0.10719435289611728
+        },
+        "proposed_outcome": null,
+        "timestamps": {
+          "delivered_at": "2032-03-01T08:42:26+08:45",
+          "request_received_at": "2032-03-02T19:42:27+12:45",
+          "return_window_hours": 31
+        }
+      }
+    ],
+    "amount_by_family": {},
+    "outside_window_actions": [
+      {
+        "kind": "choice",
+        "gold": "reject",
+        "adapted": "accept",
+        "n": 6
+      },
+      {
+        "kind": "noul",
+        "gold": "no",
+        "adapted": "no",
+        "n": 1
+      },
+      {
+        "kind": "noul",
+        "gold": "yes",
+        "adapted": "no",
+        "n": 1
+      }
+    ]
+  }
+}

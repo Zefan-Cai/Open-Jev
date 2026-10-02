@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "finite": true,
+  "lora_A_nonzero": true,
+  "lora_B_nonzero": true,
+  "base_gradients_absent": true,
+  "gradient_parameter_counts": {
+    "lora_A": 60,
+    "lora_B": 60,
+    "head": 2
+  },
+  "gradient_max_abs": {
+    "lora_A": 0.03675953298807144,
+    "lora_B": 0.02154816873371601,
+    "head": 0.14778706431388855
+  },
+  "checked_after_clipping_before_first_optimizer_update": true
+}

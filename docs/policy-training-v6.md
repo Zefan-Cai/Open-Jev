@@ -1,9 +1,12 @@
 # Prepared original-policy mixture v6
 
-This is preparation for a future controlled adaptation from the exact released
-Open-Jev-2B. No training, GPU verification, release replacement or measured
-improvement has occurred. The failed exclusion-boundary v5 checkpoint is not
-the initialization. Upstream author training/demo/test rows contribute zero.
+The fixed adaptation from the exact released Open-Jev-2B has now completed.
+The [full report](../reports/policy-v6-training-20261002/README.md) records
+692 steps, the same-runtime comparison, independent replay and unresolved
+rejection/capacity failures. The candidate is not promoted. The preparation
+below remains the original frozen protocol; the failed exclusion-boundary v5
+checkpoint was not the initialization. Upstream author training/demo/test
+rows contribute zero.
 
 ## Allocation and immutable preparation
 
