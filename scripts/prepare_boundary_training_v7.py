@@ -142,7 +142,7 @@ def read_candidate(directory):
             or audit['validator_sha256'] != _file_sha256(ROOT/'scripts/audit_boundary_controls_v7.py')):
         raise ValueError('V7 independent audit/counts differ')
     if (_file_sha256(INDEPENDENT_AUDIT) != lock['independent_audit_sha256']
-            or json.loads(INDEPENDENT_AUDIT.read_text()) != audit):
+            or json.loads(INDEPENDENT_AUDIT.read_text()) != json.loads(json.dumps(audit, allow_nan=False))):
         raise ValueError('V7 independent replay differs from its committed public receipt')
     splits = {}
     for split in SPLITS:

@@ -105,7 +105,8 @@ class BoundaryPreparationTest(unittest.TestCase):
             (root/'lock.json').write_text(json.dumps(lock))
             audit = {'status': 'validated_no_model_run', 'schema': {'splits': preparation.COUNTS},
                      'manifest_sha256': digest, 'files_sha256': hashes,
-                     'validator_sha256': preparation._file_sha256(preparation.ROOT/'scripts/audit_boundary_controls_v7.py')}
+                     'validator_sha256': preparation._file_sha256(preparation.ROOT/'scripts/audit_boundary_controls_v7.py'),
+                     'choice_target_positions': {'fixture': {0: 1, 1: 1}}}
             (root/'audit.json').write_text(json.dumps(audit))
             lock['independent_audit_sha256'] = preparation._file_sha256(root/'audit.json')
             (root/'lock.json').write_text(json.dumps(lock))
