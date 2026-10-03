@@ -1,0 +1,18 @@
+{
+  "Chrome_availability_reply_pending": true,
+  "browser_actions": 0,
+  "codepoints": 295,
+  "created_at_utc": "2026-10-03T15:48:32.173094+00:00",
+  "evidence_urls": [
+    "https://github.com/Zefan-Cai/Open-Jev/blob/0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19/docs/frontier-v8-operational-bridge.md"
+  ],
+  "posting_body_rule": "Remove exactly one terminal newline, preserve internal linebreaks",
+  "posting_body_sha256": "eae0fef0706e9c40715d7ed406921042ce2def40ac2044745dcc732f5ba76059",
+  "raw_text_sha256": "acd39714831468a3fc777e4f6c8a75bcd67ca3debf536f1f1fb67db4f8ef8271",
+  "schema_version": 1,
+  "social_posts_sent": 0,
+  "source_commit": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19",
+  "status": "review_pending_not_posted",
+  "topic": "actual_CPU_operational_source_import_not_model_gain",
+  "weighted_length": 197
+}

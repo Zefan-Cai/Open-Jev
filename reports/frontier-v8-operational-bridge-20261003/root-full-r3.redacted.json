@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-10-03T15:30:03.499270+00:00",
+  "finished_at_utc": "2026-10-03T15:37:49.247055+00:00",
+  "elapsed_seconds": 465.74841991701396,
+  "argv": [
+    "<homebrew>/opt/python@3.14/bin/python3.14",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "returncode": 0,
+  "source_sha256_before": {
+    "scripts/frontier_v8_operational_bridge.py": "d7c82370828c7b7b2e191c112aeb8e66423a1fb1cfcbf3182f38225045478b9b",
+    "tests/test_frontier_v8_operational_bridge.py": "617fc26c15f3fb0e9e9c0d886dc8482ff769c9084736fa8f0dd478bb12233372",
+    "docs/frontier-v8-operational-bridge.md": "63f0cfd3e8ce4b832ce9cf15be94229a6fe69287c1b7b03129cb31b973560730"
+  },
+  "source_sha256_after": {
+    "scripts/frontier_v8_operational_bridge.py": "d7c82370828c7b7b2e191c112aeb8e66423a1fb1cfcbf3182f38225045478b9b",
+    "tests/test_frontier_v8_operational_bridge.py": "617fc26c15f3fb0e9e9c0d886dc8482ff769c9084736fa8f0dd478bb12233372",
+    "docs/frontier-v8-operational-bridge.md": "63f0cfd3e8ce4b832ce9cf15be94229a6fe69287c1b7b03129cb31b973560730"
+  },
+  "source_unchanged_during_check": true,
+  "stdout_sha256": "96b839c4f2b774f1965f4b3eaedb82c74f5bc998f31b1cfd5e49881dcfb4b27c",
+  "stderr_sha256": "408fa2f0061c624d5704f824ef974073bb9f3174dc1c4197791091b805ff1522",
+  "ran_tests": 1390,
+  "skipped": 105,
+  "result_tail": [
+    "----------------------------------------------------------------------",
+    "Ran 1390 tests in 465.349s",
+    "",
+    "OK (skipped=105)"
+  ],
+  "scope": "final_combined_operational_CPU_bridge_compatibility_full_regression_not_model_or_real_MS_resource_execution"
+}

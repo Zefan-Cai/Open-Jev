@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "at_utc": "2026-10-03T15:16:16.701869+00:00",
+  "argv": [
+    "<homebrew>/opt/python@3.14/bin/python3.14",
+    "-B",
+    "-I",
+    "-S",
+    "<workspace>/runs/frontier-v8-operational-bridge-20261003/startup-cache-diagnostic-r1.py"
+  ],
+  "returncode": 0,
+  "source_sha256": "ff11693eac003324aca8c9d5c419fc0e0355e44a456a4859fbf5a8f44639cc48",
+  "stdout_sha256": "b406b89c5a5d9dfa63dbcc2d2a1acb3a5cf63970a929d7901ae7d9e2485a60b2",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "new_stdlib_only_script_startup_observation_no_three_source_proof",
+  "model_calls": 0,
+  "Torch_imports": 0,
+  "SSH_calls": 0,
+  "GPU_actions": 0
+}

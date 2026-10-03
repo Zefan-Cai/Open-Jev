@@ -1,0 +1,26 @@
+{
+  "JSON_reserialization": false,
+  "labels": [
+    "<existing-isolated-Linux-runtime>",
+    "<external-dir-A>",
+    "<external-dir>",
+    "<failed-A-proof>",
+    "<homebrew>",
+    "<native-root-A>",
+    "<native-root>",
+    "<operational-root-A>",
+    "<operational-root>",
+    "<scientific-root-A>",
+    "<scientific-root>",
+    "<source-C-proof>",
+    "<temporary-fixture-dir>",
+    "<workspace>"
+  ],
+  "original_evidence_modified": false,
+  "policy": "Only explicit machine-local absolute prefixes are replaced; numeric fields, SHA values, URLs, repo-relative inventory keys and all original whitespace are retained.",
+  "raw_logs_trimmed": false,
+  "receipt_hash_semantics": "Hashes inside copied receipts continue to bind original private streams; public derivative hashes are recorded separately in evidence-inventory.json.",
+  "redacted_derivatives_are_original_raw_bytes": false,
+  "replay_limit": "Redacted paths are descriptive labels, not runnable paths. Temporary checkouts were removed normally after review; original external declarations/context/raw remain private.",
+  "schema_version": 1
+}

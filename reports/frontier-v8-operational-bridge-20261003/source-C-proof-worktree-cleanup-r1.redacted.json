@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "owned_clean_C_proof_worktrees_removed_after_independent_review_external_raw_retained",
+  "at_utc": "2026-10-03T15:40:44.279335+00:00",
+  "source_C": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19",
+  "review_sha256": "06b9b6c7f88af22de2b3e8cd90a39d712d01cbf97b496aa22bdca034a732e6b9",
+  "steps": [
+    {
+      "role": "scientific",
+      "path": "<scientific-root>",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "path_absent": true
+    },
+    {
+      "role": "native",
+      "path": "<native-root>",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "path_absent": true
+    },
+    {
+      "role": "operational",
+      "path": "<operational-root>",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "path_absent": true
+    }
+  ],
+  "external_preserved_sha256": {
+    "plan.json": "984539a92f1aa37b93e58fea7df4511a1635e7e9f284531068bb5a0939ebc8be",
+    "native-declaration.json": "53e3cea8adc09fec82aea319775569ad4d487b3b0f88cd1f094653bc70de793d",
+    "context.json": "7e511d0e30aaff8180c1150a10bb927f9e51ece184ee461bf13ba9204cc0c751",
+    "operational-declaration.json": "f990c5ce0f021c8c4184eeca5806d1de768a239a08f18d3ebafeaebf792a8233",
+    "freeze.json": "a710f79977ac582cdc9269368e3f442abb88e76e4bbfae89b962116ade213a5f"
+  },
+  "old_proof_retried": false
+}

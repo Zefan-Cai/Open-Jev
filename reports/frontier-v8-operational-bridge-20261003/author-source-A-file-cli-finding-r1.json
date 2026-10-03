@@ -1,0 +1,18 @@
+{
+  "cause": "Actual CPython file CLI startup inserts exact absolute entry-script path -> None in importer cache despite -B -I -S; earlier -c fixtures did not exercise that startup shape. Original strict cache path whitelist rejected the harmless negative entry before imports.",
+  "created_at": "2026-10-03T15:18:54.045122+00:00",
+  "fresh_diagnostic": "startup-cache-diagnostic-r1.json",
+  "fresh_diagnostic_stdout_sha256": "b406b89c5a5d9dfa63dbcc2d2a1acb3a5cf63970a929d7901ae7d9e2485a60b2",
+  "new_model_or_host_actions": 0,
+  "new_named_fixture_cases": 2,
+  "new_only_amendment": "Permit None only at exact trusted bridge __file__, reject any positive finder at that entry and arbitrary other foreign None paths; original path/hook/positive-finder/zip-origin/source/ref guards remain.",
+  "old_frozen_source_or_scientific_data_changed": false,
+  "original_attempt_permanently_consumed": true,
+  "original_proof_not_rerun": true,
+  "original_proof_receipt": "actual-source-import-receipt-r1.json",
+  "original_stderr_sha256": "1170fe636035512b147fc58cd98e6ed4d5bb4f629b457e0152eb4b166389e91a",
+  "original_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "schema_version": 1,
+  "source_A": "e3abab8ac788be8f03a7d2e98219070875ee55b9",
+  "status": "source_A_actual_file_CLI_startup_failure_preserved_narrow_amendment_declared"
+}

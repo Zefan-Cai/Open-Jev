@@ -1,0 +1,37 @@
+{
+  "GPU_actions": 0,
+  "SSH_calls": 0,
+  "Torch_imports": 0,
+  "compatibility_limit": "Local Python3.14 guarded org syntax probe and real file-entry fixture are not a real Python3.10 runtime or CI pass; new sourceC actual exacthead CI required.",
+  "distinct_named_case_count": 4,
+  "elapsed_seconds": 51.31503304099897,
+  "execution_available": false,
+  "finished_at_utc": "2026-10-03T15:32:38.832396+00:00",
+  "model_calls": 0,
+  "network_calls": 0,
+  "old_consumed_proof_or_CI_retries": 0,
+  "production_source_proof_executions": 0,
+  "python_runtime": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "queue_actions": 0,
+  "resource_authority": false,
+  "returncode": 0,
+  "schema_version": 1,
+  "scope": "Four independently authored final-combined CPU cases with copied fresh Git fixture-only roots/pins via author fixture constructor/child helper. Org from-import no-positive-fallback, preloaded alias refusal before assertions, hook code/default/instance and pinned mapping audit, actual file-CLI plus exact negative cache exception controls.",
+  "source_and_checker_sha256_after": {
+    "docs/frontier-v8-operational-bridge.md": "63f0cfd3e8ce4b832ce9cf15be94229a6fe69287c1b7b03129cb31b973560730",
+    "runs/frontier-v8-operational-bridge-20261003/independent-combined-r1.py": "dbaa74ba2b2cc51932517069afc8daf09b2172c7a49ad826768b7930aacd718c",
+    "scripts/frontier_v8_operational_bridge.py": "d7c82370828c7b7b2e191c112aeb8e66423a1fb1cfcbf3182f38225045478b9b",
+    "tests/test_frontier_v8_operational_bridge.py": "617fc26c15f3fb0e9e9c0d886dc8482ff769c9084736fa8f0dd478bb12233372"
+  },
+  "source_and_checker_sha256_before": {
+    "docs/frontier-v8-operational-bridge.md": "63f0cfd3e8ce4b832ce9cf15be94229a6fe69287c1b7b03129cb31b973560730",
+    "runs/frontier-v8-operational-bridge-20261003/independent-combined-r1.py": "dbaa74ba2b2cc51932517069afc8daf09b2172c7a49ad826768b7930aacd718c",
+    "scripts/frontier_v8_operational_bridge.py": "d7c82370828c7b7b2e191c112aeb8e66423a1fb1cfcbf3182f38225045478b9b",
+    "tests/test_frontier_v8_operational_bridge.py": "617fc26c15f3fb0e9e9c0d886dc8482ff769c9084736fa8f0dd478bb12233372"
+  },
+  "source_edits": 0,
+  "started_at_utc": "2026-10-03T15:31:47.517275+00:00",
+  "status": "independent_final_combined_CPU_cases_passed",
+  "stderr_sha256": "c8cfd5d430961828f893c0d684ee550ebb9f299e9966fa094e75b94c5c300620",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

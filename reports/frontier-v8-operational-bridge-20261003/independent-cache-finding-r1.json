@@ -1,0 +1,23 @@
+{
+  "GPU_actions": 0,
+  "SSH_calls": 0,
+  "Torch_imports": 0,
+  "at_utc": "2026-10-03T15:01:05.288490+00:00",
+  "code_reason": "Initial cache validation checked type, expected attributes and standard suffix-loader pairs but did not bind finder.path to the allowed cache key.",
+  "current_inspected_draft_sha256": "7096817f667f1ff295722e886b11301a69dc227603171fea528d3865749c205f",
+  "current_source_still_lacks_FileFinder_path_binding": false,
+  "executed_probe_source_digest_scope": "The probe did not print or save a digest of its executed source bytes. current_inspected_draft_sha256 binds this later inspected draft, not an asserted original execution hash.",
+  "execution_available": false,
+  "model_calls": 0,
+  "new_three_source_proofs": 0,
+  "observed": "Accepted a genuine FileFinder whose actual_finder_path was a newly created temporary directory outside the stdlib cache key.",
+  "original_output_scope": "Exact original output is only in tool transcript; this additive finding is not an original raw stdout capture.",
+  "path": "scripts/frontier_v8_operational_bridge.py",
+  "payload_imports": 0,
+  "probe": "Fresh python3 -B -I -S bootstrap of new bridge bytes, then _clean_cache({stdlib: FileFinder(new_temp_shadow, standard SourceFileLoader)}, {stdlib}).",
+  "queue_actions": 0,
+  "required_fix": "Refuse a genuine FileFinder with mismatched origin before imports, add meaningful fixture; preserve original finding.",
+  "resource_authority": false,
+  "schema_version": 1,
+  "status": "pre_commit_cache_origin_gap_reproduced_in_helper_only_CPU_probe"
+}

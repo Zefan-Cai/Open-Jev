@@ -1,0 +1,18 @@
+{
+  "GPU_actions": 0,
+  "SSH_calls": 0,
+  "at_utc": "2026-10-03T15:02:01.358254+00:00",
+  "earlier_probe_observation": "Genuine FileFinder with stdlib cache key and foreign finder.path was accepted in the helper-only probe before the origin fix.",
+  "earlier_probe_raw_scope": "Tool transcript only; exact executed source SHA was not collected.",
+  "finding_path": "<workspace>/runs/frontier-v8-operational-bridge-20261003/independent-cache-finding-r1.json",
+  "finding_sha256": "6b2478f7c1d30155fbf62b30627482a90449b677f5e256092f7e33b0302d4236",
+  "later_inspected_draft_sha256": "7096817f667f1ff295722e886b11301a69dc227603171fea528d3865749c205f",
+  "later_snapshot_interpretation": "The later inspected draft already included finder.path equality. The reviewer follow-up message saying it still lacked the check was incorrect; the JSON boolean false is the recorded later snapshot condition.",
+  "later_snapshot_lacks_binding": false,
+  "model_calls": 0,
+  "new_three_source_proofs": 0,
+  "no_probe_rerun": true,
+  "preserved_original_finding": true,
+  "schema_version": 1,
+  "status": "additive_cache_finding_snapshot_timing_clarification"
+}

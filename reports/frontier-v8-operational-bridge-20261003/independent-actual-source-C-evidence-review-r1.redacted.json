@@ -1,0 +1,456 @@
+{
+  "checked_declared_files": {
+    "native:docs/frontier-v8-native-runtime.md": {
+      "committed_blob_sha256": "994bf0942edfa7ba0e56cea17ab2699d53cc5b6ee1d275feb7cfbc00c72f201a",
+      "declared_sha256": "994bf0942edfa7ba0e56cea17ab2699d53cc5b6ee1d275feb7cfbc00c72f201a",
+      "disk_sha256": "994bf0942edfa7ba0e56cea17ab2699d53cc5b6ee1d275feb7cfbc00c72f201a"
+    },
+    "native:scripts/frontier_v8_native_model.py": {
+      "committed_blob_sha256": "6c33a98d5b08a0ef0adf41b6a06793847a755ac81c3722bfd38adb35d25ed873",
+      "declared_sha256": "6c33a98d5b08a0ef0adf41b6a06793847a755ac81c3722bfd38adb35d25ed873",
+      "disk_sha256": "6c33a98d5b08a0ef0adf41b6a06793847a755ac81c3722bfd38adb35d25ed873"
+    },
+    "native:scripts/frontier_v8_owned_process.py": {
+      "committed_blob_sha256": "2d9edb599d48aa2c9e1e5971ce95ae833022622a9de3c8d1a1ca81f0f70debc2",
+      "declared_sha256": "2d9edb599d48aa2c9e1e5971ce95ae833022622a9de3c8d1a1ca81f0f70debc2",
+      "disk_sha256": "2d9edb599d48aa2c9e1e5971ce95ae833022622a9de3c8d1a1ca81f0f70debc2"
+    },
+    "native:scripts/run_frontier_native_v8.py": {
+      "committed_blob_sha256": "d590e781be50da81395c5493142d0d263ed066ca924341393f135046e9f0e414",
+      "declared_sha256": "d590e781be50da81395c5493142d0d263ed066ca924341393f135046e9f0e414",
+      "disk_sha256": "d590e781be50da81395c5493142d0d263ed066ca924341393f135046e9f0e414"
+    },
+    "native:tests/test_frontier_v8_native_model.py": {
+      "committed_blob_sha256": "497c7137e5709f483b646eb4cc393333c5206b52f6565cd2d4120b57d776b7f7",
+      "declared_sha256": "497c7137e5709f483b646eb4cc393333c5206b52f6565cd2d4120b57d776b7f7",
+      "disk_sha256": "497c7137e5709f483b646eb4cc393333c5206b52f6565cd2d4120b57d776b7f7"
+    },
+    "native:tests/test_frontier_v8_owned_process.py": {
+      "committed_blob_sha256": "e9ba334b8b0f79a04a3bc80620739b1ffbe7f1fa76e69f9938826f77ec754468",
+      "declared_sha256": "e9ba334b8b0f79a04a3bc80620739b1ffbe7f1fa76e69f9938826f77ec754468",
+      "disk_sha256": "e9ba334b8b0f79a04a3bc80620739b1ffbe7f1fa76e69f9938826f77ec754468"
+    },
+    "native:tests/test_run_frontier_native_v8.py": {
+      "committed_blob_sha256": "2ff4272553ce5513aea78013495820763574d831285025e0e5f3cd710c4e05f1",
+      "declared_sha256": "2ff4272553ce5513aea78013495820763574d831285025e0e5f3cd710c4e05f1",
+      "disk_sha256": "2ff4272553ce5513aea78013495820763574d831285025e0e5f3cd710c4e05f1"
+    },
+    "operational:docs/frontier-v8-operational-bridge.md": {
+      "committed_blob_sha256": "63f0cfd3e8ce4b832ce9cf15be94229a6fe69287c1b7b03129cb31b973560730",
+      "declared_sha256": "63f0cfd3e8ce4b832ce9cf15be94229a6fe69287c1b7b03129cb31b973560730",
+      "disk_sha256": "63f0cfd3e8ce4b832ce9cf15be94229a6fe69287c1b7b03129cb31b973560730"
+    },
+    "operational:docs/frontier-v8-source-loader.md": {
+      "committed_blob_sha256": "8a2657f30c73c48e1cef3542e7b9ac9d0a5252bac7c24b680ccccc8eebe889b1",
+      "declared_sha256": "8a2657f30c73c48e1cef3542e7b9ac9d0a5252bac7c24b680ccccc8eebe889b1",
+      "disk_sha256": "8a2657f30c73c48e1cef3542e7b9ac9d0a5252bac7c24b680ccccc8eebe889b1"
+    },
+    "operational:scripts/frontier_v8_live_host.py": {
+      "committed_blob_sha256": "8581076cc9c81aa051c0b07ebee2acf9d11903da972093152601ae02ed214fc7",
+      "declared_sha256": "8581076cc9c81aa051c0b07ebee2acf9d11903da972093152601ae02ed214fc7",
+      "disk_sha256": "8581076cc9c81aa051c0b07ebee2acf9d11903da972093152601ae02ed214fc7"
+    },
+    "operational:scripts/frontier_v8_operational_bridge.py": {
+      "committed_blob_sha256": "d7c82370828c7b7b2e191c112aeb8e66423a1fb1cfcbf3182f38225045478b9b",
+      "declared_sha256": "d7c82370828c7b7b2e191c112aeb8e66423a1fb1cfcbf3182f38225045478b9b",
+      "disk_sha256": "d7c82370828c7b7b2e191c112aeb8e66423a1fb1cfcbf3182f38225045478b9b"
+    },
+    "operational:scripts/frontier_v8_owned_process.py": {
+      "committed_blob_sha256": "2d9edb599d48aa2c9e1e5971ce95ae833022622a9de3c8d1a1ca81f0f70debc2",
+      "declared_sha256": "2d9edb599d48aa2c9e1e5971ce95ae833022622a9de3c8d1a1ca81f0f70debc2",
+      "disk_sha256": "2d9edb599d48aa2c9e1e5971ce95ae833022622a9de3c8d1a1ca81f0f70debc2"
+    },
+    "operational:scripts/frontier_v8_resource_episode.py": {
+      "committed_blob_sha256": "faed934df94f8aed888515c3df5cc69ed4d9fea4db5e76c19a4495782e97e333",
+      "declared_sha256": "faed934df94f8aed888515c3df5cc69ed4d9fea4db5e76c19a4495782e97e333",
+      "disk_sha256": "faed934df94f8aed888515c3df5cc69ed4d9fea4db5e76c19a4495782e97e333"
+    },
+    "operational:scripts/frontier_v8_source_loader.py": {
+      "committed_blob_sha256": "6f33f86c9b37bd69612e7d0e79772b23c27540cae7a4191526fc47dbf75e2ede",
+      "declared_sha256": "6f33f86c9b37bd69612e7d0e79772b23c27540cae7a4191526fc47dbf75e2ede",
+      "disk_sha256": "6f33f86c9b37bd69612e7d0e79772b23c27540cae7a4191526fc47dbf75e2ede"
+    },
+    "operational:tests/test_frontier_v8_live_host.py": {
+      "committed_blob_sha256": "4dd3c704f82ed343c1e7fc4c0bdca4ec53940531e5c5740c05e545df345781ea",
+      "declared_sha256": "4dd3c704f82ed343c1e7fc4c0bdca4ec53940531e5c5740c05e545df345781ea",
+      "disk_sha256": "4dd3c704f82ed343c1e7fc4c0bdca4ec53940531e5c5740c05e545df345781ea"
+    },
+    "operational:tests/test_frontier_v8_operational_bridge.py": {
+      "committed_blob_sha256": "617fc26c15f3fb0e9e9c0d886dc8482ff769c9084736fa8f0dd478bb12233372",
+      "declared_sha256": "617fc26c15f3fb0e9e9c0d886dc8482ff769c9084736fa8f0dd478bb12233372",
+      "disk_sha256": "617fc26c15f3fb0e9e9c0d886dc8482ff769c9084736fa8f0dd478bb12233372"
+    },
+    "operational:tests/test_frontier_v8_source_loader.py": {
+      "committed_blob_sha256": "3fab2f5bc49a8c1a39dfba6b514fd5b7e4030f12c1e17342f89b0a674319575d",
+      "declared_sha256": "3fab2f5bc49a8c1a39dfba6b514fd5b7e4030f12c1e17342f89b0a674319575d",
+      "disk_sha256": "3fab2f5bc49a8c1a39dfba6b514fd5b7e4030f12c1e17342f89b0a674319575d"
+    },
+    "scientific:docs/frontier-v8-resource-protocol.md": {
+      "committed_blob_sha256": "654bc7d11369fd7ceded46e605f1ad34f65f802034991a678063b4253fb4895b",
+      "declared_sha256": "654bc7d11369fd7ceded46e605f1ad34f65f802034991a678063b4253fb4895b",
+      "disk_sha256": "654bc7d11369fd7ceded46e605f1ad34f65f802034991a678063b4253fb4895b"
+    },
+    "scientific:jev/__init__.py": {
+      "committed_blob_sha256": "039d6c25d5ebea9724711756aff885f44d2226abbeea4abb99dfbc7b0b35ce7e",
+      "declared_sha256": "039d6c25d5ebea9724711756aff885f44d2226abbeea4abb99dfbc7b0b35ce7e",
+      "disk_sha256": "039d6c25d5ebea9724711756aff885f44d2226abbeea4abb99dfbc7b0b35ce7e"
+    },
+    "scientific:jev/api.py": {
+      "committed_blob_sha256": "f22aa50c00d64aa91c2d415c1973f59bdaad11d1de51308ae5454326b8cbf350",
+      "declared_sha256": "f22aa50c00d64aa91c2d415c1973f59bdaad11d1de51308ae5454326b8cbf350",
+      "disk_sha256": "f22aa50c00d64aa91c2d415c1973f59bdaad11d1de51308ae5454326b8cbf350"
+    },
+    "scientific:jev/data.py": {
+      "committed_blob_sha256": "97c1764a5090f60476397baf889a864359e0d59b48d99ddf3b34335d3e1b138e",
+      "declared_sha256": "97c1764a5090f60476397baf889a864359e0d59b48d99ddf3b34335d3e1b138e",
+      "disk_sha256": "97c1764a5090f60476397baf889a864359e0d59b48d99ddf3b34335d3e1b138e"
+    },
+    "scientific:jev/metrics.py": {
+      "committed_blob_sha256": "cb460c78b877a24708a0a8f8ca6b51f9602491f6ea24cd14e9a828c03d92f78b",
+      "declared_sha256": "cb460c78b877a24708a0a8f8ca6b51f9602491f6ea24cd14e9a828c03d92f78b",
+      "disk_sha256": "cb460c78b877a24708a0a8f8ca6b51f9602491f6ea24cd14e9a828c03d92f78b"
+    },
+    "scientific:jev/model.py": {
+      "committed_blob_sha256": "333bed84cf2801ba33b053891e9ff9563d082f3da87ad6ad1681a2b1bcb4c6aa",
+      "declared_sha256": "333bed84cf2801ba33b053891e9ff9563d082f3da87ad6ad1681a2b1bcb4c6aa",
+      "disk_sha256": "333bed84cf2801ba33b053891e9ff9563d082f3da87ad6ad1681a2b1bcb4c6aa"
+    },
+    "scientific:jev/prefix_cache.py": {
+      "committed_blob_sha256": "0eecb867d47830889b41c994af8118624edbf8871c3c21ff9136a6d65fc703cd",
+      "declared_sha256": "0eecb867d47830889b41c994af8118624edbf8871c3c21ff9136a6d65fc703cd",
+      "disk_sha256": "0eecb867d47830889b41c994af8118624edbf8871c3c21ff9136a6d65fc703cd"
+    },
+    "scientific:jev/train.py": {
+      "committed_blob_sha256": "18755ae1cb03cc8b5592693f4c8294dcbf8a4b96d3b3b5cbd3c6a59aeaedbb9f",
+      "declared_sha256": "18755ae1cb03cc8b5592693f4c8294dcbf8a4b96d3b3b5cbd3c6a59aeaedbb9f",
+      "disk_sha256": "18755ae1cb03cc8b5592693f4c8294dcbf8a4b96d3b3b5cbd3c6a59aeaedbb9f"
+    },
+    "scientific:requirements-linux-py311-cu128-20261002.lock": {
+      "committed_blob_sha256": "d1f238a916dfdfbc8b89f3de4c28bb3b7220cdd97ecf609ebb726afab0ca8221",
+      "declared_sha256": "d1f238a916dfdfbc8b89f3de4c28bb3b7220cdd97ecf609ebb726afab0ca8221",
+      "disk_sha256": "d1f238a916dfdfbc8b89f3de4c28bb3b7220cdd97ecf609ebb726afab0ca8221"
+    },
+    "scientific:scripts/audit_boundary_controls_v7.py": {
+      "committed_blob_sha256": "f5cd435d8075add6fb1b7169d46ed8faa6a8a3f9b9958b5b475a1c6bfa3de1d7",
+      "declared_sha256": "f5cd435d8075add6fb1b7169d46ed8faa6a8a3f9b9958b5b475a1c6bfa3de1d7",
+      "disk_sha256": "f5cd435d8075add6fb1b7169d46ed8faa6a8a3f9b9958b5b475a1c6bfa3de1d7"
+    },
+    "scientific:scripts/audit_frontier_controls_v8.py": {
+      "committed_blob_sha256": "78bdf3712b2090ada57587e5a44163c79cca63b9698514f116a19ba7e82a42ee",
+      "declared_sha256": "78bdf3712b2090ada57587e5a44163c79cca63b9698514f116a19ba7e82a42ee",
+      "disk_sha256": "78bdf3712b2090ada57587e5a44163c79cca63b9698514f116a19ba7e82a42ee"
+    },
+    "scientific:scripts/compare_frontier_training_v8.py": {
+      "committed_blob_sha256": "99a74cbad37973f31da9f4aaf06cb4934d6fc39ec741bfd56dc2166488c46213",
+      "declared_sha256": "99a74cbad37973f31da9f4aaf06cb4934d6fc39ec741bfd56dc2166488c46213",
+      "disk_sha256": "99a74cbad37973f31da9f4aaf06cb4934d6fc39ec741bfd56dc2166488c46213"
+    },
+    "scientific:scripts/replay_frontier_comparison_v8.py": {
+      "committed_blob_sha256": "4ec164d5247607c558f75070966a410cf373b657938e839ff9d55f85224cbf9e",
+      "declared_sha256": "4ec164d5247607c558f75070966a410cf373b657938e839ff9d55f85224cbf9e",
+      "disk_sha256": "4ec164d5247607c558f75070966a410cf373b657938e839ff9d55f85224cbf9e"
+    },
+    "scientific:scripts/run_frontier_training_v8.py": {
+      "committed_blob_sha256": "8cb4064f6f1dd05b28a581f13c0043adf981f64b0f5ac8e0706257781e53a708",
+      "declared_sha256": "8cb4064f6f1dd05b28a581f13c0043adf981f64b0f5ac8e0706257781e53a708",
+      "disk_sha256": "8cb4064f6f1dd05b28a581f13c0043adf981f64b0f5ac8e0706257781e53a708"
+    },
+    "scientific:tests/test_compare_frontier_training_v8.py": {
+      "committed_blob_sha256": "2eac77b343c624629cb342412fad37bead0d378d97f7b01fd62874a47a00b63c",
+      "declared_sha256": "2eac77b343c624629cb342412fad37bead0d378d97f7b01fd62874a47a00b63c",
+      "disk_sha256": "2eac77b343c624629cb342412fad37bead0d378d97f7b01fd62874a47a00b63c"
+    },
+    "scientific:tests/test_frontier_v8_comparison_replay_integration.py": {
+      "committed_blob_sha256": "332581f4a328551eb45254030c2710bc6d8dc833b83d83f7748a361ef1b76ac6",
+      "declared_sha256": "332581f4a328551eb45254030c2710bc6d8dc833b83d83f7748a361ef1b76ac6",
+      "disk_sha256": "332581f4a328551eb45254030c2710bc6d8dc833b83d83f7748a361ef1b76ac6"
+    },
+    "scientific:tests/test_replay_frontier_comparison_v8.py": {
+      "committed_blob_sha256": "6849e978691ab9ca0e32d1b20617448ffb8f16b59c966ac5098b8eee8a968a78",
+      "declared_sha256": "6849e978691ab9ca0e32d1b20617448ffb8f16b59c966ac5098b8eee8a968a78",
+      "disk_sha256": "6849e978691ab9ca0e32d1b20617448ffb8f16b59c966ac5098b8eee8a968a78"
+    },
+    "scientific:tests/test_run_frontier_training_v8.py": {
+      "committed_blob_sha256": "da112117c418fc5254bd03f8a840e63de66df64d022f973884b2f886fd386147",
+      "declared_sha256": "da112117c418fc5254bd03f8a840e63de66df64d022f973884b2f886fd386147",
+      "disk_sha256": "da112117c418fc5254bd03f8a840e63de66df64d022f973884b2f886fd386147"
+    }
+  },
+  "checks": {
+    "12_fresh_worktree_steps_succeeded": true,
+    "18_explicit_CPU_fixture_predicates": true,
+    "CPU_fixture_ownership_scope": true,
+    "all_reported_authority_unavailable": true,
+    "all_reported_model_actions_zero": true,
+    "bootstrap_separate_exact_pinned_source": true,
+    "context_native_hash": true,
+    "context_operational_hash": true,
+    "context_outside_source_roots": true,
+    "copied_original_frozen_declaration:freeze.json": true,
+    "copied_original_frozen_declaration:native-declaration.json": true,
+    "copied_original_frozen_declaration:plan.json": true,
+    "empty_synthetic_namespace": true,
+    "external_raw_hash:context.json": true,
+    "external_raw_hash:freeze.json": true,
+    "external_raw_hash:native-declaration.json": true,
+    "external_raw_hash:operational-declaration.json": true,
+    "external_raw_hash:plan.json": true,
+    "final_full_regression_bound_to_source_C": true,
+    "final_full_stderr_raw_hash": true,
+    "final_full_stdout_raw_hash": true,
+    "frozen_native_exact": true,
+    "frozen_science_exact": true,
+    "imported_module_table_exact": true,
+    "module_loader:scripts": true,
+    "module_loader:scripts.frontier_v8_live_host": true,
+    "module_loader:scripts.frontier_v8_owned_process": true,
+    "module_loader:scripts.frontier_v8_resource_episode": true,
+    "module_origin_and_verified_source:scripts.frontier_v8_live_host": true,
+    "module_origin_and_verified_source:scripts.frontier_v8_owned_process": true,
+    "module_origin_and_verified_source:scripts.frontier_v8_resource_episode": true,
+    "native:actual_root": true,
+    "native:clean_including_ignored": true,
+    "native:declared_disk_committed_blob:docs/frontier-v8-native-runtime.md": true,
+    "native:declared_disk_committed_blob:scripts/frontier_v8_native_model.py": true,
+    "native:declared_disk_committed_blob:scripts/frontier_v8_owned_process.py": true,
+    "native:declared_disk_committed_blob:scripts/run_frontier_native_v8.py": true,
+    "native:declared_disk_committed_blob:tests/test_frontier_v8_native_model.py": true,
+    "native:declared_disk_committed_blob:tests/test_frontier_v8_owned_process.py": true,
+    "native:declared_disk_committed_blob:tests/test_run_frontier_native_v8.py": true,
+    "native:exact_HEAD": true,
+    "native:exact_sparse_inventory": true,
+    "native:no_symlink_files": true,
+    "native:source_receipt_identity": true,
+    "new_proof_directory_and_nonce": true,
+    "operational:actual_root": true,
+    "operational:clean_including_ignored": true,
+    "operational:declared_disk_committed_blob:docs/frontier-v8-operational-bridge.md": true,
+    "operational:declared_disk_committed_blob:docs/frontier-v8-source-loader.md": true,
+    "operational:declared_disk_committed_blob:scripts/frontier_v8_live_host.py": true,
+    "operational:declared_disk_committed_blob:scripts/frontier_v8_operational_bridge.py": true,
+    "operational:declared_disk_committed_blob:scripts/frontier_v8_owned_process.py": true,
+    "operational:declared_disk_committed_blob:scripts/frontier_v8_resource_episode.py": true,
+    "operational:declared_disk_committed_blob:scripts/frontier_v8_source_loader.py": true,
+    "operational:declared_disk_committed_blob:tests/test_frontier_v8_live_host.py": true,
+    "operational:declared_disk_committed_blob:tests/test_frontier_v8_operational_bridge.py": true,
+    "operational:declared_disk_committed_blob:tests/test_frontier_v8_source_loader.py": true,
+    "operational:exact_HEAD": true,
+    "operational:exact_sparse_inventory": true,
+    "operational:no_symlink_files": true,
+    "operational:source_receipt_identity": true,
+    "original_failed_A_evidence_unchanged:actual-CPU-proof-consumed-r1.json": true,
+    "original_failed_A_evidence_unchanged:actual-source-import-r1.stderr.txt": true,
+    "original_failed_A_evidence_unchanged:actual-source-import-r1.stdout.txt": true,
+    "original_failed_A_evidence_unchanged:actual-source-import-receipt-r1.json": true,
+    "original_failed_A_evidence_unchanged:actual-worktree-creation-r1.json": true,
+    "original_failed_A_evidence_unchanged:source-A-push-r1.json": true,
+    "original_failed_A_evidence_unchanged:source-A-push-r1.stderr.txt": true,
+    "original_failed_A_evidence_unchanged:source-A-push-r1.stdout.txt": true,
+    "original_failed_A_evidence_unchanged:source-A-remote-ref-r1.json": true,
+    "plan_freeze_inventory_match": true,
+    "private_driver_still_preflight_bytes": true,
+    "raw_stderr_hash_and_empty": true,
+    "raw_stdout_hash": true,
+    "recorded_runtime_marshal_fingerprint_shape:scripts": true,
+    "recorded_runtime_marshal_fingerprint_shape:scripts.frontier_v8_live_host": true,
+    "recorded_runtime_marshal_fingerprint_shape:scripts.frontier_v8_owned_process": true,
+    "recorded_runtime_marshal_fingerprint_shape:scripts.frontier_v8_resource_episode": true,
+    "root_captured_source_C_push_success": true,
+    "root_captured_source_C_remote_ref": true,
+    "scientific:actual_root": true,
+    "scientific:clean_including_ignored": true,
+    "scientific:declared_disk_committed_blob:docs/frontier-v8-resource-protocol.md": true,
+    "scientific:declared_disk_committed_blob:jev/__init__.py": true,
+    "scientific:declared_disk_committed_blob:jev/api.py": true,
+    "scientific:declared_disk_committed_blob:jev/data.py": true,
+    "scientific:declared_disk_committed_blob:jev/metrics.py": true,
+    "scientific:declared_disk_committed_blob:jev/model.py": true,
+    "scientific:declared_disk_committed_blob:jev/prefix_cache.py": true,
+    "scientific:declared_disk_committed_blob:jev/train.py": true,
+    "scientific:declared_disk_committed_blob:requirements-linux-py311-cu128-20261002.lock": true,
+    "scientific:declared_disk_committed_blob:scripts/audit_boundary_controls_v7.py": true,
+    "scientific:declared_disk_committed_blob:scripts/audit_frontier_controls_v8.py": true,
+    "scientific:declared_disk_committed_blob:scripts/compare_frontier_training_v8.py": true,
+    "scientific:declared_disk_committed_blob:scripts/replay_frontier_comparison_v8.py": true,
+    "scientific:declared_disk_committed_blob:scripts/run_frontier_training_v8.py": true,
+    "scientific:declared_disk_committed_blob:tests/test_compare_frontier_training_v8.py": true,
+    "scientific:declared_disk_committed_blob:tests/test_frontier_v8_comparison_replay_integration.py": true,
+    "scientific:declared_disk_committed_blob:tests/test_replay_frontier_comparison_v8.py": true,
+    "scientific:declared_disk_committed_blob:tests/test_run_frontier_training_v8.py": true,
+    "scientific:exact_HEAD": true,
+    "scientific:exact_sparse_inventory": true,
+    "scientific:no_symlink_files": true,
+    "scientific:source_receipt_identity": true,
+    "six_optional_packages_absent_scoped_report": true,
+    "source_C_consumed_no_retry": true,
+    "source_C_differs_from_consumed_A": true,
+    "source_C_exact_commit": true,
+    "source_C_push_stderr_raw_hash": true,
+    "source_C_push_stdout_raw_hash": true,
+    "source_external_hash:freeze.json": true,
+    "source_external_hash:native-declaration.json": true,
+    "source_external_hash:operational-declaration.json": true,
+    "source_external_hash:plan.json": true,
+    "source_receipt_context_exact": true,
+    "source_receipt_saved_from_exact_stdout": true,
+    "source_receipt_success_scope": true,
+    "sparse_not_full_repo_claim": true,
+    "successful_runtime_status": true,
+    "three_distinct_source_roots": true,
+    "three_real_helpers_one_namespace": true,
+    "trusted_CLI_entry_path": true
+  },
+  "checks_count": 122,
+  "claim_limits": {
+    "canonical_independent_compile_fingerprint": false,
+    "execution_available": false,
+    "full_repository_materialization": false,
+    "ignored_data_as_Git_blob": false,
+    "live_ownership_observed": false,
+    "live_resource_authority": false,
+    "model_execution_authority": false,
+    "model_improvement_or_natural_trial": false,
+    "restoration_or_launcher_integration_demonstrated": false
+  },
+  "evidence_files_sha256": {
+    "actual-CPU-proof-consumed-r2.json": "edeb146e34f514dbb52c549e63f878983c075027def5c6c5b9eb0b762d7d70c3",
+    "actual-source-import-r2.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "actual-source-import-r2.stdout.txt": "bd59839ab7e9906edac2b09cd02d286df047c6b7d97d325aacd3702b9d431d37",
+    "actual-source-import-receipt-r2.json": "cd6143169e4c968e6cbedec77485f2649441234c07ed5b5b74181ba95dd4f18b",
+    "actual-three-source-verification-r2.json": "4c8db2fe44e944a9746df0809c9f85c2fc53d8239f456be4d94b5f799c04e06f",
+    "actual-worktree-creation-r2.json": "d44e62fe5d15e9e302522c5c5e94adb76c6b3ea9cceb004c5214319af46ed34b",
+    "independent-actual-failed-source-A-review-r1.json": "0a8849caf58602a0da179cdd0ce20a71d472be3d08a4393c25c196c055b96438",
+    "independent-second-attempt-preflight-review-r2.json": "b55ee1222b94714f2fdf17320b68ca8e37d0f41dd9caaa69ff4f1ad4a97ea0bf",
+    "root-full-r3.json": "060ed67e0e11d21763c87a90ea07d3fea82985464e4ed042b7a7ed2987a5ee01",
+    "root-full-r3.stderr.txt": "408fa2f0061c624d5704f824ef974073bb9f3174dc1c4197791091b805ff1522",
+    "root-full-r3.stdout.txt": "96b839c4f2b774f1965f4b3eaedb82c74f5bc998f31b1cfd5e49881dcfb4b27c",
+    "source-C-push-r1.json": "4820d0c98bf0851a1d38c52a784cd963dc7c36c6e0818009e41bd16a1964a6a9",
+    "source-C-push-r1.stderr.txt": "a3570eb4e586aa8b02a0231ffc9fff9d0b2cf7d6598614bf775c3f0620df3152",
+    "source-C-push-r1.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source-C-remote-ref-r1.json": "4111d55c64d61d6c3b18dbb4291a858c746402af4e8194b647f52efe6b51512a",
+    "verify_committed_bridge_once_r2.py": "db966f7967872ca735c6f4e58f1b9470390ede7e72f222bb4b8d68bdcbf092a1"
+  },
+  "failed_checks": [],
+  "findings": [
+    "Raw sourceC output, empty stderr, saved source receipt, external declaration hashes and35 declared scientific18/native7/operational10 committed blob entries agree with clean actual sparse roots.",
+    "Three real operational helper body origins/hash receipts match operational committed bytes; scripts is an empty synthetic namespace. The pinned verifier bootstrap and trusted CLI entry remain separately counted.",
+    "The emitted compiled_code_sha256 values are fingerprints of interpreter-specific marshaled runtime code captured by the loader. Reviewer did not independently recompile/recompute them; they are not canonical independent compile identity.",
+    "Eighteen callback tags are explicitly CPU noop fixture predicate invocations bracketing verification, imports, scoped assertion and exit audit. They establish no physical host/resource lease or live ownership.",
+    "Optional Torch/model package absence is the clean interpreter source-audit report and follows the reviewed refusal checks; no model/livehost/resource episode/worker/queue/GPU execution is demonstrated.",
+    "Original sourceA failed raw evidence and consumed marker are unchanged; corrected sourceC uses new commit, proof path, declaration nonce and r2 output paths. Counts remain two actual attempts, one early failed and one passed CPU import proof.",
+    "Root-captured sourceC push and remote-ref JSON match sourceC and push precedes proof; reviewer made no network query. Local full regression is bound to exact sourceC source hashes."
+  ],
+  "independently_checked_declared_Git_blob_entries": 35,
+  "observations": {
+    "actual_module_table_empty_namespace": 1,
+    "actual_module_table_real_helper_bodies": 3,
+    "full_regression_passed": 1285,
+    "full_regression_skipped": 105,
+    "full_regression_tests": 1390,
+    "optional_packages_absent_report": [
+      "torch",
+      "transformers",
+      "peft",
+      "triton",
+      "safetensors",
+      "accelerate"
+    ],
+    "predicate_invocations": 18,
+    "predicate_is_live_resource_authority": false,
+    "returncode": 0,
+    "separate_pinned_source_verifier_bootstrap": true,
+    "stderr_bytes": 0,
+    "stdout_sha256": "bd59839ab7e9906edac2b09cd02d286df047c6b7d97d325aacd3702b9d431d37",
+    "trusted_CLI_entry_separate_from_module_table": true
+  },
+  "proof_directory": "<source-C-proof>",
+  "reviewed_at_utc": "2026-10-03T15:40:13.376096+00:00",
+  "reviewer": "bridge_evidence_review_independent_subagent",
+  "reviewer_actions": {
+    "GPU_actions": 0,
+    "SSH_calls": 0,
+    "Torch_imports": 0,
+    "browser_actions": 0,
+    "installations": 0,
+    "network_calls": 0,
+    "old_regression_executions": 0,
+    "proof_executions": 0,
+    "source_edits": 0
+  },
+  "roots": {
+    "native": {
+      "declared_count": 7,
+      "expected_commit": "4b55c6e3f025fd92ec4396d5c61bb4dfe13cbda2",
+      "materialized_files": [
+        "docs/frontier-v8-native-runtime.md",
+        "scripts/frontier_v8_native_model.py",
+        "scripts/frontier_v8_owned_process.py",
+        "scripts/run_frontier_native_v8.py",
+        "tests/test_frontier_v8_native_model.py",
+        "tests/test_frontier_v8_owned_process.py",
+        "tests/test_run_frontier_native_v8.py"
+      ],
+      "observed_commit": "4b55c6e3f025fd92ec4396d5c61bb4dfe13cbda2",
+      "root": "<native-root>",
+      "sparse_inventory_only": true,
+      "status_porcelain_including_ignored": ""
+    },
+    "operational": {
+      "declared_count": 10,
+      "expected_commit": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19",
+      "materialized_files": [
+        "docs/frontier-v8-operational-bridge.md",
+        "docs/frontier-v8-source-loader.md",
+        "scripts/frontier_v8_live_host.py",
+        "scripts/frontier_v8_operational_bridge.py",
+        "scripts/frontier_v8_owned_process.py",
+        "scripts/frontier_v8_resource_episode.py",
+        "scripts/frontier_v8_source_loader.py",
+        "tests/test_frontier_v8_live_host.py",
+        "tests/test_frontier_v8_operational_bridge.py",
+        "tests/test_frontier_v8_source_loader.py"
+      ],
+      "observed_commit": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19",
+      "root": "<operational-root>",
+      "sparse_inventory_only": true,
+      "status_porcelain_including_ignored": ""
+    },
+    "scientific": {
+      "declared_count": 18,
+      "expected_commit": "d8eeb3d1f8e8d8751476f102ab456170c277e86a",
+      "materialized_files": [
+        "docs/frontier-v8-resource-protocol.md",
+        "jev/__init__.py",
+        "jev/api.py",
+        "jev/data.py",
+        "jev/metrics.py",
+        "jev/model.py",
+        "jev/prefix_cache.py",
+        "jev/train.py",
+        "requirements-linux-py311-cu128-20261002.lock",
+        "scripts/audit_boundary_controls_v7.py",
+        "scripts/audit_frontier_controls_v8.py",
+        "scripts/compare_frontier_training_v8.py",
+        "scripts/replay_frontier_comparison_v8.py",
+        "scripts/run_frontier_training_v8.py",
+        "tests/test_compare_frontier_training_v8.py",
+        "tests/test_frontier_v8_comparison_replay_integration.py",
+        "tests/test_replay_frontier_comparison_v8.py",
+        "tests/test_run_frontier_training_v8.py"
+      ],
+      "observed_commit": "d8eeb3d1f8e8d8751476f102ab456170c277e86a",
+      "root": "<scientific-root>",
+      "sparse_inventory_only": true,
+      "status_porcelain_including_ignored": ""
+    }
+  },
+  "schema_version": 1,
+  "source_commit": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19",
+  "stage_counts_at_review": {
+    "actual_source_import_attempts": 2,
+    "failed_actual_source_import_attempts": 1,
+    "successful_actual_source_import_proofs": 1
+  },
+  "status": "actual_source_C_CPU_import_evidence_review_passed",
+  "verification_id": "frontier-v8-operational-bridge-proof-eaaeb01e70df59af21ff7d9121f651ad"
+}

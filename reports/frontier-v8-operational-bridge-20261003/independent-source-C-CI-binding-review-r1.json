@@ -1,0 +1,63 @@
+{
+  "evidence_sha256": {
+    "independent-source-C-CI-analyzer-amendment-r1.json": "1708a8b77c55bbc86e9421ce3156baf64d2d1eac78c0ee4296360ae96d7a9be1",
+    "independent-source-C-CI-analyzer-preflight-r1.json": "343b7430edfdef6b9b2692c0fa5597e2f0ce1fda5e8a8bfaa30fcf69667efe18",
+    "independent_source_C_CI_log_analyzer.py": "e2cb6676a4a648a262cffc93a718a452cc341f845dc34f6b0ce0d8e1977eb7a0",
+    "source-C-CI-Python310-r1.log": "ccab85223266b26fe621a5be58bcdbf1624f596dc827afbdb27204b0387b5a0e",
+    "source-C-CI-Python314-r1.log": "fe28d97601ab72c556b53c5c2e57d8d75059bc2348f10b049a4f30bf49ad3deb",
+    "source-C-CI-raw-log-proof-r1.json": "4b1be931a0614b379b789828034505893b90294c6bc882161b41d7c3e866b7f7",
+    "source-C-CI-snapshot-r4.json": "cdbf181179aa7967835237b2865f4eac9ca1f790149c0a8823270b892958f2d0",
+    "source-C-workflow-run-r1.json": "6e57e457687db2eef9ce10ea2c619d993a34aa8df3357dee899413524a922199"
+  },
+  "execution_available": false,
+  "job_results": [
+    {
+      "actual_passed": 1300,
+      "actual_skipped": 90,
+      "actual_total": 1390,
+      "additional_existing_Linux_fixture_ok": 1,
+      "bridge_named_ok": 21,
+      "job_id": 111234477439,
+      "log_sha256": "ccab85223266b26fe621a5be58bcdbf1624f596dc827afbdb27204b0387b5a0e",
+      "python": "3.10"
+    },
+    {
+      "actual_passed": 1300,
+      "actual_skipped": 90,
+      "actual_total": 1390,
+      "additional_existing_Linux_fixture_ok": 1,
+      "bridge_named_ok": 21,
+      "job_id": 111234477326,
+      "log_sha256": "fe28d97601ab72c556b53c5c2e57d8d75059bc2348f10b049a4f30bf49ad3deb",
+      "python": "3.14"
+    }
+  ],
+  "limits": [
+    "21 bridge cases are portable provenance/import fixtures. Separate existing LiveHostLinuxTests case uses real owned CPU pidfds and injected host/GPU/source-verifier; it does not attest live MS adapter/physical lease/foreign queue restoration.",
+    "Actual new3.10 and3.14 CI now pass on exact sourceC. SourceA failed3.10 and failedCLI remain preserved; sourceA3.14 succeeded; no cancelledsourceA job invented or manualretry.",
+    "This confirms CPU/package checks, not model-runtime install/ABI, Tensor/gradient observations, model capability, natural trial or business action."
+  ],
+  "resource_authority": false,
+  "reviewed_at_utc": "2026-10-03T15:44:08.289464+00:00",
+  "reviewer_actions": {
+    "GPU_actions": 0,
+    "SSH_calls": 0,
+    "Torch_imports": 0,
+    "log_fetches": 0,
+    "model_calls": 0,
+    "network_calls": 0,
+    "queue_actions": 0,
+    "source_edits": 0,
+    "source_proof_executions": 0,
+    "test_suite_executions": 0
+  },
+  "schema_version": 1,
+  "scope": "Saved root-once-fetched GitHub successful sourceC push logs and completed metadata, exact GitAST. Analyzer executed only once to fresh proof output; reviewer made no network calls, fetched no logs and ran no test suites/source proof.",
+  "source_commit": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19",
+  "status": "independent_source_C_actual_CI_binding_review_passed",
+  "workflow_attempt": 1,
+  "workflow_conclusion": "success",
+  "workflow_event": "push",
+  "workflow_id": 37133937755,
+  "workflow_status": "completed"
+}

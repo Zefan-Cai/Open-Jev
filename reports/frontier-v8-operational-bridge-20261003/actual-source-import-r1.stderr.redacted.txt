@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "<operational-root-A>/scripts/frontier_v8_operational_bridge.py", line 343, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "<operational-root-A>/scripts/frontier_v8_operational_bridge.py", line 327, in main
+    with load_operational_cpu_modules(context, assert_owned=cpu_assertion_fixture) as scope:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<homebrew>/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py", line 141, in __enter__
+    return next(self.gen)
+  File "<operational-root-A>/scripts/frontier_v8_operational_bridge.py", line 181, in load_operational_cpu_modules
+    stdlib = _clean_interpreter()
+  File "<operational-root-A>/scripts/frontier_v8_operational_bridge.py", line 83, in _clean_interpreter
+    _clean_cache(sys.path_importer_cache, paths)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<operational-root-A>/scripts/frontier_v8_operational_bridge.py", line 92, in _clean_cache
+    _require(type(path) is str and (path in paths or
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             Path(path).is_relative_to(Path(STDLIB))),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             'Foreign path importer cache path rejected')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<operational-root-A>/scripts/frontier_v8_operational_bridge.py", line 36, in _require
+    raise OperationalBridgeError(message)
+OperationalBridgeError: Foreign path importer cache path rejected

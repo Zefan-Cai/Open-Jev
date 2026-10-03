@@ -1,0 +1,21 @@
+{
+  "cause": "The CLI test took its import-state baseline before ordinary argparse initialization. CLI parser startup is outside the controlled context; the manager restoration fixtures passed. The final fixture initializes standard argparse first and then checks the scoped state guarantee.",
+  "created_at": "2026-10-03T15:06:01.349423+00:00",
+  "extra_final_delta": [
+    "Post-callback audit now runs on body exceptions too.",
+    "Cache-origin and actual preloaded-module regressions added.",
+    "Captured private verifier metadata is separate from operational module table.",
+    "CLI optional absence checked and assertion repeated labels accurately called tags."
+  ],
+  "model_or_host_actions": 0,
+  "observed_failures": 1,
+  "observed_passed": 15,
+  "observed_tests": 16,
+  "original_source_guards_unchanged": true,
+  "phase": "new_operational_CPU_bridge_author_fixtures",
+  "raw_output_saved_separately": true,
+  "raw_receipt": "author-focused-r2.receipt.json",
+  "run": "author-focused-r2",
+  "schema_version": 1,
+  "status": "historical_CLI_fixture_scope_assumption_failure"
+}

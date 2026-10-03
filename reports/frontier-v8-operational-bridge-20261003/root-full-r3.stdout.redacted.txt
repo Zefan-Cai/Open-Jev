@@ -1,0 +1,16 @@
+{
+  "trace": "<temporary-fixture-dir>/typed.json",
+  "policy": "random_baseline",
+  "is_model": false,
+  "episodes": 1,
+  "metrics": [
+    {
+      "steps": 2,
+      "stop_reason": "terminal",
+      "total_reward": 2.0,
+      "mean_decision_latency_ms": 0.03852101508527994,
+      "engine_total_reward": 2.0,
+      "elapsed_tics": 8
+    }
+  ]
+}

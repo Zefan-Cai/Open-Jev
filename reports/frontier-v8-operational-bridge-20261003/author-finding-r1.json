@@ -1,0 +1,20 @@
+{
+  "causes": [
+    "Bridge package snapshot used hasattr on lazy Python 3.14 stdlib modules, changing sys.modules during iteration.",
+    "Child snippets embedded unescaped newline bytes, causing dedent/IndentationError.",
+    "Positive test referenced nonexistent resource_episode._canonical.",
+    "Foreign-hook fixture restoration compared against state before lazy sysconfig import."
+  ],
+  "created_at": "2026-10-03T15:00:47.741239+00:00",
+  "evidence": "Actual tool transcript: exec session 70830, chunk 8403eb. Raw output not reconstructed.",
+  "model_or_host_actions": 0,
+  "observed_failures": 15,
+  "observed_passed": 1,
+  "observed_tests": 16,
+  "old_completed_bytes_changed": false,
+  "phase": "new_operational_CPU_bridge_author_fixtures",
+  "raw_output_saved_separately": false,
+  "run": "author-focused-r1",
+  "schema_version": 1,
+  "status": "initial_uncommitted_source_and_fixture_failures"
+}

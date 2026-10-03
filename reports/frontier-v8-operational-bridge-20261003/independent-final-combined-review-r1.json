@@ -1,0 +1,109 @@
+{
+  "author_test_count_static_scope": {
+    "five_hook_mutation_subcases": "Contained in one author named method, not five independent named unittest cases.",
+    "named_methods_in_final_test_module": 21
+  },
+  "evidence_sha256": {
+    "actual-source-import-receipt-r1.json": "417aecb18e6fb9dd6cdb0b6ce152262d1d063ca38dbd7552937efc2015a55bf8",
+    "independent-cli-amendment-review-r1.json": "cae2ca0116a513f90c627c3e1ade07ac3c92a81bc32f15b652c07134cfee85c4",
+    "independent-combined-r1.py": "dbaa74ba2b2cc51932517069afc8daf09b2172c7a49ad826768b7930aacd718c",
+    "independent-combined-r1.stderr.txt": "c8cfd5d430961828f893c0d684ee550ebb9f299e9966fa094e75b94c5c300620",
+    "independent-combined-r1.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "independent-combined-receipt-r1.json": "6f376cb9bfe8ae1163699595a5eb14f33b92f949746bd14a9cef2eff6afe7d9a",
+    "independent-combined-static-r1.json": "b9f3ef505d4bf6d1f683914d3b01164979b589970b6f6606feb472487b2293bd",
+    "independent-org-probe-design-r1.json": "bc42b98a7fd83e776d9ad1d7d52d32d1de2d118a9ccd7cd4aab8ce2dd2de38fc",
+    "independent-source-review-r1.json": "407c847f94350c4daad77829411e5dcea9f015a167d16963ac9d917a6f324d87",
+    "source-A-CI-Python310-r1.log": "9eaf5f3b70f23338f97d81e6cae2e6a40ac8489d97ce528e64a28d9b84757868",
+    "startup-cache-diagnostic-r1.json": "78c74a34c01b75c4e27af410020cc54b7198c6aba845aed666e37dc65bc8088e"
+  },
+  "execution_available": false,
+  "historical_review_counts_scope": "OriginalA24static/9manual/6distincttargeted and cache-only10delta/7manual/3cases remain historical; final combined review does not falsely add them as cases rerun on finalC.",
+  "independent_final_combined_named_cases": {
+    "passed": 4,
+    "scope": "New independently authored bodies using author fresh copied-Git fixture constructor/child helper and fixture-only pins. No full suite or real production source proof.",
+    "total": 4
+  },
+  "limits": [
+    "Trusted interpreter provenance, not sandbox, arbitrary Python restriction or revocation of retained module/function references. Standard-library/builtins/opaque object internals remain trusted.",
+    "CPU assertion predicate is supplied trusted dependency; CLI no-op fixture tags do not attest actual ownership or independently verified resource authority.",
+    "Exact org absence is a hard denial with ImportError-compatible error class, not approval for a positive namespace or paths; all unrelated frozenFinder denials remain strict.",
+    "Local3.14 probe does not establish real3.10 compatibility; new realCI required.",
+    "No actual MS host, GPU, queue, Torch/runtime ABI, real tensors/gradients, model quality or natural trial evaluated.",
+    "Compiler marshal digests inherited from verifier are process-local post-exec fingerprints, not canonical independent compile hashes."
+  ],
+  "manual_checks": [
+    {
+      "evidence": "AST proves only fullname==org raises ModuleNotFoundError(name org), every other fullname returnsNone to unchanged pinned Finder. Direct from-org grammar catches ImportError; positive fallback sentinel untouched.",
+      "name": "exact_negative_org_probe_hard_stop",
+      "passed": true
+    },
+    {
+      "evidence": "Preloaded org/org.python/org.python.core refused before assertion/verifier bootstrap. Probe instance/class descriptor/code/defaults and pinned finder mapping identity checked before/after helper imports and audits.",
+      "name": "positive_module_and_finder_contamination",
+      "passed": true
+    },
+    {
+      "evidence": "Torch, org_unrelated and another foreign package still raise immutable SourceVerificationError(ValueError), with no generic error conversion or fallback allowance.",
+      "name": "unrelated_namespace_denial_preserved",
+      "passed": true
+    },
+    {
+      "evidence": "Final combined real file-CLI succeeds with helper3+namespace1/private verifier separately recorded; exact entryNone accepted/restored, matching-entry positive finder and source-loader foreignNone refuse.",
+      "name": "exact_negative_entry_cache_boundary",
+      "passed": true
+    },
+    {
+      "evidence": "No live-host preallocation/lease/worker/model method is invoked by bridge CLI. Production execute remains unconditional refusal before context read; assertion tags are explicit trusted CPU fixture strings.",
+      "name": "trusted_source_not_execution_authority",
+      "passed": true
+    },
+    {
+      "evidence": "Doc explains exact entry-negative exception and hard-negative org fallback denial. Historical sourceA failed actual proof and3.10 CI, cache-only e662 review and older targeted raw remain immutable separate bindings.",
+      "name": "documentation_and_historical_bindings",
+      "passed": true
+    },
+    {
+      "evidence": "Independent guarded syntax and file CLI checks ran local Python3.14. Actual new-sourceC Python3.10 exacthead CI still required; historical sourceA3.10 failures not manually retried or rewritten.",
+      "name": "runtime_compatibility_claim_limit",
+      "passed": true
+    }
+  ],
+  "manual_passed": 7,
+  "manual_total": 7,
+  "mechanical_AST_and_text_checks": {
+    "passed": 16,
+    "scope": "Mechanical guard/binding checks not semantic gold",
+    "total": 16
+  },
+  "remaining_required_validation": [
+    "Root final combined focused/full regression results and stable hashes.",
+    "Final sourceC commit/push, fresh separate external declarations/nonce/paths and one new actual source proof; old actualA proof permanently consumed.",
+    "All latest exact-C/report-head Python3.10/3.14 push/PR CI and main integration; no manual sourceA CI retry."
+  ],
+  "resource_authority": false,
+  "reviewed_at_utc": "2026-10-03T15:33:19.922960+00:00",
+  "reviewed_source_files_sha256": {
+    "docs/frontier-v8-operational-bridge.md": "63f0cfd3e8ce4b832ce9cf15be94229a6fe69287c1b7b03129cb31b973560730",
+    "scripts/frontier_v8_operational_bridge.py": "d7c82370828c7b7b2e191c112aeb8e66423a1fb1cfcbf3182f38225045478b9b",
+    "tests/test_frontier_v8_operational_bridge.py": "617fc26c15f3fb0e9e9c0d886dc8482ff769c9084736fa8f0dd478bb12233372"
+  },
+  "reviewer": "bridge_independent_review_subagent_not_author",
+  "reviewer_actions": {
+    "GPU_actions": 0,
+    "SSH_calls": 0,
+    "Torch_imports": 0,
+    "browser_actions": 0,
+    "commits": 0,
+    "installations": 0,
+    "model_calls": 0,
+    "network_calls": 0,
+    "old_proof_or_CI_retries": 0,
+    "production_committed_source_proof_executions": 0,
+    "pushes": 0,
+    "queue_actions": 0,
+    "source_edits": 0
+  },
+  "schema_version": 1,
+  "source_C_commit_status": "Combined bytes reviewed before final sourceC commit/push; new declaration/proof must bind actual pushedC separately.",
+  "status": "independent_final_combined_operational_source_review_passed_CPU_only_pending_newCI_proof"
+}

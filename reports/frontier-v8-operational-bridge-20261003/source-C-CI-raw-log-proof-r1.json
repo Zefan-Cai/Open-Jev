@@ -1,0 +1,477 @@
+{
+  "bridge_current_named_case_count": 21,
+  "claims_limits": [
+    "21 new bridge cases are portable CPU import/provenance fixtures; no new bridge Linux pidfd fixture is invented.",
+    "The separately identified existing LiveHostLinuxTests case runs an owned CPU worker with real Linux pidfds but injected host/GPU/source verifier. It is not a default MS adapter, physical GPU lease, foreign queue restoration or model test.",
+    "Suite totals and named ok results are actual saved log evidence. Job status/head binding uses saved root-fetched GitHub metadata plus actual checkout SHA; analyzer did not independently authenticate or redownload logs.",
+    "GitHub jobs install build tooling and run CPU tests; these are not model-runtime installation, Torch ABI, MS queue, model capability, natural trial or business action evidence.",
+    "SourceA failed Python3.10 CI and failed file-CLI artifacts remain historical and consumed; its Python3.14 job succeeded. No cancelled sourceA job is claimed. SourceC jobs are new pushed-source jobs, never a manual sourceA retry."
+  ],
+  "execution_available": false,
+  "existing_separate_Linux_fixture_named_case_count": 1,
+  "jobs": [
+    {
+      "actual_checkout_sha_lines": [
+        "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19"
+      ],
+      "actual_suite_errors": 0,
+      "actual_suite_failures": 0,
+      "actual_suite_passed": 1300,
+      "actual_suite_skipped": 90,
+      "actual_suite_total": 1390,
+      "conclusion": "success",
+      "head_sha": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19",
+      "job_id": 111234477439,
+      "job_url": "https://github.com/Zefan-Cai/Open-Jev/actions/runs/37133937755/job/111234477439",
+      "named_actual_ok": [
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_actual_operational_graph_origins_real_functions_and_caller_restore"
+          ],
+          "raw_line_number": 777,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_legitimate_preloaded_and_forged_scripts_modules_rejected"
+          ],
+          "raw_line_number": 788,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_forged_timestamp_bytecode_is_rejected_without_executing"
+          ],
+          "raw_line_number": 785,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_foreign_meta_path_hook_and_cache_contamination_rejected"
+          ],
+          "raw_line_number": 783,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_foreign_path_rejected_and_hostile_cwd_pythonpath_ignored"
+          ],
+          "raw_line_number": 784,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_wrong_commit_and_dirty_helper_rejected"
+          ],
+          "raw_line_number": 797,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_bootstrap_source_loader_hash_and_bridge_origin_checked"
+          ],
+          "raw_line_number": 779,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_scope_rejects_module_function_and_class_method_replacement"
+          ],
+          "raw_line_number": 794,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_private_verifier_substitution_rejected_before_fresh_capture"
+          ],
+          "raw_line_number": 792,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_scope_container_cache_and_captured_loader_mutations_rejected"
+          ],
+          "raw_line_number": 793,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_sources_changed_inside_scope_and_during_import_rejected"
+          ],
+          "raw_line_number": 795,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_ownership_loss_before_during_after_import_and_callback_restores_state"
+          ],
+          "raw_line_number": 790,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_cpu_assertion_required_cannot_use_boolean_receipt"
+          ],
+          "raw_line_number": 781,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_lazy_restoration_and_optional_model_imports_remain_undeclared"
+          ],
+          "raw_line_number": 787,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_body_exception_import_failure_and_assertion_pollution_restore_state"
+          ],
+          "raw_line_number": 778,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_cli_cpu_import_scope_and_production_refusal_before_context_read"
+          ],
+          "raw_line_number": 780,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_genuine_file_cli_imports_captured_cpu_helpers_without_execution"
+          ],
+          "raw_line_number": 786,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_exact_entry_negative_cache_retained_and_foreign_or_positive_entries_refused"
+          ],
+          "raw_line_number": 782,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_stdlib_org_absence_probe_never_falls_through_to_positive_import"
+          ],
+          "raw_line_number": 796,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_preloaded_org_package_and_submodule_aliases_are_refused"
+          ],
+          "raw_line_number": 791,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_org_probe_hook_instance_method_code_defaults_and_finder_binding_mutations_refused"
+          ],
+          "raw_line_number": 789,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_live_host",
+            "LiveHostLinuxTests",
+            "test_real_fresh_worker_checks_pidfds_but_receipt_never_grants_gpu_authority"
+          ],
+          "raw_line_number": 737,
+          "status": "ok"
+        }
+      ],
+      "python_matrix": "3.10",
+      "raw_log_path": "runs/frontier-v8-operational-bridge-20261003/source-C-CI-Python310-r1.log",
+      "raw_log_sha256": "ccab85223266b26fe621a5be58bcdbf1624f596dc827afbdb27204b0387b5a0e",
+      "reported_suite_seconds": 230.209,
+      "status": "completed"
+    },
+    {
+      "actual_checkout_sha_lines": [
+        "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19"
+      ],
+      "actual_suite_errors": 0,
+      "actual_suite_failures": 0,
+      "actual_suite_passed": 1300,
+      "actual_suite_skipped": 90,
+      "actual_suite_total": 1390,
+      "conclusion": "success",
+      "head_sha": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19",
+      "job_id": 111234477326,
+      "job_url": "https://github.com/Zefan-Cai/Open-Jev/actions/runs/37133937755/job/111234477326",
+      "named_actual_ok": [
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_actual_operational_graph_origins_real_functions_and_caller_restore"
+          ],
+          "raw_line_number": 774,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_legitimate_preloaded_and_forged_scripts_modules_rejected"
+          ],
+          "raw_line_number": 785,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_forged_timestamp_bytecode_is_rejected_without_executing"
+          ],
+          "raw_line_number": 782,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_foreign_meta_path_hook_and_cache_contamination_rejected"
+          ],
+          "raw_line_number": 780,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_foreign_path_rejected_and_hostile_cwd_pythonpath_ignored"
+          ],
+          "raw_line_number": 781,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_wrong_commit_and_dirty_helper_rejected"
+          ],
+          "raw_line_number": 794,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_bootstrap_source_loader_hash_and_bridge_origin_checked"
+          ],
+          "raw_line_number": 776,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_scope_rejects_module_function_and_class_method_replacement"
+          ],
+          "raw_line_number": 791,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_private_verifier_substitution_rejected_before_fresh_capture"
+          ],
+          "raw_line_number": 789,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_scope_container_cache_and_captured_loader_mutations_rejected"
+          ],
+          "raw_line_number": 790,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_sources_changed_inside_scope_and_during_import_rejected"
+          ],
+          "raw_line_number": 792,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_ownership_loss_before_during_after_import_and_callback_restores_state"
+          ],
+          "raw_line_number": 787,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_cpu_assertion_required_cannot_use_boolean_receipt"
+          ],
+          "raw_line_number": 778,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_lazy_restoration_and_optional_model_imports_remain_undeclared"
+          ],
+          "raw_line_number": 784,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_body_exception_import_failure_and_assertion_pollution_restore_state"
+          ],
+          "raw_line_number": 775,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_cli_cpu_import_scope_and_production_refusal_before_context_read"
+          ],
+          "raw_line_number": 777,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_genuine_file_cli_imports_captured_cpu_helpers_without_execution"
+          ],
+          "raw_line_number": 783,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_exact_entry_negative_cache_retained_and_foreign_or_positive_entries_refused"
+          ],
+          "raw_line_number": 779,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_stdlib_org_absence_probe_never_falls_through_to_positive_import"
+          ],
+          "raw_line_number": 793,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_preloaded_org_package_and_submodule_aliases_are_refused"
+          ],
+          "raw_line_number": 788,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_operational_bridge",
+            "OperationalBridgeTests",
+            "test_org_probe_hook_instance_method_code_defaults_and_finder_binding_mutations_refused"
+          ],
+          "raw_line_number": 786,
+          "status": "ok"
+        },
+        {
+          "id": [
+            "test_frontier_v8_live_host",
+            "LiveHostLinuxTests",
+            "test_real_fresh_worker_checks_pidfds_but_receipt_never_grants_gpu_authority"
+          ],
+          "raw_line_number": 734,
+          "status": "ok"
+        }
+      ],
+      "python_matrix": "3.14",
+      "raw_log_path": "runs/frontier-v8-operational-bridge-20261003/source-C-CI-Python314-r1.log",
+      "raw_log_sha256": "fe28d97601ab72c556b53c5c2e57d8d75059bc2348f10b049a4f30bf49ad3deb",
+      "reported_suite_seconds": 190.958,
+      "status": "completed"
+    }
+  ],
+  "named_cases_required_per_job": 22,
+  "resource_authority": false,
+  "reviewed_at_utc": "2026-10-03T15:43:30.045738+00:00",
+  "reviewer_actions": {
+    "GPU_actions": 0,
+    "SSH_calls": 0,
+    "Torch_imports": 0,
+    "log_fetches": 0,
+    "model_calls": 0,
+    "network_calls": 0,
+    "queue_actions": 0,
+    "source_edits": 0,
+    "source_proof_executions": 0,
+    "test_executions": 0
+  },
+  "schema_version": 1,
+  "scope": "Read-only AST of exact sourceC Git blobs and saved raw successful push-job logs, no imported code/test execution or network.",
+  "snapshot_path": "runs/frontier-v8-operational-bridge-20261003/source-C-CI-snapshot-r4.json",
+  "snapshot_sha256": "cdbf181179aa7967835237b2865f4eac9ca1f790149c0a8823270b892958f2d0",
+  "source_commit": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19",
+  "source_inventory_sha256": {
+    "tests/test_frontier_v8_live_host.py": "4dd3c704f82ed343c1e7fc4c0bdca4ec53940531e5c5740c05e545df345781ea",
+    "tests/test_frontier_v8_operational_bridge.py": "617fc26c15f3fb0e9e9c0d886dc8482ff769c9084736fa8f0dd478bb12233372"
+  },
+  "status": "independent_source_C_saved_CI_AST_named_case_review_passed"
+}

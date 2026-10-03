@@ -1,0 +1,9 @@
+test_file_CLI_graph_and_exact_negative_entry_exception_remain_closed (__main__.IndependentCombined.test_file_CLI_graph_and_exact_negative_entry_exception_remain_closed) ... ok
+test_front_hook_instance_code_defaults_and_pinned_mapping_are_audited (__main__.IndependentCombined.test_front_hook_instance_code_defaults_and_pinned_mapping_are_audited) ... ok
+test_org_from_import_hard_absence_without_positive_fallback (__main__.IndependentCombined.test_org_from_import_hard_absence_without_positive_fallback) ... ok
+test_preloaded_positive_org_aliases_refused_before_assertion (__main__.IndependentCombined.test_preloaded_positive_org_aliases_refused_before_assertion) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 51.216s
+
+OK

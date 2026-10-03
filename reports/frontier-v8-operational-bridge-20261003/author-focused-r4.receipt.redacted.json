@@ -1,0 +1,25 @@
+{
+  "command": [
+    "<homebrew>/opt/python@3.14/bin/python3.14",
+    "-B",
+    "-m",
+    "unittest",
+    "tests.test_frontier_v8_operational_bridge",
+    "-v"
+  ],
+  "completed_at": "2026-10-03T15:22:22.826247+00:00",
+  "duration_seconds": 208.7791600410128,
+  "outputs": {
+    "author-focused-r4.stderr.txt": "c5e96b147bc6a21a1d16c617b60b79899f918059af7901e3c2275c532a834fb4",
+    "author-focused-r4.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "returncode": 0,
+  "schema_version": 1,
+  "source_sha256": {
+    "scripts/frontier_v8_operational_bridge.py": "e6623117293a28925e9a80133b6364bfa21d2b52f00ec10004d9544e832debcb",
+    "tests/test_frontier_v8_operational_bridge.py": "4aa469282153f9e8e295be3485a447e64208ac659d1bc3ad999866e8bbabb79b"
+  },
+  "source_still_matches": true,
+  "started_at": "2026-10-03T15:18:54.045707+00:00",
+  "status": "focused_passed"
+}

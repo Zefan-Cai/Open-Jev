@@ -1,0 +1,135 @@
+{
+  "GPU_actions": 0,
+  "SSH_calls": 0,
+  "Torch_imports": 0,
+  "actual_CPU_import": {
+    "assertion_calls": 18,
+    "assertion_scope": "CPU_noop_fixture_only",
+    "count_is_unique_repo_relative_filenames": false,
+    "declared_Git_blob_entries_by_root": {
+      "native": 7,
+      "operational": 10,
+      "scientific": 18
+    },
+    "declared_entry_count": 35,
+    "elapsed_seconds": 11.512867874989752,
+    "empty_synthetic_namespace_modules": 1,
+    "independent_evidence_checks": 122,
+    "operational_helper_bodies_imported": 3,
+    "original_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original_stdout_sha256": "bd59839ab7e9906edac2b09cd02d286df047c6b7d97d325aacd3702b9d431d37",
+    "pinned_verifier_separately_compiled": true,
+    "platform": "darwin",
+    "python_version": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "scientific_and_native_source_modules_imported": 0,
+    "trusted_bridge_script_entry_executed_separately": true
+  },
+  "browser_actions": 0,
+  "completed_external_trials": 0,
+  "execution_available": false,
+  "foreign_queue_actions": 0,
+  "history": {
+    "actual_A_file_CLI_proof": "failed before three-source verification/helper imports; exact argv0 None importer-cache entry",
+    "cache_only_intermediate_revision": {
+      "committed": false,
+      "focused": 18,
+      "full": 1387,
+      "passed": 1282,
+      "skipped": 105
+    },
+    "cancelled_source_A_jobs_claimed": 0,
+    "compatibility_corrections": [
+      "Only exact entry-script importer-cache None is allowed; positive/foreign cache entries remain rejected.",
+      "Exact org is hard denied with ImportError-compatible ModuleNotFoundError; all other names reach unchanged pinned strict finder; preloaded org aliases and hook mutations remain rejected."
+    ],
+    "initial_r1_raw_available_only_in_tool_transcript_not_reconstructed": true,
+    "manual_CI_retries": 0,
+    "new_C_attempt_consumed_once": true,
+    "old_attempt_retried": false,
+    "source_A": "e3abab8ac788be8f03a7d2e98219070875ee55b9",
+    "source_A_Python310_CI": {
+      "cause": "copy.py negative org Jython probe received strict verifier ValueError",
+      "failures": 10,
+      "skipped": 90,
+      "total": 1385
+    },
+    "source_A_Python314_CI": "success"
+  },
+  "limits": [
+    "Trusted clean interpreter provenance only; not a sandbox, arbitrary Python restriction or revocation of retained raw references.",
+    "No-op CPU assertion calls are not live ownership, physical exclusion, a GPU lease, MS default-adapter execution or foreign-queue restoration.",
+    "Post-execution marshal compiled-code fingerprints are process-local, not canonical independently reproduced compile-only hashes.",
+    "GitHub jobs install build tooling and execute CPU fixtures; they do not prove model-runtime installation, ABI, CUDA, tensors or gradients.",
+    "CPU checks are not model/gold scores, natural trials, official JevBench gains, HTTP speedups or business actions.",
+    "Future runtime ABI note is a proposal; its creation-time pending status is historical, not a freeze or launch."
+  ],
+  "model_calls": 0,
+  "model_runtime_installations": 0,
+  "native_A": "4b55c6e3f025fd92ec4396d5c61bb4dfe13cbda2",
+  "operational_C": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19",
+  "publication_at_materialization": {
+    "latest_report_head_four_CI": "pending",
+    "main_integration": "pending",
+    "pull_request": null,
+    "report_commit": null,
+    "social_posts_sent": 0
+  },
+  "resource_authority": false,
+  "schema_version": 1,
+  "scientific_A": "d8eeb3d1f8e8d8751476f102ab456170c277e86a",
+  "scientific_freeze_sha256": "a710f79977ac582cdc9269368e3f442abb88e76e4bbfae89b962116ade213a5f",
+  "scientific_plan_sha256": "984539a92f1aa37b93e58fea7df4511a1635e7e9f284531068bb5a0939ebc8be",
+  "source_sha256": {
+    "docs/frontier-v8-operational-bridge.md": "63f0cfd3e8ce4b832ce9cf15be94229a6fe69287c1b7b03129cb31b973560730",
+    "scripts/frontier_v8_operational_bridge.py": "d7c82370828c7b7b2e191c112aeb8e66423a1fb1cfcbf3182f38225045478b9b",
+    "tests/test_frontier_v8_operational_bridge.py": "617fc26c15f3fb0e9e9c0d886dc8482ff769c9084736fa8f0dd478bb12233372"
+  },
+  "status": "actual_CPU_operational_import_and_exact_source_C_CI_passed",
+  "training_runs": 0,
+  "validation": {
+    "data_body_scope": "Ignored/untracked prepared data files were separately hash-preserved; they are not Git blobs or model evaluation results.",
+    "independent_final_combined_source_review": {
+      "distinct_CPU_cases": 4,
+      "manual": 7,
+      "mechanical": 16
+    },
+    "initial_original_byte_preservation_checks": 58,
+    "local_focused": {
+      "passed": 21,
+      "skipped": 0,
+      "total": 21
+    },
+    "local_full": {
+      "passed": 1285,
+      "skipped": 105,
+      "total": 1390
+    },
+    "precommit_preservation_checks": 65,
+    "source_C_push_CI": [
+      {
+        "bridge_named_ok": 21,
+        "conclusion": "success",
+        "head": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19",
+        "job_url": "https://github.com/Zefan-Cai/Open-Jev/actions/runs/37133937755/job/111234477439",
+        "original_raw_log_sha256": "ccab85223266b26fe621a5be58bcdbf1624f596dc827afbdb27204b0387b5a0e",
+        "passed": 1300,
+        "python": "3.10",
+        "separate_existing_injected_Linux_owned_CPU_fixture_ok": 1,
+        "skipped": 90,
+        "total": 1390
+      },
+      {
+        "bridge_named_ok": 21,
+        "conclusion": "success",
+        "head": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19",
+        "job_url": "https://github.com/Zefan-Cai/Open-Jev/actions/runs/37133937755/job/111234477326",
+        "original_raw_log_sha256": "fe28d97601ab72c556b53c5c2e57d8d75059bc2348f10b049a4f30bf49ad3deb",
+        "passed": 1300,
+        "python": "3.14",
+        "separate_existing_injected_Linux_owned_CPU_fixture_ok": 1,
+        "skipped": 90,
+        "total": 1390
+      }
+    ]
+  }
+}

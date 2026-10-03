@@ -1,0 +1,5 @@
+Open-Jev v8 now imports operational CPU helpers from verified source bytes. 🔎
+
+File startup and Python 3.10 checks included. Model execution stays closed; no new training.
+
+https://github.com/Zefan-Cai/Open-Jev/blob/0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19/docs/frontier-v8-operational-bridge.md

@@ -1,0 +1,19 @@
+{
+  "cause": "Python3.10 dataclasses imports copy.py, whose explicit from org.python.core import PyStringMap negative Jython probe catches ImportError. Frozen source verifier denies undeclared org using SourceVerificationError(ValueError), so absence escaped that stdlib catch.",
+  "created_at": "2026-10-03T15:30:09.349650+00:00",
+  "new_model_or_host_actions": 0,
+  "new_named_regression_cases": 3,
+  "new_only_amendment": "Operational front-finder hard-denies exact org with ModuleNotFoundError before the unchanged pinned finder; returns no positive specs. Other undeclared namespaces retain frozen strict denial. Preloaded org aliases are refused and probe hook method/code/default/instance plus pinned mapping bindings are audited.",
+  "no_manual_CI_retry": true,
+  "observed_failures": 10,
+  "observed_skipped": 90,
+  "observed_tests": 1385,
+  "old_proof_attempt_permanently_consumed": true,
+  "original_CI_raw": "source-A-CI-Python310-r1.log",
+  "original_CI_raw_sha256": "9eaf5f3b70f23338f97d81e6cae2e6a40ac8489d97ce528e64a28d9b84757868",
+  "original_science_native_loader_source_changed": false,
+  "real_Python310_CI_still_required": true,
+  "schema_version": 1,
+  "source_A": "e3abab8ac788be8f03a7d2e98219070875ee55b9",
+  "status": "source_A_Python310_CI_failure_preserved_operational_only_amendment"
+}

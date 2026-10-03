@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "at_utc": "2026-10-03T15:22:23.444674+00:00",
+  "status": "source_A_Python310_CI_stdlib_negative_Jython_probe_failure_preserved",
+  "source_A": "e3abab8ac788be8f03a7d2e98219070875ee55b9",
+  "CI_job_id": 111230232033,
+  "raw_log_sha256": "9eaf5f3b70f23338f97d81e6cae2e6a40ac8489d97ce528e64a28d9b84757868",
+  "tests": 1385,
+  "skipped": 90,
+  "failures": 10,
+  "passed": 1285,
+  "failed_named_cases": [
+    "test_actual_operational_graph_origins_real_functions_and_caller_restore (test_frontier_v8_operational_bridge.OperationalBridgeTests)",
+    "test_body_exception_import_failure_and_assertion_pollution_restore_state (test_frontier_v8_operational_bridge.OperationalBridgeTests)",
+    "test_cli_cpu_import_scope_and_production_refusal_before_context_read (test_frontier_v8_operational_bridge.OperationalBridgeTests)",
+    "test_foreign_path_rejected_and_hostile_cwd_pythonpath_ignored (test_frontier_v8_operational_bridge.OperationalBridgeTests)",
+    "test_lazy_restoration_and_optional_model_imports_remain_undeclared (test_frontier_v8_operational_bridge.OperationalBridgeTests)",
+    "test_ownership_loss_before_during_after_import_and_callback_restores_state (test_frontier_v8_operational_bridge.OperationalBridgeTests)",
+    "test_private_verifier_substitution_rejected_before_fresh_capture (test_frontier_v8_operational_bridge.OperationalBridgeTests)",
+    "test_scope_container_cache_and_captured_loader_mutations_rejected (test_frontier_v8_operational_bridge.OperationalBridgeTests)",
+    "test_scope_rejects_module_function_and_class_method_replacement (test_frontier_v8_operational_bridge.OperationalBridgeTests)",
+    "test_sources_changed_inside_scope_and_during_import_rejected (test_frontier_v8_operational_bridge.OperationalBridgeTests)"
+  ],
+  "failure_boundary": "dataclasses imports stdlib copy.py; negative org.python.core probe expects ImportError; frozen source Finder raises SourceVerificationError(ValueError)",
+  "source_A_Python314_CI_success": true,
+  "manual_CI_retries": 0,
+  "frozen_scientific_native_loader_changes": 0,
+  "new_model_calls": 0,
+  "new_GPU_actions": 0
+}

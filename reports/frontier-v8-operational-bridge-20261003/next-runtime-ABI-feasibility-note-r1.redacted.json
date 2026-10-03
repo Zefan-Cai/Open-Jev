@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "status": "CPU_only_next_stage_proposal_not_freeze_launch_or_authority",
+  "created_at_utc": "2026-10-03T15:40:06.996402+00:00",
+  "source_C": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19",
+  "integration_status_at_creation": "pending_publication_and_CI",
+  "proposed_next_step": "Separately declared fresh Linux CPU runtime ABI observation in the already installed isolated runtime, with CUDA_VISIBLE_DEVICES empty and no CUDA initialization, model load, download, installation or queue control.",
+  "prerequisites": [
+    "Start from the completed current phase merge after main integration, using a fresh branch/source closure and new nonce/attempt/output paths.",
+    "Read MS skill and capture fresh allowed host identity/boot/UID/PID birth/ancestry; do not treat old snapshots as a lease.",
+    "Revalidate the existing 76 locked distributions, absolute package positions and pipcheck, scientific/native/operational source and frozen input hashes before imports.",
+    "Independent prelaunch review of bounded CPU-only child/controller and exact permitted imports; consume the new attempt once and preserve any failure without retry.",
+    "Record actual import/ABI/numerical observations; distinguish CPU import compatibility from CUDA/model/Tensor/gradient verification or resource authority."
+  ],
+  "runtime_input_only": "<existing-isolated-Linux-runtime>",
+  "runtime_reinstall_available": false,
+  "scientific_source_A": "d8eeb3d1f8e8d8751476f102ab456170c277e86a",
+  "native_source_A": "4b55c6e3f025fd92ec4396d5c61bb4dfe13cbda2",
+  "plan_sha256": "984539a92f1aa37b93e58fea7df4511a1635e7e9f284531068bb5a0939ebc8be",
+  "execution_available": false,
+  "resource_authority": false,
+  "model_calls": 0,
+  "SSH_calls": 0,
+  "GPU_actions": 0,
+  "remaining_model_phase": [
+    "Reviewed production model/native bridge and owned live resource lifecycle still needed.",
+    "Fresh live ownership/lease, full runtime/data/weights hashes and independent restoration protocol required before any GPU/model stage.",
+    "Real tensors/gradients and CUDA ABI remain unobserved;733-step training has not begun."
+  ],
+  "Chrome_availability_reply_pending": true,
+  "social_posts_sent": 0
+}

@@ -1,0 +1,433 @@
+{
+  "entries": [
+    {
+      "original_bytes": 910,
+      "private_original_sha256": "470f671d8c8694b6e9f9f89cc439fa9e6c06d214c22169e32c4a23c9fdeaa028",
+      "public_bytes": 907,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/author-focused-r5.receipt.redacted.json",
+      "public_sha256": "42b41a37bc7faffefe1f04e187dd3ba9458229ae672f68640b3f3a8a85c7fe5a",
+      "replacement_count_by_public_label": {
+        "<homebrew>": 1
+      },
+      "source_basename": "author-focused-r5.receipt.json",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 4423,
+      "private_original_sha256": "40308cdfc2c1343f46d6bfaff06cc2025f7205ed06c95b81f4dbe7bf44f7642f",
+      "public_bytes": 4423,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/author-focused-r5.stderr.txt",
+      "public_sha256": "40308cdfc2c1343f46d6bfaff06cc2025f7205ed06c95b81f4dbe7bf44f7642f",
+      "replacement_count_by_public_label": {},
+      "source_basename": "author-focused-r5.stderr.txt",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 0,
+      "private_original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_bytes": 0,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/author-focused-r5.stdout.txt",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacement_count_by_public_label": {},
+      "source_basename": "author-focused-r5.stdout.txt",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 1660,
+      "private_original_sha256": "060ed67e0e11d21763c87a90ea07d3fea82985464e4ed042b7a7ed2987a5ee01",
+      "public_bytes": 1657,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/root-full-r3.redacted.json",
+      "public_sha256": "afee50d2256bef7ba649ce723e28d4b440fa8d7f6a77aee42f9388ee59401cef",
+      "replacement_count_by_public_label": {
+        "<homebrew>": 1
+      },
+      "source_basename": "root-full-r3.json",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 245688,
+      "private_original_sha256": "408fa2f0061c624d5704f824ef974073bb9f3174dc1c4197791091b805ff1522",
+      "public_bytes": 245688,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/root-full-r3.stderr.txt",
+      "public_sha256": "408fa2f0061c624d5704f824ef974073bb9f3174dc1c4197791091b805ff1522",
+      "replacement_count_by_public_label": {},
+      "source_basename": "root-full-r3.stderr.txt",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 381,
+      "private_original_sha256": "96b839c4f2b774f1965f4b3eaedb82c74f5bc998f31b1cfd5e49881dcfb4b27c",
+      "public_bytes": 344,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/root-full-r3.stdout.redacted.txt",
+      "public_sha256": "333e0624914766c64683d746571726a11f3b5834eb6322301bb2da098c947aea",
+      "replacement_count_by_public_label": {
+        "<temporary-fixture-dir>": 1
+      },
+      "source_basename": "root-full-r3.stdout.txt",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 6822,
+      "private_original_sha256": "6a43bc2964bcb1a6f92c2429869ec2c06111137d84e4f94d4082a975775e230a",
+      "public_bytes": 6822,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/independent-final-combined-review-r1.json",
+      "public_sha256": "6a43bc2964bcb1a6f92c2429869ec2c06111137d84e4f94d4082a975775e230a",
+      "replacement_count_by_public_label": {},
+      "source_basename": "independent-final-combined-review-r1.json",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 2478,
+      "private_original_sha256": "6f376cb9bfe8ae1163699595a5eb14f33b92f949746bd14a9cef2eff6afe7d9a",
+      "public_bytes": 2478,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/independent-combined-receipt-r1.json",
+      "public_sha256": "6f376cb9bfe8ae1163699595a5eb14f33b92f949746bd14a9cef2eff6afe7d9a",
+      "replacement_count_by_public_label": {},
+      "source_basename": "independent-combined-receipt-r1.json",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 771,
+      "private_original_sha256": "c8cfd5d430961828f893c0d684ee550ebb9f299e9966fa094e75b94c5c300620",
+      "public_bytes": 771,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/independent-combined-r1.stderr.txt",
+      "public_sha256": "c8cfd5d430961828f893c0d684ee550ebb9f299e9966fa094e75b94c5c300620",
+      "replacement_count_by_public_label": {},
+      "source_basename": "independent-combined-r1.stderr.txt",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 0,
+      "private_original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_bytes": 0,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/independent-combined-r1.stdout.txt",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacement_count_by_public_label": {},
+      "source_basename": "independent-combined-r1.stdout.txt",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 2294,
+      "private_original_sha256": "417aecb18e6fb9dd6cdb0b6ce152262d1d063ca38dbd7552937efc2015a55bf8",
+      "public_bytes": 1986,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/actual-source-import-receipt-r1.redacted.json",
+      "public_sha256": "a715ac02bb93fad65b9b3ad91e91985b826eddfb8669c9b684fc5e6380354b8d",
+      "replacement_count_by_public_label": {
+        "<external-dir-A>": 2,
+        "<failed-A-proof>": 1,
+        "<homebrew>": 2,
+        "<operational-root-A>": 1
+      },
+      "source_basename": "actual-source-import-receipt-r1.json",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 2069,
+      "private_original_sha256": "1170fe636035512b147fc58cd98e6ed4d5bb4f629b457e0152eb4b166389e91a",
+      "public_bytes": 1604,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/actual-source-import-r1.stderr.redacted.txt",
+      "public_sha256": "fcec07225f3326b4fdec2658397d98527a09f903bc5bab145897afaefcdaa3e4",
+      "replacement_count_by_public_label": {
+        "<homebrew>": 1,
+        "<operational-root-A>": 6
+      },
+      "source_basename": "actual-source-import-r1.stderr.txt",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 0,
+      "private_original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_bytes": 0,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/actual-source-import-r1.stdout.txt",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacement_count_by_public_label": {},
+      "source_basename": "actual-source-import-r1.stdout.txt",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 746,
+      "private_original_sha256": "78c74a34c01b75c4e27af410020cc54b7198c6aba845aed666e37dc65bc8088e",
+      "public_bytes": 703,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/startup-cache-diagnostic-r1.redacted.json",
+      "public_sha256": "e9d90f5422ea7179c45b457746c7f8cb59d15baefd344aa4440c83ea400f416b",
+      "replacement_count_by_public_label": {
+        "<homebrew>": 1,
+        "<workspace>": 1
+      },
+      "source_basename": "startup-cache-diagnostic-r1.json",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 3913,
+      "private_original_sha256": "b406b89c5a5d9dfa63dbcc2d2a1acb3a5cf63970a929d7901ae7d9e2485a60b2",
+      "public_bytes": 3758,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/startup-cache-diagnostic-r1.stdout.redacted.txt",
+      "public_sha256": "061cecaac67066534ba09777d5ff1fc96b50adc9e761f39ab782991102a1e712",
+      "replacement_count_by_public_label": {
+        "<homebrew>": 25,
+        "<workspace>": 2
+      },
+      "source_basename": "startup-cache-diagnostic-r1.stdout.txt",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 1367,
+      "private_original_sha256": "94217bfeaa0c8521c35881fbab072c75a1b320599d4957fd4075baff1d90f6ad",
+      "public_bytes": 1367,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/author-source-A-file-cli-finding-r1.json",
+      "public_sha256": "94217bfeaa0c8521c35881fbab072c75a1b320599d4957fd4075baff1d90f6ad",
+      "replacement_count_by_public_label": {},
+      "source_basename": "author-source-A-file-cli-finding-r1.json",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 1314,
+      "private_original_sha256": "73d8d4cffbf101f4709ddfb90cbd1a5710f5d2f88c93e558bd0cd81b88ee80a5",
+      "public_bytes": 1314,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/author-source-A-python310-finding-r1.json",
+      "public_sha256": "73d8d4cffbf101f4709ddfb90cbd1a5710f5d2f88c93e558bd0cd81b88ee80a5",
+      "replacement_count_by_public_label": {},
+      "source_basename": "author-source-A-python310-finding-r1.json",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 2127,
+      "private_original_sha256": "a87b0990b5b0feec41e9000eb044edbe5059233158c9708ed9f2e741f2d7282d",
+      "public_bytes": 2127,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/source-A-CI-Python310-finding-r1.json",
+      "public_sha256": "a87b0990b5b0feec41e9000eb044edbe5059233158c9708ed9f2e741f2d7282d",
+      "replacement_count_by_public_label": {},
+      "source_basename": "source-A-CI-Python310-finding-r1.json",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 256510,
+      "private_original_sha256": "9eaf5f3b70f23338f97d81e6cae2e6a40ac8489d97ce528e64a28d9b84757868",
+      "public_bytes": 256510,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/source-A-CI-Python310-r1.log",
+      "public_sha256": "9eaf5f3b70f23338f97d81e6cae2e6a40ac8489d97ce528e64a28d9b84757868",
+      "replacement_count_by_public_label": {},
+      "source_basename": "source-A-CI-Python310-r1.log",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 4185,
+      "private_original_sha256": "cd6143169e4c968e6cbedec77485f2649441234c07ed5b5b74181ba95dd4f18b",
+      "public_bytes": 3792,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/actual-source-import-receipt-r2.redacted.json",
+      "public_sha256": "0765eafc261d269b51ff7ba85a7bf63b77d7d64beb89f9771018f7a1ab63ce76",
+      "replacement_count_by_public_label": {
+        "<external-dir>": 2,
+        "<homebrew>": 2,
+        "<operational-root>": 2,
+        "<source-C-proof>": 1
+      },
+      "source_basename": "actual-source-import-receipt-r2.json",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 9356,
+      "private_original_sha256": "bd59839ab7e9906edac2b09cd02d286df047c6b7d97d325aacd3702b9d431d37",
+      "public_bytes": 8246,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/actual-source-import-r2.stdout.redacted.txt",
+      "public_sha256": "f1980353e6ef37f561e8edb2f3196f200c4b45aa24a67936d2c4c4727416661e",
+      "replacement_count_by_public_label": {
+        "<external-dir>": 4,
+        "<native-root>": 2,
+        "<operational-root>": 6,
+        "<scientific-root>": 2
+      },
+      "source_basename": "actual-source-import-r2.stdout.txt",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 0,
+      "private_original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_bytes": 0,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/actual-source-import-r2.stderr.txt",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "replacement_count_by_public_label": {},
+      "source_basename": "actual-source-import-r2.stderr.txt",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 27829,
+      "private_original_sha256": "06b9b6c7f88af22de2b3e8cd90a39d712d01cbf97b496aa22bdca034a732e6b9",
+      "public_bytes": 27523,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/independent-actual-source-C-evidence-review-r1.redacted.json",
+      "public_sha256": "fb515730a9a2bd87895a904627e4b556b002a99972b3c22b38b6f6ec75859333",
+      "replacement_count_by_public_label": {
+        "<native-root>": 1,
+        "<operational-root>": 1,
+        "<scientific-root>": 1,
+        "<source-C-proof>": 1
+      },
+      "source_basename": "independent-actual-source-C-evidence-review-r1.json",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 1592,
+      "private_original_sha256": "5180caedbfc98aaf91d84d69e9abba0113dc308c052303afe238bb131d1b9ab8",
+      "public_bytes": 1355,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/source-C-proof-worktree-cleanup-r1.redacted.json",
+      "public_sha256": "d0c92e2a4657c9d11ccd23cf0c89104ef74fc8a79df69d4e04f88d6a4dadd1bb",
+      "replacement_count_by_public_label": {
+        "<native-root>": 1,
+        "<operational-root>": 1,
+        "<scientific-root>": 1
+      },
+      "source_basename": "source-C-proof-worktree-cleanup-r1.json",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 244179,
+      "private_original_sha256": "ccab85223266b26fe621a5be58bcdbf1624f596dc827afbdb27204b0387b5a0e",
+      "public_bytes": 244179,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/source-C-CI-Python310-r1.log",
+      "public_sha256": "ccab85223266b26fe621a5be58bcdbf1624f596dc827afbdb27204b0387b5a0e",
+      "replacement_count_by_public_label": {},
+      "source_basename": "source-C-CI-Python310-r1.log",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 325515,
+      "private_original_sha256": "fe28d97601ab72c556b53c5c2e57d8d75059bc2348f10b049a4f30bf49ad3deb",
+      "public_bytes": 325515,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/source-C-CI-Python314-r1.log",
+      "public_sha256": "fe28d97601ab72c556b53c5c2e57d8d75059bc2348f10b049a4f30bf49ad3deb",
+      "replacement_count_by_public_label": {},
+      "source_basename": "source-C-CI-Python314-r1.log",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 16296,
+      "private_original_sha256": "4b1be931a0614b379b789828034505893b90294c6bc882161b41d7c3e866b7f7",
+      "public_bytes": 16296,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/source-C-CI-raw-log-proof-r1.json",
+      "public_sha256": "4b1be931a0614b379b789828034505893b90294c6bc882161b41d7c3e866b7f7",
+      "replacement_count_by_public_label": {},
+      "source_basename": "source-C-CI-raw-log-proof-r1.json",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 6148,
+      "private_original_sha256": "cdbf181179aa7967835237b2865f4eac9ca1f790149c0a8823270b892958f2d0",
+      "public_bytes": 6148,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/source-C-CI-snapshot-r4.json",
+      "public_sha256": "cdbf181179aa7967835237b2865f4eac9ca1f790149c0a8823270b892958f2d0",
+      "replacement_count_by_public_label": {},
+      "source_basename": "source-C-CI-snapshot-r4.json",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 3134,
+      "private_original_sha256": "eba26a8781f8b39424ffb9839244e75aa908511743a7a1cac77f97ded23c2e0f",
+      "public_bytes": 3134,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/independent-source-C-CI-binding-review-r1.json",
+      "public_sha256": "eba26a8781f8b39424ffb9839244e75aa908511743a7a1cac77f97ded23c2e0f",
+      "replacement_count_by_public_label": {},
+      "source_basename": "independent-source-C-CI-binding-review-r1.json",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 909,
+      "private_original_sha256": "eb9a865d32e4f464d1ff809e18739c4869d5f2b77d92a36aee90ae3985925cc9",
+      "public_bytes": 906,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/author-focused-r4.receipt.redacted.json",
+      "public_sha256": "24206e29b6c36062334d1c5763f185bc53433322d531dc547158cd6bc363376a",
+      "replacement_count_by_public_label": {
+        "<homebrew>": 1
+      },
+      "source_basename": "author-focused-r4.receipt.json",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 1654,
+      "private_original_sha256": "953a96e59ae3832e98e8dc252cab3332d778fef0b96918460af529dc3db6fdc0",
+      "public_bytes": 1651,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/root-full-r2.redacted.json",
+      "public_sha256": "b6079ff0be3669f1cb7ed7280abf0928e396bdba3768cff12003e9713b9ff5c6",
+      "replacement_count_by_public_label": {
+        "<homebrew>": 1
+      },
+      "source_basename": "root-full-r2.json",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 12115,
+      "private_original_sha256": "359a43230c13d58b0f18cd6433048d8d359edaf3532ccd09391b285eecccd925",
+      "public_bytes": 12115,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/root-initial-preservation-r1.json",
+      "public_sha256": "359a43230c13d58b0f18cd6433048d8d359edaf3532ccd09391b285eecccd925",
+      "replacement_count_by_public_label": {},
+      "source_basename": "root-initial-preservation-r1.json",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 4930,
+      "private_original_sha256": "3169132c9ed14f831d76a1ed61e59634c563688306be432b8ce42d426107d927",
+      "public_bytes": 4930,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/root-precommit-preservation-r2.json",
+      "public_sha256": "3169132c9ed14f831d76a1ed61e59634c563688306be432b8ce42d426107d927",
+      "replacement_count_by_public_label": {},
+      "source_basename": "root-precommit-preservation-r2.json",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 2292,
+      "private_original_sha256": "576013be98a130253dca1bbf8816afb05442f3368c12657c93a38a18bf39fae4",
+      "public_bytes": 2208,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/next-runtime-ABI-feasibility-note-r1.redacted.json",
+      "public_sha256": "e945d9df1689aaf2911bd74975a10fa91f1291f71c40ca442c22fcd6c3a34308",
+      "replacement_count_by_public_label": {
+        "<existing-isolated-Linux-runtime>": 1
+      },
+      "source_basename": "next-runtime-ABI-feasibility-note-r1.json",
+      "transformation": "explicit_private_path_redacted_derivative"
+    },
+    {
+      "original_bytes": 910,
+      "private_original_sha256": "ecdbd76e48d04e17abcd58b77cb1674faea97206b639aa6f37a7009d32c61b1d",
+      "public_bytes": 910,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/author-finding-r1.json",
+      "public_sha256": "ecdbd76e48d04e17abcd58b77cb1674faea97206b639aa6f37a7009d32c61b1d",
+      "replacement_count_by_public_label": {},
+      "source_basename": "author-finding-r1.json",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 1090,
+      "private_original_sha256": "78bc0c6651916188773ff59e8a3404a9daffd307b9b8ab126c2e6deb8bec632c",
+      "public_bytes": 1090,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/author-finding-r2.json",
+      "public_sha256": "78bc0c6651916188773ff59e8a3404a9daffd307b9b8ab126c2e6deb8bec632c",
+      "replacement_count_by_public_label": {},
+      "source_basename": "author-finding-r2.json",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 1568,
+      "private_original_sha256": "6b2478f7c1d30155fbf62b30627482a90449b677f5e256092f7e33b0302d4236",
+      "public_bytes": 1568,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/independent-cache-finding-r1.json",
+      "public_sha256": "6b2478f7c1d30155fbf62b30627482a90449b677f5e256092f7e33b0302d4236",
+      "replacement_count_by_public_label": {},
+      "source_basename": "independent-cache-finding-r1.json",
+      "transformation": "exact_byte_copy"
+    },
+    {
+      "original_bytes": 1185,
+      "private_original_sha256": "b3ceb0313a93b5649f3f96d08914b3713d6741586e734b16efe89388820c065c",
+      "public_bytes": 1145,
+      "public_path": "reports/frontier-v8-operational-bridge-20261003/independent-cache-finding-clarification-r1.redacted.json",
+      "public_sha256": "4f05c99360c1ef0a797d541bcfceacac79d2aaa56a15a5aac587b9899c076aff",
+      "replacement_count_by_public_label": {
+        "<workspace>": 1
+      },
+      "source_basename": "independent-cache-finding-clarification-r1.json",
+      "transformation": "explicit_private_path_redacted_derivative"
+    }
+  ],
+  "schema_version": 1,
+  "source_commit": "0a8bc5adb06a7b0a0618b46d7bb908bb7c170e19"
+}
