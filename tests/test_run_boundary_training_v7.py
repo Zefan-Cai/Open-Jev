@@ -1,11 +1,13 @@
 """CPU contracts: immutable staging, path translation, one attempt and GPU proof."""
 import copy
 from datetime import datetime, timedelta, timezone
+import hashlib
 import json
 import math
 import os
 from pathlib import Path
 import shutil
+import subprocess
 import tempfile
 from types import SimpleNamespace
 import unittest
@@ -105,6 +107,21 @@ class StagingTests(unittest.TestCase):
             self.skipTest('Frozen local mixture is not shipped in portable CI')
         data = self.task/'data';shutil.copytree(source_data, data)
         plan = json.loads(driver.PLAN.read_text())
+        self.live_source = driver.ROOT
+        self.source = self.task/'frozen-source'
+        self.evaluation_source = self.task/'evaluation-source'
+        environment = {name: value for name, value in os.environ.items() if not name.startswith('GIT_')}
+        # A newer trainer must not change the positive fixture's frozen v7 implementation.
+        for name in sorted({*plan['implementation_sha256'], 'jev/model.py'}):
+            raw = subprocess.check_output(
+                ['git', '-C', str(self.live_source), 'show', driver.SOURCE_COMMIT+':'+name],
+                env=environment, stderr=subprocess.DEVNULL)
+            digest = hashlib.sha256(raw).hexdigest()
+            if name in plan['implementation_sha256']:
+                self.assertEqual(digest, plan['implementation_sha256'][name])
+            for checkout in (self.source, self.evaluation_source):
+                path = checkout/name;path.parent.mkdir(parents=True, exist_ok=True);path.write_bytes(raw)
+                self.assertEqual(driver.sha(path), digest)
         runtime = dict(zip(driver.RUNTIME_NAMES, ('2.8.0', '5.10.2', '0.19.1', '3.4.0', '0.7.0', '1.13.0')))
         revision = '15852e8c16360a2fea060d615a32b45270f8a8fc'
         snapshot = self.task/'cache'/'models--Qwen--Qwen3.5-2B'/'snapshots'/revision
@@ -114,7 +131,7 @@ class StagingTests(unittest.TestCase):
             base_snapshot_files_sha256={'model.safetensors': driver.sha(snapshot/'model.safetensors')})
         write(self.task/'cpu-stage-receipt.json', stage)
         self.request = dict(schema_version=1, evaluation_commit='e'*40, plan_sha256=driver.PLAN_SHA256,
-            source_directory=str(driver.ROOT), dataset=str(data), released_checkpoint=str(self.task/'released'),
+            source_directory=str(self.source), dataset=str(data), released_checkpoint=str(self.task/'released'),
             training_run=str(self.task/'adaptation'), comparison_output=str(self.task/'comparison'),
             completion_receipt=str(self.task/'completion-receipt.json'), resource_receipt=str(self.task/'resource-ready.json'),
             cpu_stage_receipt_sha256=driver.sha(self.task/'cpu-stage-receipt.json'), runtime=runtime,
@@ -122,7 +139,9 @@ class StagingTests(unittest.TestCase):
         self.args = SimpleNamespace(request=str(self.task/'execution-request.json'), expected_commit='e'*40)
         write(self.args.request, self.request)
         initial = dict(files_sha256=plan['expected_initial_checkpoint']['files_sha256'], config=dict(revision=revision))
-        for patcher in (patch.object(comparison, 'source_identity', return_value={}),
+        for patcher in (patch.object(driver, 'ROOT', self.evaluation_source),
+                        patch.object(comparison, 'ROOT', self.evaluation_source),
+                        patch.object(comparison, 'source_identity', return_value={}),
                         patch.object(driver, 'git', side_effect=lambda path, *args: driver.SOURCE_COMMIT if args[0] == 'rev-parse' else ''),
                         patch.object(driver, 'version', side_effect=runtime.__getitem__),
                         patch.object(helpers, 'checkpoint_identity', return_value=initial),
@@ -153,6 +172,34 @@ class StagingTests(unittest.TestCase):
         write(self.task/'attempt.lock.json', {'status': 'failed'})
         with self.assertRaisesRegex(ValueError, 'already started'):
             driver.prepare(self.args)
+
+    def test_edited_or_live_trainer_refused_before_data_checkpoint_and_runtime_staging(self):
+        frozen = (self.source/'jev/train.py').read_bytes()
+        changed = [('edited', frozen+b'\n# Deliberately changed CPU fixture trainer.\n')]
+        live = (self.live_source/'jev/train.py').read_bytes()
+        if live != frozen:
+            changed.append(('live', live))
+        actual_open = Path.open
+        forbidden = (Path(self.request['dataset']), Path(self.stage['base_snapshot']))
+        def guarded_open(path, *args, **kwargs):
+            candidate = Path(path)
+            if any(candidate.is_relative_to(root) for root in forbidden) or candidate.name == 'cpu-stage-receipt.json':
+                raise AssertionError('Frozen source refusal must precede data/checkpoint/runtime stage reads')
+            return actual_open(path, *args, **kwargs)
+        for checkout in (self.source, self.evaluation_source):
+            path = checkout/'jev/train.py'
+            for label, raw in changed:
+                with self.subTest(checkout=checkout.name, source=label):
+                    path.write_bytes(raw)
+                    try:
+                        with patch.object(Path, 'open', guarded_open), \
+                             patch.object(helpers, 'checkpoint_identity', side_effect=AssertionError('Checkpoint stage reached')):
+                            with self.assertRaisesRegex(ValueError, 'Frozen implementation changed: jev/train.py'):
+                                driver.prepare(self.args)
+                    finally:
+                        path.write_bytes(frozen)
+                    self.assertFalse((self.task/'attempt.lock.json').exists())
+                    self.assertFalse(Path(self.request['training_run']).exists())
 
 
 class ResourceProofTests(unittest.TestCase):

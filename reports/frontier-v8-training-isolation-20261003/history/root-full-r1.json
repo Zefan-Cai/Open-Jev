@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-03T09:18:49.594507+00:00",
+  "argv": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests"
+  ],
+  "returncode": 1,
+  "elapsed_seconds": 86.75441804202273,
+  "tests": 1123,
+  "skipped": 0,
+  "source_sha256": {
+    "jev/train.py": "18755ae1cb03cc8b5592693f4c8294dcbf8a4b96d3b3b5cbd3c6a59aeaedbb9f",
+    "scripts/prepare_frontier_training_v8.py": "9b9a27c32fb75a140357a404acdd11b17a79c8e9b544a6685f5f94ce38193fb0",
+    "scripts/audit_frontier_training_v8.py": "1437516a70e6f52250cb1d0e9b7651e604bdd4a1d5356ccd23147fd2d0381193",
+    "tests/test_training_deferred_heldout.py": "6a820de3de8023e0461605801550c77b516a32a749006b4ebd38fb7aada97744",
+    "tests/test_prepare_frontier_training_v8.py": "7c3f087687c66fa3808d2fa5b61df89edf5269c8dd262b6c70dcca1cbc484bc0",
+    "tests/test_audit_frontier_training_v8.py": "358929d47e83931b830bbbd58afd3bca64d40e43ecf34f81cbeb788dd9f036fa"
+  },
+  "sources_unchanged_during_tests": true,
+  "real_model_calls": 0,
+  "GPU_actions": 0
+}

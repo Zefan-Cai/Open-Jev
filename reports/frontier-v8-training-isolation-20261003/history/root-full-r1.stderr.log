@@ -1,0 +1,32 @@
+.............................................................................................................................................................................ss..................................................................................................................................................ssssssssssss........s.....s...ss.ss................................ssss......s.....s............................................................................s.................................ssssss.............................................s...........................s....................ssss..............sssss.......................................sssssssssss......................................................................ss...ssss..s...s..s.s........................ssssssssssssss.........................................................................................................F.E.......................................................................................................................................sssss.............s............................................
+======================================================================
+ERROR: test_real_frozen_data_preflight_without_gpu_acquisition (test_run_boundary_training_v7.StagingTests.test_real_frozen_data_preflight_without_gpu_acquisition)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/tests/test_run_boundary_training_v7.py", line 134, in test_real_frozen_data_preflight_without_gpu_acquisition
+    request, plan, receipt = driver.prepare(self.args)
+                             ~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/scripts/run_boundary_training_v7.py", line 109, in prepare
+    require(sha(source/name) == sha(ROOT/name) == digest, 'Frozen implementation changed: '+name)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/scripts/run_boundary_training_v7.py", line 27, in require
+    raise ValueError(message)
+ValueError: Frozen implementation changed: jev/train.py
+
+======================================================================
+FAIL: test_data_runtime_stage_and_base_tampering_refused_before_model (test_run_boundary_training_v7.StagingTests.test_data_runtime_stage_and_base_tampering_refused_before_model)
+----------------------------------------------------------------------
+ValueError: Frozen implementation changed: jev/train.py
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/tests/test_run_boundary_training_v7.py", line 149, in test_data_runtime_stage_and_base_tampering_refused_before_model
+    with self.assertRaisesRegex(ValueError, 'package versions'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "package versions" does not match "Frozen implementation changed: jev/train.py"
+
+----------------------------------------------------------------------
+Ran 1123 tests in 86.369s
+
+FAILED (failures=1, errors=1, skipped=85)

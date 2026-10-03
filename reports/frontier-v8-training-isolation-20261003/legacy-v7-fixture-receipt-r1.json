@@ -1,0 +1,75 @@
+{
+  "GPU_actions": 0,
+  "actual_old_attempts_executed": 0,
+  "author": "independent_27b_readiness",
+  "browser_actions": 0,
+  "checked_at_utc": "2026-10-03T09:22:57.038496+00:00",
+  "commits_by_author": 0,
+  "controller_actions": 0,
+  "diff_check_passed": true,
+  "frozen_locks_modified": false,
+  "frozen_plan_sha256": "bab40284419d8ff0bfcdca818047cc96581d0d4e69a7fb891f1c08fe0ec49f35",
+  "frozen_source_commit": "87eb8b419685d272f059b3696e0f547e47ebdcc6",
+  "limitations": [
+    "CPU contract fixtures retain preexisting mocked checkout identity, package versions and published checkpoint metadata; they do not prove actual GPU/runtime/weight ownership or training.",
+    "Only source/path/data CPU prepare was called; no execute, old controller, old attempt, model loading or resource acquisition invoked.",
+    "Root owns full suite under a new output path, independent review and commit/push/PR/latest CI integration."
+  ],
+  "model_calls": 0,
+  "negative_fixture": {
+    "attempt_and_training_outputs_absent": true,
+    "checkpoint_guard": "checkpoint_identity raises AssertionError if reached",
+    "expected_error": "Frozen implementation changed: jev/train.py",
+    "file_open_guard": "Deny any dataset, snapshot or cpu-stage-receipt reads during driver.prepare",
+    "source_variants": [
+      "historical trainer with intentional added comment",
+      "current live deferred trainer, when different from historical bytes"
+    ],
+    "subcases_current_source": 4,
+    "temporary_checkouts": [
+      "frozen-source",
+      "evaluation-source"
+    ]
+  },
+  "positive_fixture": {
+    "CI_without_ignored_mixture": "Existing skip behavior retained; no regeneration or guard waivers",
+    "additional_historical_module": "jev/model.py",
+    "data": "Existing frozen local ignored mixture copied to temporary fixture and privately validated by unchanged CPU prepare; no row bodies printed or edited",
+    "hash_verified_implementation_entries": 21,
+    "historical_files": 22,
+    "origin": "git show exact87eb8b:<repository-relative-file>; all inherited GIT_* env scrubbed",
+    "training_and_evaluation_source": "distinct temporary directories, exact historical bytes checked after each write"
+  },
+  "pushes_by_author": 0,
+  "schema_version": 1,
+  "source_files_edited": [
+    "tests/test_run_boundary_training_v7.py"
+  ],
+  "source_hashes_or_guards_waived": false,
+  "source_sha256": {
+    "tests/test_run_boundary_training_v7.py": "d6b802d172bd93518a663c4151190fac5d8e73ccb9c1b83f23a0b1f1cae984f9"
+  },
+  "status": "legacy_v7_frozen_positive_fixture_and_changed_source_refusal_passed_pending_root_full_suite",
+  "test_result": {
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "tests.test_run_boundary_training_v7",
+      "-v"
+    ],
+    "errors": 0,
+    "failed": 0,
+    "passed": 10,
+    "returncode": 0,
+    "skipped": 0,
+    "tests": 10,
+    "tool_output_chunk_id": "7c6b72"
+  },
+  "training_runs": 0,
+  "unchanged_driver_comparison_and_plan_verified_vs_HEAD": [
+    "scripts/run_boundary_training_v7.py",
+    "scripts/compare_boundary_training_v7.py",
+    "reports/boundary-controls-v7-20261002/prepared-training/comparison-plan.json"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "GPU_actions": 0,
+  "browser_actions": 0,
+  "checked_at_utc": "2026-10-03T09:05:17.535702+00:00",
+  "code_scope": [
+    "jev/train.py",
+    "tests/test_training_deferred_heldout.py"
+  ],
+  "commits_by_author": 0,
+  "diff_check_passed": true,
+  "frozen_protocols": 0,
+  "large_installs": 0,
+  "legacy_final_evaluation_reload_summary_block_byte_unchanged": true,
+  "limitations": [
+    "No frozen training mixture, initializer, step plan, comparison protocol or GPU/resource acquisition declared here.",
+    "Mock orchestration tests do not establish numerical training, actual checkpoint equivalence, latency, memory use, model gain, safety, natural-user or official JevBench results.",
+    "Parent owns source review, whole-repository tests, commit/push/PR/CI and integration. Current source is uncommitted against the recorded base.",
+    "Existing completed v6/v7 controllers, runs and heldout bodies were not used or restarted.",
+    "Both allocated tensor and reserved allocator peaks include resident allocations; neither is physical total or minimum VRAM. A future driver still needs actual device telemetry."
+  ],
+  "model_calls": 0,
+  "network_requests": 0,
+  "old_dataset_body_reads": [],
+  "passed_tests": 8,
+  "prior_r2_receipt": {
+    "change": "Add peak_reserved_allocator_memory_gib alongside allocated tensor peak in six deferred phases; neither denotes physical total or minimum VRAM. Root requested this explicit second allocator measure.",
+    "path": "runs/v8-training-isolation-20261003/deferred-trainer-receipt-r2.json",
+    "preserved": true,
+    "sha256": "5bfd387d0a3a0561141ca26c78c31f8fb777f0bd1eea952d67b12d1ddf1d8939"
+  },
+  "prior_receipt": {
+    "finding": "New deferred branch inherited legacy zip/max reload weakness: width truncation and NaN could bypass tolerance check. Only new branch was repaired; default reload code remains unchanged.",
+    "path": "runs/v8-training-isolation-20261003/deferred-trainer-receipt-r1.json",
+    "preserved": true,
+    "sha256": "4a6e3c4e8442267fd14ab9e9bec1b812589aaabf84d4cc2ce03cc9e6acb37b5f"
+  },
+  "prior_unchanged_legacy_contract_checks": {
+    "current_default_mock_path": "Included and passed again in current8 focused tests",
+    "passed": 18,
+    "receipt": "runs/v8-training-isolation-20261003/deferred-trainer-receipt-r1.json",
+    "sha256": "4a6e3c4e8442267fd14ab9e9bec1b812589aaabf84d4cc2ce03cc9e6acb37b5f",
+    "source_revision": "original r1 source; not rerun after new deferred-branch-only reload guard",
+    "tests": 18
+  },
+  "pushes_by_author": 0,
+  "reload_failure_subcases": 7,
+  "schema_version": 1,
+  "skipped_tests": 0,
+  "source_base_commit": "6edcc3a3c36cd89241f42cd13d5b6c0713bdbf11",
+  "source_bindings_sha256": {
+    "jev/train.py": "18755ae1cb03cc8b5592693f4c8294dcbf8a4b96d3b3b5cbd3c6a59aeaedbb9f",
+    "tests/test_training_deferred_heldout.py": "6a820de3de8023e0461605801550c77b516a32a749006b4ebd38fb7aada97744"
+  },
+  "source_files_edited": [
+    "jev/train.py",
+    "tests/test_training_deferred_heldout.py"
+  ],
+  "status": "deferred_heldout_trainer_allocated_reserved_phase_mock_checks_passed_pending_root_integration",
+  "test_runs": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "tests.test_training_deferred_heldout",
+        "-v"
+      ],
+      "passed": 8,
+      "returncode": 0,
+      "runtime": "stdlib + mock Torch/DecisionModel/transformers; handcrafted temporary fixtures only",
+      "skipped": 0,
+      "tests": 8
+    }
+  ],
+  "total_tests": 8,
+  "training_runs": 0,
+  "verified_behaviors": [
+    "Explicit --defer-heldout loads and schema-validates complete Train and Calibration before row limits; does not invoke read_split_directory.",
+    "Filesystem guards fail on Validation/Test/OOD opens; forbidden files containing invalid JSON are never parsed or hashed.",
+    "Warmup forwards Train; optimizer forwards Train; only final Calibration and Calibration reload are evaluated. No initialized baselines or heldout metrics/files are emitted.",
+    "Checkpoint saved exactly once at fixed final step; Calibration temperature fitted once, no heldout best-checkpoint or threshold selection.",
+    "Deferred resume and snapshots rejected before runtime/initializer imports; existing resume/initialization contracts unchanged for default mode.",
+    "Deferred identity explicitly binds flag and only allowed rows/data hashes. Run/summary report heldout deferred status and empty Test/OOD IDs/metrics.",
+    "Six phase timers synchronize CUDA boundaries and reset allocated-tensor peaks; memory scope and file-write timing boundaries are disclosed. Actual GPU telemetry has not been executed.",
+    "Legacy path test still validates/reads all five splits, warms up Test, evaluates original baselines/final/reload, fits two temperatures and emits all eight heldout metric cells.",
+    "Deferred reload requires equal nonempty logit widths and finite numeric values for both reference and restored logits before max error.",
+    "Seven guarded reload adversaries (NaN, infinity, short/empty/long width, difference>0.05, nonfinite reference) all raise and leave no summary; no heldout forwards or reads occur.",
+    "All six deferred phases now record CUDA max_memory_allocated and max_memory_reserved after synchronized boundaries and per-phase resets. Mock assertions require both3GiB allocated/4GiB reserved values; no actual GPU measurement was performed.",
+    "Legacy default path still does not call max_memory_reserved or reset_peak_memory_stats."
+  ]
+}

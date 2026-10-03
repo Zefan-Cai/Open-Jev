@@ -1,0 +1,84 @@
+{
+  "GPU_actions": 0,
+  "actual_data_materialization_runs": 0,
+  "additional_checks": {
+    "actual_temporary_dirty_bound_source_rejected": true,
+    "actual_temporary_foreign_git_env_did_not_redirect_provenance": true,
+    "full_observed_inventory_from_locked_manifest_rows": 1128,
+    "model_runtime_modules_loaded": [],
+    "new_reserved_inventory_files": 4,
+    "public4pinned_lock_docs_read_and_coherent": true,
+    "real_repo_data_and_historical_hf_dataset_reads_denied": true,
+    "selected_observed_claim_rows": 904,
+    "selected_observed_inventory_files": 8
+  },
+  "base_commit": "6edcc3a3c36cd89241f42cd13d5b6c0713bdbf11",
+  "browser_actions": 0,
+  "checked_at_utc": "2026-10-03T09:11:25.456209+00:00",
+  "checks": {
+    "all5bound_source_worktree_bytes_equal_captured_commit": true,
+    "all_inherited_GIT_variables_removed": true,
+    "captured_immutable_commit_show_and_exact_toplevel": true,
+    "declaration_byte_hash_binds_preflight": true,
+    "derivative2932rows499groups_choice1951noul981_validated": true,
+    "exact335unique_opaque_whole_old_parent_exclusions_only": true,
+    "exclusive_output_and_input_overlap_guards_before_source_read": true,
+    "original_train_hashes_checked_before_parse_and_complete_membership_validation": true,
+    "passing_exact_input_summary_and_auditor_preflight_required_before_reserved_reads_or_output": true,
+    "provisional_no_training_plan_initializer_steps_or_argv": true,
+    "raw_train_lines_order_whitespace_metadata_and_ids_preserved": true,
+    "reserved_and_selected_regression_copies_exact_bytes_without_parsing": true,
+    "separate_postmaterialization_independent_audit_required": true
+  },
+  "commits_by_reviewer": 0,
+  "limits": [
+    "Temporary invented packing fixtures and temporary invented Git repos only; no actual dataset/auditor/model phase executed.",
+    "This is a source/guarded fixture cross-review, not a passing actual mixture isolation receipt or training authorization.",
+    "No numerical model gain, safety, latency, actual memory, natural-user or officialJevBench results established."
+  ],
+  "model_calls": 0,
+  "old_dataset_body_reads": [],
+  "pushes_by_reviewer": 0,
+  "related_auditor_static_review": {
+    "final_binding": false,
+    "proof_chain_checked": "Full1128screen and selected904inventory are separately bound; original orderedTrain ancestry, exact parent-closure exclusion declaration, selectedTrain rawbyte/order membership and postbuild inventories all independently audited in code. Actual auditor not executed by this reviewer.",
+    "reported_to_root": [
+      "verify_committed_source at observed source scrubbed only3Git variables; root asked to scrub allGIT_* in finalaudit",
+      "Current auditor sourcehash appears in fresh fullreceipt equality; preserve historical blockedreceipt and generate fresh exclusively named blockedreceipt/declaration for finalsource rather than reusing/overwriting historical sourcebinding"
+    ],
+    "source_sha256_observed_at_review": "6133db99694bb6042abc8a19306499bc1312e88855626789b1aab8eebbfcf68e"
+  },
+  "required_integration_conditions": [
+    "All5bound implementation files must first be committed; tests used fixture-patched source check and separately actual temporary Git check.",
+    "Final independent auditor source, fresh fullblocked receipt, exact derivative declaration/preflight and postmaterialization proof remain root-owned; historical source evidence must be retained.",
+    "Full regression, commit/push/PRattachment/latestCIintegration remain root-owned."
+  ],
+  "reviewed_scope": [
+    "scripts/prepare_frontier_training_v8.py",
+    "tests/test_prepare_frontier_training_v8.py"
+  ],
+  "reviewer": "independent_27b_readiness",
+  "schema_version": 1,
+  "source_bindings_sha256": {
+    "scripts/prepare_frontier_training_v8.py": "9b9a27c32fb75a140357a404acdd11b17a79c8e9b544a6685f5f94ce38193fb0",
+    "tests/test_prepare_frontier_training_v8.py": "7c3f087687c66fa3808d2fa5b61df89edf5269c8dd262b6c70dcca1cbc484bc0"
+  },
+  "source_edits_by_reviewer": [],
+  "status": "independent_materializer_source_and_guarded_fixture_review_passed_pending_committed_audit_integration",
+  "test_result": {
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "tests.test_prepare_frontier_training_v8"
+    ],
+    "executed_via": "stdlib wrapper with sys.addaudithook real-dataset read guard",
+    "failed": 0,
+    "passed": 14,
+    "returncode": 0,
+    "skipped": 0,
+    "tests": 14,
+    "tool_output_chunk_id": "d89ced"
+  },
+  "training_runs": 0
+}

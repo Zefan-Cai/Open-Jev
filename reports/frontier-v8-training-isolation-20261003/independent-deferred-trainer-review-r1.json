@@ -1,0 +1,40 @@
+{
+  "GPU_actions": 0,
+  "checks": {
+    "allocated_and_reserved_allocator_peaks_named_separately": true,
+    "deferred_branch_reads_and_hashes_Train_Calibration_only": true,
+    "deferred_branch_returns_before_heldout_evaluation": true,
+    "explicit_opt_in_preserves_default_branch": true,
+    "fixed_final_checkpoint_saved_without_heldout_selection": true,
+    "full_Train_and_Calibration_validated_before_limit_sampling": true,
+    "guarded_mock_tests_cover_forbidden_reads_and_forwards": true,
+    "identity_marks_opt_in_without_changing_default_identity_arguments": true,
+    "no_initialized_baseline_in_deferred_branch": true,
+    "optimizer_consumes_Train_rows_only": true,
+    "phase_scope_and_VRAM_limitations_disclosed": true,
+    "phase_timers_synchronize_and_reset_peak_stats": true,
+    "reload_mismatch_prevents_complete_summary": true,
+    "reload_uses_Calibration_first_row_with_finite_equal_length_logits_guard": true,
+    "selected_identity_contains_no_Validation_Test_OOD_rows": true,
+    "snapshots_and_resume_rejected_before_runtime_imports": true,
+    "temperature_fit_uses_Calibration_only": true,
+    "warmup_uses_Train_in_deferred_branch": true
+  },
+  "data_materializations": 0,
+  "failed_checks": [],
+  "limits": [
+    "This review establishes source/control-flow boundaries, not numerical model training or CUDA telemetry.",
+    "Committed source, exact initializer, one finite pass, comparator/replay and fresh resource/restoration protocol remain separately required.",
+    "The candidate remains experimental; no safety, natural-user or official JevBench improvement claim."
+  ],
+  "model_calls": 0,
+  "review_type": "Read-only source/control-flow and guarded-fixture-design review",
+  "schema_version": 1,
+  "source_sha256": {
+    "docs/training.md": "563f71675bee4b181612dda4f4d20bdb43ecec4c5a762f7b181f91757fb540b5",
+    "jev/train.py": "18755ae1cb03cc8b5592693f4c8294dcbf8a4b96d3b3b5cbd3c6a59aeaedbb9f",
+    "tests/test_training_deferred_heldout.py": "6a820de3de8023e0461605801550c77b516a32a749006b4ebd38fb7aada97744"
+  },
+  "status": "independent_deferred_training_source_review_passed",
+  "tests_executed_by_this_review": false
+}

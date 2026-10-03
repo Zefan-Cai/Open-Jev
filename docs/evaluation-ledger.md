@@ -163,3 +163,12 @@ regression and diagnostic timings with cold outliers; those timings establish
 no deployment speedup. The candidate remains experimental and unpublished.
 Natural business blind tests and the fresh independent 27B evaluation above
 remain pending.
+
+The [2026-10-03 training-input audit](../reports/frontier-v8-training-isolation-20261003/README.md)
+subsequently found 151 legacy v4 Train rows matching 39 observed v4 input
+fingerprints after renaming and reordering, with exact typed account/event
+facts and rules retained. This adds a concrete exposure limitation to the v4
+regression slices above; their recorded counts remain unchanged. A separate
+future mixture excludes complete parents, including additional conservative
+scaffold matches. This preparation does not erase historical exposure or
+establish a new model result.

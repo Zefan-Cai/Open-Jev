@@ -55,6 +55,30 @@ The tests also cover incompatible run identities, reordered held-out references,
 
 For a full-data pass, set `--training-sampling shuffled`. This retains each selected record once and avoids the long tail of the largest source after smaller round-robin buckets are exhausted. Short source-balanced pilots retain the original `source_kind_round_robin` option. The sampling mode is part of the resume identity.
 
+## Defer heldout evaluation
+
+Use the explicit `--defer-heldout` flag for a separately declared fixed-final
+training run. This mode reads, schema-validates, samples and hashes only
+`train.jsonl` and `calibration.jsonl`. Validation, Test and OOD are neither
+parsed nor forwarded. Warmup uses Train; the final temperature and checkpoint
+reload check use Calibration. The initialized baseline and all heldout metrics
+remain deferred to a separate comparison. A Calibration fit is not a capability
+or safety result.
+
+This mode requires `--checkpoint-every 0` and prohibits `--resume-training`.
+The default pilot/resume behavior above is preserved. The flag is part of the
+run identity. A fresh attempt, exact initializer, data membership, step budget
+and comparison protocol still need their own declarations before launch.
+
+Deferred summaries report synchronized timing, peak CUDA allocated tensors
+and peak allocator-reserved memory
+for model loading, warmup, optimizer steps, checkpoint saving, Calibration and
+temperature fitting, and checkpoint reload. Peaks include resident weights;
+reserved memory also includes allocator caching. Neither figure measures
+physical total or minimum VRAM. Phase timings include their file
+writes, and optimizer timing includes training logs. These are instrumentation
+boundaries, not measured performance results until an actual run completes.
+
 ### N1-1 real-model resume check
 
 On September 20, 2026 UTC, Qwen3.5-2B on N1-1 physical GPU 3 ran four

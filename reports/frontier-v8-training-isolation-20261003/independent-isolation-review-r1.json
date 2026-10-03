@@ -1,0 +1,138 @@
+{
+  "actionable_findings": [],
+  "actual_mixtures_materialized": 0,
+  "actual_old_heldout_bodies_read": 0,
+  "base_commit": "6edcc3a3c36cd89241f42cd13d5b6c0713bdbf11",
+  "created_at_utc": "2026-10-03T09:18:12.487780+00:00",
+  "documentation_review": {
+    "declared_2932_derivative_not_a_frozen_training_plan": true,
+    "historical_and_initializer_exposure_not_erased_by_future_parent_exclusion": true,
+    "ledger_preserves_recorded_counts_and_adds_historical_exposure_limit": true,
+    "no_natural_official_model_quality_latency_or_memory_performance_claim": true,
+    "report_distinguishes_confirmed_account_query_clones_from_conservative_abstract_menus": true,
+    "selected_904_observed_inventory_distinguished_from_full_1128_overlap_screen": true
+  },
+  "files_sha256": {
+    "docs/evaluation-ledger.md": "6eca4bd62b7ded4c50ae8d0c32c0f529a992c7cbef268f6f43093a09ff89215e",
+    "docs/training.md": "563f71675bee4b181612dda4f4d20bdb43ecec4c5a762f7b181f91757fb540b5",
+    "jev/api.py": "f22aa50c00d64aa91c2d415c1973f59bdaad11d1de51308ae5454326b8cbf350",
+    "jev/data.py": "97c1764a5090f60476397baf889a864359e0d59b48d99ddf3b34335d3e1b138e",
+    "jev/train.py": "18755ae1cb03cc8b5592693f4c8294dcbf8a4b96d3b3b5cbd3c6a59aeaedbb9f",
+    "reports/frontier-v8-training-isolation-20261003/README.md": "2211ccf6228a085194d592be4d1db8805f44720d06505edda8a864b7626c3ff9",
+    "scripts/audit_frontier_isolation_v8.py": "5d06384058a1ee13508c8ea1f98ce7f4279782a7ab49f0e8594c266911468a81",
+    "scripts/audit_frontier_training_v8.py": "1437516a70e6f52250cb1d0e9b7651e604bdd4a1d5356ccd23147fd2d0381193",
+    "scripts/prepare_frontier_training_v8.py": "9b9a27c32fb75a140357a404acdd11b17a79c8e9b544a6685f5f94ce38193fb0",
+    "tests/test_audit_frontier_training_v8.py": "358929d47e83931b830bbbd58afd3bca64d40e43ecf34f81cbeb788dd9f036fa",
+    "tests/test_prepare_frontier_training_v8.py": "7c3f087687c66fa3808d2fa5b61df89edf5269c8dd262b6c70dcca1cbc484bc0"
+  },
+  "gpu_actions": 0,
+  "independent_checks": {
+    "additional_hand_authored_account_checks": {
+      "coverage": [
+        "typed subject-event equality under renaming and array permutation",
+        "changed subject edge, sequence, rule, proposition, negation or unreviewed query cannot confirm a clone",
+        "target and invisible metadata do not control clone confirmation",
+        "confirmed overlap blocks"
+      ],
+      "passed": 9
+    },
+    "additional_hand_authored_output_checks": {
+      "coverage": [
+        "valid invented output",
+        "reordered Train",
+        "changed invented opaque retained bytes",
+        "missing primary split",
+        "wrong per-source block",
+        "wrong inventory count",
+        "unexpected regular file",
+        "FIFO",
+        "symlink"
+      ],
+      "limit": "Committed-source check mocked only for layered output-byte fixtures; independently checked separately.",
+      "passed": 9
+    },
+    "additional_hand_authored_source_checks": {
+      "coverage": [
+        "all inherited GIT_* overrides removed",
+        "dirty dependency source rejected",
+        "different auditor source rejected",
+        "unavailable committed source rejected"
+      ],
+      "passed": 4
+    },
+    "final_auditor_unittest_fixture_tests": {
+      "failed": 0,
+      "passed": 20,
+      "seconds": 0.069
+    },
+    "full_to_preserved_to_declared_derivative_replay": "Regression independently reproduced before fix; final dedicated fixture passes.",
+    "materializer_unittest_fixture_tests": {
+      "failed": 0,
+      "passed": 14,
+      "seconds": 2.154
+    }
+  },
+  "model_calls": 0,
+  "natural_trials": 0,
+  "repository_branch": "codex/open-jev-v8-training-isolation-20261003",
+  "resolved_findings": [
+    {
+      "issue": "Inherited Git config/object environment could redirect stage source verification.",
+      "resolution": "All GIT_* variables scrubbed; focused source fixtures pass."
+    },
+    {
+      "issue": "Unexpected FIFO/socket-like leaves were omitted from regular-file inventory.",
+      "resolution": "All non-directory leaves must exactly equal expected files and be regular; check occurs before reads; FIFO and symlink fixtures reject."
+    },
+    {
+      "issue": "Per-source membership blocks and observed/reserved count declarations were unchecked.",
+      "resolution": "Stage compares block digests/counts and inventory declarations to independent preflight."
+    },
+    {
+      "issue": "New train_blocks field broke preserved full-receipt equality for derivative replay.",
+      "resolution": "Full-proposal blocks added before preserved receipt comparison; complete full-to-derivative fixture passes."
+    }
+  ],
+  "review_receipt_writes": 1,
+  "reviewer": "independent_v8_isolation_review",
+  "safe_overlap_summary": {
+    "confirmation": {
+      "confirmed_typed_account_clone_fingerprints": 39,
+      "fingerprints": 39,
+      "matching_observed_rows": 60,
+      "matching_train_rows": 151
+    },
+    "quarantine": {
+      "additional_conservative_parent_groups": 288,
+      "additional_conservative_parent_rows": 1664,
+      "group_hash_algorithm": "sha256_canonical_json",
+      "kind_counts": {
+        "choice": 1133,
+        "noul": 719
+      },
+      "proven_clone_parent_groups": 47,
+      "proven_clone_parent_rows": 188,
+      "source_counts": {
+        "boundary-controls-v7": 1024,
+        "frontier-controls-v4": 588,
+        "original-policy-controls-v6-candidate": 240
+      },
+      "whole_parent_groups": 335,
+      "whole_parent_rows": 1852
+    }
+  },
+  "safe_receipt_bindings": {
+    "blocked-full-inputs-r1.json": "0c97231f87a310c50a80eece43caf0f7e5f905ea7e5d825f41ae3f8a21553149",
+    "blocked-full-inputs-r2.json": "03c25ea3a89edf128986efd33b541b337e2dcca9558ea6bcbb3f53d57f3ae21d"
+  },
+  "schema_version": 1,
+  "scope_limits": [
+    "Implementation and documentation review, with hand-authored CPU fixtures and safe opaque receipts only.",
+    "No actual old heldout body was read by this reviewer.",
+    "No actual mixture was materialized or actual output-stage audit performed by this reviewer.",
+    "Post-materialization independent actual output audit remains required.",
+    "No numerical training, CUDA telemetry, latency, memory performance, fresh resource restoration, natural trial or official benchmark result is established."
+  ],
+  "status": "independent_v8_isolation_implementation_review_passed",
+  "training_runs": 0
+}

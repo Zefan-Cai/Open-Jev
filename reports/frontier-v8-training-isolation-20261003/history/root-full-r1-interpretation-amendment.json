@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "failed_full_test_receipt_interpretation_amended_original_preserved",
+  "original_receipt_sha256": "bd6540c10a51b918c73f9a4bbbb26f41fbec1a2415dbb8625c43158d845a764a",
+  "stderr_sha256": "acc05009eefb268832d4e3454d5fe65c8d45a5535dd595a2741433343fe3ad64",
+  "actual_tests": 1123,
+  "actual_skipped": 85,
+  "actual_failures": 1,
+  "actual_errors": 1,
+  "actual_passed": 1036,
+  "parser_error": "Original wrapper only parsed skipped from OK; FAILED summary also contained skipped85. Original JSON is retained unmodified.",
+  "failure_cause": "Two legacy v7 CPU staging fixtures use current modified trainer against an immutable historical implementation lock; driver correctly rejects it before model stage. Update only temporary fixture source to exact historical commit, retain guard and add negative check.",
+  "old_attempts_started": 0,
+  "model_calls": 0,
+  "GPU_actions": 0
+}
