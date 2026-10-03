@@ -1,4 +1,5 @@
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+import csv
 import json
 from pathlib import Path
 import tempfile
@@ -90,6 +91,30 @@ class SupportRoutingTests(unittest.TestCase):
             result = finalize(queue, self.index, output)
             self.assertEqual(result["human_reviewed"], 1)
             self.assertEqual(result["unresolved"], 0)
+
+    def test_named_human_can_finish_no_route_without_forcing_a_catalog_label(self):
+        row = {"id": "outside", "text": "fixture outside banking", "status": "review",
+               "proposed_label": UNKNOWN, "top_probability": .8,
+               "reviewed_label": UNKNOWN, "reviewer": ""}
+        with tempfile.TemporaryDirectory() as tmp:
+            queue, output = Path(tmp) / "queue.csv", Path(tmp) / "final.csv"
+            write_csv(queue, [row], list(row))
+            with self.assertRaisesRegex(ValueError, "reviewer"):
+                finalize(queue, self.index, output)
+            row["reviewer"] = "fixture reviewer"
+            write_csv(queue, [row], list(row))
+            result = finalize(queue, self.index, output)
+            self.assertEqual(result["human_reviewed"], 1)
+            self.assertEqual(result["unresolved"], 0)
+            with output.open(newline="") as stream:
+                saved = list(csv.DictReader(stream))
+            self.assertEqual(saved[0]["final_label"], UNKNOWN)
+            self.assertEqual(saved[0]["decision_source"], "human")
+            self.assertEqual(saved[0]["reviewer"], "fixture reviewer")
+            row["reviewed_label"] = "invented_route"
+            write_csv(queue, [row], list(row))
+            with self.assertRaisesRegex(ValueError, "valid catalog"):
+                finalize(queue, self.index, output)
 
     def test_test_gold_and_predictions_follow_calibration_lock_without_retuning(self):
         with tempfile.TemporaryDirectory() as tmp:

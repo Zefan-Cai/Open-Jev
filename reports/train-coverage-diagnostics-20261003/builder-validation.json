@@ -1,0 +1,22 @@
+{
+  "clean_checkout_test_scope": "Six fixture/gate tests always run; the exact frozen Train integration check skips only when the ignored Train artifact is absent.",
+  "deterministic_report_matches": true,
+  "files_sha256": {
+    "docs/train-coverage-diagnostics.md": "6cff5fd118caba6a116a464973f5ca119bf8780321c8a8ee34b1c85435dd2086",
+    "reports/train-coverage-diagnostics-20261003/README.md": "ac028a0201eec004c158ff27c24fd8e81ae7fcc138ef774e66452747fffce6de",
+    "reports/train-coverage-diagnostics-20261003/coverage.json": "58bf037465c1ddc5a56d01ae63a1e682f499a8182c24777f38c480610668cad5",
+    "scripts/audit_boundary_train_coverage.py": "730f0dadad046373181f3c6191157396e463a101986ddfce3d3b4fa1ec08b6ac",
+    "tests/test_boundary_train_coverage.py": "55f3797d0e13d9b7dbd478b23dd0ab4a06828e3b41bf8b16cc4560e48e2c0f4d"
+  },
+  "focused_tests": {
+    "command": "python3 -m unittest tests.test_boundary_train_coverage -v",
+    "failed": 0,
+    "passed": 7
+  },
+  "heldout_row_files_read": [],
+  "independent_review": "pending",
+  "input_sha256": "83fa0a04e04c43fa21a86aa799b642dad5fcb1c3e69ffb7a8b92df42c759b6c0",
+  "limitations": "Static Train support only; no model-error mechanism or capability claim. No next candidate or examples were created.",
+  "model_calls": 0,
+  "status": "builder_focused_validation_passed"
+}

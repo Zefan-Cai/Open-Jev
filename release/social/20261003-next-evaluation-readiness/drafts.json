@@ -1,0 +1,32 @@
+{
+  "created_at_utc": "2026-10-03T05:19:09.440733+00:00",
+  "drafts": [
+    {
+      "topic": "train-coverage",
+      "status": "draft_pending_final_code_review_and_CI_not_posted",
+      "account": "Zefan_Cai",
+      "text": "🧪 We audited all 3,792 Open-Jev Train rows.\n\nThree actions never appear as correct Choice labels. In v7, valid capacity/limit margins are only 0 or +1 cent.\n\n🔎 Static coverage, no model-gain claim:\nhttps://github.com/Zefan-Cai/Open-Jev/blob/main/reports/train-coverage-diagnostics-20261003/README.md",
+      "evidence_url": "https://github.com/Zefan-Cai/Open-Jev/blob/main/reports/train-coverage-diagnostics-20261003/README.md",
+      "text_sha256": "b90e855b95d819ec23245d919e09f96f875bdb4c358d130c76b29869ae01b9a8",
+      "conservative_weighted_length": 223
+    },
+    {
+      "topic": "locked-27b-handoff",
+      "status": "draft_pending_final_code_review_and_CI_not_posted",
+      "account": "Zefan_Cai",
+      "text": "🔒 Open-Jev 27B evaluator handoffs now carry a 76-package version lock.\n\nLock, runtime and venv drift are rejected before model allocation.\n\nPrepared on CPU; clean Linux replay and independent sealed scores are still pending.\n\nhttps://github.com/Zefan-Cai/Open-Jev/blob/main/docs/evaluation-ledger.md",
+      "evidence_url": "https://github.com/Zefan-Cai/Open-Jev/blob/main/docs/evaluation-ledger.md",
+      "text_sha256": "460c205a5ee0239522cad80d057f48aecd40975449d69a49cbcce93878fd4882",
+      "conservative_weighted_length": 250
+    },
+    {
+      "topic": "human-no-route",
+      "status": "draft_pending_final_code_review_and_CI_not_posted",
+      "account": "Zefan_Cai",
+      "text": "🧑‍💻 Open-Jev support triage now lets a named reviewer finish “No matching banking intent” and export that human decision.\n\nModel abstention stays unresolved until review.\n\nReal opt-in trials remain 0; intake protocol:\nhttps://github.com/Zefan-Cai/Open-Jev/blob/main/docs/natural-support-pilot.md",
+      "evidence_url": "https://github.com/Zefan-Cai/Open-Jev/blob/main/docs/natural-support-pilot.md",
+      "text_sha256": "ad570b61eccebe131ce53ccbecfed43c550d5232e10667f66fcfe8c389c43205",
+      "conservative_weighted_length": 243
+    }
+  ]
+}

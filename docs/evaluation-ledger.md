@@ -94,6 +94,14 @@ on an evaluator-owned NVIDIA host. The default 16,384-token evaluation limit
 is an explicit override of the saved 4,096-token training limit; use
 `--max-length 4096` for a separate submission at the saved limit.
 
+New handoffs carry the observed Linux x86-64 / Python 3.11 / CUDA 12.8
+dependency version lock and its checksum. Installation uses those exact
+versions; a metadata-only preflight rejects lock, package-version or venv
+location drift and runs `pip check` before model allocation. Preparation does
+not install the environment or load weights, and the version lock is not an
+artifact-hash lock or a completed clean-install replay. The older published
+handoff and its original validation remain unchanged.
+
 Record hardware, actual denominators, attempted/failed/missing requests,
 per-primitive accuracy/calibration/coverage, warmup/retry policy, raw timings
 and cost assumptions with the returned aggregate. The new sealed status

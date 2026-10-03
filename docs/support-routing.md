@@ -123,14 +123,19 @@ human review.
 The browser used a local page and an SSH bridge to the real model API, so UI
 elapsed time includes transport overhead and is not inference latency. The
 receipt pins the tested UI at source commit `80ca8e81d08992cb2a4cbb6a0caa1355ad3e5aee`.
-The genuine screenshot retains the heading shown during that run; the current
-page subsequently changed only that heading to “Review each proposed support
-decision.” Both UI hashes and the limited wording change are recorded.
+The genuine screenshot retains the heading shown during that run. The subsequent
+heading-only change to “Review each proposed support decision” and both UI hashes
+are recorded. The later human no-route option described below was not part of
+that original browser smoke.
 
 ## Finish human review
 
 The browser provides a catalog selector for every row and requires a reviewer
 name for human corrections. Export either the review queue or the final CSV.
+For a request outside the catalog, choose **No matching banking intent**.
+The CLI uses `reviewed_label=__review__` with a named reviewer for the same
+final human disposition. The export records it as a human decision; an
+unreviewed model `__review__` proposal remains unresolved.
 The CLI supports the same last step: edit `reviewed_label` and `reviewer` in
 the saved review queue, then run:
 
@@ -145,6 +150,11 @@ The export records whether the final label came from the model, from a named
 human, or remains unresolved. It does not infer a review label from gold.
 The actual human-review completion count must come from saved reviews; merely
 testing the correction mechanism with fixtures is not a completed human pilot.
+
+The [real opt-in pilot protocol](natural-support-pilot.md) keeps request intake,
+blind labels and human corrections separate and defines misroutes, abstention,
+actual rework and completed trials. Its evidence-capture helper and real intake
+are still pending; the protocol does not establish new natural-user results.
 
 ## Limits
 

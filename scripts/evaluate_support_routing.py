@@ -254,8 +254,8 @@ def finalize(queue, index, output):
     labels = set(index["labels"])
     for row in rows:
         reviewed = row.get("reviewed_label", "").strip()
-        if reviewed and (reviewed not in labels or not row.get("reviewer", "").strip()):
-            raise ValueError("Reviewed rows require a valid catalog label and reviewer")
+        if reviewed and (reviewed not in labels | {UNKNOWN} or not row.get("reviewer", "").strip()):
+            raise ValueError("Reviewed rows require a valid catalog/no-route label and reviewer")
         row["final_label"] = reviewed or (row["proposed_label"] if row["status"] == "accepted" else "")
         row["decision_source"] = "human" if reviewed else "model" if row["final_label"] else "unresolved"
     write_csv(output, rows, ["id", "text", "final_label", "decision_source", "reviewer", "top_probability"])
