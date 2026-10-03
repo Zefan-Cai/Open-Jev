@@ -322,7 +322,7 @@ def norm(value):
 
 
 def instant(value):
-    parsed = datetime.fromisoformat(value)
+    parsed = datetime.fromisoformat(value[:-1] + "+00:00" if isinstance(value, str) and value.endswith("Z") else value)
     if parsed.utcoffset() is None or parsed.microsecond:
         raise ValueError("Whole-second offset timestamp required")
     return int(parsed.timestamp())

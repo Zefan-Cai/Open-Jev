@@ -1,0 +1,72 @@
+{
+  "CI_failure_evidence": {
+    "errors": 5,
+    "path": "runs/frontier-v8-data-20261003/failed-job-310-r2.log",
+    "runtime": "CPython 3.10.21",
+    "sha256": "060c900ccdfa5b20283d904e825a47c24679baa4b91a74f6b56242bdd4172902",
+    "trigger": "datetime.fromisoformat rejects trailing Z on Python 3.10"
+  },
+  "GPU_actions": 0,
+  "actual_new_python310_run": false,
+  "browser_actions": 0,
+  "checks": {
+    "UTC_Z_plus0000_and_offset_equal": true,
+    "all2976_new_and1128_old_predictions_free_CPU_rows": true,
+    "entire_scientific_replay_equal_excluding_only_reader_sha": true,
+    "five_original_310_Z_failures_preserved": true,
+    "focused_fixtures_unchanged_from_source_A": true,
+    "fresh_source_binding_exact": true,
+    "new_source_not_claimed_original_source": true,
+    "new_split_byte_unchanged/calibration.jsonl": true,
+    "new_split_byte_unchanged/ood.jsonl": true,
+    "new_split_byte_unchanged/test.jsonl": true,
+    "new_split_byte_unchanged/train.jsonl": true,
+    "new_split_byte_unchanged/validation.jsonl": true,
+    "old_split_byte_unchanged/data/boundary-controls-v7-20261002-r1/ood.jsonl": true,
+    "old_split_byte_unchanged/data/boundary-controls-v7-20261002-r1/test.jsonl": true,
+    "old_split_byte_unchanged/data/frontier-controls-v4-20261002/ood.jsonl": true,
+    "old_split_byte_unchanged/data/frontier-controls-v4-20261002/test.jsonl": true,
+    "old_split_byte_unchanged/data/policy-training-v6-20261002-r1/ood.jsonl": true,
+    "old_split_byte_unchanged/data/policy-training-v6-20261002-r1/test.jsonl": true,
+    "old_split_byte_unchanged/data/temporal-windows-v5-20261002-r1/ood.jsonl": true,
+    "old_split_byte_unchanged/data/temporal-windows-v5-20261002-r1/test.jsonl": true,
+    "one_line_only_source_change": true,
+    "original_source_A_binding_exact": true,
+    "rejects_fractional_unchanged": true,
+    "rejects_naive_unchanged": true,
+    "rejects_non_text_unchanged": true,
+    "reviewed_contract_byte_unchanged": true
+  },
+  "created_at_utc": "2026-10-03T08:21:00.089501+00:00",
+  "data_refreeze": false,
+  "data_regeneration": false,
+  "failed_checks": [],
+  "focused_fixture_count": 14,
+  "focused_fixtures_passed": 14,
+  "fresh_exclusive_replay_receipt": {
+    "path": "runs/frontier-v8-data-20261003/independent-isolation-portability-r1.json",
+    "sha256": "6aaaa15b227d48faa0f1e3a716744a1a01b0863a370d2cd067dce4ab84e6c409"
+  },
+  "local_python": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "model_calls": 0,
+  "narrow_diff": "Only instant(): replace trailing UTC Z with +00:00 before datetime.fromisoformat for Python 3.10; explicit offsets and naive/fractional/non-text rejection stay unchanged.",
+  "network_requests": 0,
+  "old_row_bodies_exported": 0,
+  "original_audit_receipt": {
+    "path": "runs/frontier-v8-data-20261003/independent-isolation-r1.json",
+    "preserved": true,
+    "sha256": "7919152a0afaaf3607d9e38b914f7b3fac33f44eb67a466dd889134a4d45a6cd"
+  },
+  "original_receipts_rewritten": false,
+  "promotion_or_new_scientific_claim": false,
+  "python310_confirmation": "Latest GitHub CI remains required; no local Python 3.10 installation/run was performed.",
+  "schema_version": 1,
+  "scientific_comparison_omitted_keys": [
+    "audit_source_sha256"
+  ],
+  "scientific_replay_equal": true,
+  "source_after_sha256": "5d06384058a1ee13508c8ea1f98ce7f4279782a7ab49f0e8594c266911468a81",
+  "source_before_commit": "4399cbaed4a22749516efdea17a1668331577df6",
+  "source_before_sha256": "f162c55a23217f8bf8b1eb882104925701fd54d4ec35e5990f3103c3bacc5112",
+  "status": "narrow_reader_portability_amendment_verified_locally"
+}

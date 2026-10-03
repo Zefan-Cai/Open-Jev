@@ -73,6 +73,17 @@ bytes stayed unchanged.
 
 ## Reproduction and freeze boundary
 
+The initial Python 3.10 CI run found five existing isolation-test errors:
+`datetime.fromisoformat` rejected the UTC `Z` spelling. The
+[portability amendment](portability-amendment.json) normalizes a trailing
+`Z` to `+00:00` in one reader line, preserving offset, naive and fractional
+timestamp rules. A fresh private isolation replay produced exactly the same
+scientific JSON as the original; only the reader source hash differs.
+Generator, contract, all six dataset files and all original receipts remain
+unchanged. The amendment records the failed CI and new local checks; latest
+CI on the amended commit is required before integration. It is a reader
+compatibility repair, with no data regeneration or new freeze.
+
 The [external freeze receipt](freeze-receipt.json) binds an exact byte copy
 to committed source `4399cbaed4a22749516efdea17a1668331577df6`.
 At freeze time this source was committed locally; network push, PR and CI
@@ -84,8 +95,9 @@ The external freeze receipt, added after a real source commit, is authoritative
 for reviewed data status. This commits only CPU preparation; initializer,
 training mixture, steps and comparison protocol remain unfrozen and unrun.
 
-To reproduce into a fresh directory, using the source commit named by the
-freeze receipt:
+To reproduce into a fresh directory, use the source commit named by the
+freeze receipt with Python 3.14, or use the amended reader recorded above
+for Python 3.10. The generator and dataset hashes must match that same freeze:
 
 ```sh
 python -m scripts.build_frontier_controls_v8 --output data/frontier-controls-v8-reproduction

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "status": "reader_portability_amendment_locally_verified_latest_CI_pending",
+  "created_at_utc": "2026-10-03T08:23:43.672518+00:00",
+  "original_data_source_commit": "4399cbaed4a22749516efdea17a1668331577df6",
+  "original_report_commit": "90629c5f95b299534cf941f00db3b970b1687090",
+  "original_freeze_sha256": "cd554fe00bd592febdf01a0b41c20de676054e54484a1bd27dc8f86ee4e20232",
+  "isolation_reader_source_before_sha256": "f162c55a23217f8bf8b1eb882104925701fd54d4ec35e5990f3103c3bacc5112",
+  "isolation_reader_source_after_sha256": "5d06384058a1ee13508c8ea1f98ce7f4279782a7ab49f0e8594c266911468a81",
+  "reader_change": "Exactly one expression normalizes a trailing UTC Z to +00:00 before fromisoformat; timestamp rejection gates and all other rules unchanged.",
+  "CI_failure_snapshot_sha256": "f953a9337544d398837d0bbc064b91740616fbd80204c28408736bfe6203b5d8",
+  "CI_failure_log_sha256": "060c900ccdfa5b20283d904e825a47c24679baa4b91a74f6b56242bdd4172902",
+  "failed_job_URL": "https://github.com/Zefan-Cai/Open-Jev/actions/runs/37108947882/job/111162924471",
+  "failed_job_python310": {
+    "tests": 1081,
+    "errors": 5,
+    "skipped": 89
+  },
+  "local_python314_validation": {
+    "focused_tests": 44,
+    "full_tests": 1081,
+    "full_passed": 996,
+    "full_skipped": 85
+  },
+  "local_python310_execution": false,
+  "owner_amendment_sha256": "b3fb3194bff00f2173a2c8d68b1b2c2deec296131afe3c560dd0e080bf83f498",
+  "fresh_replay_sha256": "6aaaa15b227d48faa0f1e3a716744a1a01b0863a370d2cd067dce4ab84e6c409",
+  "original_replay_sha256": "7919152a0afaaf3607d9e38b914f7b3fac33f44eb67a466dd889134a4d45a6cd",
+  "fresh_replay_omitted_comparison_keys": [
+    "audit_source_sha256"
+  ],
+  "fresh_replay_scientific_JSON_identical": true,
+  "checks": {
+    "original_freeze_unchanged": true,
+    "current_reader_matches_amendment": true,
+    "only_sourcehash_diff_in_fresh_scientific_replay": true,
+    "compat-focused-r1": true,
+    "compat-full-r1": true
+  },
+  "failed_checks": [],
+  "generator_sha256": "ba41aaf964dd579225cd98d64cbfcb2a0516fac2bb4fc7e34bf0f9544306eeaa",
+  "contract_sha256": "30daab0f14711bc8e707e954fb38ba4f4ea73ec394589e0386c2e7e1d0b664ca",
+  "manifest_sha256": "dd8a9d941c2a73b9ac222bfeee53c4284f854a89fde1496ace6531e318244fd9",
+  "split_files_sha256": {
+    "calibration.jsonl": "8656ac9c14dde26aa96b0436b7977c34bf43962c3806e73b8aff9bab90c99cf9",
+    "ood.jsonl": "ffbdbf0c18b12f128b4d0e86e61f79248338c789e396cb940255683891616464",
+    "test.jsonl": "5ed589652193e1867e1ba1a2933c7da47b6e20e044acc6db52f717b7df743355",
+    "train.jsonl": "5051ca50f96f73610ad51714d830c4a2ac0fffd6b7b31fa393f3bb95a76b0912",
+    "validation.jsonl": "30281832e5329267dcfbfbe2323e40d7a42d9b1516d4a1b9a4ac9c7cb45901b3"
+  },
+  "test_receipts_sha256": {
+    "compat-focused-r1.json": "5750d28cd7bf7f8fd1a4a31c404134c60860c56dd079eb6bdfd43fd445a42cb9",
+    "compat-focused-r1.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compat-focused-r1.stderr.log": "9340c6f1bb276bcf5f3f732058916ed8ba29eaad4a3c98c05b59001d9de5482b",
+    "compat-full-r1.json": "ddc05de842c564561d8ddb9197d574af0d49431ce65e533964c7c1bf864369a5",
+    "compat-full-r1.stdout.log": "13b3a0289518e2ecd4af4d138246f52b970c548eb2ffaadd5801579d9b5fb41c",
+    "compat-full-r1.stderr.log": "92c157decc35afacfb0121da9d3993341c6dae0cca85ee1f5a957ce6f227bf65"
+  },
+  "data_regenerated": false,
+  "data_refrozen": false,
+  "original_receipts_rewritten": false,
+  "model_calls": 0,
+  "training_runs": 0,
+  "GPU_actions": 0,
+  "browser_actions": 0,
+  "social_posts_sent": 0,
+  "training_plan_frozen": false
+}
