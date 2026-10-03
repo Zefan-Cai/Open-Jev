@@ -29,8 +29,10 @@ Full operational receipts remain local and are bound by their SHA256 hashes.
 
 ## Separate next acquisition
 
-The proposed identity is `boundary-v7-acquisition-a2-20261002`, in a separate
-task directory. It uses a separately reviewed controller and new execution,
+The separately declared identity is `boundary-v7-acquisition-a2-20261002`, in a separate
+task directory. The [declaration](acquisition-a2-declaration.json) binds the
+finalized CPU receipts and preserves the earlier provisional CPU receipts.
+It uses a separately reviewed controller and new execution,
 staging, preflight, ownership and restoration receipts. It does not reuse the
 previous acquisition's PIDs, ownership nonce, empty observations or locks.
 
@@ -41,6 +43,16 @@ reads and sleeps share the absolute idle deadline; observations completing
 at or after it are refused. Process spawning and cleanup can add wall time;
 the policy bounds acceptance of observations, not all operating-system overhead.
 UUID, ownership, parse and other subprocess errors remain hard failures.
+Malformed compute rows, unknown UUIDs, nonpositive or invalid PIDs, and
+duplicate inventory indexes or UUIDs are explicitly rejected. An unresolved
+positive PID remains an occupied process rather than being dropped.
+
+The final controller passed 57 local and Linux CPU mocks. Independent source
+review passed 27 checks and separately rejected ten malformed-query probes.
+Final staging and request binding passed 67 independent checks. A subsequent
+fresh capture passed 42 ownership and checkpoint checks, including all 23
+current owned processes and the full 21.88 GB checkpoint inventory.
+These checks establish controller behavior, not GPU acquisition or training.
 
 An exclusive, fsynced `acquisition.lock.json` is created before guard creation
 or pause. It survives failure, including failure before model loading, so
@@ -50,7 +62,7 @@ the 4500-second driver allowance and 1500-second restoration allowance remain.
 Launch requires a separate recorded root declaration, pushed public record
 and passing CI, CPU staging/preflight, fresh live checkpoint/optimizer/config/
 process ownership evidence, and a live restoration guard. Prefer an actually
-empty H100; the latest independent six-node snapshot at 00:22:20–00:22:33 UTC
+empty H100; the latest independent six-node snapshot began at 01:31:59 UTC
 found all 48 cards occupied. The already authorized original-queue borrowing
 may be used only after these new checks. GPU0/1 remain protected.
 

@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "status": "separately_declared_single_resource_acquisition_not_executed",
+  "declared_at_utc": "2026-10-03T01:49:14.468525+00:00",
+  "acquisition_id": "boundary-v7-acquisition-a2-20261002",
+  "root_decision": "Proceed exactly once after verified latest CI and integration, final remote receipt binding and fresh current queue ownership capture. This does not restart the failed a1 controller or a started model attempt.",
+  "standing_authorization": "MS GPU use and bounded original-queue pause with complete restoration; protected R-KV GPU0/1 excluded.",
+  "prior_acquisition": {
+    "id": "boundary-v7-training-20261002",
+    "outcome": "inventory_timeout_before_resource_driver_or_model",
+    "model_calls": 0,
+    "original_queue_restored": true,
+    "independent_restoration_sha256": "bf1b664880cb54ac803a84475bf07c73c476260e9414bb3cb85a6ee5f99f41f3",
+    "must_not_restart_controller_sha256": "84e0af7b2a3e55bbda62791a839b1000f932f2f478b9e7964c94986dc6f39fd0"
+  },
+  "first_model_attempt": {
+    "source_commit": "87eb8b419685d272f059b3696e0f547e47ebdcc6",
+    "evaluation_commit": "37729b2340e8d00fb211784d2181dd167db4f96b",
+    "published_initializer": "ZefanCai/Open-Jev-2B@0c7aa498b1627be8da4acf34c863ff0ee0a92785",
+    "initial_checkpoint_directory_sha256": "3076462e6356412082e79af909227b39b2863b90def79155ca0821aa506b7ded",
+    "train_rows": 3792,
+    "steps": 948,
+    "accumulation": 4,
+    "seed": 20261003,
+    "lora_rank": 8,
+    "maximum_length": 4096,
+    "learning_rate": 2e-05,
+    "head_learning_rate": 5e-05,
+    "brier_weight": 0.1,
+    "checkpoint_every": 0,
+    "resume": false,
+    "automatic_retry": false,
+    "automatic_promotion": false,
+    "test_ood_tuning": false
+  },
+  "plan_sha256": "bab40284419d8ff0bfcdca818047cc96581d0d4e69a7fb891f1c08fe0ec49f35",
+  "manifest_sha256": "adcf3c66af2c6398c9039220172d10ce3398c455f40d7fc9bfc0af639a33aae0",
+  "cpu_evidence_sha256": {
+    "pause_v7_training_restore.py": "db25760e47cf446c29ee37aedf5f09d24114fe098f12989e9c792b0150303622",
+    "controller_cpu_checks.py": "27fb132e81530478accb26017eec9680ca34c9b96c7967f7e2aea6ec8820bc33",
+    "controller-linux-cpu-receipt.json": "be53d9abf56153315eff4f281555d3705327e03ef4cd1ade028442ca8fd9460b",
+    "cpu-stage-receipt.json": "339cf2ea2860948ed874babacde970bcb708fcea4a9e87033448af708fd651e2",
+    "execution-request.json": "6bac74d48095a7547375df1239d90270015828fd24249e95367c8ef8110a960f",
+    "cpu-preflight-receipt.json": "0744533353af828bba2248e29485354ea3831fd4368df59a6ce6c660ff7eefa6",
+    "controller-plan.json": "6d010fdcc1cb6ecd950fcd74bd8c5e9ab60f33824138282c81931e17634d2fdc",
+    "controller-plan-preflight.json": "0115892631495a91cb9c0f81a9d779146c7be0dc04c46871d24fe36b16140319",
+    "independent-controller-cpu-review.json": "185a1e4303302486b0675d9cf42f5db65e1c927c1851fbe11bd3692fe634f35d",
+    "independent-final-cpu-binding-review.json": "a1961869b0e71aa11e77a52bc191721ac9fdde45c420e364b947f00d5eaf7b97",
+    "controller-ready-cpu.json": "322710567f6f42e8eed95a7a6d7556860959933b235ec32105cab6a87aeddb71",
+    "fresh-capture-only-receipt.json": "14879e647e03c120688d469674dc20b1970644d5a2703dd5109e590a8546858e",
+    "independent-fresh-capture-review.json": "1619d825c041cd1841c16e5314059cb0c5ceee9338c86fd9993070d079990b0f"
+  },
+  "preserved_provisional_cpu_evidence_sha256": {
+    "cpu-stage-receipt.provisional-d1.json": "e7463df35d82c7188f867a3e7cc3a9381833dccf946eb64fb9b98ff73e83577f",
+    "execution-request.provisional-d1.json": "c5f5c0283fcb27bc547ae5fbd79a8d32869e74308c78c628c59677dae8e638a8"
+  },
+  "runtime": {
+    "torch": "2.8.0",
+    "transformers": "5.10.2",
+    "peft": "0.19.1",
+    "triton": "3.4.0",
+    "safetensors": "0.7.0",
+    "accelerate": "1.13.0"
+  },
+  "controller_cpu_tests": {
+    "local": 57,
+    "linux": 57,
+    "independent_checks": 27,
+    "independent_final_binding_checks": 67,
+    "independent_fresh_ownership_checks": 42,
+    "model_calls": 0,
+    "cuda_initialized": false
+  },
+  "latest_fleet_evidence": {
+    "at_utc": "2026-10-03T01:31:59+00:00",
+    "nodes_reached": 6,
+    "gpus_reached": 48,
+    "occupied": 48,
+    "free": 0,
+    "raw_sha256": "d0859261b490bdc45b637eca78be52ce0de56ce05248ecace8b61675b46176e9"
+  },
+  "conditional_target": {
+    "node": "N1-1",
+    "physical_gpu": 4,
+    "original_queue_gpus_reserved_for_restore": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "protected_gpu_indices": [
+      0,
+      1
+    ],
+    "fresh_pid_birth_uid_boot_uuid_nonce_ancestry_checkpoint_optimizer_config_required": true
+  },
+  "resource_protocol": {
+    "single_use_acquisition_lock_before_guard_and_pause": true,
+    "idle_read_timeout_seconds": 12,
+    "two_fresh_consecutive_complete_idle_samples": true,
+    "absolute_idle_deadline_seconds": 90,
+    "partial_stale_or_late_samples_rejected": true,
+    "malformed_inventory_compute_or_unknown_uuid_fail_closed": true,
+    "only_timeout_expired_is_nonconfirming_read": true,
+    "live_independent_restoration_guard_required": true,
+    "driver_limit_seconds": 4500,
+    "total_borrow_limit_seconds": 6000,
+    "restore_original_optimizer_tree_config_four_ranks_three_services_and_real_current_pid_completions": true,
+    "automatic_resource_lifecycle_retry": false
+  },
+  "publication_limits": {
+    "model_calls_at_declaration": 0,
+    "training_started_at_declaration": false,
+    "model_capability_claim": false,
+    "natural_business_or_official_jevbench_claim": false
+  }
+}
