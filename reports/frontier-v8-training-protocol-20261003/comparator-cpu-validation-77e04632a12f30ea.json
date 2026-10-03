@@ -1,0 +1,25 @@
+{
+  "GPU_actions": 0,
+  "actual_comparisons": 0,
+  "actual_training_runs": 0,
+  "heldout_source_bodies_read_for_authoring": false,
+  "implementation_sha256": {
+    "scripts/compare_frontier_training_v8.py": "77e04632a12f30ea9205ccdaf59b305fabb901c9ffd680173ec45a628e599676",
+    "tests/test_compare_frontier_training_v8.py": "1c6f2e5d660a18b559639070086384b72627d8df930f034ee5c6bf150e319c55"
+  },
+  "limitations": [
+    "Hand-authored CPU fixtures and mocks validate code contracts; no host/resource launch or model capability result.",
+    "CLI execute remains disabled; an independent fresh owned launcher is still required."
+  ],
+  "model_calls": 0,
+  "observed_at_utc": "2026-10-03T10:05:00.715964+00:00",
+  "schema_version": 1,
+  "status": "CPU_comparator_contracts_passed",
+  "validation": {
+    "command": "python -m pytest tests/test_compare_frontier_training_v8.py -q",
+    "exit_code": 0,
+    "last_output": "11 passed, 46 subtests passed in 1.40s",
+    "passed_subtests": 46,
+    "passed_tests": 11
+  }
+}

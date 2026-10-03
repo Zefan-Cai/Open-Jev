@@ -1,0 +1,26 @@
+{
+  "status": "root_scientific_plan_input_review_passed",
+  "checked_at_utc": "2026-10-03T09:51:38.843097+00:00",
+  "checks": {
+    "manifest_exact": true,
+    "all13_files_exact": true,
+    "external_membership_exact": true,
+    "train_rows_2932": true,
+    "cal_rows_496": true,
+    "fullpass": true,
+    "heldout_predictions_perweight_1896": true,
+    "20heldout_journals": true,
+    "two_cal_journals": true,
+    "four_cells": true,
+    "runtime76_locked": true,
+    "oldv6v7experimental_not_initializer": true,
+    "no_gpu_authority": true
+  },
+  "newheldout_bodies_parsed": false,
+  "selectedTrainCalibration_counts_only": true,
+  "bytes_hashes_only_for_other_inputs": true,
+  "previous_audits_not_rerun": true,
+  "model_calls": 0,
+  "GPU_actions": 0,
+  "notes": "Source implementation bindings remain pending and are not verified by this input-only check."
+}

@@ -1,0 +1,16 @@
+======================================================================
+FAIL: test_resource_receipt_flag_cannot_unlock_execution (tests.test_run_frontier_training_v8.DriverFixtures.test_resource_receipt_flag_cannot_unlock_execution)
+----------------------------------------------------------------------
+ValueError: Driver checkout differs from frozen source
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/tests/test_run_frontier_training_v8.py", line 241, in test_resource_receipt_flag_cannot_unlock_execution
+    with self.assertRaisesRegex(ValueError, 'Execution unavailable'): driver.execute(self.args)
+AssertionError: "Execution unavailable" does not match "Driver checkout differs from frozen source"
+
+----------------------------------------------------------------------
+Ran 17 tests in 8.835s
+
+FAILED (failures=1)

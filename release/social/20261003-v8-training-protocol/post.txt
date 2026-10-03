@@ -1,0 +1,9 @@
+🧪 Open-Jev v8 protocol is frozen.
+
+2,932 Train rows · 733 steps · published 2B initialization
+
+Calibration first, then 4 comparison cells with safety + efficiency metrics.
+
+CPU checks pass; training has not run.
+
+Evidence: https://github.com/Zefan-Cai/Open-Jev/blob/main/reports/frontier-v8-training-protocol-20261003/README.md

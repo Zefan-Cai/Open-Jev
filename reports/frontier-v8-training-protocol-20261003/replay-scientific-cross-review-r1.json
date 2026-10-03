@@ -1,0 +1,70 @@
+{
+  "GPU_actions": 0,
+  "actual_comparison_runs_started": 0,
+  "actual_exclusive_outputs_replayed": 0,
+  "actual_executions": 0,
+  "actual_training_runs_started": 0,
+  "automatic_promotion": false,
+  "blocking_findings": [],
+  "checks": [
+    "Complete ten heldout slices: 1896 predictions per weight, plus 496 Calibration; all22 journals and four runtime loads.",
+    "Both own-Calibration temperatures fitted before any heldout forwarding; published common temperature unchanged; all four weight/temperature cells reported.",
+    "Independent typed state gold, Brier/NLL/ECE15, inclusive .2/.8 Noul predicates and paired regressions/fixes recomputed without comparator or jev.metrics imports.",
+    "Six dangerous permissive Choice actions and all seven pooled-family Noul safety gates; numeric wrong Choices disclosed separately; old v5 split6+6 rejects and old v6 split3+3 revocations.",
+    "Frozen source, request, plan, external freeze, dataset, checkpoint, deferred733-step training completion, Calibration-only saved temperature/reload, full76-version runtime receipt and all comparison bytes bound.",
+    "BF16 backbone, FP32 head, CUDA12.8, highest matmul precision, TF32False with declared CUDA-matmul scope, quantizationFalse, same physical device identity across four recorded loads.",
+    "Cold timing outliers retained; median and nearest-rank P95; allocated/reserved scoped peaks; exact events ordering and exclusive persistent consumed replay marker.",
+    "Parsed adapted and released base metadata, rank8 LORA target-module compatibility, immutable wrapper paths and fixed comparison output verified."
+  ],
+  "limitations": [
+    "No actual model, CUDA, remote host staging, historical reserved dataset bodies, training attempt, comparison campaign or consumed exclusive output was used in this review.",
+    "The successful exclusive receipt integration explicitly mocks provenance() twice; actual comparison bundle parsing, independent scientific arithmetic, receipt creation and consumed-marker behavior execute. Individual source/checkpoint/completion/runtime guards are tested separately, but a real-host complete provenance invocation is still pending.",
+    "Opaque regular resource receipt hashes confer no launch, live GPU ownership or restoration authority; operational validation must be supplied by a separately reviewed future owned launcher.",
+    "Recorded runtime/device provenance consistency does not establish a fresh installation or live machine state.",
+    "This prepares a CPU protocol and makes no model capability, natural-business or official JevBench improvement claim."
+  ],
+  "model_calls": 0,
+  "plan_sha256": "984539a92f1aa37b93e58fea7df4511a1635e7e9f284531068bb5a0939ebc8be",
+  "protocol_id": "frontier-v8-isolated-20261003-r1",
+  "resource_controller_validation": "not_performed",
+  "restoration_validation": "not_performed",
+  "reviewed_at_utc": "2026-10-03T10:15:23.341754+00:00",
+  "reviewed_files_sha256": {
+    "reports/frontier-v8-training-protocol-20261003/training-plan.json": "984539a92f1aa37b93e58fea7df4511a1635e7e9f284531068bb5a0939ebc8be",
+    "scripts/compare_frontier_training_v8.py": "99a74cbad37973f31da9f4aaf06cb4934d6fc39ec741bfd56dc2166488c46213",
+    "scripts/replay_frontier_comparison_v8.py": "4ec164d5247607c558f75070966a410cf373b657938e839ff9d55f85224cbf9e",
+    "scripts/run_frontier_training_v8.py": "8cb4064f6f1dd05b28a581f13c0043adf981f64b0f5ac8e0706257781e53a708",
+    "tests/test_frontier_v8_comparison_replay_integration.py": "332581f4a328551eb45254030c2710bc6d8dc833b83d83f7748a361ef1b76ac6",
+    "tests/test_replay_frontier_comparison_v8.py": "6849e978691ab9ca0e32d1b20617448ffb8f16b59c966ac5098b8eee8a968a78"
+  },
+  "reviewer": "independent_replay_author_natural_trial_gap",
+  "schema_version": 1,
+  "status": "independent_cpu_scientific_protocol_review_passed",
+  "tests": [
+    {
+      "command": "python3 -m unittest discover -s tests -p test_replay_frontier_comparison_v8.py -v",
+      "failures": 0,
+      "fixture_scope": "Hand-authored arithmetic, malformed evidence, independent committed-source/GIT-env, checkpoint, Unicode Calibration/completion, exclusive-failure guards.",
+      "latest_elapsed_seconds": 0.725,
+      "passed": 15,
+      "tests": 15
+    },
+    {
+      "adversarial_mutation_subtests": 3,
+      "command": "python3 -m unittest discover -s tests -p test_frontier_v8_comparison_replay_integration.py -v",
+      "failures": 0,
+      "fixture_scope": "Hand-authored seven-family typed data; actual comparator score_bundle with CPU mock loader to independent validate_bundle; exact science and rehashed events/runtime/summary tampering checks.",
+      "observed_elapsed_seconds": 7.29,
+      "passed": 4,
+      "tests": 4
+    },
+    {
+      "command": "python3 -m py_compile scripts/replay_frontier_comparison_v8.py tests/test_replay_frontier_comparison_v8.py",
+      "status": "passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed"
+    }
+  ]
+}

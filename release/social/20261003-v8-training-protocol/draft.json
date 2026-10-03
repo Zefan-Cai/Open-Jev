@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "draft_unposted_waiting_existing_Chrome_availability_and_integration",
+  "text": "🧪 Open-Jev v8 protocol is frozen.\n\n2,932 Train rows · 733 steps · published 2B initialization\n\nCalibration first, then 4 comparison cells with safety + efficiency metrics.\n\nCPU checks pass; training has not run.\n\nEvidence: https://github.com/Zefan-Cai/Open-Jev/blob/main/reports/frontier-v8-training-protocol-20261003/README.md",
+  "text_sha256": "3f544d33cc8c9e001b02605c544fbc28174398a711d6c4b8fd8d204b10c1c365",
+  "evidence_url": "https://github.com/Zefan-Cai/Open-Jev/blob/main/reports/frontier-v8-training-protocol-20261003/README.md",
+  "standard_count_with_shortened_URL": 247,
+  "model_gain_claim": false,
+  "posted": false,
+  "duplicates_checked": false,
+  "actual_model_calls": 0,
+  "actual_training_runs": 0,
+  "scope": "Frozen scientific experiment and CPU verification only; no new model capability or measured efficiency.",
+  "url_shortened_unicode_codepoints": 246,
+  "X_weighted_characters": 247
+}

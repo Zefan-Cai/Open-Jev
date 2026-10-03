@@ -1,0 +1,24 @@
+test_attempt_is_consumed_even_when_preflight_fails (test_run_frontier_training_v8.DriverFixtures.test_attempt_is_consumed_even_when_preflight_fails) ... ok
+test_changed_calibration_labels_initial_identity_reload_or_phase_rejected (test_run_frontier_training_v8.DriverFixtures.test_changed_calibration_labels_initial_identity_reload_or_phase_rejected) ... ok
+test_changed_data_checkpoint_and_base_rejected (test_run_frontier_training_v8.DriverFixtures.test_changed_data_checkpoint_and_base_rejected) ... ok
+test_changed_plan_or_freeze_bytes_rejected (test_run_frontier_training_v8.DriverFixtures.test_changed_plan_or_freeze_bytes_rejected) ... ok
+test_complete_read_only_preflight_and_exact_deferred_command (test_run_frontier_training_v8.DriverFixtures.test_complete_read_only_preflight_and_exact_deferred_command) ... ok
+test_dirty_source_and_different_commit_rejected (test_run_frontier_training_v8.DriverFixtures.test_dirty_source_and_different_commit_rejected) ... ok
+test_git_environment_cannot_redirect_source (test_run_frontier_training_v8.DriverFixtures.test_git_environment_cannot_redirect_source) ... ok
+test_hf_link_must_remain_inside_declared_cache (test_run_frontier_training_v8.DriverFixtures.test_hf_link_must_remain_inside_declared_cache) ... ok
+test_incomplete_final_checkpoint_and_special_journal_rejected (test_run_frontier_training_v8.DriverFixtures.test_incomplete_final_checkpoint_and_special_journal_rejected) ... ok
+test_incomplete_nonfinite_or_nonmonotonic_optimizer_steps_rejected (test_run_frontier_training_v8.DriverFixtures.test_incomplete_nonfinite_or_nonmonotonic_optimizer_steps_rejected) ... ok
+test_old_attempt_protected_node_placeholder_overlap_and_existing_outputs_refused (test_run_frontier_training_v8.DriverFixtures.test_old_attempt_protected_node_placeholder_overlap_and_existing_outputs_refused) ... ok
+test_real_trainer_journal_shape_without_options_is_supported (test_run_frontier_training_v8.DriverFixtures.test_real_trainer_journal_shape_without_options_is_supported) ... ok
+test_reserved_files_are_never_parsed (test_run_frontier_training_v8.DriverFixtures.test_reserved_files_are_never_parsed) ... ok
+test_resource_receipt_flag_cannot_unlock_execution (test_run_frontier_training_v8.DriverFixtures.test_resource_receipt_flag_cannot_unlock_execution) ... ok
+test_runtime_lock_platform_or_stage_mutation_rejected (test_run_frontier_training_v8.DriverFixtures.test_runtime_lock_platform_or_stage_mutation_rejected) ... ok
+test_runtime_version_or_position_shadowing_rejected (test_run_frontier_training_v8.DriverFixtures.test_runtime_version_or_position_shadowing_rejected) ... ok
+test_source_inventory_cannot_claim_other_bytes (test_run_frontier_training_v8.DriverFixtures.test_source_inventory_cannot_claim_other_bytes) ... ok
+test_special_manifest_or_plan_rejected_before_open (test_run_frontier_training_v8.DriverFixtures.test_special_manifest_or_plan_rejected_before_open) ... ok
+test_symlink_and_special_dataset_leaf_rejected (test_run_frontier_training_v8.DriverFixtures.test_symlink_and_special_dataset_leaf_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 9.619s
+
+OK

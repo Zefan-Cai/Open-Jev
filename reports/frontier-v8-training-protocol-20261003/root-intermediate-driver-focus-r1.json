@@ -1,0 +1,17 @@
+{
+  "status": "intermediate_fixture_failure_preserved",
+  "tests": 17,
+  "failures": 1,
+  "errors": 0,
+  "passed": 16,
+  "verified_at_utc": "2026-10-03T10:03:28.747199+00:00",
+  "failure": "test_resource_receipt_flag_cannot_unlock_execution expected Execution unavailable but frozen source checkout mismatch refused before that branch",
+  "guard_behavior": "fail_closed",
+  "source_guard_relaxation_authorized": false,
+  "model_calls": 0,
+  "GPU_actions": 0,
+  "final_verification": false,
+  "captured_tool_output_log": "runs/frontier-v8-training-protocol-20261003/root-intermediate-driver-focus-r1.log",
+  "log_sha256": "7bfb5871028b1279a37816c6f92d4146ee5e5816cf1bf87ac1785e89ea31c858",
+  "source_hash_at_start_not_captured": true
+}

@@ -1,0 +1,93 @@
+{
+  "captured_tool_output_log": "runs/frontier-v8-training-protocol-20261003/driver-cpu-review-r1.log",
+  "git_diff_check": {
+    "exit_code": 0
+  },
+  "initial_failure_preserved": {
+    "failures": 1,
+    "log": "runs/frontier-v8-training-protocol-20261003/root-intermediate-driver-focus-r1.log",
+    "log_sha256": "7bfb5871028b1279a37816c6f92d4146ee5e5816cf1bf87ac1785e89ea31c858",
+    "reason": "A shared subprocess.run mock intercepted Git check_output; fixture now routes Git calls to real subprocess.run. The source guard remained fail-closed and was not relaxed.",
+    "receipt": "runs/frontier-v8-training-protocol-20261003/root-intermediate-driver-focus-r1.json",
+    "tests": 17
+  },
+  "interface": {
+    "completed_run_validation": "733 contiguous finite optimizer steps, immutable Calibration identities and labels, refitted temperature, recomputed reload error, published initializer identity, fixed-final deferred no-resume boundary, six finite scoped phases and complete final checkpoint.",
+    "completion_preflight_hash_key": "training_preflight_receipt_sha256",
+    "execute": "Unavailable; a resource receipt flag cannot unlock model execution. Valid fresh execute requests are consumed with an exclusive lock and failure receipt, including preflight failures.",
+    "helpers": [
+      "verify_source",
+      "inventory",
+      "directory_sha",
+      "runtime_identity",
+      "validate_completed_run"
+    ],
+    "numerical_settings": "Returned as requirements with numerical_settings_applied:false; future owned launcher must apply and observe before model allocation.",
+    "trainer_prediction_records": "No options field; options/width and labels are bound to immutable Calibration inputs."
+  },
+  "log_sha256": "390b400af11a25ecd80ba34d74b0b5058598ad875162ff8cc1b87ca905d39388",
+  "owned_files_sha256": {
+    "docs/frontier-v8-resource-protocol.md": "654bc7d11369fd7ceded46e605f1ad34f65f802034991a678063b4253fb4895b",
+    "scripts/run_frontier_training_v8.py": "8cb4064f6f1dd05b28a581f13c0043adf981f64b0f5ac8e0706257781e53a708",
+    "tests/test_run_frontier_training_v8.py": "da112117c418fc5254bd03f8a840e63de66df64d022f973884b2f886fd386147"
+  },
+  "pending": [
+    "Root fills implementation inventory, verifies integration/full suite, commits and pushes source, then writes external freeze binding exact source.",
+    "Actual staging, current ownership, tensor/gradient observations, fresh owned launcher and independent restoration guard remain separate future work."
+  ],
+  "protocol_id": "frontier-v8-isolated-20261003-r1",
+  "reviewer": "v8_isolation_review",
+  "schema_version": 1,
+  "scope": {
+    "GPU_actions": 0,
+    "SSH_calls": 0,
+    "actual_data_materializations": 0,
+    "actual_host_staged": false,
+    "actual_jsonl_rows_parsed_during_final_review": false,
+    "browser_actions": 0,
+    "current_resource_ownership_established": false,
+    "external_trials": 0,
+    "legacy_drivers_or_plans_modified": false,
+    "model_accuracy_latency_or_memory_claims": false,
+    "model_calls": 0,
+    "reserved_byte_hashes_only": true,
+    "training_runs": 0
+  },
+  "static_public_plan_review": {
+    "actual_jsonl_rows_parsed": false,
+    "checks": {
+      "all_four_cells_and_no_promotion": true,
+      "data_manifest_exact": true,
+      "exact11_base_content_inventory_and_origin": true,
+      "exact13_file_inventory_and_hashes": true,
+      "exact_runtime_lock_and76_versions": true,
+      "full496cal_then1896_each_and20heldout_two_cal": true,
+      "full_pass_733x4_equals2932": true,
+      "markdown_links_exist": true,
+      "numerical_settings_match_driver": true,
+      "optimizer_matches_existing_trainer": true,
+      "published_initializer_matches_immutable_v7_plan": true,
+      "resource_and_gpu_authority_false": true,
+      "retry_resume_promotion_false": true,
+      "settings_match_driver": true,
+      "source_inventory_pending_final_freeze": true
+    },
+    "metadata_only": true,
+    "reserved_bytes_hashed_only": true,
+    "reviewed_plan_sha256": "56ff48c1cba135a420190c3b1418b3f151167c7119065f6b3e571b2f7caf0623",
+    "reviewed_readme_sha256": "1d560dfd3d9186e7f3076b05675a641b1254357d2e13e11340cd0657be989a24"
+  },
+  "status": "driver_cpu_protocol_review_passed_pending_root_committed_source_freeze",
+  "test_command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -p test_run_frontier_training_v8.py -v",
+  "tests": {
+    "count": 19,
+    "elapsed_seconds": 9.619,
+    "errors": 0,
+    "exit_code": 0,
+    "failures": 0,
+    "fixture_scope": "Invented rows and weights, temporary real Git repositories, mocked package metadata and import positions; no actual model or live host.",
+    "passed": 19,
+    "skipped": 0
+  },
+  "verified_at_utc": "2026-10-03 10:13:28 UTC"
+}

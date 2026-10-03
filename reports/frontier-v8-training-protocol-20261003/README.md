@@ -130,3 +130,41 @@ commit or squash merge is not a substitute for the frozen source HEAD. Resource 
 actual model calls, training, browser actions and external trials remain zero
 in this CPU milestone. Natural pilot capture and sealed independent 27B
 assessment remain separate pending work.
+
+## CPU verification and frozen source
+
+[freeze-receipt.json](freeze-receipt.json) binds source
+`d8eeb3d1f8e8d8751476f102ab456170c277e86a`, which was pushed before this
+external freeze. The executable source inventory contains 18 files, including
+all 12 transitive local runtime dependencies. Later report-only commits can
+add evidence without replacing that frozen source identity.
+
+[verification.json](verification.json) records 49/49 focused tests and
+1,173 repository tests: 1,088 passed, 85 explicitly skipped, zero failures or
+errors. [The final plan review](final-public-plan-review-r1.json) checks all
+18 content hashes and the 12-file runtime dependency closure; independent
+[scientific review](replay-scientific-cross-review-r1.json) and
+[replay code review](independent-replay-code-review-4ec164d5247607c5.json)
+cover the comparison/replay contracts.
+
+These tests use authored typed fixtures, temporary Git repositories and
+injected CPU mock logits. The end-to-end exclusive replay receipt test mocks
+external provenance explicitly; provenance guards are tested separately.
+No real host staging, model tensor/gradient validation, live GPU ownership,
+training, installation or restoration was performed. These passing checks
+provide no model accuracy, latency or memory measurement.
+
+An [intermediate test failure](root-intermediate-driver-focus-r1.json) and
+[its original log](root-intermediate-driver-focus-r1.log) are preserved. A
+mock of `subprocess.run` intercepted the real Git check used by the source
+guard. The fixture was corrected to permit real Git calls; the source guard
+continued to reject inconsistent checkouts. Earlier review/source hashes and
+pending labels in original receipts retain their historical meaning; final
+source and plan reviews supersede those code-version checks only.
+
+All copied evidence retains its original bytes. Paths beginning with `runs/`
+in receipts describe original local provenance; the corresponding public
+copies use the same basenames in this directory. Latest report-head CI and
+integration are tracked by this branch's pull request. Training and
+comparison have not run; the separate native launcher/restoration phase is
+next.

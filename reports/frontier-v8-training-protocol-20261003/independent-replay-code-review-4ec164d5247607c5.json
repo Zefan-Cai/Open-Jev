@@ -1,0 +1,50 @@
+{
+  "GPU_actions": 0,
+  "actual_comparisons": 0,
+  "actual_training_runs": 0,
+  "blocking_findings": [],
+  "checks": {
+    "all_seven_family_denominators_and_fixed_observed_gates": true,
+    "both_calibration_fits_precede_all_heldout_journal_starts": true,
+    "exclusive_replay_receipt_and_consumed_marker": true,
+    "four_own_and_common_temperature_cells": true,
+    "four_runtime_records_exact_device_dtype_precision_scope": true,
+    "full_journal_identity_order_checkpoint_and_finite_logit_checks": true,
+    "independent_state_gold_checks": true,
+    "independent_temperature_fit_and_metrics": true,
+    "no_comparator_or_metric_import_in_replay": true,
+    "no_model_calls_or_resource_authority_claim": true,
+    "rehashed_event_runtime_summary_mutations_rejected": true,
+    "source_plan_freeze_data_checkpoint_completion_runtime_bindings": true
+  },
+  "cross_implementation_sha256": {
+    "scripts/compare_frontier_training_v8.py": "99a74cbad37973f31da9f4aaf06cb4934d6fc39ec741bfd56dc2166488c46213",
+    "scripts/replay_frontier_comparison_v8.py": "4ec164d5247607c558f75070966a410cf373b657938e839ff9d55f85224cbf9e",
+    "scripts/run_frontier_training_v8.py": "8cb4064f6f1dd05b28a581f13c0043adf981f64b0f5ac8e0706257781e53a708",
+    "tests/test_compare_frontier_training_v8.py": "2eac77b343c624629cb342412fad37bead0d378d97f7b01fd62874a47a00b63c",
+    "tests/test_frontier_v8_comparison_replay_integration.py": "332581f4a328551eb45254030c2710bc6d8dc833b83d83f7748a361ef1b76ac6",
+    "tests/test_replay_frontier_comparison_v8.py": "6849e978691ab9ca0e32d1b20617448ffb8f16b59c966ac5098b8eee8a968a78"
+  },
+  "heldout_source_bodies_read_for_authoring": false,
+  "limitations": [
+    "Code review and CPU mock bundles establish protocol/arithmetic consistency, not actual training, GPU ownership or measured model capability.",
+    "The integration receipt smoke explicitly mocks provenance; separate independent replay tests exercise provenance guards."
+  ],
+  "model_calls": 0,
+  "observed_at_utc": "2026-10-03T10:15:04.468980+00:00",
+  "resolved_findings": [
+    "Added authored affected_role_index/topic_index subgroup dimensions.",
+    "Required observed v5/v6 Test/OOD split-specific gate denominators.",
+    "Bound completion wrapper paths and independent training preflight/execution/runtime hashes.",
+    "Made replay output disjoint from source, evidence inputs and training root.",
+    "Locked exact temperature strategies and efficiency conventions.",
+    "Preserved fixed published model.json and compatible LoRA rank/type/revision/target modules."
+  ],
+  "reviewed_implementation_sha256": {
+    "scripts/replay_frontier_comparison_v8.py": "4ec164d5247607c558f75070966a410cf373b657938e839ff9d55f85224cbf9e",
+    "tests/test_replay_frontier_comparison_v8.py": "6849e978691ab9ca0e32d1b20617448ffb8f16b59c966ac5098b8eee8a968a78"
+  },
+  "reviewer": "train_diagnostic_design",
+  "schema_version": 1,
+  "status": "independent_code_review_passed"
+}

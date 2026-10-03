@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "status": "CPU_protocol_verified_frozen_source_pushed_report_integration_pending",
+  "verified_at_utc": "2026-10-03T10:19:02.499541+00:00",
+  "source_commit": "d8eeb3d1f8e8d8751476f102ab456170c277e86a",
+  "plan_sha256": "984539a92f1aa37b93e58fea7df4511a1635e7e9f284531068bb5a0939ebc8be",
+  "freeze_receipt_sha256": "a710f79977ac582cdc9269368e3f442abb88e76e4bbfae89b962116ade213a5f",
+  "evidence_files_sha256": {
+    "root-input-review-r1.json": "bd32855188bad3185bbc7430981f6e25474806774e0f7ab9933d8eab851a5c7b",
+    "driver-cpu-review-r1.json": "faec8f0e17eeb55e29a541cfed575ae4993cd2a65111366dab32135443a1d2ff",
+    "driver-cpu-review-r1.log": "390b400af11a25ecd80ba34d74b0b5058598ad875162ff8cc1b87ca905d39388",
+    "comparator-cpu-validation-77e04632a12f30ea.json": "236856d493240b951e5bde8da23518170ef1265c8a210293932acfaac69c5a83",
+    "comparator-integration-cpu-validation-99a74cbad37973f3.json": "ce115f8479e78dff6a3655d7052a24607110ca5005b502215d24b029cc509f81",
+    "independent-replay-code-review-4ec164d5247607c5.json": "d40437fdca905db0e049123eb61c4d76f075745fdfad8b01a319fbe39b9afd70",
+    "replay-scientific-cross-review-r1.json": "360a24dac55a611bd0c96ac18b98b8e752dccaae914b3b301ed9fff1dd50147c",
+    "final-public-plan-review-r1.json": "9ddad3302861ccf0643725a8b056e252d02ad74db9086efd274a7fd456e58c9a",
+    "root-final-focused-r1.json": "7e2b4d4ed8ab66397b60cc71d0f6ae829b96acfe918b4411aac70bbcc322ef41",
+    "root-final-focused-r1.log": "191c5cd6c36d9cb2f6204ac3af3a9249a90c13c9cb1d728ed62ac179372f9df5",
+    "root-final-full-r1.json": "94baf359fa36e0651f006c9b3a93e6cd02e2eb6aedb553043d0fe61c75116f71",
+    "root-final-full-r1.log": "f3c7a495c562590fb379fd9c057cd18a256d5a666d326ce375487b6a42797e93",
+    "root-final-cpu-verification-r1.json": "8f7fc18b4845147891fc1426e0cad4fd9041ad885bc87c840f1d40aee2ee8b91",
+    "root-intermediate-driver-focus-r1.json": "06c44aa7a290006fc4bd08bf883380e0a63f261f7108b672db94534a5a0cef5c",
+    "root-intermediate-driver-focus-r1.log": "7bfb5871028b1279a37816c6f92d4146ee5e5816cf1bf87ac1785e89ea31c858",
+    "source-A-push-receipt-r1.json": "09202c249882ea592c01093b6d43e22bb014550b86ebbf12765efbd9c43ae149",
+    "publication-social-count-finding-r1.json": "9bf4355414083b65b19750753f9d8b75021a5347164fe28bf42752e94c01b4ed"
+  },
+  "focused_tests": {
+    "run": 49,
+    "passed": 49,
+    "skipped": 0,
+    "failed": 0
+  },
+  "repository_tests": {
+    "run": 1173,
+    "passed": 1088,
+    "skipped": 85,
+    "failures": 0,
+    "errors": 0
+  },
+  "scientific_protocol_frozen": true,
+  "model_calls": 0,
+  "actual_training_runs": 0,
+  "actual_comparisons": 0,
+  "GPU_actions": 0,
+  "installation_performed": false,
+  "actual_host_staged": false,
+  "browser_actions": 0,
+  "completed_external_trials": 0,
+  "execution_available": false,
+  "resource_protocol_ready": false,
+  "retained_failure": {
+    "receipt": "root-intermediate-driver-focus-r1.json",
+    "reason": "Mock intercepted real Git check_output; test fixture corrected without relaxing source guard.",
+    "final_source_verified": true
+  },
+  "limits": [
+    "These are CPU authored typed fixtures and injected mock prediction logits, not measured model scores or efficiency.",
+    "Exclusive replay receipt integration explicitly mocks external provenance; identity guards are separately unit tested, not exercised on a real host.",
+    "The earlier driver/public review plan and comparator source hashes are historical, followed by final-plan/final-source reviews.",
+    "Copies preserve exact original bytes; historical ignored-run path strings remain provenance references and the same basenames are available in this public directory.",
+    "Frozen scientific protocol does not enable CUDA launch. Fresh native loader, owned controller and independent restoration guard remain pending."
+  ],
+  "publication_metadata_finding": {
+    "path": "publication-social-count-finding-r1.json",
+    "sha256": "9bf4355414083b65b19750753f9d8b75021a5347164fe28bf42752e94c01b4ed",
+    "scope": "social draft Unicode codepoint vs Twitter weighted emoji count",
+    "resolved": true,
+    "current_X_weighted_characters": 247,
+    "post_text_unchanged": true,
+    "scientific_source_unchanged": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "GPU_actions": 0,
+  "actual_comparisons": 0,
+  "actual_training_runs": 0,
+  "heldout_source_bodies_read_for_authoring": false,
+  "implementation_sha256": {
+    "scripts/compare_frontier_training_v8.py": "99a74cbad37973f31da9f4aaf06cb4934d6fc39ec741bfd56dc2166488c46213",
+    "scripts/replay_frontier_comparison_v8.py": "4ec164d5247607c558f75070966a410cf373b657938e839ff9d55f85224cbf9e",
+    "scripts/run_frontier_training_v8.py": "8cb4064f6f1dd05b28a581f13c0043adf981f64b0f5ac8e0706257781e53a708",
+    "tests/test_compare_frontier_training_v8.py": "2eac77b343c624629cb342412fad37bead0d378d97f7b01fd62874a47a00b63c",
+    "tests/test_frontier_v8_comparison_replay_integration.py": "332581f4a328551eb45254030c2710bc6d8dc833b83d83f7748a361ef1b76ac6",
+    "tests/test_replay_frontier_comparison_v8.py": "6849e978691ab9ca0e32d1b20617448ffb8f16b59c966ac5098b8eee8a968a78"
+  },
+  "independent_replay_code_review": {
+    "path": "runs/frontier-v8-training-protocol-20261003/independent-replay-code-review-4ec164d5247607c5.json",
+    "sha256": "d40437fdca905db0e049123eb61c4d76f075745fdfad8b01a319fbe39b9afd70"
+  },
+  "limitations": [
+    "All prediction logits, loading/timing/memory fields are CPU mocks over hand-authored typed fixtures, not model performance.",
+    "The exclusive replay receipt I/O test explicitly mocks external provenance; source and training provenance are tested separately by the independent replay owner.",
+    "CLI execution remains disabled; current CPU code confers no GPU/resource authority."
+  ],
+  "model_calls": 0,
+  "observed_at_utc": "2026-10-03T10:15:20.915265+00:00",
+  "schema_version": 1,
+  "status": "CPU_comparator_and_independent_replay_integration_contracts_passed",
+  "supersedes_code_version_validation_only": {
+    "path": "runs/frontier-v8-training-protocol-20261003/comparator-cpu-validation-77e04632a12f30ea.json",
+    "sha256": "236856d493240b951e5bde8da23518170ef1265c8a210293932acfaac69c5a83"
+  },
+  "validation": {
+    "command": "python -m pytest tests/test_compare_frontier_training_v8.py tests/test_frontier_v8_comparison_replay_integration.py -q",
+    "exit_code": 0,
+    "git_diff_check_exit_code": 0,
+    "last_output": "15 passed, 49 subtests passed in 8.26s",
+    "passed_subtests": 49,
+    "passed_tests": 15,
+    "py_compile_exit_code": 0
+  }
+}
