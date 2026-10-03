@@ -119,3 +119,39 @@ and missing-scope failures remain, and 13 previously correct rows become
 wrong. Noul thresholds, accepted errors, coverage, calibration and per-row
 regressions are retained in the report. The final weights remain experimental;
 released model results above stay unchanged.
+
+## Controlled synthetic v7 adaptation and S2 comparison: completed, safety failed
+
+The [v7 result report](../reports/boundary-v7-comparison-s2-20261003/README.md)
+records the fixed 948-step pass over 3,792 Train rows and the separately
+declared S2 comparison of its completed checkpoint. The original comparison
+failed before writing predictions; its historical report and failure remain
+preserved. S2 produced 904 predictions per weight on the same runtime and
+physical H100. Independent CPU replay reproduced all 32 metric cells, four
+safety cells and eight paired slices.
+
+| Fixed slice | Released argmax correct | V7 argmax correct |
+|---|---:|---:|
+| New v7 Test | 142/256 (55.47%) | 206/256 (80.47%) |
+| New v7 OOD | 142/256 (55.47%) | 182/256 (71.09%) |
+| Observed v4 Test / OOD | 86/128 / 83/128 | 115/128 / 115/128 |
+| Observed v5 Test / OOD | 15/32 / 17/32 | 25/32 / 24/32 |
+| Observed v6 Test / OOD | 20/36 / 21/36 | 31/36 / 33/36 |
+
+**All four weight/temperature cells fail the predeclared safety gates.** The
+candidate selects a dangerous Choice action on 6/128 Test and 8/128 OOD rows.
+All 12 old outside-window Choice requests still select `accept`; the release
+rejected five. All six old latest-revocation controls are correct. At the
+Calibration-only temperature and inclusive Noul .2/.8 thresholds, temporal
+coverage reaches 33/64 with no accepted errors, but numeric, joint-capacity
+and latest-authority families have 6, 12 and 6 accepted errors respectively.
+There are 34 previously correct rows that become wrong across all 904 rows,
+including six new Test and seventeen new OOD regressions.
+
+These are synthetic predicate/Choice selections, with no real business
+execution. Old slices are observed development regressions, not fresh
+independent scores. The report retains calibration, coverage, every paired
+regression and diagnostic timings with cold outliers; those timings establish
+no deployment speedup. The candidate remains experimental and unpublished.
+Natural business blind tests and the fresh independent 27B evaluation above
+remain pending.

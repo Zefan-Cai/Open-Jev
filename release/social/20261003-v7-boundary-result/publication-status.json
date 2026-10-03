@@ -1,0 +1,9 @@
+{
+  "status": "draft_verified_post_not_sent",
+  "reason": "Chrome Computer Use was interrupted by user activity; previously requested availability response remains pending. Publication authorization remains valid.",
+  "draft": "draft.json",
+  "duplicate_check": "pending_before_posting",
+  "browser_actions_this_phase": 0,
+  "posted_url": null,
+  "publication_receipt": null
+}

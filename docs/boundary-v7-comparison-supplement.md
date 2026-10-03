@@ -1,5 +1,10 @@
 # V7 comparison-only forensic supplement
 
+Execution status, 2026-10-03: S2 completed and its [independently replayed results](../reports/boundary-v7-comparison-s2-20261003/README.md)
+fail all four safety cells. Its controller, driver, stage and attempt locks
+are consumed and must not be restarted. The protocol below documents the
+completed experiment; it is not authorization for another execution.
+
 The original v7 training attempt completed all 948 finite optimizer steps.
 Its required comparison exited with code 1 before writing any of the sixteen
 prediction journals: a raw UUID equality check rejected the bare UUID form

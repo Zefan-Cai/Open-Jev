@@ -1,5 +1,10 @@
 # V7 supplemental CPU preflight failures and source layout repair
 
+Later update, 2026-10-03: [S2 completed](../boundary-v7-comparison-s2-20261003/README.md)
+and its scores passed independent replay, while all four safety cells failed.
+The account below preserves the earlier S1 failures and S2 preparation;
+neither consumed attempt nor its evidence was rerun or overwritten.
+
 V7 training remains complete at 948 finite optimizer steps. There are still
 no valid v7 comparison scores. The first supplemental evaluation, S1, reached
 two CPU preflight failures and never acquired resources or ran supplemental

@@ -104,6 +104,131 @@
       "status": "pending_independent_evaluator",
       "results": null,
       "reference_scope": "Evaluator-owned frozen open/sealed suite. No private questions or labels requested. Handoff preparation is not evaluation."
+    },
+    {
+      "protocol": "controlled-synthetic-v6",
+      "status": "completed_candidate_not_promoted",
+      "scope": "Original synthetic development controls; no natural-request or official JevBench result. Observed v4/v5 slices are development regressions.",
+      "source": "https://github.com/Zefan-Cai/Open-Jev/blob/main/reports/policy-v6-training-20261002/README.md",
+      "metric": "argmax raw accuracy; not leaderboard competence or composite",
+      "train_rows": 2768,
+      "training_steps": 692,
+      "predictions_per_weight": 392,
+      "released_correct": {
+        "v6_test": 20,
+        "v6_ood": 21,
+        "v4_test": 86,
+        "v4_ood": 83,
+        "v5_test": 15,
+        "v5_ood": 17
+      },
+      "candidate_correct": {
+        "v6_test": 32,
+        "v6_ood": 32,
+        "v4_test": 114,
+        "v4_ood": 113,
+        "v5_test": 24,
+        "v5_ood": 25
+      },
+      "denominators": {
+        "v6_test": 36,
+        "v6_ood": 36,
+        "v4_test": 128,
+        "v4_ood": 128,
+        "v5_test": 32,
+        "v5_ood": 32
+      },
+      "candidate_safety_passed": false,
+      "old_outside_window_choice_accept_errors": 12,
+      "old_outside_window_choice_count": 12,
+      "paired_correct_to_wrong": 13,
+      "automatic_promotion": false
+    },
+    {
+      "protocol": "controlled-synthetic-v7-s2",
+      "status": "completed_safety_failed_candidate_not_promoted",
+      "scope": "Separately declared S2 comparison of completed 2B v7; new primary synthetic Test/OOD and separately reported observed v4/v5/v6 development regressions. No real business execution, natural-request or official JevBench result.",
+      "source": "https://github.com/Zefan-Cai/Open-Jev/blob/main/reports/boundary-v7-comparison-s2-20261003/README.md",
+      "metric": "argmax raw accuracy; not leaderboard competence or composite",
+      "train_rows": 3792,
+      "training_steps": 948,
+      "predictions_per_weight": 904,
+      "released_correct": {
+        "v7_test": 142,
+        "v7_ood": 142,
+        "v4_test": 86,
+        "v4_ood": 83,
+        "v5_test": 15,
+        "v5_ood": 17,
+        "v6_test": 20,
+        "v6_ood": 21
+      },
+      "candidate_correct": {
+        "v7_test": 206,
+        "v7_ood": 182,
+        "v4_test": 115,
+        "v4_ood": 115,
+        "v5_test": 25,
+        "v5_ood": 24,
+        "v6_test": 31,
+        "v6_ood": 33
+      },
+      "denominators": {
+        "v7_test": 256,
+        "v7_ood": 256,
+        "v4_test": 128,
+        "v4_ood": 128,
+        "v5_test": 32,
+        "v5_ood": 32,
+        "v6_test": 36,
+        "v6_ood": 36
+      },
+      "independent_replay_passed": true,
+      "safety_cells": 4,
+      "safety_cells_passed": 0,
+      "candidate_safety_passed": false,
+      "candidate_dangerous_choice_selections": {
+        "v7_test": {
+          "errors": 6,
+          "choice_rows": 128
+        },
+        "v7_ood": {
+          "errors": 8,
+          "choice_rows": 128
+        }
+      },
+      "old_outside_window_choice_accept_errors": 12,
+      "old_outside_window_choice_count": 12,
+      "old_latest_revocation_correct": 6,
+      "old_latest_revocation_count": 6,
+      "candidate_pooled_noul_at_calibration_temperature": {
+        "temporal_window": {
+          "rows": 64,
+          "accepted": 33,
+          "accepted_errors": 0
+        },
+        "exact_numeric": {
+          "rows": 64,
+          "accepted": 46,
+          "accepted_errors": 6
+        },
+        "joint_capacity": {
+          "rows": 64,
+          "accepted": 60,
+          "accepted_errors": 12
+        },
+        "latest_authority": {
+          "rows": 64,
+          "accepted": 56,
+          "accepted_errors": 6
+        }
+      },
+      "paired_correct_to_wrong": 34,
+      "paired_wrong_to_correct": 239,
+      "argmax_changes": 299,
+      "automatic_promotion": false,
+      "timing_note": "Ordered single-row diagnostic timings retain cold outliers; no deployment/HTTP speedup or comparison peak-memory claim."
     }
-  ]
+  ],
+  "updated_at_utc": "2026-10-03T04:58:10.519796+00:00"
 }

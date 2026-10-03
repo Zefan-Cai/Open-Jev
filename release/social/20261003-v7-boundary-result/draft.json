@@ -1,0 +1,11 @@
+{
+  "status": "verified_draft_not_posted",
+  "account": "Zefan_Cai",
+  "text": "🧪 Open-Jev 2B v7: accuracy gains ≠ safe decisions.\n\nSynthetic Test/OOD: 142/256 each → 206/256, 182/256.\n\n⚠️ 14 dangerous choices + 12/12 old window failures. Weights stay experimental.\n\nRaw predictions + independent replay:\nhttps://github.com/Zefan-Cai/Open-Jev/blob/main/reports/boundary-v7-comparison-s2-20261003/README.md",
+  "evidence_url": "https://github.com/Zefan-Cai/Open-Jev/blob/main/reports/boundary-v7-comparison-s2-20261003/README.md",
+  "evidence_result_sha256": "36cb7346d379351deeca4a7868c9670834a89d029ad41b6d1df77297b3b60c96",
+  "text_sha256": "7c0cf76f05fb0293c2be0b31829a9267d53a3c1fe44ed751d41a14676a700782",
+  "conservative_weighted_length": 253,
+  "created_at_utc": "2026-10-03T05:01:24.490117+00:00",
+  "scope": "Completed synthetic 2B V7 comparison; gates failed. No weight promotion, natural-request, official JevBench or deployment-speed claim."
+}

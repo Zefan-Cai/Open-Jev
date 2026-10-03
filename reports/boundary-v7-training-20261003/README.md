@@ -1,5 +1,10 @@
 # Open-Jev-2B v7: training completed, comparison failed
 
+Later update, 2026-10-03: the separately declared [S2 comparison](../boundary-v7-comparison-s2-20261003/README.md)
+completed with independent replay; all four safety cells failed. This report
+preserves the original attempt and its failure. Its outcome and original
+evidence are unchanged; the candidate remains experimental and unpublished.
+
 The frozen 948-step adaptation completed and saved an experimental candidate.
 The required published-versus-candidate comparison failed at its runtime
 identity guard before writing any comparison predictions. There is no valid
