@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "status": "prepared_membership_fixed_independent_output_audit_passed_model_plan_unfrozen",
+  "prepared_at_utc": "2026-10-03T09:30:11.563591+00:00",
+  "data_membership_fixed": true,
+  "source_commit": "945f5af3cff3870b5752343f799e3d2c7ee02ef9",
+  "source_pushed_and_remote_ref_confirmed": true,
+  "source_push_receipt_sha256": "b5dff7e32671e8a77a4480082b4fa6c590b9a0054abcf92901c8f4a82a42b2eb",
+  "dataset": "data/frontier-training-v8-20261003-isolated-r1",
+  "manifest_sha256": "ee8f8d689a748e2e7d71b43fa18e47183a5c7aca01a4bb39ffffe3f5dbd499a8",
+  "train_summary": {
+    "families": {
+      "policy": 2624,
+      "routing": 308
+    },
+    "groups": 499,
+    "kinds": {
+      "choice": 1951,
+      "noul": 981
+    },
+    "records": 2932,
+    "sources": {
+      "frontier-controls-v4": 1812,
+      "frontier-controls-v8": 992,
+      "temporal-windows-v5": 128
+    },
+    "splits": {
+      "train": 2932
+    },
+    "unique_inputs": 2932
+  },
+  "primary_files_sha256": {
+    "calibration.jsonl": "8656ac9c14dde26aa96b0436b7977c34bf43962c3806e73b8aff9bab90c99cf9",
+    "ood.jsonl": "ffbdbf0c18b12f128b4d0e86e61f79248338c789e396cb940255683891616464",
+    "test.jsonl": "5ed589652193e1867e1ba1a2933c7da47b6e20e044acc6db52f717b7df743355",
+    "train.jsonl": "67888a8f0cf88697902ab5fdac80ae41b91d8ee50e6dc949d156688404437702",
+    "validation.jsonl": "30281832e5329267dcfbfbe2323e40d7a42d9b1516d4a1b9a4ac9c7cb45901b3"
+  },
+  "retained_files_sha256": {
+    "observed-regression/v4/ood.jsonl": "013d4d5af35c7c8f183eccad13aee0054dc53a5432cf011bc712bcdff7b6d9fa",
+    "observed-regression/v4/test.jsonl": "36bdd440f48eb364cb32f4779492aa5c65ca737b9600b1b934b403beb656eda0",
+    "observed-regression/v5/ood.jsonl": "05dbfcbeb4eaeaee0e2836fb84dd3ddf8a46e05add84f74abd2fbe80ba17126e",
+    "observed-regression/v5/test.jsonl": "7a5b23564faa0edd9f1fc196f36c0f85ff6aee59781151fc964fc09c2374af07",
+    "observed-regression/v6/ood.jsonl": "09d72bc41eaff341efa9e768874c433696e03199365b337733334540fc8f7537",
+    "observed-regression/v6/test.jsonl": "807bd0d5e40f5883bf1f276fb732b2552fb992885cf45884364140e90231ef5b",
+    "observed-regression/v7/ood.jsonl": "ed0af3eea8c8851481bd0283378f440708193e8c540e7cb67ba650aa59818929",
+    "observed-regression/v7/test.jsonl": "6aa95f95c51cb0c7c40bf66a7fc101a2ba8506b17d04c25958c9fa0b36356d45"
+  },
+  "ordered_row_ids_sha256": "0efba72840d0f48c3c21aba3466e9769dddb10b91ac8c145f913cef85d4e369e",
+  "ordered_records_sha256": "bac595c62916fb3760875d27c12a8172235834b1bf91864bc24db8a06ef159ca",
+  "whole_parent_exclusion_declaration_sha256": "a2661a614cdbf512f4c47ab13b8b0da677030ed881f7d18f063c5f82cfdbcfbf",
+  "independent_input_audit_sha256": "9cfb8711d0cc69206e7c44df5ec8746bb800a784c88cd875ccce300eaa91878c",
+  "independent_output_audit_sha256": "a7691eace88625783ff85b7f2cf98fb1115a0a7b5edb44f8f3ebe9a5f22e1f9c",
+  "materializations": 1,
+  "independent_output_audits": 1,
+  "manifest_provisional_flags_preserved": true,
+  "initializer_frozen": false,
+  "steps_frozen": false,
+  "training_plan_frozen": false,
+  "comparison_protocol_frozen": false,
+  "resource_protocol_ready": false,
+  "model_calls": 0,
+  "training_runs": 0,
+  "GPU_actions": 0,
+  "browser_actions": 0,
+  "completed_external_trials": 0,
+  "publication_status": "report_commit_PR_latest_CI_and_integration_pending",
+  "limitations": [
+    "Fixed data membership and byte inventories grant no model-run or GPU authority.",
+    "Some whole-parent exclusions are conservative abstract-menu matches, not proven exact contamination.",
+    "Old observed regressions retain historical exposure; no pretraining or initializer novelty claim.",
+    "Synthetic composition-depth shifts are not natural business data or official JevBench results."
+  ]
+}

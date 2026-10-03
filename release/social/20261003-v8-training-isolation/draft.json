@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "draft_unposted_waiting_existing_Chrome_availability_and_integration",
+  "text": "Open-Jev split audit 🔎\n\n151 legacy Train rows matched v4 cases after renaming/reordering.\n\nWe preserved the originals and prepared a 2,932-row mix with whole-group exclusions, including conservative scaffold matches.\n\nNo new model results yet.\n\nEvidence: https://github.com/Zefan-Cai/Open-Jev/blob/main/reports/frontier-v8-training-isolation-20261003/README.md",
+  "text_sha256": "fd4c8ee3930c4fb09048dd57ff225765e29540644d516114b29564d646266156",
+  "evidence_url": "https://github.com/Zefan-Cai/Open-Jev/blob/main/reports/frontier-v8-training-isolation-20261003/README.md",
+  "standard_count_with_shortened_URL": 278,
+  "model_gain_claim": false,
+  "posted": false,
+  "duplicates_checked": false,
+  "X_weighted_characters": 279
+}

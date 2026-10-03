@@ -68,14 +68,36 @@ The [materializer review](independent-materializer-review-r1.json) and
 source versions and hand-authored tests. The latter identifies four resolved
 checker/proof-boundary findings; its draft-document hashes are historical.
 The [focused repository check](root-focused-r1.json) passed 42 tests with no
-skips. [Repository regression](root-full-r2.json) passed 1,124 tests:
+skips. [Repository regression](root-full-r2.json) ran 1,124 tests:
 1,039 passed, 85 skipped, no failures. Its first run correctly rejected the
 new trainer in two old v7 staging fixtures. Only the temporary tests were
 [repaired to use exact historical source](legacy-v7-fixture-receipt-r1.json);
 the old driver, plans and guards remain unchanged. New negative checks prove
 that edited/current source is rejected before data or checkpoint staging.
 The [original failure and skip-count amendment](history/README.md) are preserved.
-Actual output preparation is recorded separately once completed.
+Actual output preparation is recorded separately below.
+
+## Actual prepared output
+
+Source `945f5af3cff3870b5752343f799e3d2c7ee02ef9` was committed, pushed and
+confirmed on the remote branch before the materializer ran once. The actual
+output is `data/frontier-training-v8-20261003-isolated-r1`. The independent
+checker then ran once and verified all 13 JSONL files plus the manifest:
+exact byte inventories, order, parent/row membership, provenance, source
+commit, blocks and split counts. No original input or output was rewritten.
+
+| Binding | SHA-256 |
+| --- | --- |
+| Prepared Train bytes | `67888a8f0cf88697902ab5fdac80ae41b91d8ee50e6dc949d156688404437702` |
+| Prepared manifest | `ee8f8d689a748e2e7d71b43fa18e47183a5c7aca01a4bb39ffffe3f5dbd499a8` |
+| Independent actual-output audit | `a7691eace88625783ff85b7f2cf98fb1115a0a7b5edb44f8f3ebe9a5f22e1f9c` |
+
+The [prepared membership receipt](prepared-membership-receipt-r1.json),
+[manifest](prepared-manifest-r1.json) and
+[actual output audit](independent-output-audit-r1.json) fix the data identity.
+The original provisional manifest flags remain intact. This external receipt
+records completed CPU preparation; it freezes no initializer, training steps,
+comparison or resource protocol and grants no model-run authority.
 
 ## Trainer boundary and limits
 

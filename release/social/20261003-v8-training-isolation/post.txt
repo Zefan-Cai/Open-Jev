@@ -1,0 +1,9 @@
+Open-Jev split audit 🔎
+
+151 legacy Train rows matched v4 cases after renaming/reordering.
+
+We preserved the originals and prepared a 2,932-row mix with whole-group exclusions, including conservative scaffold matches.
+
+No new model results yet.
+
+Evidence: https://github.com/Zefan-Cai/Open-Jev/blob/main/reports/frontier-v8-training-isolation-20261003/README.md
