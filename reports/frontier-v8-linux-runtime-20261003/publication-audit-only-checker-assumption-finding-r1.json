@@ -1,0 +1,19 @@
+{
+  "GPU_actions": 0,
+  "Git_readonly_lookup_exit_code": 128,
+  "checker_process_exit_code": 1,
+  "correction": "Bind the freeze receipt to unchanged declared SHA256 and the already-merged PR26 commit 8bbdfa7561fc34fb4921072d93e18c3ae3eb9f95. Continue to compare executable implementation18 and available training plan to sourceA; external prepared data is bound by frozen hashes only.",
+  "created_at_utc": "2026-10-03T11:26:45.390584+00:00",
+  "finding": "Reviewer read-only Git comparison assumed the later freeze-receipt.json existed in scientific sourceA. The checker stopped before creating its final publication receipt.",
+  "freeze_report_commit": "8bbdfa7561fc34fb4921072d93e18c3ae3eb9f95",
+  "installer_or_model_rerun": false,
+  "network_calls": 0,
+  "original_source_data_evidence_changed": false,
+  "preserved_tool_output": "Traceback (most recent call last):\n  File \"<stdin>\", line 79, in <module>\n  File \"<stdin>\", line 16, in gitblob\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py\", line 473, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n               **kwargs).stdout\n               ^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py\", line 578, in run\n    raise CalledProcessError(retcode, process.args,\n                             output=stdout, stderr=stderr)\nsubprocess.CalledProcessError: Command '['git', 'show', 'd8eeb3d1f8e8d8751476f102ab456170c277e86a:reports/frontier-v8-training-protocol-20261003/freeze-receipt.json']' returned non-zero exit status 128.\n",
+  "reviewer": "v8_isolation_review",
+  "schema_version": 1,
+  "source_commit": "d8eeb3d1f8e8d8751476f102ab456170c277e86a",
+  "status": "audit_only_publication_checker_assumption_corrected_no_evidence_rerun",
+  "tests_run": 0,
+  "tool_output_sha256": "2980514a5e397dc9cbdfbc68398cc759bc666c509c10174781420c1081fc6270"
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-03T11:00:16.271375+00:00",
+  "results": {
+    "focused": {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_install_isolated_runtime_cpu.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.2113790839794092,
+      "log_sha256": "7c756a2275717368c909764ca15818a5f3e419fd272a5e173a25c2848f152e4e"
+    },
+    "full": {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 104.85573333402863,
+      "log_sha256": "ac54aaf9ebbf39eae4c1e42fb9713f681b5a47fd702878e1c4f4bba7854a03ed"
+    }
+  },
+  "files_sha256": {
+    "scripts/install_isolated_runtime_cpu.py": "acf804c8af5fbdf9357bb808482e0af0186cc0e78cc869fd80e15ca7fad5e606",
+    "tests/test_install_isolated_runtime_cpu.py": "f8028779752d52920764f8e94b9ff6609586f2d7c91b9958535bb140a60a280e",
+    "docs/isolated-runtime-cpu.md": "12c6878b79e779fa330a73ed916708c0b73f595803201c1a024294e5c8eb0f79"
+  },
+  "frozen_PR26_files_unchanged": true,
+  "frozen_PR26_files": {
+    "docs/frontier-v8-resource-protocol.md": true,
+    "jev/__init__.py": true,
+    "jev/api.py": true,
+    "jev/data.py": true,
+    "jev/metrics.py": true,
+    "jev/model.py": true,
+    "jev/prefix_cache.py": true,
+    "jev/train.py": true,
+    "requirements-linux-py311-cu128-20261002.lock": true,
+    "scripts/audit_boundary_controls_v7.py": true,
+    "scripts/audit_frontier_controls_v8.py": true,
+    "scripts/compare_frontier_training_v8.py": true,
+    "scripts/replay_frontier_comparison_v8.py": true,
+    "scripts/run_frontier_training_v8.py": true,
+    "tests/test_compare_frontier_training_v8.py": true,
+    "tests/test_frontier_v8_comparison_replay_integration.py": true,
+    "tests/test_replay_frontier_comparison_v8.py": true,
+    "tests/test_run_frontier_training_v8.py": true
+  },
+  "installation_runs": 0,
+  "model_calls": 0,
+  "GPU_actions": 0
+}

@@ -1,0 +1,70 @@
+{
+  "additional_root_request_confirmed": {
+    "evidence": "Initial guard protects source/current bootstrap/base prefixes but has no ancestor pyvenv.cfg or conda-meta check for other existing environments.",
+    "file": "scripts/install_isolated_runtime_cpu.py",
+    "id": "other_environment_ancestors",
+    "lines": [
+      90,
+      95
+    ],
+    "root_author_requested_resolution": "Refuse attempts nested under any existing venv/conda environment ancestor."
+  },
+  "aligned_initial_contracts": [
+    "stdlib-only utility/probe and no Torch import request",
+    "explicit exact source and76-version lock hash",
+    "fresh owned absolute path/exclusive marker and receipt",
+    "allowlist env drops inherited Python/PIP/proxies/credential/loader variables",
+    "PIP_CONFIG_FILE=/dev/null and CUDA_VISIBLE_DEVICES empty per pip call",
+    "NETRC points to absent owned-attempt path and keyring disabled",
+    "explicit Torchcu128 versus75PyPI indexes",
+    "install no-deps/wheels-only/no-cache/retries0",
+    "metadata versions/76distribution roots/six origins/user/system-site isolation",
+    "actual wheel reports distinct from version lock"
+  ],
+  "checked_at_utc": "2026-10-03 10:47:45 UTC",
+  "final_review": false,
+  "findings": [
+    {
+      "file": "scripts/install_isolated_runtime_cpu.py",
+      "id": "wheel_report_satisfied_packages",
+      "lines": [
+        131,
+        157,
+        209,
+        212
+      ],
+      "problem": "A fresh Python3.11 venv may already contain pinned pip24.0. Pip install reports omit already-satisfied packages, but the validator requires all75 second-step packages, so a matching installed runtime can fail its wheel-provenance requirement.",
+      "required_resolution": "Force reinstall every pinned package only inside the newly owned isolated venv, or explicitly bind bootstrap wheel provenance separately; add meaningful fixture coverage for already-satisfied pip."
+    },
+    {
+      "file": "scripts/install_isolated_runtime_cpu.py",
+      "id": "TERM_HUP_cleanup",
+      "lines": [
+        110,
+        127,
+        188,
+        238,
+        241,
+        252
+      ],
+      "problem": "Default SIGTERM/SIGHUP terminate the installer without raising into BaseException handling. Its pip process runs in a new session and can survive while failure receipt is omitted.",
+      "required_resolution": "Scoped TERM/HUP handlers must raise into owned-session cleanup and consumed-failure preservation and restore prior handlers afterward; cover both signals."
+    }
+  ],
+  "pending": "Author repairs, then independently verify new stable bytes and documentation before installer source commit/deployment.",
+  "reviewed_source_sha256": "19855d2acbb7d06d67eaf637f7e490e8bcf799f7400adb1f6643d35cefa12554",
+  "reviewed_test_sha256": "50f9c61b5c2617dd2cda8dfdc7428b4021fb08d8c76805cf299819fd7fdd8330",
+  "reviewer": "v8_isolation_review",
+  "schema_version": 1,
+  "scope": {
+    "GPU_actions": 0,
+    "SSH_calls": 0,
+    "actual_installs": 0,
+    "model_calls": 0,
+    "network_calls": 0,
+    "old_audits_or_frozen_replay_rerun": false,
+    "source_or_data_writes": 0,
+    "tests_run_by_reviewer": 0
+  },
+  "status": "initial_installer_contract_review_blocking_findings"
+}

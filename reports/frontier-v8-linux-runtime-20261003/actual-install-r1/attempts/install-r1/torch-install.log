@@ -1,0 +1,7 @@
+Looking in indexes: https://download.pytorch.org/whl/cu128
+Collecting torch==2.8.0+cu128
+  Downloading https://download-r2.pytorch.org/whl/cu128/torch-2.8.0%2Bcu128-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (30 kB)
+Downloading https://download-r2.pytorch.org/whl/cu128/torch-2.8.0%2Bcu128-cp311-cp311-manylinux_2_28_x86_64.whl (889.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 889.2/889.2 MB 279.5 MB/s eta 0:00:00
+Installing collected packages: torch
+Successfully installed torch-2.8.0+cu128

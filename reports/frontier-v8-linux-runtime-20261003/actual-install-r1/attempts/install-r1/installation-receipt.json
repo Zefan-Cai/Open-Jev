@@ -1,0 +1,605 @@
+{
+  "GPU_actions": 0,
+  "attempt_directory": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1",
+  "boot_id": "b961bd5d-1d24-4c68-a500-d204ecbfb3d9",
+  "bootstrap_python": "/home/sigma/miniconda3/envs/llm_env/bin/python3.11",
+  "bootstrap_python_sha256": "39b59ede3b21ac9578e12aac4f9372efc7b0dc198379a105e0d64adb52306b58",
+  "derived_lock_sha256": "4345e5f2102105313e20f6bc717750ddacaee8f4324ce3ed96bb62a07c56bf53",
+  "elapsed_seconds": 93.34620994701982,
+  "evidence_sha256": {
+    "metadata.log": "e8149d80758eab5b8c43ffebe326acf28a9c446eebbe074f546f0098a474a756",
+    "pip-check.log": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+    "pypi-75.lock": "4345e5f2102105313e20f6bc717750ddacaee8f4324ce3ed96bb62a07c56bf53",
+    "pypi-install.log": "f47fd15360b903a3a6206a129e417e4ccd9107918ff034a48a2e0f792f707836",
+    "pypi-install.report.json": "93886f264c0f2fd38f463660bd64dde25e5d91c42ab815dbba1e2aa72251a7db",
+    "torch-install.log": "679d06f6d78ca91af201faaae263a0ec6c1f08320bb75e81aaa4d1099d44c06f",
+    "torch-install.report.json": "16b32171ed3de50c33ec25f1ebc46f25c32684c88ba23e4519acc48d451597e5",
+    "venv-create.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "host": "kwade5342000001",
+  "installer_sha256": "acf804c8af5fbdf9357bb808482e0af0186cc0e78cc869fd80e15ca7fad5e606",
+  "limits": [
+    "Installation report hashes identify fetched wheels; this is not model execution or live GPU ownership.",
+    "The original bootstrap environment and source are read-only; only this new attempt was installed."
+  ],
+  "lock_sha256": "d1f238a916dfdfbc8b89f3de4c28bb3b7220cdd97ecf609ebb726afab0ca8221",
+  "maximum_seconds": 1800,
+  "model_calls": 0,
+  "pid": 3222814,
+  "resource_authority": false,
+  "runtime_metadata": {
+    "base_prefix": "/home/sigma/miniconda3/envs/llm_env",
+    "distribution_roots": {
+      "accelerate": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "aiohappyeyeballs": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "aiohttp": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "aiosignal": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "annotated-doc": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "anyio": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "attrs": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "certifi": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "charset-normalizer": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "click": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "datasets": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "dill": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "einops": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "filelock": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "fla-core": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "flash-linear-attention": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "frozenlist": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "fsspec": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "h11": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "hf-xet": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "httpcore": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "httpx": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "huggingface-hub": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "idna": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "jinja2": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "markdown-it-py": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "markupsafe": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "mdurl": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "mpmath": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "multidict": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "multiprocess": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "networkx": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "ninja": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "numpy": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-cublas-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-cuda-cupti-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-cuda-nvrtc-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-cuda-runtime-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-cudnn-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-cufft-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-cufile-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-curand-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-cusolver-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-cusparse-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-cusparselt-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-nccl-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-nvjitlink-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "nvidia-nvtx-cu12": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "packaging": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "pandas": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "peft": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "pip": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "propcache": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "psutil": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "pyarrow": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "pygments": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "python-dateutil": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "pyyaml": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "regex": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "requests": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "rich": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "safetensors": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "setuptools": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "shellingham": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "six": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "sympy": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "tokenizers": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "torch": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "tqdm": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "transformers": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "triton": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "typer": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "typing-extensions": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "urllib3": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "xxhash": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages",
+      "yarl": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages"
+    },
+    "enable_user_site": false,
+    "executable": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/bin/python",
+    "isolated": 1,
+    "package_origins": {
+      "accelerate": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages/accelerate/__init__.py",
+      "peft": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages/peft/__init__.py",
+      "safetensors": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages/safetensors/__init__.py",
+      "torch": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages/torch/__init__.py",
+      "transformers": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages/transformers/__init__.py",
+      "triton": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages/triton/__init__.py"
+    },
+    "prefix": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv",
+    "python_version": [
+      3,
+      11,
+      15
+    ],
+    "site_paths": [
+      "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages"
+    ],
+    "sys_path": [
+      "/home/sigma/miniconda3/envs/llm_env/lib/python311.zip",
+      "/home/sigma/miniconda3/envs/llm_env/lib/python3.11",
+      "/home/sigma/miniconda3/envs/llm_env/lib/python3.11/lib-dynload",
+      "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1/venv/lib/python3.11/site-packages"
+    ],
+    "torch_imported": false,
+    "versions": {
+      "accelerate": "1.13.0",
+      "aiohappyeyeballs": "2.7.1",
+      "aiohttp": "3.14.3",
+      "aiosignal": "1.4.0",
+      "annotated-doc": "0.0.5",
+      "anyio": "4.15.1",
+      "attrs": "26.1.0",
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.5.2",
+      "click": "8.5.0",
+      "datasets": "5.0.0",
+      "dill": "0.4.1",
+      "einops": "0.8.2",
+      "filelock": "3.32.3",
+      "fla-core": "0.5.2",
+      "flash-linear-attention": "0.5.2",
+      "frozenlist": "1.8.0",
+      "fsspec": "2026.4.0",
+      "h11": "0.16.0",
+      "hf-xet": "1.6.0",
+      "httpcore": "1.0.9",
+      "httpx": "0.28.1",
+      "huggingface-hub": "1.33.0",
+      "idna": "3.20",
+      "jinja2": "3.1.6",
+      "markdown-it-py": "4.2.0",
+      "markupsafe": "3.0.3",
+      "mdurl": "0.1.2",
+      "mpmath": "1.3.0",
+      "multidict": "6.9.1",
+      "multiprocess": "0.70.19",
+      "networkx": "3.6.1",
+      "ninja": "1.13.0",
+      "numpy": "2.4.6",
+      "nvidia-cublas-cu12": "12.8.4.1",
+      "nvidia-cuda-cupti-cu12": "12.8.90",
+      "nvidia-cuda-nvrtc-cu12": "12.8.93",
+      "nvidia-cuda-runtime-cu12": "12.8.90",
+      "nvidia-cudnn-cu12": "9.10.2.21",
+      "nvidia-cufft-cu12": "11.3.3.83",
+      "nvidia-cufile-cu12": "1.13.1.3",
+      "nvidia-curand-cu12": "10.3.9.90",
+      "nvidia-cusolver-cu12": "11.7.3.90",
+      "nvidia-cusparse-cu12": "12.5.8.93",
+      "nvidia-cusparselt-cu12": "0.7.1",
+      "nvidia-nccl-cu12": "2.27.3",
+      "nvidia-nvjitlink-cu12": "12.8.93",
+      "nvidia-nvtx-cu12": "12.8.90",
+      "packaging": "26.3",
+      "pandas": "3.0.6",
+      "peft": "0.19.1",
+      "pip": "24.0",
+      "propcache": "0.5.4",
+      "psutil": "7.2.2",
+      "pyarrow": "25.0.1",
+      "pygments": "2.21.0",
+      "python-dateutil": "2.9.0.post0",
+      "pyyaml": "6.0.3",
+      "regex": "2026.9.29",
+      "requests": "2.34.2",
+      "rich": "15.0.0",
+      "safetensors": "0.7.0",
+      "setuptools": "79.0.1",
+      "shellingham": "1.5.4",
+      "six": "1.17.0",
+      "sympy": "1.14.0",
+      "tokenizers": "0.22.2",
+      "torch": "2.8.0+cu128",
+      "tqdm": "4.70.1",
+      "transformers": "5.10.2",
+      "triton": "3.4.0",
+      "typer": "0.27.2",
+      "typing-extensions": "4.16.0",
+      "urllib3": "2.8.0",
+      "xxhash": "4.0.1",
+      "yarl": "1.25.1"
+    }
+  },
+  "schema_version": 1,
+  "status": "isolated_cpu_runtime_installation_passed",
+  "torch_imports_requested": 0,
+  "uid": 1000,
+  "venv_config_sha256": "5abc75a1267db80e869b4129e41f6da1a7e010f1eae1d9328e96940c5c1837de",
+  "venv_python_resolved": "/home/sigma/miniconda3/envs/llm_env/bin/python3.11",
+  "venv_python_sha256": "39b59ede3b21ac9578e12aac4f9372efc7b0dc198379a105e0d64adb52306b58",
+  "wheel_provenance": {
+    "accelerate": {
+      "url": "https://files.pythonhosted.org/packages/7e/46/02ac5e262d4af18054b3e922b2baedbb2a03289ee792162de60a865defc5/accelerate-1.13.0-py3-none-any.whl",
+      "version": "1.13.0",
+      "wheel_sha256": "cf1a3efb96c18f7b152eb0fa7490f3710b19c3f395699358f08decca2b8b62e0"
+    },
+    "aiohappyeyeballs": {
+      "url": "https://files.pythonhosted.org/packages/71/43/1947f06babed6b3f1d7f38b0c767f52df66bfb2bc10b468c4a7de9eceff2/aiohappyeyeballs-2.7.1-py3-none-any.whl",
+      "version": "2.7.1",
+      "wheel_sha256": "9243213661e29250eb41368e5daa826fc017156c3b8a11440826b2e3ed376472"
+    },
+    "aiohttp": {
+      "url": "https://files.pythonhosted.org/packages/a5/b9/2b8f0c0ce09c87a1daf80fd483431b56b1435d3f62789bc86f572e1245de/aiohttp-3.14.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "3.14.3",
+      "wheel_sha256": "53e7b4ce82b54a8bcc71b3b67a5cbd177ca1d7f592cbc92cd38b7349f73482db"
+    },
+    "aiosignal": {
+      "url": "https://files.pythonhosted.org/packages/fb/76/641ae371508676492379f16e2fa48f4e2c11741bd63c48be4b12a6b09cba/aiosignal-1.4.0-py3-none-any.whl",
+      "version": "1.4.0",
+      "wheel_sha256": "053243f8b92b990551949e63930a839ff0cf0b0ebbe0597b0f3fb19e1a0fe82e"
+    },
+    "annotated-doc": {
+      "url": "https://files.pythonhosted.org/packages/3e/30/e900b21425a860e195f32e37657aa1f7c7f2b1bfb26f03ca209b90933c06/annotated_doc-0.0.5-py3-none-any.whl",
+      "version": "0.0.5",
+      "wheel_sha256": "117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101"
+    },
+    "anyio": {
+      "url": "https://files.pythonhosted.org/packages/12/b8/4bd346e22b28902df4d651910f5242c28d84e4a5c2435ca5c3f797ed7e2e/anyio-4.15.1-py3-none-any.whl",
+      "version": "4.15.1",
+      "wheel_sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101"
+    },
+    "attrs": {
+      "url": "https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl",
+      "version": "26.1.0",
+      "wheel_sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309"
+    },
+    "certifi": {
+      "url": "https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl",
+      "version": "2026.7.22",
+      "wheel_sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775"
+    },
+    "charset-normalizer": {
+      "url": "https://files.pythonhosted.org/packages/e4/ed/cf505d3011ffceb12c2067a7a5d3cfe92b875d4d44bb0ff0d69375e2c184/charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "3.5.2",
+      "wheel_sha256": "211d5a3eb6af8f513b8d4ca19a8c1b7accab1b5f0d3175f9826b03c1a920dc1f"
+    },
+    "click": {
+      "url": "https://files.pythonhosted.org/packages/58/50/6c0d534c5f134586a8e1ba4e330569e32f057e33372ae556463212fb4cd3/click-8.5.0-py3-none-any.whl",
+      "version": "8.5.0",
+      "wheel_sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+    },
+    "datasets": {
+      "url": "https://files.pythonhosted.org/packages/05/66/73034ad30b59f13439b75e620989dacba4c047256e358ba7c2e9ec98ea22/datasets-5.0.0-py3-none-any.whl",
+      "version": "5.0.0",
+      "wheel_sha256": "7dd34927a0fd7046e98aad5cb9430e699c373238a15befa7b9bf22b991a7fee6"
+    },
+    "dill": {
+      "url": "https://files.pythonhosted.org/packages/1e/77/dc8c558f7593132cf8fefec57c4f60c83b16941c574ac5f619abb3ae7933/dill-0.4.1-py3-none-any.whl",
+      "version": "0.4.1",
+      "wheel_sha256": "1e1ce33e978ae97fcfcff5638477032b801c46c7c65cf717f95fbc2248f79a9d"
+    },
+    "einops": {
+      "url": "https://files.pythonhosted.org/packages/2a/09/f8d8f8f31e4483c10a906437b4ce31bdf3d6d417b73fe33f1a8b59e34228/einops-0.8.2-py3-none-any.whl",
+      "version": "0.8.2",
+      "wheel_sha256": "54058201ac7087911181bfec4af6091bb59380360f069276601256a76af08193"
+    },
+    "filelock": {
+      "url": "https://files.pythonhosted.org/packages/a7/8e/50f46a9c0ce8d2861a394c1347caae037ea0431d2f67d7feb151cbc4649a/filelock-3.32.3-py3-none-any.whl",
+      "version": "3.32.3",
+      "wheel_sha256": "7f0ca4bcc0e181c60dbbd8aa9ab5b120ebb99e4e064e83636340056f833a1f09"
+    },
+    "fla-core": {
+      "url": "https://files.pythonhosted.org/packages/2d/ed/dfe19c4da779957eb6a42a26812f9b4e2280bf757a17a71933ff59ffcb98/fla_core-0.5.2-py3-none-any.whl",
+      "version": "0.5.2",
+      "wheel_sha256": "5e830c85bad3d0d34677f98ac7074d08687a3756f0f0499d95ceb96eb6920761"
+    },
+    "flash-linear-attention": {
+      "url": "https://files.pythonhosted.org/packages/90/d2/2070e3cf2148c5cce99ca4876633c4b7b89ec085323600bd3d47aeacd306/flash_linear_attention-0.5.2-py3-none-any.whl",
+      "version": "0.5.2",
+      "wheel_sha256": "dcf405d81f5426393b59037097aa700d0f4a841465d5028d5aa543f4502f2400"
+    },
+    "frozenlist": {
+      "url": "https://files.pythonhosted.org/packages/11/b1/71a477adc7c36e5fb628245dfbdea2166feae310757dea848d02bd0689fd/frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl",
+      "version": "1.8.0",
+      "wheel_sha256": "2552f44204b744fba866e573be4c1f9048d6a324dfe14475103fd51613eb1d1f"
+    },
+    "fsspec": {
+      "url": "https://files.pythonhosted.org/packages/d5/0c/043d5e551459da400957a1395e0febbf771446ff34291afcbe3d8be2a279/fsspec-2026.4.0-py3-none-any.whl",
+      "version": "2026.4.0",
+      "wheel_sha256": "11ef7bb35dab8a394fde6e608221d5cf3e8499401c249bebaeaad760a1a8dec2"
+    },
+    "h11": {
+      "url": "https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl",
+      "version": "0.16.0",
+      "wheel_sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86"
+    },
+    "hf-xet": {
+      "url": "https://files.pythonhosted.org/packages/67/4e/a28359bf1c1ecf11eba22123168c138698f7cb576ac678f5a2e16cd5da08/hf_xet-1.6.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "version": "1.6.0",
+      "wheel_sha256": "d62671bb130879cef0ee4c9ebe47a14af6c66ec53e6d84dc15936e5ffdfac82f"
+    },
+    "httpcore": {
+      "url": "https://files.pythonhosted.org/packages/7e/f5/f66802a942d491edb555dd61e3a9961140fd64c90bce1eafd741609d334d/httpcore-1.0.9-py3-none-any.whl",
+      "version": "1.0.9",
+      "wheel_sha256": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55"
+    },
+    "httpx": {
+      "url": "https://files.pythonhosted.org/packages/2a/39/e50c7c3a983047577ee07d2a9e53faf5a69493943ec3f6a384bdc792deb2/httpx-0.28.1-py3-none-any.whl",
+      "version": "0.28.1",
+      "wheel_sha256": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad"
+    },
+    "huggingface-hub": {
+      "url": "https://files.pythonhosted.org/packages/fc/16/963096d224b80909432dc16561a615fd33d2d13beef3ce4c63fa25e40867/huggingface_hub-1.33.0-py3-none-any.whl",
+      "version": "1.33.0",
+      "wheel_sha256": "04e434b06e100eddbce9a6e817d72693a7884b10a79bd67ab48080d5c07eb899"
+    },
+    "idna": {
+      "url": "https://files.pythonhosted.org/packages/58/a2/bb081bab032533a855d44de1d56f8e8426114ff1ba5d1f07a438a0a654f8/idna-3.20-py3-none-any.whl",
+      "version": "3.20",
+      "wheel_sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c"
+    },
+    "jinja2": {
+      "url": "https://files.pythonhosted.org/packages/62/a1/3d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56/jinja2-3.1.6-py3-none-any.whl",
+      "version": "3.1.6",
+      "wheel_sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67"
+    },
+    "markdown-it-py": {
+      "url": "https://files.pythonhosted.org/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl",
+      "version": "4.2.0",
+      "wheel_sha256": "9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a"
+    },
+    "markupsafe": {
+      "url": "https://files.pythonhosted.org/packages/30/ac/0273f6fcb5f42e314c6d8cd99effae6a5354604d461b8d392b5ec9530a54/markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "3.0.3",
+      "wheel_sha256": "0bf2a864d67e76e5c9a34dc26ec616a66b9888e25e7b9460e1c76d3293bd9dbf"
+    },
+    "mdurl": {
+      "url": "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl",
+      "version": "0.1.2",
+      "wheel_sha256": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"
+    },
+    "mpmath": {
+      "url": "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl",
+      "version": "1.3.0",
+      "wheel_sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
+    },
+    "multidict": {
+      "url": "https://files.pythonhosted.org/packages/27/50/f420de3683f9b047fc5588064d84043ef57a7152ef451b8373dfc7068d22/multidict-6.9.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "6.9.1",
+      "wheel_sha256": "e8f1e362c9352b50ed120f001046fdbb80810c9d56580f4c3fc13bbe30823387"
+    },
+    "multiprocess": {
+      "url": "https://files.pythonhosted.org/packages/86/c2/dec9722dc3474c164a0b6bcd9a7ed7da542c98af8cabce05374abab35edd/multiprocess-0.70.19-py311-none-any.whl",
+      "version": "0.70.19",
+      "wheel_sha256": "928851ae7973aea4ce0eaf330bbdafb2e01398a91518d5c8818802845564f45c"
+    },
+    "networkx": {
+      "url": "https://files.pythonhosted.org/packages/9e/c9/b2622292ea83fbb4ec318f5b9ab867d0a28ab43c5717bb85b0a5f6b3b0a4/networkx-3.6.1-py3-none-any.whl",
+      "version": "3.6.1",
+      "wheel_sha256": "d47fbf302e7d9cbbb9e2555a0d267983d2aa476bac30e90dfbe5669bd57f3762"
+    },
+    "ninja": {
+      "url": "https://files.pythonhosted.org/packages/ed/de/0e6edf44d6a04dabd0318a519125ed0415ce437ad5a1ec9b9be03d9048cf/ninja-1.13.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "version": "1.13.0",
+      "wheel_sha256": "fb46acf6b93b8dd0322adc3a4945452a4e774b75b91293bafcc7b7f8e6517dfa"
+    },
+    "numpy": {
+      "url": "https://files.pythonhosted.org/packages/02/03/74fe2a4cb3817d94d86402f2506554130a2f01414e299b5a843e5a8a957f/numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "2.4.6",
+      "wheel_sha256": "89cd468399cfd2504718f0ba50e410dca55a170b61a02ad92bb18c8a65186e93"
+    },
+    "nvidia-cublas-cu12": {
+      "url": "https://files.pythonhosted.org/packages/dc/61/e24b560ab2e2eaeb3c839129175fb330dfcfc29e5203196e5541a4c44682/nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl",
+      "version": "12.8.4.1",
+      "wheel_sha256": "8ac4e771d5a348c551b2a426eda6193c19aa630236b418086020df5ba9667142"
+    },
+    "nvidia-cuda-cupti-cu12": {
+      "url": "https://files.pythonhosted.org/packages/f8/02/2adcaa145158bf1a8295d83591d22e4103dbfd821bcaf6f3f53151ca4ffa/nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "version": "12.8.90",
+      "wheel_sha256": "ea0cb07ebda26bb9b29ba82cda34849e73c166c18162d3913575b0c9db9a6182"
+    },
+    "nvidia-cuda-nvrtc-cu12": {
+      "url": "https://files.pythonhosted.org/packages/05/6b/32f747947df2da6994e999492ab306a903659555dddc0fbdeb9d71f75e52/nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl",
+      "version": "12.8.93",
+      "wheel_sha256": "a7756528852ef889772a84c6cd89d41dfa74667e24cca16bb31f8f061e3e9994"
+    },
+    "nvidia-cuda-runtime-cu12": {
+      "url": "https://files.pythonhosted.org/packages/0d/9b/a997b638fcd068ad6e4d53b8551a7d30fe8b404d6f1804abf1df69838932/nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "version": "12.8.90",
+      "wheel_sha256": "adade8dcbd0edf427b7204d480d6066d33902cab2a4707dcfc48a2d0fd44ab90"
+    },
+    "nvidia-cudnn-cu12": {
+      "url": "https://files.pythonhosted.org/packages/ba/51/e123d997aa098c61d029f76663dedbfb9bc8dcf8c60cbd6adbe42f76d049/nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl",
+      "version": "9.10.2.21",
+      "wheel_sha256": "949452be657fa16687d0930933f032835951ef0892b37d2d53824d1a84dc97a8"
+    },
+    "nvidia-cufft-cu12": {
+      "url": "https://files.pythonhosted.org/packages/1f/13/ee4e00f30e676b66ae65b4f08cb5bcbb8392c03f54f2d5413ea99a5d1c80/nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "version": "11.3.3.83",
+      "wheel_sha256": "4d2dd21ec0b88cf61b62e6b43564355e5222e4a3fb394cac0db101f2dd0d4f74"
+    },
+    "nvidia-cufile-cu12": {
+      "url": "https://files.pythonhosted.org/packages/bb/fe/1bcba1dfbfb8d01be8d93f07bfc502c93fa23afa6fd5ab3fc7c1df71038a/nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "version": "1.13.1.3",
+      "wheel_sha256": "1d069003be650e131b21c932ec3d8969c1715379251f8d23a1860554b1cb24fc"
+    },
+    "nvidia-curand-cu12": {
+      "url": "https://files.pythonhosted.org/packages/fb/aa/6584b56dc84ebe9cf93226a5cde4d99080c8e90ab40f0c27bda7a0f29aa1/nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl",
+      "version": "10.3.9.90",
+      "wheel_sha256": "b32331d4f4df5d6eefa0554c565b626c7216f87a06a4f56fab27c3b68a830ec9"
+    },
+    "nvidia-cusolver-cu12": {
+      "url": "https://files.pythonhosted.org/packages/85/48/9a13d2975803e8cf2777d5ed57b87a0b6ca2cc795f9a4f59796a910bfb80/nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl",
+      "version": "11.7.3.90",
+      "wheel_sha256": "4376c11ad263152bd50ea295c05370360776f8c3427b30991df774f9fb26c450"
+    },
+    "nvidia-cusparse-cu12": {
+      "url": "https://files.pythonhosted.org/packages/c2/f5/e1854cb2f2bcd4280c44736c93550cc300ff4b8c95ebe370d0aa7d2b473d/nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "version": "12.5.8.93",
+      "wheel_sha256": "1ec05d76bbbd8b61b06a80e1eaf8cf4959c3d4ce8e711b65ebd0443bb0ebb13b"
+    },
+    "nvidia-cusparselt-cu12": {
+      "url": "https://files.pythonhosted.org/packages/56/79/12978b96bd44274fe38b5dde5cfb660b1d114f70a65ef962bcbbed99b549/nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl",
+      "version": "0.7.1",
+      "wheel_sha256": "f1bb701d6b930d5a7cea44c19ceb973311500847f81b634d802b7b539dc55623"
+    },
+    "nvidia-nccl-cu12": {
+      "url": "https://files.pythonhosted.org/packages/5c/5b/4e4fff7bad39adf89f735f2bc87248c81db71205b62bcc0d5ca5b606b3c3/nvidia_nccl_cu12-2.27.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "version": "2.27.3",
+      "wheel_sha256": "adf27ccf4238253e0b826bce3ff5fa532d65fc42322c8bfdfaf28024c0fbe039"
+    },
+    "nvidia-nvjitlink-cu12": {
+      "url": "https://files.pythonhosted.org/packages/f6/74/86a07f1d0f42998ca31312f998bd3b9a7eff7f52378f4f270c8679c77fb9/nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl",
+      "version": "12.8.93",
+      "wheel_sha256": "81ff63371a7ebd6e6451970684f916be2eab07321b73c9d244dc2b4da7f73b88"
+    },
+    "nvidia-nvtx-cu12": {
+      "url": "https://files.pythonhosted.org/packages/a2/eb/86626c1bbc2edb86323022371c39aa48df6fd8b0a1647bc274577f72e90b/nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "version": "12.8.90",
+      "wheel_sha256": "5b17e2001cc0d751a5bc2c6ec6d26ad95913324a4adb86788c944f8ce9ba441f"
+    },
+    "packaging": {
+      "url": "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl",
+      "version": "26.3",
+      "wheel_sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+    },
+    "pandas": {
+      "url": "https://files.pythonhosted.org/packages/63/be/dfb6cc9329d0bbe76dadda8a1113d026bb996ec76c509221368dc68349f4/pandas-3.0.6-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "3.0.6",
+      "wheel_sha256": "47121f9571503f724c9b93e297ab6254ac99c77adf5e9ed085ea419fd585c258"
+    },
+    "peft": {
+      "url": "https://files.pythonhosted.org/packages/e8/b6/f54d676ed93cc2dd2234c3b172ea9c8c3d7d29361e66b1b23dec57a67465/peft-0.19.1-py3-none-any.whl",
+      "version": "0.19.1",
+      "wheel_sha256": "2113f72a81621b5913ef28f9022204c742df111890c5f49d812716a4a301e356"
+    },
+    "pip": {
+      "url": "https://files.pythonhosted.org/packages/8a/6a/19e9fe04fca059ccf770861c7d5721ab4c2aebc539889e97c7977528a53b/pip-24.0-py3-none-any.whl",
+      "version": "24.0",
+      "wheel_sha256": "ba0d021a166865d2265246961bec0152ff124de910c5cc39f1156ce3fa7c69dc"
+    },
+    "propcache": {
+      "url": "https://files.pythonhosted.org/packages/c7/06/519a5ebb48b6f94beb48396e55c905f12246a25c3a3608a7ec7bceabf50e/propcache-0.5.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "0.5.4",
+      "wheel_sha256": "6e9368e87a3efc285e559131092c5db643eb8e56de4ee42064d5baec22ef2bb5"
+    },
+    "psutil": {
+      "url": "https://files.pythonhosted.org/packages/b5/70/5d8df3b09e25bce090399cf48e452d25c935ab72dad19406c77f4e828045/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "7.2.2",
+      "wheel_sha256": "076a2d2f923fd4821644f5ba89f059523da90dc9014e85f8e45a5774ca5bc6f9"
+    },
+    "pyarrow": {
+      "url": "https://files.pythonhosted.org/packages/c8/6e/d3fafc41f378b2c65be43b827798c0fae42049a641c8526633ed3eb573e2/pyarrow-25.0.1-cp311-cp311-manylinux_2_28_x86_64.whl",
+      "version": "25.0.1",
+      "wheel_sha256": "25f8720bf6387d5dc2ebd2622112de630760419e4b66134405dd24110d15f37e"
+    },
+    "pygments": {
+      "url": "https://files.pythonhosted.org/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl",
+      "version": "2.21.0",
+      "wheel_sha256": "2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9"
+    },
+    "python-dateutil": {
+      "url": "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+      "version": "2.9.0.post0",
+      "wheel_sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+    },
+    "pyyaml": {
+      "url": "https://files.pythonhosted.org/packages/71/60/917329f640924b18ff085ab889a11c763e0b573da888e8404ff486657602/pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "6.0.3",
+      "wheel_sha256": "b8bb0864c5a28024fac8a632c443c87c5aa6f215c0b126c449ae1a150412f31d"
+    },
+    "regex": {
+      "url": "https://files.pythonhosted.org/packages/8a/70/aa08d1d2b294894b365e5f8ba5380fe3f8546acdb81f10639dfd74209c37/regex-2026.9.29-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "2026.9.29",
+      "wheel_sha256": "612b709381c0355b70d89cdb51b7f670591ed5cbbc0e3b5337488019dc667b65"
+    },
+    "requests": {
+      "url": "https://files.pythonhosted.org/packages/a0/f4/c67b0b3f1b9245e8d266f0f112c500d50e5b4e83cb6f3b71b6528104182a/requests-2.34.2-py3-none-any.whl",
+      "version": "2.34.2",
+      "wheel_sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
+    },
+    "rich": {
+      "url": "https://files.pythonhosted.org/packages/82/3b/64d4899d73f91ba49a8c18a8ff3f0ea8f1c1d75481760df8c68ef5235bf5/rich-15.0.0-py3-none-any.whl",
+      "version": "15.0.0",
+      "wheel_sha256": "33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb"
+    },
+    "safetensors": {
+      "url": "https://files.pythonhosted.org/packages/a0/60/429e9b1cb3fc651937727befe258ea24122d9663e4d5709a48c9cbfceecb/safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "version": "0.7.0",
+      "wheel_sha256": "dac7252938f0696ddea46f5e855dd3138444e82236e3be475f54929f0c510d48"
+    },
+    "setuptools": {
+      "url": "https://files.pythonhosted.org/packages/0d/6d/b4752b044bf94cb802d88a888dc7d288baaf77d7910b7dedda74b5ceea0c/setuptools-79.0.1-py3-none-any.whl",
+      "version": "79.0.1",
+      "wheel_sha256": "e147c0549f27767ba362f9da434eab9c5dc0045d5304feb602a0af001089fc51"
+    },
+    "shellingham": {
+      "url": "https://files.pythonhosted.org/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl",
+      "version": "1.5.4",
+      "wheel_sha256": "7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686"
+    },
+    "six": {
+      "url": "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl",
+      "version": "1.17.0",
+      "wheel_sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+    },
+    "sympy": {
+      "url": "https://files.pythonhosted.org/packages/a2/09/77d55d46fd61b4a135c444fc97158ef34a095e5681d0a6c10b75bf356191/sympy-1.14.0-py3-none-any.whl",
+      "version": "1.14.0",
+      "wheel_sha256": "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5"
+    },
+    "tokenizers": {
+      "url": "https://files.pythonhosted.org/packages/2e/76/932be4b50ef6ccedf9d3c6639b056a967a86258c6d9200643f01269211ca/tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "version": "0.22.2",
+      "wheel_sha256": "369cc9fc8cc10cb24143873a0d95438bb8ee257bb80c71989e3ee290e8d72c67"
+    },
+    "torch": {
+      "url": "https://download-r2.pytorch.org/whl/cu128/torch-2.8.0%2Bcu128-cp311-cp311-manylinux_2_28_x86_64.whl",
+      "version": "2.8.0+cu128",
+      "wheel_sha256": "039b9dcdd6bdbaa10a8a5cd6be22c4cb3e3589a341e5f904cbb571ca28f55bed"
+    },
+    "tqdm": {
+      "url": "https://files.pythonhosted.org/packages/a7/03/921a3d3c75785aca9ebfbfcabfbc3a1be12e2ab5265deb026d55a5a3f83e/tqdm-4.70.1-py3-none-any.whl",
+      "version": "4.70.1",
+      "wheel_sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73"
+    },
+    "transformers": {
+      "url": "https://files.pythonhosted.org/packages/73/6f/e1564b0cc182afa05e219a8e09a8e770ffaab879b6b824b56c819bd221da/transformers-5.10.2-py3-none-any.whl",
+      "version": "5.10.2",
+      "wheel_sha256": "8a669db546f82c7c3618cb46ceb0f0afd89292bc70f319c058f8332ec63e268d"
+    },
+    "triton": {
+      "url": "https://files.pythonhosted.org/packages/7d/39/43325b3b651d50187e591eefa22e236b2981afcebaefd4f2fc0ea99df191/triton-3.4.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "3.4.0",
+      "wheel_sha256": "7b70f5e6a41e52e48cfc087436c8a28c17ff98db369447bcaff3b887a3ab4467"
+    },
+    "typer": {
+      "url": "https://files.pythonhosted.org/packages/dc/bf/205d0004930ede8f542fb58f601526fccf4ae7626075ca1e6c4de5d3d652/typer-0.27.2-py3-none-any.whl",
+      "version": "0.27.2",
+      "wheel_sha256": "b3a5fc4342d5fc8fda8fc3010b1cf117e9249aab7fae800c2eff62fd3842d97d"
+    },
+    "typing-extensions": {
+      "url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
+      "version": "4.16.0",
+      "wheel_sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+    },
+    "urllib3": {
+      "url": "https://files.pythonhosted.org/packages/92/9d/c4e665119135114480843e7ab388fa94d8480650450e6f8e26b70d323a4c/urllib3-2.8.0-py3-none-any.whl",
+      "version": "2.8.0",
+      "wheel_sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+    },
+    "xxhash": {
+      "url": "https://files.pythonhosted.org/packages/40/ff/e39e1900179ce7f0f23e7000d9fc672471a8d05b6b2dc657cb496c8975d0/xxhash-4.0.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "4.0.1",
+      "wheel_sha256": "101aa300de6ceef3d9c77569706330d8921fc45dd82bceed2084f1e9f2557a24"
+    },
+    "yarl": {
+      "url": "https://files.pythonhosted.org/packages/95/0c/a71501bbc1a674ff72c4d6c2b75f4d9a5af819f5244c3a7558080a8802c5/yarl-1.25.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "version": "1.25.1",
+      "wheel_sha256": "d5add7b4ca7afeea91d52e4d4e4db3b1fe9885b71f07054560d8c4296b7441a2"
+    }
+  }
+}

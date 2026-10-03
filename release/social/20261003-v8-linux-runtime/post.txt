@@ -1,0 +1,7 @@
+🧪 Open-Jev runtime reproduced
+
+Fresh venv on Linux/Python 3.11: all 76 pinned versions matched, wheel hashes recorded, pip check passed.
+
+CPU installation only; v8 training is still pending.
+
+Evidence: https://github.com/Zefan-Cai/Open-Jev/blob/main/reports/frontier-v8-linux-runtime-20261003/README.md

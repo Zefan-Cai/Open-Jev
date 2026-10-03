@@ -1,0 +1,13 @@
+{
+  "attempt_directory": "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1",
+  "boot_id": "b961bd5d-1d24-4c68-a500-d204ecbfb3d9",
+  "bootstrap_python": "/home/sigma/miniconda3/envs/llm_env/bin/python3.11",
+  "bootstrap_python_sha256": "39b59ede3b21ac9578e12aac4f9372efc7b0dc198379a105e0d64adb52306b58",
+  "host": "kwade5342000001",
+  "installer_sha256": "acf804c8af5fbdf9357bb808482e0af0186cc0e78cc869fd80e15ca7fad5e606",
+  "lock_sha256": "d1f238a916dfdfbc8b89f3de4c28bb3b7220cdd97ecf609ebb726afab0ca8221",
+  "pid": 3222814,
+  "schema_version": 1,
+  "status": "installation_attempt_consumed_no_retry",
+  "uid": 1000
+}

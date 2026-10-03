@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "draft_not_posted_prior_Chrome_availability_pending",
+  "created_at_utc": "2026-10-03T11:08:12.128984+00:00",
+  "text_sha256": "8bd6c75375ff95f92621a480db6f0a371cdabc0c0f2b5299bbb27f171679bfb0",
+  "weighted_length": 226,
+  "single_topic": "Actual isolated CPU runtime installation",
+  "evidence_url": "https://github.com/Zefan-Cai/Open-Jev/blob/main/reports/frontier-v8-linux-runtime-20261003/README.md",
+  "evidence_link_requires_integration": true,
+  "model_improvement_claim": false,
+  "posting_authorization_persists": true,
+  "browser_availability_pending": true,
+  "posts_sent": 0,
+  "precision_revision": "Clarifies new venv; existing OS/CPython retained host inputs.",
+  "prior_text_sha256": "35f3fa2f2f4ffc7c7a0f61bc76aeada635b1d698b48a05d5ee65622dac113a04",
+  "posting_text_normalization": "remove one terminal newline",
+  "posting_body_sha256": "edb79f7cfd7bdbb01d70eaaee291665872544748fc60ad7d65083b118ff957ce",
+  "raw_file_weighted_length": 227
+}

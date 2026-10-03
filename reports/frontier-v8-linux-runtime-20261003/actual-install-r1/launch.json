@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "/home/sigma/miniconda3/envs/llm_env/bin/python3.11",
+    "-I",
+    "-S",
+    "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/installer-source/scripts/install_isolated_runtime_cpu.py",
+    "--attempt-directory",
+    "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/attempts/install-r1",
+    "--lock",
+    "/data/zefan/open-jev-v8-linux-runtime-20261003/cpu-install-20261003T110248Z-6e0e0877072e2ff7/inputs/requirements.lock",
+    "--expected-lock-sha256",
+    "d1f238a916dfdfbc8b89f3de4c28bb3b7220cdd97ecf609ebb726afab0ca8221",
+    "--expected-source-sha256",
+    "acf804c8af5fbdf9357bb808482e0af0186cc0e78cc869fd80e15ca7fad5e606"
+  ],
+  "environment": {
+    "PATH": "/usr/bin:/bin",
+    "HOME": "/home/sigma",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "CUDA_VISIBLE_DEVICES": "",
+    "PIP_CONFIG_FILE": "/dev/null",
+    "PYTHONNOUSERSITE": "1"
+  },
+  "CPU_install_only": true
+}

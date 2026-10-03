@@ -1,0 +1,33 @@
+{
+  "actual_install_provenance_observed": false,
+  "checked_at_utc": "2026-10-03 10:59:30 UTC",
+  "evidence_receipt": "runs/frontier-v8-linux-runtime-20261003/feasibility-r1/receipt.json",
+  "evidence_receipt_sha256": "61bfb6563442288495f05d784d2fcbfc37e6b14fba36656145d11c09938aa822",
+  "final_source_sha256": "acf804c8af5fbdf9357bb808482e0af0186cc0e78cc869fd80e15ca7fad5e606",
+  "final_test_sha256": "f8028779752d52920764f8e94b9ff6609586f2d7c91b9958535bb140a60a280e",
+  "finding": "The exact official CUDA128 Torch index publishes its cp311 wheel on download-r2.pytorch.org; the earlier report validator accepted only download.pytorch.org and would refuse actual provenance after download.",
+  "no_generic_host_fallback": true,
+  "observed_candidate_source_sha256": "aa239d8a6fe0414631887abf2535742aa746535b4de54fb327fd3781044d1034",
+  "observed_candidate_test_sha256": "a480bef717ed1bb152e3d665af0bf17fa3fb53294a604c776090f1c011427d55",
+  "observed_wheel": {
+    "filename": "torch-2.8.0+cu128-cp311-cp311-manylinux_2_28_x86_64.whl",
+    "requires_python": null,
+    "sha256_fragment": "sha256=039b9dcdd6bdbaa10a8a5cd6be22c4cb3e3589a341e5f904cbb571ca28f55bed",
+    "url": "https://download-r2.pytorch.org/whl/cu128/torch-2.8.0%2Bcu128-cp311-cp311-manylinux_2_28_x86_64.whl#sha256=039b9dcdd6bdbaa10a8a5cd6be22c4cb3e3589a341e5f904cbb571ca28f55bed"
+  },
+  "resolution": "Final validator narrowly accepts exactly download.pytorch.org and download-r2.pytorch.org for Torch; PyPI retains files.pythonhosted.org only. Exact observed URL/hash is tested and unrelated/suffix hosts are refused.",
+  "reviewer": "v8_isolation_review",
+  "schema_version": 1,
+  "scope": {
+    "GPU_actions": 0,
+    "SSH_calls": 0,
+    "actual_installs": 0,
+    "code_data_or_docs_writes": 0,
+    "model_calls": 0,
+    "own_network_calls": 0,
+    "read_retained_public_index_metadata_only": true,
+    "tests_run_by_reviewer": 0
+  },
+  "status": "actual_metadata_CDN_contract_finding_resolved_in_final_candidate",
+  "torch_index_response_sha256": "f16dd8214a2da5f5767ab534ad05276fd2ad8f687a25848801811fbdff650817"
+}

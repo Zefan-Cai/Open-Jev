@@ -1,0 +1,54 @@
+{
+  "acknowledged_limits": [
+    "No terminal receipt is guaranteed after uncatchable SIGKILL or host loss.",
+    "Controller-alive1800-second deadline and catchable cleanup are distinct from independent restoration guard.",
+    "Existing Python/stdlib/OS are host inputs, not rebuilt or fully content-verified by metadata probe."
+  ],
+  "checked_at_utc": "2026-10-03 10:51:16 UTC",
+  "corrected_parts": [
+    "New venv-only force reinstall requests reports for all76 wheels including already-satisfied bootstrap pip24.",
+    "Scoped TERM/HUP/INT handler reaches active-child cleanup/failure and restores previous handlers.",
+    "Other existing venv/conda ancestors are refused."
+  ],
+  "final_review": false,
+  "prior_findings_receipt": "runs/frontier-v8-linux-runtime-20261003/installer-contract-findings-r1.json",
+  "prior_findings_sha256": "92b11fb231cbd1623e53bd5522b6e3e20339e8790c8aa24a40ac7478f43f85d8",
+  "remaining_review": {
+    "catchable_launch_registration_window": {
+      "file": "scripts/install_isolated_runtime_cpu.py",
+      "finding": "Popen construction precedes the cleanup try. A caught signal may raise after child creation but before assignment/registration; stdlib constructor cleanup closes fds but does not kill that new child.",
+      "lines": [
+        119,
+        121,
+        140,
+        145
+      ],
+      "resolution_requested": "Defer raising handled signals through child launch/registration, then raise pending interruption inside owned cleanup try; cover signal-at-Popen-return."
+    },
+    "root_bootstrap_startup_isolation_request": {
+      "file": "scripts/install_isolated_runtime_cpu.py",
+      "finding": "Bootstrap helper and venv creation currently use no enforced -I-S launch; -I alone can execute shared sitecustomize before helper's clean environment takes effect.",
+      "lines": [
+        83,
+        84,
+        228
+      ],
+      "resolution_requested": "Require helper bootstrap -I-S flags and create venv with -I-S; fresh venv pip/metadata use -I. Root will use -I-S for actual launch."
+    }
+  },
+  "reviewed_source_sha256": "fc822a606272db24dc9a82406c58e93b2719abd2b9f66583d75e6bcc215150c1",
+  "reviewed_test_sha256": "9eab6f139855b77b3597a3f0e14933d877bea54bccce3be3197942c589f2a3cb",
+  "reviewer": "v8_isolation_review",
+  "schema_version": 1,
+  "scope": {
+    "GPU_actions": 0,
+    "SSH_calls": 0,
+    "actual_installs": 0,
+    "code_data_or_docs_writes": 0,
+    "model_calls": 0,
+    "network_calls": 0,
+    "old_audits_or_frozen_replay_rerun": false,
+    "tests_run_by_reviewer": 0
+  },
+  "status": "installer_review_followup_startup_boundaries_pending"
+}

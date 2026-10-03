@@ -1,0 +1,18 @@
+{
+  "GPU_actions": 0,
+  "Git_readonly_lookup_exit_code": 128,
+  "checker_process_exit_code": 1,
+  "correction": "Bind the external manifest and data bytes to the unchanged frozen public plan SHA256; compare executable18 and public plan to exact Git source. Do not claim that external prepared data is Git tracked.",
+  "created_at_utc": "2026-10-03T11:18:41.623021+00:00",
+  "finding": "Reviewer incorrectly assumed external frozen prepared manifest was tracked in executable Git source. This read-only checker stopped before creating the independent review output.",
+  "installer_or_model_rerun": false,
+  "installer_receipt_changed": false,
+  "original_evidence_or_data_changed": false,
+  "preserved_tool_output": "fatal: path 'data/frontier-training-v8-20261003-isolated-r1/manifest.json' exists on disk, but not in '360a9ef584352a876dbd9eaccf7a0b7332dea73c'\nTraceback (most recent call last):\n  File \"<stdin>\", line 80, in <module>\n  File \"<stdin>\", line 22, in gitblob\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py\", line 473, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n               **kwargs).stdout\n               ^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py\", line 578, in run\n    raise CalledProcessError(retcode, process.args,\n                             output=stdout, stderr=stderr)\nsubprocess.CalledProcessError: Command '['git', 'show', '360a9ef584352a876dbd9eaccf7a0b7332dea73c:data/frontier-training-v8-20261003-isolated-r1/manifest.json']' returned non-zero exit status 128.\n",
+  "reviewer": "natural_trial_gap",
+  "schema_version": 1,
+  "source_commit": "360a9ef584352a876dbd9eaccf7a0b7332dea73c",
+  "status": "audit_only_checker_assumption_corrected_no_installation_rerun",
+  "tests_run": 0,
+  "tool_output_sha256": "f8d9bcefeee2cf3a02bf143a6b765375820a2f5001bc96f520c705191590a46d"
+}

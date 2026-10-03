@@ -1,0 +1,44 @@
+{
+  "GPU_actions": 0,
+  "blocking_findings": [],
+  "checks": {
+    "AST_parse_passed": true,
+    "CPU_only_scrubbed_subprocess_environment": true,
+    "committed_installer_and_frozen_lock_bytes_verified": true,
+    "exclusive_local_actual_attempt_directory": true,
+    "fresh_random_remote_episode": true,
+    "independent_installer_review_binding": true,
+    "isolated_no_site_bootstrap": true,
+    "live_host_boot_uid_bootstrap_hash_linux_python_disk_guards_present": true,
+    "local_request_consumed_before_SSH": true,
+    "no_GPU_queue_model_commands": true,
+    "owned_installer_pid_birth_and_exit_evidence": true,
+    "regression_hash_bindings": true,
+    "remote_pushed_branch_identity_checked": true,
+    "scientific_sourceA_recorded_separately_without_execution": true,
+    "separate_installer_source_inputs_and_attempt_paths": true
+  },
+  "execution_performed_by_reviewer": false,
+  "installation_runs": 0,
+  "installer_independent_review_sha256": "92ed09fb6f5cee8cf65284e6bd4bfe5e1cc21ac6a7640cf71269d3e416a12809",
+  "installer_source_sha256": "acf804c8af5fbdf9357bb808482e0af0186cc0e78cc869fd80e15ca7fad5e606",
+  "installer_tests_sha256": "f8028779752d52920764f8e94b9ff6609586f2d7c91b9958535bb140a60a280e",
+  "limitations": [
+    "This is static transport code review, not a live host installation or successful runtime receipt.",
+    "Independent installer implementation review is separately provided by v8_isolation_review; the installer author does not substitute for that review.",
+    "Abrupt controller or host loss can require separate ownership and surviving-child verification; no restoration guard is claimed."
+  ],
+  "model_calls": 0,
+  "observed_at_utc": "2026-10-03T11:03:14.388187+00:00",
+  "resolved_findings": [
+    "All Git calls remove inherited GIT_* variables, disable interactive authentication and verify exact source checkout root.",
+    "Regression receipt file hashes are checked against current bytes and the declared committed source."
+  ],
+  "resource_authority": false,
+  "reviewer": "train_diagnostic_design",
+  "root_regression_sha256": "1cc3f9cde651386ca3ea69ed88cc4c4bfa479af6ea2c273867c01a2cd2cca0a1",
+  "schema_version": 1,
+  "script_path": "/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/runs/frontier-v8-linux-runtime-20261003/deploy-install-once.py",
+  "script_sha256": "d9e3c5ee37ff33971c47c8643bbfc07b88bd60e9df655081c09f97ba0c3ca6d6",
+  "status": "transport_code_review_passed_pending_execution"
+}
