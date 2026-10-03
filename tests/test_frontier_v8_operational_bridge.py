@@ -311,7 +311,7 @@ class OperationalBridgeTests(unittest.TestCase):
                         elif change == 'loader':
                             scope.modules['frontier_v8_live_host'].__loader__.raw = b'# different bytes'
                 except bridge.OperationalBridgeError as error:
-                    assert any(word in str(error) for word in ('container', 'cache', 'identity', 'loader state')), str(error)
+                    assert any(word in str(error) for word in ('container', 'cache', 'identity', 'loader state', 'hook sequence')), str(error)
                 else: raise AssertionError(change+' accepted')
                 restored(before)
         ''')
@@ -428,6 +428,117 @@ class OperationalBridgeTests(unittest.TestCase):
             assert result['model_calls'] == 0 and not result['resource_authority'] and not result['execution_available']
             restored(before)
             rejected(lambda: bridge.main(['--execute', '--context', '/missing/unreadable.json']), 'Production execution unavailable')
+        ''')
+
+    def test_genuine_file_cli_imports_captured_cpu_helpers_without_execution(self):
+        entry = self.roots['operational'] / BRIDGE
+        result = subprocess.run([sys.executable, '-B', '-I', '-S', str(entry),
+            '--import-cpu', '--context', self.fixture], cwd=self.root,
+            capture_output=True, text=True, timeout=60)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertEqual(result.stderr, '')
+        output = json.loads(result.stdout)
+        self.assertEqual(output['source_receipt']['context'], self.context)
+        self.assertEqual(len(output['imported_modules']), 4)
+        self.assertEqual(output['bootstrap_source_loader']['path'], str(self.roots['operational'] / LOADER))
+        self.assertEqual(output['model_calls'], 0)
+        self.assertIs(output['execution_available'], False)
+        self.assertIs(output['resource_authority'], False)
+        self.assertEqual(output['assertion_scope'], 'trusted_CPU_assertion_fixture_not_live_ownership')
+        self.assertGreater(output['assertion_calls'], 10)
+        self.assertFalse(list(self.root.rglob('*.pyc')))
+        refused = subprocess.run([sys.executable, '-B', '-I', '-S', str(entry),
+            '--execute', '--context', '/missing/unreadable-context.json'], cwd=self.root,
+            capture_output=True, text=True, timeout=15)
+        self.assertNotEqual(refused.returncode, 0)
+        self.assertIn('Production execution unavailable', refused.stderr)
+        self.assertEqual(refused.stdout, '')
+
+    def test_exact_entry_negative_cache_retained_and_foreign_or_positive_entries_refused(self):
+        self.child(r'''
+            entry = str(path)
+            sys.path_importer_cache[entry] = None
+            before = snapshot()
+            with bridge.load_operational_cpu_modules(context, assert_owned=owned) as scope:
+                scope.assert_current()
+            restored(before)
+            assert entry in sys.path_importer_cache and sys.path_importer_cache[entry] is None
+            positive = importlib.machinery.FileFinder(entry,
+                (importlib.machinery.SourceFileLoader, importlib.machinery.SOURCE_SUFFIXES))
+            assert positive.path == entry
+            sys.path_importer_cache[entry] = positive
+            rejected(lambda: bridge.load_operational_cpu_modules(context, assert_owned=owned).__enter__(),
+                     'Entry-script importer cache must be negative')
+            sys.path_importer_cache[entry] = None
+            for foreign in (str(path.parent/'frontier_v8_source_loader.py'), str(path.parent/'foreign.py')):
+                sys.path_importer_cache[foreign] = None
+                rejected(lambda: bridge.load_operational_cpu_modules(context, assert_owned=owned).__enter__(),
+                         'Foreign path importer cache path')
+                del sys.path_importer_cache[foreign]
+        ''')
+
+    def test_stdlib_org_absence_probe_never_falls_through_to_positive_import(self):
+        self.child(r'''
+            before = snapshot()
+            with bridge.load_operational_cpu_modules(context, assert_owned=owned) as scope:
+                reached = []
+                class PositiveFallback:
+                    def find_spec(self, fullname, path=None, target=None):
+                        reached.append(fullname)
+                        raise AssertionError('org negative probe reached a positive fallback')
+                hooks = list(sys.meta_path)
+                sys.meta_path.insert(1, PositiveFallback())
+                try:
+                    try:
+                        from org.python.core import PyStringMap
+                    except ImportError as error:
+                        assert isinstance(error, ModuleNotFoundError) and error.name == 'org'
+                    else: raise AssertionError('org positive import accepted')
+                finally:
+                    sys.meta_path[:] = hooks
+                assert reached == [] and not any(name == 'org' or name.startswith('org.') for name in sys.modules)
+                rejected(lambda: __import__('torch'), 'Undeclared')
+                rejected(lambda: __import__('unrelated_positive_fallback_probe'), 'Undeclared')
+                scope.assert_current()
+            restored(before)
+        ''')
+
+    def test_preloaded_org_package_and_submodule_aliases_are_refused(self):
+        self.child(r'''
+            for name in ('org', 'org.python', 'org.python.core'):
+                positive = types.ModuleType(name)
+                positive.__path__ = []
+                positive.PyStringMap = dict
+                sys.modules[name] = positive
+                before = snapshot()
+                rejected(lambda: bridge.load_operational_cpu_modules(context, assert_owned=owned).__enter__(), 'Preloaded')
+                restored(before)
+                assert sys.modules[name] is positive
+                del sys.modules[name]
+        ''')
+
+    def test_org_probe_hook_instance_method_code_defaults_and_finder_binding_mutations_refused(self):
+        self.child(r'''
+            probe_class = bridge._DenyOrgProbe
+            original = probe_class.find_spec
+            code, defaults = original.__code__, original.__defaults__
+            for change in ('instance', 'method', 'code', 'defaults', 'finder'):
+                before = snapshot()
+                try:
+                    with bridge.load_operational_cpu_modules(context, assert_owned=owned) as scope:
+                        probe, finder = sys.meta_path[:2]
+                        if change == 'instance': probe.find_spec = lambda *args: None
+                        elif change == 'method': probe_class.find_spec = lambda self, fullname, path=None, target=None: None
+                        elif change == 'code': original.__code__ = (lambda self, fullname, path=None, target=None: None).__code__
+                        elif change == 'defaults': original.__defaults__ = ('changed', None)
+                        elif change == 'finder': finder.loaders = dict(finder.loaders)
+                except bridge.OperationalBridgeError as error:
+                    assert 'hook identity' in str(error) or 'finder binding' in str(error), str(error)
+                else: raise AssertionError(change+' accepted')
+                finally:
+                    probe_class.find_spec = original
+                    original.__code__, original.__defaults__ = code, defaults
+                restored(before)
         ''')
 
 

@@ -31,6 +31,14 @@ class OperationalBridgeError(ValueError):
     pass
 
 
+class _DenyOrgProbe:
+    def find_spec(self, fullname, path=None, target=None):
+        if fullname == 'org':
+            # Older CPython copy.py catches ImportError for this absent Jython probe.
+            raise ModuleNotFoundError('org is unavailable in the operational CPU scope', name='org')
+        return None
+
+
 def _require(condition, message):
     if not condition:
         raise OperationalBridgeError(message)
@@ -58,7 +66,8 @@ def _clean_interpreter():
                  for hook in sys.meta_path), 'Foreign meta import hook rejected')
     _require(not any(name == 'jev' or name.startswith('jev.') or name == 'scripts'
                      or name.startswith('scripts.') or name.startswith('_frontier_v8_bridge_')
-                     for name in sys.modules), 'Preloaded source namespace rejected')
+                     or name == 'org' or name.startswith('org.')
+                     for name in sys.modules), 'Preloaded source/probe namespace rejected')
     _require(not any(name == prefix or name.startswith(prefix + '.')
                      for name in sys.modules for prefix in OPTIONAL), 'Preloaded optional module rejected')
     stdlib = STDLIB
@@ -89,6 +98,11 @@ def _clean_cache(cache, paths):
                machinery.SourcelessFileLoader: machinery.BYTECODE_SUFFIXES,
                machinery.ExtensionFileLoader: machinery.EXTENSION_SUFFIXES}
     for path, finder in cache.items():
+        if type(path) is str and path == str(Path(__file__)):
+            # CPython probes a file CLI entry as an importer even with -I -S.
+            # Its exact negative result cannot import anything from this file.
+            _require(finder is None, 'Entry-script importer cache must be negative')
+            continue
         _require(type(path) is str and (path in paths or
                  Path(path).is_relative_to(Path(STDLIB))),
                  'Foreign path importer cache path rejected')
@@ -223,18 +237,37 @@ def load_operational_cpu_modules(context, *, assert_owned):
             loaders['scripts.' + helper] = verifier._CapturedLoader(
                 str(Path(receipt['operational']['root']) / relative), sources['operational'][relative])
         finder = verifier._Finder(loaders)
-        sys.meta_path.insert(0, finder)
+        probe = _DenyOrgProbe()
+        probe_attributes = dict(_DenyOrgProbe.__dict__)
+        probe_function = _function_state(_DenyOrgProbe.find_spec)
+        sys.meta_path[:0] = [probe, finder]
+        hook_container, hooks = sys.meta_path, list(sys.meta_path)
+
+        def audit_hooks():
+            _require(sys.meta_path is hook_container and sys.meta_path == hooks,
+                     'Operational import hook sequence changed')
+            _require(type(probe) is _DenyOrgProbe and not probe.__dict__
+                     and set(_DenyOrgProbe.__dict__) == set(probe_attributes)
+                     and all(_DenyOrgProbe.__dict__[name] is value
+                             for name, value in probe_attributes.items())
+                     and _function_state(_DenyOrgProbe.find_spec) == probe_function,
+                     'Operational negative-probe hook identity changed')
+            _require(finder.loaders is loaders and set(finder.__dict__) == {'loaders'},
+                     'Pinned finder binding changed')
+
         modules, bindings = {}, [binding]
         for helper in HELPERS:
             owned()
             for current in bindings:
                 current.audit()
+            audit_hooks()
             module = importlib.import_module('scripts.' + helper)
             modules[helper] = module
             bindings.append(_Bindings(module))
             owned()
             for current in bindings:
                 current.audit()
+            audit_hooks()
         bindings.append(_Bindings(sys.modules['scripts']))
         import_state = (sys.modules, sys.path, list(sys.path), sys.meta_path, list(sys.meta_path),
                         sys.path_hooks, list(sys.path_hooks), sys.path_importer_cache)
@@ -244,6 +277,7 @@ def load_operational_cpu_modules(context, *, assert_owned):
         loader_state = {name: _basic(loader.__dict__) for name, loader in loaders.items()}
 
         def audit_import_state():
+            audit_hooks()
             _require(sys.modules is import_state[0] and sys.path is import_state[1]
                      and sys.path == import_state[2] and sys.meta_path is import_state[3]
                      and sys.meta_path == import_state[4] and sys.path_hooks is import_state[5]

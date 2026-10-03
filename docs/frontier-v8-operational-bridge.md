@@ -19,6 +19,15 @@ optional model packages, foreign import paths and hooks, changed sources and
 substituted callables must cause refusal. Import state is restored when the
 scope exits, including on failure.
 
+CPython's direct file startup may leave a negative (`None`) importer-cache
+entry for the exact bridge script. That one entry is permitted; a positive
+finder at the same key and other foreign entries remain rejected. A separate
+front finder hard-denies the exact `org` namespace with `ModuleNotFoundError`
+so older CPython standard-library `copy` code can handle its optional Jython
+probe as absent. It never searches a fallback path or supplies a positive spec.
+Preloaded `org` modules are refused, the denial hook is audited, and all other
+names continue through the unchanged pinned source finder.
+
 A supplied `assert_owned` callback brackets verification, loading and scoped
 CPU inspection. This is a trusted predicate dependency, not a GPU lease or
 independent resource attestation. A no-op callback in a CPU source proof is
