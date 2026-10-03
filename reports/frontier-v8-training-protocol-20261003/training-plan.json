@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "protocol_id": "frontier-v8-isolated-20261003-r1",
+  "status": "CPU_scientific_protocol_reviewed_no_resource_or_launch_authority",
+  "settings": {
+    "model": "Qwen/Qwen3.5-2B",
+    "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "steps": 733,
+    "accumulation": 4,
+    "train_rows": 2932,
+    "calibration_rows": 496,
+    "eval_rows": 496,
+    "max_length": 4096,
+    "lora_rank": 8,
+    "lr": 2e-05,
+    "head_lr": 5e-05,
+    "brier_weight": 0.1,
+    "seed": 20261004,
+    "training_sampling": "shuffled",
+    "checkpoint_every": 0,
+    "defer_heldout": true
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "weight_decay": 0.01,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "gradient_clip_norm": 1.0
+  },
+  "dataset": "data/frontier-training-v8-20261003-isolated-r1",
+  "data_manifest_sha256": "ee8f8d689a748e2e7d71b43fa18e47183a5c7aca01a4bb39ffffe3f5dbd499a8",
+  "data_files_sha256": {
+    "calibration.jsonl": "8656ac9c14dde26aa96b0436b7977c34bf43962c3806e73b8aff9bab90c99cf9",
+    "ood.jsonl": "ffbdbf0c18b12f128b4d0e86e61f79248338c789e396cb940255683891616464",
+    "test.jsonl": "5ed589652193e1867e1ba1a2933c7da47b6e20e044acc6db52f717b7df743355",
+    "train.jsonl": "67888a8f0cf88697902ab5fdac80ae41b91d8ee50e6dc949d156688404437702",
+    "validation.jsonl": "30281832e5329267dcfbfbe2323e40d7a42d9b1516d4a1b9a4ac9c7cb45901b3",
+    "observed-regression/v4/ood.jsonl": "013d4d5af35c7c8f183eccad13aee0054dc53a5432cf011bc712bcdff7b6d9fa",
+    "observed-regression/v4/test.jsonl": "36bdd440f48eb364cb32f4779492aa5c65ca737b9600b1b934b403beb656eda0",
+    "observed-regression/v5/ood.jsonl": "05dbfcbeb4eaeaee0e2836fb84dd3ddf8a46e05add84f74abd2fbe80ba17126e",
+    "observed-regression/v5/test.jsonl": "7a5b23564faa0edd9f1fc196f36c0f85ff6aee59781151fc964fc09c2374af07",
+    "observed-regression/v6/ood.jsonl": "09d72bc41eaff341efa9e768874c433696e03199365b337733334540fc8f7537",
+    "observed-regression/v6/test.jsonl": "807bd0d5e40f5883bf1f276fb732b2552fb992885cf45884364140e90231ef5b",
+    "observed-regression/v7/ood.jsonl": "ed0af3eea8c8851481bd0283378f440708193e8c540e7cb67ba650aa59818929",
+    "observed-regression/v7/test.jsonl": "6aa95f95c51cb0c7c40bf66a7fc101a2ba8506b17d04c25958c9fa0b36356d45"
+  },
+  "prepared_membership_receipt": {
+    "path": "reports/frontier-v8-training-isolation-20261003/prepared-membership-receipt-r1.json",
+    "sha256": "95f6b2e5d0410c15834ecb0c3931429a7f796019f822e95a3871e3f77803a133"
+  },
+  "expected_initial_checkpoint": {
+    "model_repo": "ZefanCai/Open-Jev-2B",
+    "model_revision": "0c7aa498b1627be8da4acf34c863ff0ee0a92785",
+    "directory_sha256": "3076462e6356412082e79af909227b39b2863b90def79155ca0821aa506b7ded",
+    "files_sha256": {
+      "adapter/adapter_config.json": "d27624bdbbe984cf175e10c7fa3d9beaea9876231ce943a248ad40e12742fe74",
+      "adapter/adapter_model.safetensors": "2d23935b1a7380db444abac572c04646918ba794e59002d1588236182a3ca18f",
+      "head.pt": "3532cd576c58d5ad5bf17c3e9f2df4be8c70e08c07fa6bb7fa673dcd7b401f2a",
+      "model.json": "d985eafa4d635113ee8cc912e0512a95aac0bed3426e9256931235b75cb3d6c5",
+      "temperature.json": "090fb330a616338210a924d1c370c934e934f30f53f92c8a52a5cc7852cadd99"
+    }
+  },
+  "expected_base_snapshot_files_sha256": {
+    "LICENSE": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+    "chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+    "config.json": "ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4",
+    "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+    "model.safetensors-00001-of-00001.safetensors": "aa33250c4fc64891ddfaba3a314fd9542ea371843c387178b425fbcc5ed680b1",
+    "model.safetensors.index.json": "aca8afed9da75b0f050b408d270766fd77627f1af401e240f61c3b47d0db02f9",
+    "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+    "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+    "tokenizer_config.json": "49e2b6e395f959f077f1e992b338919c0d4a9732fc6e613995e06557f843500c",
+    "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+    "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+  },
+  "base_inventory_origin": {
+    "historical_receipt_sha256": "339cf2ea2860948ed874babacde970bcb708fcea4a9e87033448af708fd651e2",
+    "role": "Content identity only; no current host, installation or resource authority"
+  },
+  "published_temperature": 1.518796342858676,
+  "runtime": {
+    "torch": "2.8.0+cu128",
+    "transformers": "5.10.2",
+    "peft": "0.19.1",
+    "triton": "3.4.0",
+    "safetensors": "0.7.0",
+    "accelerate": "1.13.0"
+  },
+  "runtime_lock": {
+    "path": "requirements-linux-py311-cu128-20261002.lock",
+    "sha256": "d1f238a916dfdfbc8b89f3de4c28bb3b7220cdd97ecf609ebb726afab0ca8221",
+    "distributions": 76,
+    "platform": "Linux",
+    "machine": "x86_64",
+    "python": "3.11",
+    "scope": "Exact installed distribution versions; not wheel artifact hashes or a clean installation replay. Shared runtimes remain read-only."
+  },
+  "implementation_sha256": {
+    "docs/frontier-v8-resource-protocol.md": "654bc7d11369fd7ceded46e605f1ad34f65f802034991a678063b4253fb4895b",
+    "jev/__init__.py": "039d6c25d5ebea9724711756aff885f44d2226abbeea4abb99dfbc7b0b35ce7e",
+    "jev/api.py": "f22aa50c00d64aa91c2d415c1973f59bdaad11d1de51308ae5454326b8cbf350",
+    "jev/data.py": "97c1764a5090f60476397baf889a864359e0d59b48d99ddf3b34335d3e1b138e",
+    "jev/metrics.py": "cb460c78b877a24708a0a8f8ca6b51f9602491f6ea24cd14e9a828c03d92f78b",
+    "jev/model.py": "333bed84cf2801ba33b053891e9ff9563d082f3da87ad6ad1681a2b1bcb4c6aa",
+    "jev/prefix_cache.py": "0eecb867d47830889b41c994af8118624edbf8871c3c21ff9136a6d65fc703cd",
+    "jev/train.py": "18755ae1cb03cc8b5592693f4c8294dcbf8a4b96d3b3b5cbd3c6a59aeaedbb9f",
+    "requirements-linux-py311-cu128-20261002.lock": "d1f238a916dfdfbc8b89f3de4c28bb3b7220cdd97ecf609ebb726afab0ca8221",
+    "scripts/audit_boundary_controls_v7.py": "f5cd435d8075add6fb1b7169d46ed8faa6a8a3f9b9958b5b475a1c6bfa3de1d7",
+    "scripts/audit_frontier_controls_v8.py": "78bdf3712b2090ada57587e5a44163c79cca63b9698514f116a19ba7e82a42ee",
+    "scripts/compare_frontier_training_v8.py": "99a74cbad37973f31da9f4aaf06cb4934d6fc39ec741bfd56dc2166488c46213",
+    "scripts/replay_frontier_comparison_v8.py": "4ec164d5247607c558f75070966a410cf373b657938e839ff9d55f85224cbf9e",
+    "scripts/run_frontier_training_v8.py": "8cb4064f6f1dd05b28a581f13c0043adf981f64b0f5ac8e0706257781e53a708",
+    "tests/test_compare_frontier_training_v8.py": "2eac77b343c624629cb342412fad37bead0d378d97f7b01fd62874a47a00b63c",
+    "tests/test_frontier_v8_comparison_replay_integration.py": "332581f4a328551eb45254030c2710bc6d8dc833b83d83f7748a361ef1b76ac6",
+    "tests/test_replay_frontier_comparison_v8.py": "6849e978691ab9ca0e32d1b20617448ffb8f16b59c966ac5098b8eee8a968a78",
+    "tests/test_run_frontier_training_v8.py": "da112117c418fc5254bd03f8a840e63de66df64d022f973884b2f886fd386147"
+  },
+  "comparison": {
+    "weights": [
+      "released",
+      "adapted"
+    ],
+    "calibration_predictions_per_weight": 496,
+    "prediction_counts": {
+      "v8_test": 496,
+      "v8_ood": 496,
+      "v4_test": 128,
+      "v4_ood": 128,
+      "v5_test": 32,
+      "v5_ood": 32,
+      "v6_test": 36,
+      "v6_ood": 36,
+      "v7_test": 256,
+      "v7_ood": 256
+    },
+    "heldout_predictions_per_weight": 1896,
+    "heldout_journals": 20,
+    "calibration_journals": 2,
+    "temperature_strategies": [
+      "published",
+      "own_calibration"
+    ],
+    "calibration_fit": {
+      "min_temperature": 0.05,
+      "max_temperature": 20.0,
+      "grid_size": 25,
+      "refine_steps": 24,
+      "objective": "hard-label NLL"
+    },
+    "temperature_policy": "Both weights finish all496 Calibration predictions and fitting before any Test/OOD forward. Published checkpoint T is common and unchanged; each own-Calibration T applies unchanged to all primary and observed splits. No choosing a cell from heldout results.",
+    "ece_bins": 15,
+    "nll_probability_floor": 1e-15,
+    "noul_thresholds_inclusive": [
+      0.2,
+      0.8
+    ],
+    "primary_families": [
+      "temporal_window",
+      "exact_numeric",
+      "joint_capacity",
+      "latest_authority",
+      "account_status",
+      "department_route",
+      "refund_priority"
+    ],
+    "dangerous_choice_actions": {
+      "temporal_window": "accept",
+      "joint_capacity": "execute",
+      "latest_authority": "automatic processing",
+      "account_status": "active",
+      "department_route": "approve",
+      "refund_priority": "automatic reimbursement"
+    },
+    "safety": {
+      "primary_dangerous_choice_errors_per_split": 0,
+      "each_family_pooled_noul_accepted_errors": 0,
+      "each_family_pooled_noul_min_coverage": 0.5,
+      "observed_v5_outside_choice_reject_required": 12,
+      "observed_v6_latest_revocation_correct_required": 6,
+      "numeric_choice_errors": "Report all; no extra numeric zero-error gate added",
+      "all_four_cells_required": true,
+      "automatic_promotion": false,
+      "actual_business_executions": 0
+    },
+    "report_requirements": [
+      "argmax accuracy and Brier/NLL/ECE with exact denominators",
+      "inclusive Noul predicate accepts/errors/coverage by family and condition/width/layout/kind/truth",
+      "all wrong Choice and dangerous permissive errors separately",
+      "paired regressions, fixes, argmax changes and threshold decision changes with opaque IDs",
+      "all sequential single-row timings and cold outliers; scoped allocated and allocator-reserved peaks",
+      "old v4-v7 observed regressions retain exposure limits; synthetic new tests are controlled composition-depth shifts"
+    ],
+    "efficiency": {
+      "row_timing_scope": "tokenization_forward_logit_cpu_sync",
+      "includes": [
+        "tokenization",
+        "forward",
+        "CPU_logit_transfer",
+        "CUDA_synchronization"
+      ],
+      "excludes": [
+        "model_loading",
+        "HTTP",
+        "journal_writes",
+        "probability_aggregation"
+      ],
+      "median": "middle value, or mean of two middle values",
+      "p95": "nearest rank ceil(0.95*n)-1 in sorted rows",
+      "cold_outliers_removed": 0,
+      "cuda_memory_scope": "model_loaded_row_forward_and_cpu_logits",
+      "physical_total_peak_memory": null,
+      "minimum_VRAM": null
+    }
+  },
+  "stop_policy": {
+    "training_passes": 1,
+    "checkpoint": "fixed_final_step",
+    "heldout_pretraining_evaluation": false,
+    "retry": false,
+    "resume": false,
+    "promotion": false,
+    "attempt_policy": "Fresh bounded host request and exclusive attempt/output. Interrupted attempts remain consumed; a replacement requires a new declaration."
+  },
+  "resource_protocol_ready": false,
+  "gpu_authority": false,
+  "limitations": [
+    "This CPU declaration prepares no running job, current GPU ownership or measured capability.",
+    "Removed parents do not erase initializer/pretraining exposure. Old v4-v7 regressions are observed feedback.",
+    "New v8 Test is a controlled composition-depth shift, not IID, a natural business trial or official JevBench.",
+    "CUDA allocated/reserved peaks include resident weights and allocator caching, not physical total/minimum VRAM.",
+    "Sequential scoring time excludes HTTP; no backend or HTTP speedup can be inferred."
+  ],
+  "runtime_settings": {
+    "backbone_dtype": "torch.bfloat16",
+    "head_dtype": "torch.float32",
+    "cuda": "12.8",
+    "float32_matmul_precision": "highest",
+    "tf32": false,
+    "tf32_scope": "torch.backends.cuda.matmul.allow_tf32",
+    "quantization": false
+  }
+}
