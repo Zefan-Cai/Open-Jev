@@ -73,6 +73,10 @@ bytes stayed unchanged.
 
 ## Reproduction and freeze boundary
 
+The [external freeze receipt](freeze-receipt.json) binds an exact byte copy
+to committed source `4399cbaed4a22749516efdea17a1668331577df6`.
+At freeze time this source was committed locally; network push, PR and CI
+were pending. Local data freeze grants no model-run or deployment authority.
 Source and dataset freeze are recorded separately. The original
 [manifest](manifest.json) and contract retain their creation-time provisional
 flags. They must not be silently rewritten to remove historical pending states.

@@ -1,0 +1,8 @@
+🧪 Open-Jev v8 data
+
+2,976 original synthetic rows. Independent audits passed.
+
+Tests use a controlled composition-depth shift.
+Training hasn't run yet.
+
+https://github.com/Zefan-Cai/Open-Jev/tree/main/reports/frontier-v8-data-20261003
