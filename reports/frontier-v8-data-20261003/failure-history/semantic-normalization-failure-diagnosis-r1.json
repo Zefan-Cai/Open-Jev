@@ -1,0 +1,48 @@
+{
+  "group_id": "frontier-controls-v8/20261003/calibration/latest_authority/3",
+  "case_index": 0,
+  "family": "latest_authority",
+  "condition": "automatic_first_near",
+  "differences": [
+    {
+      "field": "/signed_policy_registry/0/issuer_role",
+      "forward": "topic_authority_1",
+      "other": "topic_authority_3"
+    },
+    {
+      "field": "/signed_policy_registry/1/issuer_role",
+      "forward": "topic_authority_0",
+      "other": "topic_authority_2"
+    },
+    {
+      "field": "/signed_policy_registry/2/issuer_role",
+      "forward": "topic_authority_3",
+      "other": "topic_authority_1"
+    },
+    {
+      "field": "/signed_policy_registry/3/issuer_role",
+      "forward": "topic_authority_2",
+      "other": "topic_authority_0"
+    },
+    {
+      "field": "/policy_authorities/required_topic_2",
+      "forward": "topic_authority_3",
+      "other": "topic_authority_1"
+    },
+    {
+      "field": "/policy_authorities/required_topic_3",
+      "forward": "topic_authority_2",
+      "other": "topic_authority_0"
+    },
+    {
+      "field": "/policy_authorities/required_topic_0",
+      "forward": "topic_authority_1",
+      "other": "topic_authority_3"
+    },
+    {
+      "field": "/policy_authorities/required_topic_1",
+      "forward": "topic_authority_0",
+      "other": "topic_authority_2"
+    }
+  ]
+}

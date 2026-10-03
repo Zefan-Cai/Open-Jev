@@ -1,0 +1,48 @@
+{
+  "group_id": "frontier-controls-v8/20261003/calibration/temporal_window/3",
+  "case_index": 0,
+  "family": "temporal_window",
+  "condition": "at_start",
+  "differences": [
+    {
+      "field": "/case_ref",
+      "forward": "case-e8ef5749719de2f0238e",
+      "other": "case-4135ab4b6cb9ff820884"
+    },
+    {
+      "field": "/correction_authority",
+      "forward": "authority-eba1b32245fbe6be6614",
+      "other": "authority-1401e0f42540f56f7501"
+    },
+    {
+      "field": "/delivery_corrections/0/case_ref",
+      "forward": "case-e8ef5749719de2f0238e",
+      "other": "case-4135ab4b6cb9ff820884"
+    },
+    {
+      "field": "/delivery_corrections/0/issuer_role",
+      "forward": "authority-eba1b32245fbe6be6614",
+      "other": "authority-1401e0f42540f56f7501"
+    },
+    {
+      "field": "/delivery_corrections/1/case_ref",
+      "forward": "case-e8ef5749719de2f0238e",
+      "other": "case-4135ab4b6cb9ff820884"
+    },
+    {
+      "field": "/delivery_corrections/1/issuer_role",
+      "forward": "authority-eba1b32245fbe6be6614",
+      "other": "authority-1401e0f42540f56f7501"
+    },
+    {
+      "field": "/delivery_corrections/2/case_ref",
+      "forward": "case-e8ef5749719de2f0238e",
+      "other": "case-4135ab4b6cb9ff820884"
+    },
+    {
+      "field": "/delivery_corrections/2/issuer_role",
+      "forward": "authority-eba1b32245fbe6be6614",
+      "other": "authority-1401e0f42540f56f7501"
+    }
+  ]
+}

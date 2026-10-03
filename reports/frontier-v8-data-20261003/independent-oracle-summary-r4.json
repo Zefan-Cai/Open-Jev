@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "status": "independent_original_data_oracle_passed",
+  "report_sha256": "265fdfdc1d016da2611299e5e622ab230ef27298f2e09f4e88a9772b0a1cb912",
+  "oracle_sha256": "78bdf3712b2090ada57587e5a44163c79cca63b9698514f116a19ba7e82a42ee",
+  "contract_sha256": "30daab0f14711bc8e707e954fb38ba4f4ea73ec394589e0386c2e7e1d0b664ca",
+  "manifest_sha256": "dd8a9d941c2a73b9ac222bfeee53c4284f854a89fde1496ace6531e318244fd9",
+  "rows": 2976,
+  "parents": 42,
+  "splits": {
+    "calibration": 496,
+    "ood": 496,
+    "test": 496,
+    "train": 992,
+    "validation": 496
+  },
+  "kinds": {
+    "choice": 1488,
+    "noul": 1488
+  },
+  "essential_input_interventions": 264,
+  "full_typed_presentation_integrity_comparisons": 2232,
+  "scope_cells": 90,
+  "policy_scope_cells": 60,
+  "money_numeric_rank_case_support": [
+    {
+      "numeric_rank": 0,
+      "rows": 2,
+      "split": "calibration",
+      "width": 3
+    },
+    {
+      "numeric_rank": 1,
+      "rows": 1,
+      "split": "calibration",
+      "width": 3
+    },
+    {
+      "numeric_rank": 2,
+      "rows": 1,
+      "split": "calibration",
+      "width": 3
+    },
+    {
+      "numeric_rank": 3,
+      "rows": 1,
+      "split": "calibration",
+      "width": 3
+    },
+    {
+      "numeric_rank": 4,
+      "rows": 1,
+      "split": "calibration",
+      "width": 3
+    },
+    {
+      "numeric_rank": 0,
+      "rows": 2,
+      "split": "ood",
+      "width": 6
+    },
+    {
+      "numeric_rank": 1,
+      "rows": 1,
+      "split": "ood",
+      "width": 6
+    },
+    {
+      "numeric_rank": 2,
+      "rows": 1,
+      "split": "ood",
+      "width": 6
+    },
+    {
+      "numeric_rank": 3,
+      "rows": 1,
+      "split": "ood",
+      "width": 6
+    },
+    {
+      "numeric_rank": 4,
+      "rows": 1,
+      "split": "ood",
+      "width": 6
+    },
+    {
+      "numeric_rank": 0,
+      "rows": 2,
+      "split": "test",
+      "width": 5
+    },
+    {
+      "numeric_rank": 1,
+      "rows": 1,
+      "split": "test",
+      "width": 5
+    },
+    {
+      "numeric_rank": 2,
+      "rows": 1,
+      "split": "test",
+      "width": 5
+    },
+    {
+      "numeric_rank": 3,
+      "rows": 1,
+      "split": "test",
+      "width": 5
+    },
+    {
+      "numeric_rank": 4,
+      "rows": 1,
+      "split": "test",
+      "width": 5
+    },
+    {
+      "numeric_rank": 0,
+      "rows": 2,
+      "split": "train",
+      "width": 1
+    },
+    {
+      "numeric_rank": 1,
+      "rows": 1,
+      "split": "train",
+      "width": 1
+    },
+    {
+      "numeric_rank": 2,
+      "rows": 1,
+      "split": "train",
+      "width": 1
+    },
+    {
+      "numeric_rank": 3,
+      "rows": 1,
+      "split": "train",
+      "width": 1
+    },
+    {
+      "numeric_rank": 4,
+      "rows": 1,
+      "split": "train",
+      "width": 1
+    },
+    {
+      "numeric_rank": 0,
+      "rows": 1,
+      "split": "train",
+      "width": 2
+    },
+    {
+      "numeric_rank": 1,
+      "rows": 2,
+      "split": "train",
+      "width": 2
+    },
+    {
+      "numeric_rank": 2,
+      "rows": 1,
+      "split": "train",
+      "width": 2
+    },
+    {
+      "numeric_rank": 3,
+      "rows": 1,
+      "split": "train",
+      "width": 2
+    },
+    {
+      "numeric_rank": 4,
+      "rows": 1,
+      "split": "train",
+      "width": 2
+    },
+    {
+      "numeric_rank": 0,
+      "rows": 2,
+      "split": "validation",
+      "width": 4
+    },
+    {
+      "numeric_rank": 1,
+      "rows": 1,
+      "split": "validation",
+      "width": 4
+    },
+    {
+      "numeric_rank": 2,
+      "rows": 1,
+      "split": "validation",
+      "width": 4
+    },
+    {
+      "numeric_rank": 3,
+      "rows": 1,
+      "split": "validation",
+      "width": 4
+    },
+    {
+      "numeric_rank": 4,
+      "rows": 1,
+      "split": "validation",
+      "width": 4
+    }
+  ],
+  "equivalent_case_annotations": [
+    {
+      "conditions": [
+        "unknown_all",
+        "unknown_first",
+        "unknown_last"
+      ],
+      "family": "account_status",
+      "split": "train",
+      "width": 1
+    },
+    {
+      "family": "account_status",
+      "positional_axis": "first_and_last_are_the_same_component",
+      "scope": "Logical position equivalence; exact fact equality is tabulated separately.",
+      "split": "train",
+      "width": 1
+    },
+    {
+      "family": "refund_priority",
+      "positional_axis": "first_and_last_are_the_same_component",
+      "scope": "Logical position equivalence; exact fact equality is tabulated separately.",
+      "split": "train",
+      "width": 1
+    }
+  ],
+  "record_order_indistinguishable_cases": 54,
+  "disclosed_noul_layout_shortfalls": 744,
+  "limitations": [
+    "Noul yes/no share one layout per authored case; every condition has both Choice layouts, but full condition x Noul-truth x layout crossing is absent within a single parent.",
+    "Only first/last required authority positions are mismatch-probed; middle positions are outcome-essential but not exhaustively mismatch-probed.",
+    "Full presentation integrity uses one bijective identity map on reviewed schema fields plus exact typed facts and declared record layouts. It is a bounded presentation matcher, not arbitrary graph isomorphism. Projected duplicate statistics are separate and do not prove full reference preservation.",
+    "Train widths1/2, Calibration3, Validation4, Test5, OOD6 are a declared composition shift; no IID or natural request claim.",
+    "Dataset oracle and CPU interventions establish authored rules and support, not model capability, natural business success, or official JevBench gain."
+  ],
+  "focused_tests_passed": 23,
+  "generator_source_read": false,
+  "old_heldout_row_reads": [],
+  "model_calls": 0,
+  "original_dataset_bytes_unchanged": true
+}

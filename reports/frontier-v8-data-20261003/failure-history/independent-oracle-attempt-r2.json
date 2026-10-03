@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-10-03T06:01:43.707506+00:00",
+  "finished_at_utc": "2026-10-03T06:01:44.058450+00:00",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-m",
+    "scripts.audit_frontier_controls_v8",
+    "--dataset",
+    "data/frontier-controls-v8-20261003-provisional-r1",
+    "--output",
+    "/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/runs/frontier-v8-data-20261003/independent-oracle-r2.json"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 203, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/scripts/audit_frontier_controls_v8.py\", line 983, in <module>\n    if __name__ == '__main__':main()\n                              ~~~~^^\n  File \"/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/scripts/audit_frontier_controls_v8.py\", line 977, in main\n    report = audit_directory(args.dataset,args.contract)\n  File \"/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/scripts/audit_frontier_controls_v8.py\", line 962, in audit_directory\n    report = audit_rows(records)\n  File \"/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/scripts/audit_frontier_controls_v8.py\", line 865, in audit_rows\n    require(len({semantic_state(row['state']) for row in case_rows}) == 1, 'Presentation changed semantic facts beyond identity/order')\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/scripts/audit_frontier_controls_v8.py\", line 16, in require\n    raise ValueError(message)\nValueError: Presentation changed semantic facts beyond identity/order\n",
+  "source_sha256": "7ecb5a85e30f70460658a7826743931c8e58587cdc8f6fc7ef393d2c2c9d4fb8",
+  "manifest_sha256": "dd8a9d941c2a73b9ac222bfeee53c4284f854a89fde1496ace6531e318244fd9",
+  "contract_sha256": "30daab0f14711bc8e707e954fb38ba4f4ea73ec394589e0386c2e7e1d0b664ca",
+  "split_files_sha256": {
+    "calibration.jsonl": "8656ac9c14dde26aa96b0436b7977c34bf43962c3806e73b8aff9bab90c99cf9",
+    "ood.jsonl": "ffbdbf0c18b12f128b4d0e86e61f79248338c789e396cb940255683891616464",
+    "test.jsonl": "5ed589652193e1867e1ba1a2933c7da47b6e20e044acc6db52f717b7df743355",
+    "train.jsonl": "5051ca50f96f73610ad51714d830c4a2ac0fffd6b7b31fa393f3bb95a76b0912",
+    "validation.jsonl": "30281832e5329267dcfbfbe2323e40d7a42d9b1516d4a1b9a4ac9c7cb45901b3"
+  },
+  "model_calls": 0,
+  "generator_source_read": false,
+  "old_heldout_row_reads": [],
+  "reason_for_new_cpu_audit": "Only identity normalization corrected to stable required-topic order; gold/scope/target/condition rules unchanged",
+  "original_r1_failure_preserved": true,
+  "original_dataset_contract_bindings_unchanged": true
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-10-03T06:10:41.148579+00:00",
+  "finished_at_utc": "2026-10-03T06:10:41.640810+00:00",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-m",
+    "scripts.audit_frontier_controls_v8",
+    "--dataset",
+    "data/frontier-controls-v8-20261003-provisional-r1",
+    "--output",
+    "/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/runs/frontier-v8-data-20261003/independent-oracle-r4.json"
+  ],
+  "returncode": 0,
+  "stdout": "{\"status\": \"independent_original_data_oracle_passed\", \"rows\": 2976, \"model_calls\": 0}\n",
+  "stderr": "",
+  "source_sha256": "78bdf3712b2090ada57587e5a44163c79cca63b9698514f116a19ba7e82a42ee",
+  "tests_sha256": "f81a690bd06a02cc1626e1603a9b7a7b7a4bd40a6a8d7f436ca95caabe27f292",
+  "manifest_sha256": "dd8a9d941c2a73b9ac222bfeee53c4284f854a89fde1496ace6531e318244fd9",
+  "contract_sha256": "30daab0f14711bc8e707e954fb38ba4f4ea73ec394589e0386c2e7e1d0b664ca",
+  "split_files_sha256": {
+    "calibration.jsonl": "8656ac9c14dde26aa96b0436b7977c34bf43962c3806e73b8aff9bab90c99cf9",
+    "ood.jsonl": "ffbdbf0c18b12f128b4d0e86e61f79248338c789e396cb940255683891616464",
+    "test.jsonl": "5ed589652193e1867e1ba1a2933c7da47b6e20e044acc6db52f717b7df743355",
+    "train.jsonl": "5051ca50f96f73610ad51714d830c4a2ac0fffd6b7b31fa393f3bb95a76b0912",
+    "validation.jsonl": "30281832e5329267dcfbfbe2323e40d7a42d9b1516d4a1b9a4ac9c7cb45901b3"
+  },
+  "model_calls": 0,
+  "generator_source_read": false,
+  "old_heldout_row_reads": [],
+  "reason_for_new_cpu_audit": "Bounded bijective reviewed-schema presentation matcher allows actual consistent ID renamings while preserving every reference equality and typed fact. Gold/precedence/scope rules unchanged.",
+  "original_r1_r2_r3_failures_preserved": true,
+  "focused_fixture_tests_passed": 23,
+  "original_dataset_contract_bindings_unchanged": true,
+  "output_sha256": "265fdfdc1d016da2611299e5e622ab230ef27298f2e09f4e88a9772b0a1cb912"
+}

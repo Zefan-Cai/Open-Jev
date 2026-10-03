@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-10-03T06:08:29.616851+00:00",
+  "finished_at_utc": "2026-10-03T06:08:29.923547+00:00",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-m",
+    "scripts.audit_frontier_controls_v8",
+    "--dataset",
+    "data/frontier-controls-v8-20261003-provisional-r1",
+    "--output",
+    "/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/runs/frontier-v8-data-20261003/independent-oracle-r3.json"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 203, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/scripts/audit_frontier_controls_v8.py\", line 1033, in <module>\n    if __name__ == '__main__':main()\n                              ~~~~^^\n  File \"/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/scripts/audit_frontier_controls_v8.py\", line 1027, in main\n    report = audit_directory(args.dataset,args.contract)\n  File \"/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/scripts/audit_frontier_controls_v8.py\", line 1012, in audit_directory\n    report = audit_rows(records)\n  File \"/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/scripts/audit_frontier_controls_v8.py\", line 913, in audit_rows\n    require(same_typed_state(reverse,presentations[1]['state']),\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n            'Claimed reverse Choice layout does not reverse actual records')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ethan/Codex-new/Open-Jev-efficiency-20261002/scripts/audit_frontier_controls_v8.py\", line 16, in require\n    raise ValueError(message)\nValueError: Claimed reverse Choice layout does not reverse actual records\n",
+  "source_sha256": "3e95bbcc518fb9b4bd71f8e7ebcb052915e8f4fe055aff14c9f27af9e1c90b8c",
+  "tests_sha256": "7d61f4621cdfa14fd00414a43d4522629ea5bc0ccd201fc862167b1bdd1b19ef",
+  "manifest_sha256": "dd8a9d941c2a73b9ac222bfeee53c4284f854a89fde1496ace6531e318244fd9",
+  "contract_sha256": "30daab0f14711bc8e707e954fb38ba4f4ea73ec394589e0386c2e7e1d0b664ca",
+  "split_files_sha256": {
+    "calibration.jsonl": "8656ac9c14dde26aa96b0436b7977c34bf43962c3806e73b8aff9bab90c99cf9",
+    "ood.jsonl": "ffbdbf0c18b12f128b4d0e86e61f79248338c789e396cb940255683891616464",
+    "test.jsonl": "5ed589652193e1867e1ba1a2933c7da47b6e20e044acc6db52f717b7df743355",
+    "train.jsonl": "5051ca50f96f73610ad51714d830c4a2ac0fffd6b7b31fa393f3bb95a76b0912",
+    "validation.jsonl": "30281832e5329267dcfbfbe2323e40d7a42d9b1516d4a1b9a4ac9c7cb45901b3"
+  },
+  "model_calls": 0,
+  "generator_source_read": false,
+  "old_heldout_row_reads": [],
+  "reason_for_new_cpu_audit": "Exact typed presentation integrity matcher replaces projected normalization gate; unordered department stats fixed, foreign names retained; numeric-rank assertions added. All state gold/precedence/scope rules unchanged.",
+  "original_r1_r2_failures_preserved": true,
+  "focused_fixture_tests_passed": 22,
+  "original_dataset_contract_bindings_unchanged": true
+}

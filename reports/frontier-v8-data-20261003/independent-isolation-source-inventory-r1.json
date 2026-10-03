@@ -1,0 +1,327 @@
+{
+  "GPU_actions": 0,
+  "audit_receipt": "runs/frontier-v8-data-20261003/independent-isolation-r1.json",
+  "audit_receipt_sha256": "7919152a0afaaf3607d9e38b914f7b3fac33f44eb67a466dd889134a4d45a6cd",
+  "browser_actions": 0,
+  "checked_at_utc": "2026-10-03T06:01:42.448251+00:00",
+  "checks": {
+    "actual2976_new_rows": true,
+    "actual_full_audit_success_pending_root_freeze": true,
+    "all42_causal_parent_reports": true,
+    "all_parent_essential_witnesses_and_no_neutral_padding": true,
+    "complete1128_observed_TestOOD_rows": true,
+    "contract_exact_and_still_bound": true,
+    "cross/joint_capacity/width1": true,
+    "cross/joint_capacity/width2": true,
+    "cross/joint_capacity/width3": true,
+    "cross/joint_capacity/width4": true,
+    "cross/joint_capacity/width5": true,
+    "cross/joint_capacity/width6": true,
+    "cross/latest_authority/width1": true,
+    "cross/latest_authority/width2": true,
+    "cross/latest_authority/width3": true,
+    "cross/latest_authority/width4": true,
+    "cross/latest_authority/width5": true,
+    "cross/latest_authority/width6": true,
+    "new_hash/calibration.jsonl": true,
+    "new_hash/ood.jsonl": true,
+    "new_hash/test.jsonl": true,
+    "new_hash/train.jsonl": true,
+    "new_hash/validation.jsonl": true,
+    "no_collision_or_quarantined_groups": true,
+    "old_hash/data/boundary-controls-v7-20261002-r1/ood.jsonl": true,
+    "old_hash/data/boundary-controls-v7-20261002-r1/test.jsonl": true,
+    "old_hash/data/frontier-controls-v4-20261002/ood.jsonl": true,
+    "old_hash/data/frontier-controls-v4-20261002/test.jsonl": true,
+    "old_hash/data/policy-training-v6-20261002-r1/ood.jsonl": true,
+    "old_hash/data/policy-training-v6-20261002-r1/test.jsonl": true,
+    "old_hash/data/temporal-windows-v5-20261002-r1/ood.jsonl": true,
+    "old_hash/data/temporal-windows-v5-20261002-r1/test.jsonl": true,
+    "source_hash_still_bound": true
+  },
+  "failed_checks": [],
+  "family_causal_case_counts": {
+    "account_status": {
+      "declared_semantic_cases": 72,
+      "distinct_symbolic_case_scaffolds": 29,
+      "unique_exact_causal_fact_cases": 70
+    },
+    "department_route": {
+      "declared_semantic_cases": 72,
+      "distinct_symbolic_case_scaffolds": 54,
+      "unique_exact_causal_fact_cases": 72
+    },
+    "exact_numeric": {
+      "declared_semantic_cases": 72,
+      "distinct_symbolic_case_scaffolds": 54,
+      "unique_exact_causal_fact_cases": 72
+    },
+    "joint_capacity": {
+      "declared_semantic_cases": 192,
+      "distinct_symbolic_case_scaffolds": 48,
+      "unique_exact_causal_fact_cases": 192
+    },
+    "latest_authority": {
+      "declared_semantic_cases": 192,
+      "distinct_symbolic_case_scaffolds": 66,
+      "unique_exact_causal_fact_cases": 192
+    },
+    "refund_priority": {
+      "declared_semantic_cases": 72,
+      "distinct_symbolic_case_scaffolds": 48,
+      "unique_exact_causal_fact_cases": 72
+    },
+    "temporal_window": {
+      "declared_semantic_cases": 72,
+      "distinct_symbolic_case_scaffolds": 54,
+      "unique_exact_causal_fact_cases": 72
+    }
+  },
+  "focused_fixtures_passed": 14,
+  "freeze_authorized_by_this_receipt": false,
+  "limitations": [
+    "Controlled composition-width Test/OOD shift, not IID, natural requests, capability gain, or foundation-pretraining novelty.",
+    "Exact/compiled and reviewed causal normalization cover seven typed families; no exhaustive mathematical graph-isomorphism proof.",
+    "Recurring neutral-subset-shape screen is conservative and limited to sixteen operands. Independent source/oracle/root reviews remain required.",
+    "Shared single-rule motifs and symbolic case aliases recur; 2976 supervised rows are not 2976 independent semantic scenarios."
+  ],
+  "model_calls": 0,
+  "network_requests": 0,
+  "new_manifest_sha256": "dd8a9d941c2a73b9ac222bfeee53c4284f854a89fde1496ace6531e318244fd9",
+  "old_row_bodies_exported": 0,
+  "old_target_fields_selected": false,
+  "schema_version": 1,
+  "shared_atomic_scaffolds": {
+    "magnitude_time_scaffold": {
+      "cross_split_atomic_scaffolds": 0,
+      "policy": "Disclosed shared atoms; whole-parent reuse remains a blocker."
+    },
+    "observed_atomic_scaffolds": 8
+  },
+  "source_scope": "Only authored visible state/question/kind/options enter overlap fingerprints; new metadata indices are checked assertions, never ancestry proof. Old reserved rows are not exposed. All old Test/OOD bytes are unchanged from the initial private overlap inventory.",
+  "source_sha256": {
+    "jev/api.py": "f22aa50c00d64aa91c2d415c1973f59bdaad11d1de51308ae5454326b8cbf350",
+    "jev/data.py": "97c1764a5090f60476397baf889a864359e0d59b48d99ddf3b34335d3e1b138e",
+    "jev/frontier_controls_v8.py": "ba41aaf964dd579225cd98d64cbfcb2a0516fac2bb4fc7e34bf0f9544306eeaa",
+    "reports/frontier-v8-data-20261003/contract.json": "30daab0f14711bc8e707e954fb38ba4f4ea73ec394589e0386c2e7e1d0b664ca",
+    "scripts/audit_frontier_isolation_v8.py": "f162c55a23217f8bf8b1eb882104925701fd54d4ec35e5990f3103c3bacc5112",
+    "tests/test_frontier_isolation_v8.py": "6d4cad57bd43d89339a77fc51fe70bdb62e3dd9a0772dd951030d4e50ee26c44"
+  },
+  "status": "source_and_inventory_binding_passed",
+  "width1_collapse": {
+    "account_status": {
+      "declared_case_count": 12,
+      "distinct_symbolic_case_scaffolds": 4,
+      "symbolic_case_aliases": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7,
+          8
+        ],
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "unique_causal_fact_cases": 10
+    },
+    "department_route": {
+      "declared_case_count": 12,
+      "distinct_symbolic_case_scaffolds": 9,
+      "symbolic_case_aliases": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "unique_causal_fact_cases": 12
+    },
+    "exact_numeric": {
+      "declared_case_count": 12,
+      "distinct_symbolic_case_scaffolds": 9,
+      "symbolic_case_aliases": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "unique_causal_fact_cases": 12
+    },
+    "joint_capacity": {
+      "declared_case_count": 32,
+      "distinct_symbolic_case_scaffolds": 8,
+      "symbolic_case_aliases": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        [
+          16,
+          17,
+          20,
+          21
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          22,
+          23
+        ],
+        [
+          24,
+          25,
+          28,
+          29
+        ],
+        [
+          26,
+          27,
+          30,
+          31
+        ]
+      ],
+      "unique_causal_fact_cases": 32
+    },
+    "latest_authority": {
+      "declared_case_count": 32,
+      "distinct_symbolic_case_scaffolds": 11,
+      "symbolic_case_aliases": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          12,
+          13
+        ],
+        [
+          10,
+          11,
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          20,
+          21
+        ],
+        [
+          22,
+          23
+        ],
+        [
+          24,
+          26,
+          28,
+          30
+        ],
+        [
+          27,
+          29,
+          31
+        ]
+      ],
+      "unique_causal_fact_cases": 32
+    },
+    "refund_priority": {
+      "declared_case_count": 12,
+      "distinct_symbolic_case_scaffolds": 8,
+      "symbolic_case_aliases": [
+        [
+          0,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "unique_causal_fact_cases": 12
+    },
+    "temporal_window": {
+      "declared_case_count": 12,
+      "distinct_symbolic_case_scaffolds": 9,
+      "symbolic_case_aliases": [
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "unique_causal_fact_cases": 12
+    }
+  }
+}

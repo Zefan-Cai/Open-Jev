@@ -1,0 +1,310 @@
+{
+  "version": "frontier-controls-v8",
+  "status": "provisional_contract_not_frozen",
+  "split_widths": {
+    "train": [
+      1,
+      2
+    ],
+    "calibration": [
+      3
+    ],
+    "validation": [
+      4
+    ],
+    "test": [
+      5
+    ],
+    "ood": [
+      6
+    ]
+  },
+  "seed": 20261003,
+  "supervision": {
+    "presentations_per_case": 4,
+    "choice_variants": [
+      0,
+      1
+    ],
+    "noul_yes_variant": 2,
+    "noul_no_variant": 3,
+    "choice_questions": [
+      "Apply the supplied rule to these recorded facts. Which outcome follows?",
+      "Use the authoritative rule and facts to select the resulting disposition."
+    ],
+    "noul_question_template": "Does the supplied rule establish '{proposed_outcome}' for this case?",
+    "noul_options": [
+      "no",
+      "yes"
+    ],
+    "target": "Exact one-hot over options; gold comes only from visible rule and facts.",
+    "descendants": "All semantic cases and presentation/order/identity/magnitude descendants of one width/family scaffold share one group and split. Presentation transformations keep all referential relations and facts intact."
+  },
+  "schema": "Standard jev.data fields id/group_id/split/source/state/question/kind/options/target/metadata. metadata.scenario_family is the family key, condition is coverage only, provenance.variant=(case_index*4+presentation), entity_ids names the parent; model-visible input is state/question/kind/options.",
+  "parent_scaffold": "Per-family essential composition width is 1..6, not IDs or magnitudes. All base cases at one width are one parent. Each essential operand/correction/required-role/topic/account/line changes an actual rule result if altered in at least one valid case. No older/no-op/invalid padding record is used to establish isolation.",
+  "structural_shift": "Train has widths 1/2; Cal3/Val4/Test5/OOD6. Joint and policy families use width+1 required authorities/topics. Test deliberately measures unseen composition depth; this is not IID, natural-business, or official JevBench evidence. Atomic motifs may recur, but abstract complete parent menus must remain disjoint.",
+  "axis_limits": "Joint/policy mismatch probes fully cross affected first/last required position with declared scope fields and kind/truth; middle roles/topics are essential to valid execution but are not exhaustively mismatch-probed. This limitation is explicit, not a claim of all-role crossing.",
+  "family_specs": {
+    "temporal_window": {
+      "policy": "Start with recorded_delivery_at. Add seconds for each delay and subtract seconds for each advance in delivery_corrections with verified_signature true, issuer_role exactly correction_authority, and case_ref exactly this case_ref. Corrections are distinct by sequence; ignore array order and invalid records. The resulting absolute instant is delivery. An approved exception means review. Otherwise accept from delivery through delivery plus return_window_seconds inclusive; reject outside. Interpret explicit fixed UTC offsets.",
+      "state_fields": "case_ref, recorded_delivery_at, correction_authority, delivery_corrections[{sequence,issuer_role,verified_signature,case_ref,direction:delay|advance,seconds:positive int}], request_received_at, return_window_seconds:positive int, exception_approved:bool, policy",
+      "options": [
+        "accept",
+        "reject",
+        "review"
+      ],
+      "conditions": [
+        "at_start",
+        "inside_near",
+        "inside_far",
+        "at_deadline",
+        "before_near",
+        "before_far",
+        "after_near",
+        "after_far",
+        "exception_before",
+        "exception_inside",
+        "exception_deadline",
+        "exception_after"
+      ],
+      "gold_schedule": "First 4 accept, next 4 reject, final4 review; independent oracle must derive all from corrected delivery and exception.",
+      "scaffold": "Exactly width nonzero applicable corrections, alternating delay/advance. Their effects cannot be dropped as padding: changing a correction changes corrected anchor and endpoint-case outcomes.",
+      "case_count": 12
+    },
+    "exact_numeric": {
+      "policy": "For balance, sum all credit amount_cents and subtract all debit amount_cents in ledger. For integer_compare, compute those exact signed sums separately for left_ledger and right_ledger, then report below/equal/above. All amounts are nonnegative integer USD cents; use exact integer arithmetic and ignore ledger array order.",
+      "state_fields": "case_ref,task:balance|integer_compare,currency:USD,policy; balance has ledger; compare has left_ledger/right_ledger. Each ledger entry is {entry_ref,direction:credit|debit,amount_cents:positive int}.",
+      "options": "Balance: five distinct exact 'USD [-]d.dd' labels containing exact sum; compare: below/equal/above.",
+      "conditions": [
+        "balance_negative_near",
+        "balance_negative_far",
+        "balance_zero_small",
+        "balance_zero_large",
+        "balance_positive_near",
+        "balance_positive_far",
+        "compare_below_positive",
+        "compare_below_negative",
+        "compare_equal_positive",
+        "compare_equal_negative",
+        "compare_above_positive",
+        "compare_above_negative"
+      ],
+      "gold_schedule": "Balance2 negative/2zero/2positive; compare2below/2equal/2above. Amounts are not categorical business actions.",
+      "scaffold": "Each evaluated ledger has width credit operands and width debit operands; all positive. Avoid exact credit/debit cancellation pairs for widths>1 so extra records cannot establish isolation through removable neutral padding. Scalar comparisons are explicit compositions of ledger operands.",
+      "case_count": 12
+    },
+    "joint_capacity": {
+      "policy": "Each required role needs its greatest-sequence verified signed event with exact request resource/operation/currency scope. Ignore array order, unverified signatures, wrong roles and scopes. Any latest valid revoke means reject revoked consent, even if another role is missing. Otherwise missing roles mean request missing consent. With all latest records grant, execute at/below every capacity; above any capacity means request higher capacity.",
+      "state_fields": "case_ref,request{resource,operation,currency:USD,amount_cents:nonnegative int},trusted_policy{required_roles:[distinct names],rules},signed_events[{issuer_role,verified_signature,credential_scope{resource,operation,currency},sequence:nonnegative int,status:grant|revoke,capacity_cents:nonnegative int}]",
+      "options": [
+        "execute",
+        "request missing consent",
+        "reject revoked consent",
+        "request higher capacity"
+      ],
+      "conditions": [
+        "execute_below_near_first",
+        "execute_below_near_last",
+        "execute_below_far_first",
+        "execute_below_far_last",
+        "execute_equal_first",
+        "execute_equal_last",
+        "execute_regrant_first",
+        "execute_regrant_last",
+        "scope_first_resource",
+        "scope_first_operation",
+        "scope_first_currency",
+        "scope_last_resource",
+        "scope_last_operation",
+        "scope_last_currency",
+        "missing_absent",
+        "missing_invalid",
+        "revoke_first_latest",
+        "revoke_last_latest",
+        "revoke_first_with_missing",
+        "revoke_last_with_missing",
+        "revoke_first_ignore_invalid",
+        "revoke_last_ignore_invalid",
+        "revoke_first_over_capacity",
+        "revoke_last_over_capacity",
+        "capacity_first_near",
+        "capacity_last_near",
+        "capacity_first_far",
+        "capacity_last_far",
+        "capacity_first_reduced",
+        "capacity_last_reduced",
+        "capacity_first_broad",
+        "capacity_last_broad"
+      ],
+      "gold_schedule": "Eight each execute/missing/revoked/higher-capacity; every condition has both question kinds and Noul truths.",
+      "scaffold": "width+1 essential required roles (2..7). Baseline has one valid matching grant per role; extras implement specified revocation/regrant or invalid authority tests, not isolation.",
+      "case_count": 32
+    },
+    "latest_authority": {
+      "policy": "For each required topic, select its greatest valid revision: verified signature from policy_authorities[topic], exact request department in department and credential_scope.department, and exact topic in topic and credential_scope.topic. Resolve all topics before amount/fraud. Missing topic or any latest withdrawn policy means verify policy. Otherwise confirmed_fraud means fraud review. With all latest topics active and no fraud, automatic processing at/below every topic limit; capacity review above any. Ignore array order and invalid records.",
+      "state_fields": "case_ref,request{department,amount_cents,confirmed_fraud},required_topics:[distinct names],policy_authorities:{topic:issuer},signed_policy_registry[{topic,department,credential_scope{department,topic},issuer_role,verified_signature,revision,status:active|withdrawn,automatic_limit_cents}],trust_contract",
+      "options": [
+        "automatic processing",
+        "capacity review",
+        "fraud review",
+        "verify policy"
+      ],
+      "conditions": [
+        "automatic_first_near",
+        "automatic_last_near",
+        "automatic_first_far",
+        "automatic_last_far",
+        "automatic_first_equal",
+        "automatic_last_equal",
+        "automatic_first_ignore_invalid",
+        "automatic_last_ignore_invalid",
+        "capacity_first_near",
+        "capacity_last_near",
+        "capacity_first_far",
+        "capacity_last_far",
+        "capacity_first_lowered",
+        "capacity_last_lowered",
+        "capacity_first_broad",
+        "capacity_last_broad",
+        "fraud_first_below",
+        "fraud_last_below",
+        "fraud_first_equal",
+        "fraud_last_equal",
+        "fraud_first_above",
+        "fraud_last_above",
+        "fraud_first_broad",
+        "fraud_last_broad",
+        "verify_first_missing",
+        "verify_last_withdrawn",
+        "verify_first_signature",
+        "verify_last_issuer",
+        "verify_first_department",
+        "verify_last_department",
+        "verify_first_topic",
+        "verify_last_topic"
+      ],
+      "gold_schedule": "Eight each automatic/capacity/fraud/verification. Verification can coincide with fraud to test authority-before-fraud precedence.",
+      "scaffold": "width+1 essential required policy topics (2..7); every topic must be active and sufficient. Old/invalid history records only implement case predicates; topic composition proves isolation.",
+      "case_count": 32
+    },
+    "account_status": {
+      "policy": "For each required account, use its greatest-sequence status, ignoring other accounts and array order. No matching event means unknown for that component. Aggregate closed if any component closed; otherwise paused if any paused; otherwise unknown if any missing; otherwise active.",
+      "state_fields": "case_ref,required_accounts:[distinct names],events[{account,sequence,status:active|paused|closed}],rule",
+      "options": [
+        "active",
+        "paused",
+        "closed",
+        "unknown"
+      ],
+      "conditions": [
+        "active_first",
+        "active_last",
+        "active_history",
+        "paused_first",
+        "paused_last",
+        "paused_history",
+        "closed_first",
+        "closed_last",
+        "closed_history",
+        "unknown_first",
+        "unknown_last",
+        "unknown_all"
+      ],
+      "gold_schedule": "Three each active/paused/closed/unknown.",
+      "scaffold": "width essential required component accounts. All components participate in the aggregate; nonrequired account distractors are not isolation evidence.",
+      "case_count": 12
+    },
+    "department_route": {
+      "policy": "Confirmed fraud on any request line means security review before checking policy availability. Otherwise each line requires its greatest valid active signed department policy, verified from policy_authority with exact department and credential_scope. Missing/withdrawn policy or any line amount above its limit means manager review. Approve only when every line has active valid policy and is at/below its own limit.",
+      "state_fields": "case_ref,request_lines[{department,amount_cents,confirmed_fraud}],policy_authority,signed_policies[{department,credential_scope:department,issuer_role,verified_signature,revision,status:active|withdrawn,approval_limit_cents}],policy",
+      "options": [
+        "approve",
+        "manager review",
+        "security review"
+      ],
+      "conditions": [
+        "approve_below_near",
+        "approve_below_far",
+        "approve_equal",
+        "approve_mixed_below",
+        "manager_above_near",
+        "manager_above_far",
+        "manager_missing",
+        "manager_withdrawn",
+        "security_below",
+        "security_equal",
+        "security_above",
+        "security_without_policy"
+      ],
+      "gold_schedule": "Four each approve/manager/security.",
+      "scaffold": "width essential request department lines; each amount and fraud flag/policy can change aggregate route.",
+      "case_count": 12
+    },
+    "refund_priority": {
+      "policy": "Any item's verified recall means recall remediation before all other checks. Otherwise a verified purchase document is required; absent document or any item having neither confirmed defect nor intact seal means reject request. If every item is eligible, sum all item amount_cents: automatic reimbursement at/below automatic_limit_cents; review reimbursement above.",
+      "state_fields": "case_ref,purchase_document_verified:bool,items[{item_ref,amount_cents,defect_confirmed,seal_intact,verified_recall}],trusted_policy{currency:USD,automatic_limit_cents,ordered_rule}",
+      "options": [
+        "automatic reimbursement",
+        "recall remediation",
+        "reject request",
+        "review reimbursement"
+      ],
+      "conditions": [
+        "automatic_below_near",
+        "automatic_below_far",
+        "automatic_equal",
+        "recall_first_without_document",
+        "recall_last_over_limit",
+        "recall_with_ineligible",
+        "reject_document",
+        "reject_first_item",
+        "reject_last_item",
+        "review_above_near",
+        "review_above_far",
+        "review_broad"
+      ],
+      "gold_schedule": "Three each automatic/recall/reject/review.",
+      "scaffold": "width essential item lines; every amount contributes and any ineligible/recall item changes route. No neutral zero-value padding.",
+      "case_count": 12
+    }
+  },
+  "expected_counts": {
+    "train": 992,
+    "calibration": 496,
+    "validation": 496,
+    "test": 496,
+    "ood": 496,
+    "total": 2976,
+    "groups": 42
+  },
+  "provisional_output": "data/frontier-controls-v8-20261003-provisional-r1 (root chooses actual exclusive output; no automatic freeze)",
+  "gold_and_isolation_gates": [
+    "Independent gold derives from typed visible facts, not metadata condition or scaffold IDs.",
+    "Every family/scaffold has identical condition and disposition/type/truth schedules.",
+    "Abstract complete parent menu ignores IDs, numbers, time origin, ordering and wording; essential composition remains disjoint between splits.",
+    "Exact/order/wording/identity-equivalent rows cannot cross splits. Shared atomic motifs are counted/disclosed.",
+    "All authored amounts/seconds/capacities exact integers; timestamps whole second with explicit offset.",
+    "Provisional status remains until independent whole-dataset oracle/isolation reviews and root declaration."
+  ],
+  "typing_clarifications": {
+    "visible_rule_literal": "Every family rule string is exactly family_specs.policy; independent oracle dispatches from that visible literal and checks metadata agrees.",
+    "ambiguous_records": "Duplicate applicable correction sequence, valid role/sequence, valid topic/revision, requested account/sequence or valid department/revision is an error.",
+    "metadata_assertions": [
+      "composition_width",
+      "case_index",
+      "presentation_index",
+      "layout",
+      "affected_role_index",
+      "affected_topic_index",
+      "scope_field",
+      "money_gold_numeric_rank"
+    ],
+    "layouts": "Choice0 forward/Choice1 reverse; both Noul truths for one factcase share the same layout, alternating by case_index+width. Thus layout cannot select Noul yes/no. Required_roles/topics/accounts ordered names stay fixed; other record arrays and dictionary key order reverse.",
+    "refund_department_position": "First/last refer the canonical forward-record layout; reverse presentation inverses those array positions while preserving facts. Gold ignores layout metadata.",
+    "identifier_guard": "Every model-visible identifier is an opaque pseudorandom hex name with no literal split/condition/width/case ordinal; lineage appears only in non-model metadata.",
+    "amount_candidates": "Amount numeric rank is assigned by a precomputed shuffled balanced rank schedule per split/width, independent of state totals and gold sign. Presented option positions rotate independently; false amount proposals include both sides where candidates permit.",
+    "distinctness_limit": "At width1 some first/last status/refund cases are semantically equivalent after identity/number/order normalization. Raw distinct inputs/condition cases are not asserted to be independent distinct scenarios; independent audit must count/report actual equivalences.",
+    "previous_contract_sha256": "85c54f067241c3282336a88663cd64769831590c1760d1e5aed7209d48e0443f",
+    "prior_bytes_preserved": "runs/frontier-v8-data-20261003/generator-contract.initial.json"
+  }
+}
